@@ -12,4 +12,4 @@ Coming soon!
 For theme documentation, please visit https://thebrandidthemes.com/category/coursemaker-theme/.
 
 ## Support Forum
-Please visit https://thebrandidthemes.com/category/course-maker-theme/#support-form for theme support.
+Please visit https://thebrandidthemes.com/forum/support/themes/course-maker-pro/ for theme support.
