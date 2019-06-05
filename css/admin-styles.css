@@ -1,0 +1,12 @@
+#wpadminbar #wp-admin-bar-modules-cpt-link > .ab-item:before {
+    content: "\f118";
+	position: relative;
+    float: left;
+    font: 400 20px/1 dashicons;
+    speak: none;
+    padding: 4px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none!important;
+    margin-right: 6px;
+}

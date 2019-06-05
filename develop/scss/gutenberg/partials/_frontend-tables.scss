@@ -1,0 +1,58 @@
+/* Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    word-break: break-all;
+}
+
+tbody {
+	border-bottom: 1px solid #ddd;
+}
+
+.wp-block-table.is-style-stripes tr:nth-child(odd) {
+	background-color: rgba(0,0,0,0.03);
+}
+
+td,
+th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid #ddd;
+	padding: 6px;
+}
+
+th {
+	font-weight: 400;
+	padding: 0 6px;
+}
+
+table.alignwide,
+table.alignfull {
+    width: 100vw;
+}
+
+.full-width-content .site-container .alignwide,
+.full-width-content .site-container table.alignwide {
+	margin-left: calc( -99vw / 2 + 100% / 2);
+    margin-right: calc( -99vw / 2 + 100% / 2);
+    max-width: 99vw;
+	@include media($screen--l){
+	    margin-left: -180px;
+	    margin-right: -180px;
+	    max-width: 1020px;
+	}
+}
+
+.full-width-content .site-container table.alignfull {
+	margin-left: calc( -99vw / 2 + 100% / 2);
+    margin-right: calc( -99vw / 2 + 100% / 2);
+    max-width: 99vw;
+}

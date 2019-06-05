@@ -1,0 +1,44 @@
+/*
+Theme Name: Course Maker Pro
+Theme URI: https://thebrandidthemes.com/product/course-maker-theme/
+Description: Lead your online class with style, organization and the most user-friendly course interface in the StudioPress / Genesis suite, with Course Maker from brandiD.
+Author: The brandiD
+Author URI: https://thebrandid.com/
+
+Version: 2.0.0.21
+
+Tags: block-styles, classes, courses, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, lifter-lms, membership, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
+
+Template: genesis
+Template Version: 2.10
+
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: coursemaker
+*/
+
+// Import Bourbon, Neat, sass-rem
+@import 'bourbon';
+// @import 'partials/grid-settings';
+@import 'neat';
+// @import '../../node_modules/sass-rem/rem';
+
+// Import styles
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/defaults';
+@import 'partials/accessibility';
+@import 'partials/layout';
+@import 'partials/common-classes';
+@import 'partials/blog';
+@import 'partials/widgets';
+@import 'partials/plugins';
+@import 'partials/header';
+@import 'partials/content-area';
+@import 'partials/site-footer';
+@import 'partials/navigation';
+@import 'partials/social-icons';
+@import 'partials/colors-custom-default';
+@import 'partials/custom-classes';
+@import 'partials/print-media-queries';

@@ -1,0 +1,29 @@
+/* SOCIAL PROOF SLIDER
+----------------------------------------------------------------------------- */
+.widget__socialproofslider {
+	margin-top: 0;
+}
+.social-proof-slider-wrap {
+	box-shadow: none;
+	padding: 0 0;
+	@include media($medium-screen){
+		padding: 0 50px;
+	}
+	.testimonial-text {
+		padding-bottom: 0;
+		.quote {
+			margin-bottom: 30px;
+		}
+		.author {
+			.author-name,
+			.author-title {
+				font-weight: 400;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.social-proof-slider-wrap.align_left .slick-dots > li:first-child {
+	margin-left: 0;
+}

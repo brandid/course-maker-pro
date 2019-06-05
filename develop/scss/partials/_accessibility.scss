@@ -1,0 +1,68 @@
+/*
+Accessibility Support
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Screen Reader Text
+--------------------------------------------- */
+
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.genesis-nav-menu .search input[type="submit"]:focus,
+.screen-reader-shortcut:focus,
+.screen-reader-text:focus,
+.widget_search input[type="submit"]:focus {
+  background: $white;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  clip: auto !important;
+  color: $base-text-color;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+.more-link {
+  position: relative;
+  margin-top: 12px;
+  font-weight: 600;
+  border-bottom-color: transparent;
+}
+
+.more-link:focus,
+.more-link:hover {
+  border-bottom-color: inherit;
+}
+
+/* # Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+.genesis-skip-link {
+  margin: 0;
+}
+
+.genesis-skip-link li {
+  height: 0;
+  list-style: none;
+  width: 0;
+}
+
+// Display outline on focus
+:focus {
+  color: lighten($black, 11);
+  outline: lighten($black, 63) dotted thin;
+}

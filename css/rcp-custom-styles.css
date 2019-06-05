@@ -1,0 +1,26 @@
+/* Course Maker - Custom Restrict Content Pro Styles
+----------------------------------------------------------------------------- */
+.entry-content .rcp_form p {
+	margin-bottom: 20px;
+}
+
+.entry-content .rcp_form ul > li {
+	list-style-type: none;
+}
+
+#rcp_gateway {
+	margin-bottom: 5px;
+}
+
+.rcp_form input[type="submit"]:hover {
+	background-color: #ccc;
+}
+
+.rcp_login_data {
+	border: none;
+}
+
+.rcp_form legend {
+	margin-bottom: 10px;
+	color: #777
+}

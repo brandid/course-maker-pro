@@ -1,0 +1,30 @@
+body {
+    overflow-x: hidden;
+}
+
+.content-sidebar-wrap {
+    overflow: visible;
+    display: block;
+}
+
+body.content-sidebar .content-sidebar-wrap,
+body.content-sidebar .site-inner {
+    display: flex;
+    flex-direction: column;
+    @include media($screen--m){
+        flex-direction: row;
+    }
+}
+
+.full-width-content .content {
+    @include media($screen--m){
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* No top padding when AB Container Block is first element on the page */
+.page-template-blocks.first-block-atomic-blocks-ab-container .content > .entry {
+    padding-top: 0 !important;
+}

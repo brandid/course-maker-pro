@@ -1,0 +1,92 @@
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets {
+    padding: 50px 8%;
+    .wrap {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        @include media($screen--m) {
+            max-width: 1200px;
+            flex-wrap: nowrap;
+        }
+        .widget-area {
+            width: 100%;
+            margin: 0 auto 50px auto;
+            @include media($screen--m) {
+                margin: 0 0 0 50px;
+            }
+            &:first-child {
+                margin-left: auto;
+                @include media($screen--m) {
+                    margin-left: 0;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            p {
+                font-size: $base-font-size-smaller;
+                @include media($screen--s2) {
+                  font-size: $base-font-size;
+                }
+            }
+        }
+    }
+}
+
+.site-footer {
+    background-color: $footerbg;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+    .nav-secondary{
+        // border-bottom: 2px solid $main-accent-color;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        ul {
+            padding-bottom: 0;
+        }
+    }
+    .wrap {
+        width: 100%;
+        padding: 0 7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include media($screen--m) {
+            justify-content: center;
+        }
+    }
+    .credits {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footer-subnav {
+        background-color: rgba(0,0,0,0.05);
+        padding: 20px 0;
+        .nav-secondary {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+    }
+    a:focus,
+    a:hover {
+        border-bottom: 1px solid transparent;
+    }
+    p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    p:last-child {
+        margin-bottom: 0;
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,677 @@
+
+/* Front Page styles
+---------------------------------------------------------------------------------------------------- */
+
+.home .widget-title {
+	font-weight: 400;
+}
+
+.home .widget-title,
+.home .textwidget,
+.home .textwidget p,
+.home .enews p {
+	color: $main-text-color;
+}
+
+.home #genesis-content > .widget-area {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	@include media($medium-screen){
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+}
+
+/* WELCOME
+----------------------------------------------------------------------------- */
+
+.home #welcome {
+	position: relative;
+	border-top: 0;
+	// background-color: $main-accent-color;
+	@include media($screen--m) {
+        padding-top: 200px !important;
+    }
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	> .wrap {
+		z-index: 1;
+		position: relative;
+	}
+	.widget-title,
+	.textwidget {
+		text-align: center;
+	}
+	h1,
+	h3.widget-title {
+		font-size: 32px;
+		font-weight: 400;
+		max-width: 900px;
+		margin: 0 auto;
+	    margin-bottom: 20px;
+	    @include media($medium-screen) {
+			font-size: 60px;
+			letter-spacing: 3px;
+	        margin-bottom: 0;
+	    }
+	}
+	h2,
+	.subhead {
+		font-size: 20px;
+		line-height: normal;
+		font-weight: 400;
+		@include media($medium-screen) {
+			font-size: 32px;
+		}
+	}
+	p {
+		font-size: 16px;
+		margin: 10px auto 30px auto;
+		@include media($medium-screen) {
+			font-size: 20px;
+			max-width: 800px;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	p {
+		color: $white;
+	}
+	> .bg-image {
+		position: absolute;
+		background-position: center center !important;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
+/* SECOND WELCOME
+----------------------------------------------------------------------------- */
+
+.home #second-welcome {
+	// background-color: $homepage-section-bg-color;
+    text-align: center;
+    @include media($medium-screen) {
+        text-align: right;
+    }
+	.widget {
+		width: 100%;
+		float: none;
+		padding: 0;
+		@include media($medium-screen) {
+			padding: 0 10%;
+		}
+	}
+	h1 {
+	   color: $med-gray;
+	   font-size: 32px;
+	   font-weight: 400;
+   }
+   h2 {
+   	color: $main-accent-color;
+   	font-size: 26px;
+   	font-weight: 400;
+   	margin-bottom: 0;
+   }
+}
+
+/* ABOUT
+----------------------------------------------------------------------------- */
+
+.home #about {
+	position: relative;
+	background-color: $main-accent-color;
+	padding: 0 0 0 0 !important;
+	color: $white;
+	> .wrap {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		display: flex;
+		flex-direction: column;
+	    @include media($medium-screen) {
+			flex-direction: row;
+	    }
+	}
+	.widget {
+	    float: none;
+		width: 100%;
+		padding: 40px;
+	}
+	#about-left,
+	#about-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	    justify-content: center;
+	    width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	#about-left {
+		z-index: 1;
+		background-color: $soft-white;
+	    @include media($medium-screen){
+			width: calc(33.333%);
+			padding: 20px;
+	    }
+		@include media($large-screen){
+			padding: 40px;
+		}
+		.widget {
+			padding: 20px 5%;
+			@include media($medium-screen){
+				padding: 20px;
+			}
+			@include media($large-screen){
+				padding: 40px;
+			}
+		}
+		.widget-title {
+			letter-spacing: 3px;
+			font-weight: 400;
+			color: $main-accent-color;
+			margin-bottom: 0;
+		}
+		.widget-title,
+		.textwidget {
+			text-align: center;
+			@include media($medium-screen){
+				text-align: left;
+			}
+		}
+		.widget_text {
+			color: $main-text-color;
+		}
+		.widget_text .widget-title {
+			font-weight: normal;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	#about-right {
+	    @include media($medium-screen){
+			width: calc(66.666%);
+			padding: 40px;
+	    }
+		@include media($large-screen){
+			padding: 80px;
+		}
+		.widget {
+			padding: 20px 5%;
+			@include media($medium-screen){
+				padding: 20px;
+			}
+			@include media($large-screen){
+				padding: 40px;
+			}
+		}
+		.widget-title,
+		.textwidget {
+			text-align: center;
+			@include media($medium-screen){
+				text-align: left;
+			}
+		}
+		.widget-title,
+		.textwidget,
+		.textwidget p {
+			color: $white;
+		}
+		.textwidget p {
+			font-size: 20px;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+/* CTA
+----------------------------------------------------------------------------- */
+
+.home #cta,
+.home #author,
+.home #guarantee {
+	background: $background-color;
+	padding: 40px 0;
+	text-align: center;
+	> .wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		@include media($medium-screen){
+			flex-direction: row;
+		}
+		.widget {
+			width: 100%;
+			@include media($medium-screen){
+			    flex-grow: 1;
+			    width: calc(100% * (1/2) - 10px - 1px); // widget becomes either half width or full width
+			}
+		}
+	}
+	.widget {
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+		@include media($medium-screen){
+			padding: 40px;
+			text-align: left;
+		}
+		.widget-title {
+			letter-spacing: 3px;
+			margin-bottom: 60px;
+		}
+		form {
+			margin: 0 auto 40px auto;
+			input[type="text"],
+			input[type="email"] {
+				width: 100%;
+				margin-bottom: 10px;
+				padding: 16px;
+				border: 1px solid $light-gray;
+				font-size: 16px;
+			}
+			input[type="submit"] {
+				display: block;
+				margin: 0 auto;
+				@include media($medium-screen){
+					margin: 0 0 0 auto;
+				}
+			}
+		}
+	}
+	.widget.widget_media_image{
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			@include media($medium-screen){
+				max-width: 100%;
+			}
+		}
+	}
+	.gform_wrapper {
+		padding: 0;
+		.top_label .gfield_label,
+		.field_sublabel_below .ginput_complex.ginput_container label {
+		    display: none;
+		}
+		.top_label div.ginput_container {
+		    margin-top: 0;
+		}
+		ul.gform_fields li.gfield {
+			margin-top: 0;
+			margin-bottom: 0;
+		    padding-right: 0;
+			padding-bottom: 0;
+		}
+		.gform_footer {
+		    padding: 0;
+		    margin: 0;
+		}
+	}
+}
+
+/* FEATURES
+----------------------------------------------------------------------------- */
+
+.home #features {
+	position: relative;
+	> .wrap > .widget:first-child .widget-title {
+		font-size: 48px;
+		letter-spacing: 3px;
+	}
+	.widget-wrap {
+		text-align: center;
+	}
+	.featuredpages {
+		margin-top: 40px;
+	}
+	.featuredpages .widget-wrap {
+		display: flex;
+		height: 100%;
+	}
+	.featuredpost > .widget-wrap,
+	.featuredpages {
+		display: flex;
+		flex-wrap: wrap;
+		@include media($medium-screen){
+			flex-wrap: nowrap;
+			flex-direction: row;
+		}
+	}
+	.featuredpost > .widget-wrap > article,
+	.featuredpages > .featuredpage {
+		position: relative;
+		width: 96%;
+		background: transparent;
+		margin: 0 2% 30px 2%;
+		padding: 0;
+	}
+	.featuredpages > .featuredpage article {
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		@include media($medium-screen){
+			width: 100%;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.featuredpages > .featuredpage article.entry {
+		padding: 0;
+	}
+	.featuredpost > .widget-wrap > article > .stripe,
+	.featuredpages > .featuredpage .widget-wrap > article > .stripe {
+		display: block;
+		content: " ";
+		width: 1%;
+		height: 8px;
+		margin: 0 auto;
+		background-color: $main-accent-color;
+		opacity: 0;
+		transition: all .3s ease-out;
+	}
+	.featuredpost > .widget-wrap > article:hover > .stripe,
+	.featuredpages > .featuredpage .widget-wrap > article:hover > .stripe {
+		width: 100%;
+		opacity: 1;
+	}
+	.featuredpost > .widget-wrap > article > .wrapper,
+	.featuredpages > .featuredpage .widget-wrap > article > .wrapper {
+		display: table;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(255,255,255,0.9);
+		box-shadow: 0px 0px 0px rgba(0,0,0,0);
+		transition: all .5s ease-out;
+	}
+	.featuredpost > .widget-wrap > article:hover > .wrapper,
+	.featuredpages > .featuredpage .widget-wrap > article:hover > .wrapper {
+		background: rgba(255,255,255,1);
+		box-shadow: 0px 2px 40px rgba(0,0,0,0.2);
+	}
+	.featuredpost > .widget-wrap > article a.link-has-image,
+	.featuredpages > .featuredpage .widget-wrap > article a.link-has-image {
+		margin-bottom: 0;
+	    display: block;
+	}
+	.featuredpost > .widget-wrap > article a.link-has-image img,
+	.featuredpages > .featuredpage .widget-wrap > article a.link-has-image img {
+		display: block;
+		width: 100%;
+	}
+	.featuredpost > .widget-wrap > article .entry-header,
+	.featuredpost > .widget-wrap > article .entry-content,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-header,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-content {
+		padding: 10px 20px;
+	}
+	.featuredpost > .widget-wrap > article .entry-header .entry-title,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-header .entry-title {
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.featuredpost > .widget-wrap > article .entry-header .entry-title,
+	.featuredpost > .widget-wrap > article .entry-header .entry-title a,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-header .entry-title,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-header .entry-title a {
+		font-size: 20px;
+		font-weight: 400;
+	}
+	.featuredpost > .widget-wrap > article .entry-header .entry-title a:hover,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-header .entry-title a:hover {
+		color: $main-accent-color;
+	}
+	.featuredpost > .widget-wrap > article .entry-content,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-content {
+		font-size: 16px;
+		text-align: left;
+	}
+	.featuredpost > .widget-wrap > article .entry-content a.more-link,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-content a.more-link {
+		display: table;
+		margin: 20px auto 0 0;
+	}
+	.featuredpost > .widget-wrap > article .entry-content a.more-link::after,
+	.featuredpages > .featuredpage .widget-wrap > article .entry-content a.more-link::after {
+		display: none;
+	}
+}
+
+/* TESTIMONIALS
+----------------------------------------------------------------------------- */
+
+.home #testimonial {
+	position: relative;
+	background-color: $main-accent-color;
+	padding: 0 0 0 0 !important;
+	> .wrap {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		display: flex;
+		flex-direction: column;
+	    @include media($medium-screen) {
+			flex-direction: row;
+	    }
+	}
+	.widget {
+	    float: none;
+		width: 100%;
+		padding: 40px;
+	}
+	#testimonial-left,
+	#testimonial-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	    justify-content: center;
+	    width: 100%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	#testimonial-left {
+	    @include media($medium-screen){
+			width: calc(33.333%);
+			padding: 20px;
+	    }
+		@include media($large-screen){
+			padding: 40px;
+		}
+		.widget {
+			padding: 20px 5%;
+			@include media($medium-screen){
+				padding: 20px;
+			}
+			@include media($large-screen){
+				padding: 40px;
+			}
+		}
+		.widget-title,
+		.textwidget {
+			text-align: center;
+			@include media($medium-screen){
+				text-align: left;
+			}
+		}
+		.widget-title,
+		.textwidget,
+		.textwidget p {
+			color: $white;
+		}
+		.textwidget p {
+			font-size: 20px;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	#testimonial-right {
+		z-index: 1;
+		background-color: $soft-white;
+		> .widget {
+		    width: 100%;
+		}
+	    @include media($medium-screen){
+			width: calc(66.666%);
+			padding: 40px;
+	    }
+		@include media($large-screen){
+			padding: 80px;
+		}
+		.widget {
+			padding: 20px 5%;
+			@include media($medium-screen){
+				padding: 20px;
+			}
+			@include media($large-screen){
+				padding: 40px;
+			}
+		}
+		.widget-title {
+			letter-spacing: 3px;
+			font-weight: 400;
+			color: $main-accent-color;
+			margin-bottom: 0;
+		}
+		.widget-title,
+		.textwidget {
+			text-align: center;
+			@include media($medium-screen){
+				text-align: left;
+			}
+		}
+		.widget_text {
+			color: $main-text-color;
+		}
+		.widget_text .widget-title {
+			font-weight: normal;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+/* AUTHOR
+----------------------------------------------------------------------------- */
+
+// .home #author,
+// .home #guarantee {
+// 	background: $background-color;
+// 	padding: 40px 0;
+// 	text-align: center;
+// 	> .wrap {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		flex-direction: column;
+// 		@include media($medium-screen){
+// 			flex-direction: row;
+// 		}
+// 		.widget {
+// 			width: 100%;
+// 			@include media($medium-screen){
+// 			    flex-grow: 1;
+// 			    width: calc(100% * (1/2) - 10px - 1px); // widget becomes either half width or full width
+// 			}
+// 		}
+// 	}
+// 	.widget {
+// 		width: 100%;
+// 		padding: 20px;
+// 		text-align: center;
+// 		@include media($medium-screen){
+// 			padding: 40px;
+// 			text-align: left;
+// 		}
+// 		.widget-title {
+// 			letter-spacing: 3px;
+// 			margin-bottom: 60px;
+// 		}
+// 	}
+// 	.widget.widget_media_image{
+// 		img {
+// 			display: block;
+// 			height: auto;
+// 			width: 100%;
+// 			max-width: 400px;
+// 			margin: 0 auto;
+// 			@include media($medium-screen){
+// 				max-width: 100%;
+// 			}
+// 		}
+// 	}
+// }
+
+/* FAQ
+----------------------------------------------------------------------------- */
+
+.home #faq {
+	.widget-title {
+		text-align: center;
+	}
+	.widget_text {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.widget_text .textwidget {
+		font-size: 24px;
+	}
+	.widget_text .textwidget,
+	.widget_text .textwidget p {
+		color: $med-gray;
+	}
+	.gs-faq-widget {
+		max-width: 770px;
+		width: 100%;
+		margin: 40px auto;
+	}
+	.gs-faq__question {
+		text-transform: none;
+		background-color: transparent;
+		border-bottom: 1px solid $main-text-color;
+		color: $main-text-color;
+	}
+	.gs-faq__question::after {
+	    content: "\f132";
+	    font-family: "dashicons";
+	    float: right;
+	}
+	.gs-faq__question.gs-faq--expanded::after {
+	    content: "\f460";
+	}
+	.gs-faq__answer {
+		padding: 24px;
+		p {
+			color: $main-text-color;
+		}
+	}
+}

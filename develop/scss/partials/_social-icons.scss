@@ -1,0 +1,67 @@
+/*
+Social Icons Classes - for custom menu and widgets
+---------------------------------------------------------------------------------------------------- */
+
+#menu-social-menu .icon,
+.menu-social-menu-container .icon {
+    height: 20px;
+    width: 20px;
+}
+
+.nav-secondary #menu-social-menu {
+    display: flex;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-social-menu li {
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-social-menu li a {
+    padding: 0;
+    border-radius: 50%;
+}
+
+#menu-social-menu li,
+#menu-social-menu li:hover,
+#menu-social-menu li a,
+#menu-social-menu li a:hover,
+#menu-social-menu li > a:hover {
+    background-color: transparent;
+}
+
+#menu-social-menu li a .icon {
+    color: $navtext;
+}
+
+#menu-social-menu li a:hover .icon {
+    color: $hover;
+}
+
+.menu-social-menu-container ul {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-social-menu-container ul > li {
+    display: inline-block;
+    padding: 20px 16px;
+}
+
+.sidebar .menu-social-menu-container ul {
+    padding: 0;
+}
+
+.sidebar .menu-social-menu-container ul > li {
+    padding: 10px;
+}

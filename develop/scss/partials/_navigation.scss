@@ -1,0 +1,424 @@
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/* Genesis Navigation */
+
+/* fix to remove unwanted space between nav items - thanks Rob Neu -> https://gist.github.com/robneu/0ad283737d80802cb0e0 */
+.genesis-nav-menu {
+  clear: both;
+  font-size: .001px;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  // added to reduce flash of standard menu while js loads
+  display: none;
+  @include media($screen--m) {
+    display: block;
+    text-align: center;
+  }
+  @include media($screen--l) {
+
+    text-align: right;
+  }
+}
+
+.genesis-nav-menu .wrap {
+  padding: 0;
+}
+
+.genesis-nav-menu .menu-item {
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: left;
+
+}
+
+.genesis-nav-menu a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-bottom: none;
+  @include media($screen--m) {
+    padding: 20px;
+  }
+  @include media($screen--l) {
+    padding: 32px 16px;
+  }
+
+  .icon-angle-down {
+    color: transparent;
+    display: none;
+    @include media($screen--m) {
+      display: inline-block;
+      color: inherit;
+    }
+  }
+}
+
+.genesis-nav-menu a span {
+  padding-bottom: 3px;
+}
+
+.genesis-nav-menu .sub-menu {
+  background-color: $background-color;
+  border-top: 1px dotted $main-accent-color;
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .3s ease-in-out;
+  z-index: 99;
+  width: 100%;
+  @include media($screen--m) {
+    width: 300px;
+  }
+}
+
+.genesis-nav-menu .sub-menu a {
+  border: 1px dotted;
+  border-top: 0;
+  font-size: 14px;
+  padding: 20px;
+  position: relative;
+  word-wrap: break-word;
+  width: 100%;
+  @include media($screen--m) {
+    width: 300px;
+  }
+
+}
+
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -56px 0 0 199px;
+}
+
+.genesis-nav-menu .menu-item:hover {
+  position: static;
+}
+
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
+.genesis-nav-menu > .first > a {
+  padding-left: 0;
+}
+
+.genesis-nav-menu > .last > a {
+  padding-right: 0;
+}
+
+.genesis-nav-menu > .right {
+  float: right;
+}
+
+.genesis-nav-menu li {
+  float: none;
+}
+
+/* ## Accessible Menu
+--------------------------------------------- */
+.menu .menu-item:focus {
+  //  @include media($screen--m) {
+  position: static;
+  //  }
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+  //@include media($screen--m) {
+  left: auto;
+  opacity: 1;
+  //  }
+}
+
+.menu-toggle {
+  border-radius: 0;
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+  //  @include media($screen--m) {
+  display: none;
+  visibility: hidden;
+  //  }
+}
+
+.sub-menu-toggle::before,
+.sub-menu-toggle:focus::before,
+.sub-menu-toggle:hover::before {
+    color: $white;
+}
+/* ## Site Header Navigation
+--------------------------------------------- */
+
+.site-header .genesis-nav-menu li li {
+  margin-left: 0;
+}
+
+/* ## Primary Header Navigation
+--------------------------------------------- */
+
+.nav-primary,
+.nav-primary-members {
+  font-family: $accent-font;
+  font-weight: 300;
+  display: none;
+  width: 100%;
+  @include media($screen--m) {
+    opacity: 0;
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @include media($screen--l) {
+    display: inline-block;
+    width: calc(100% - 390px);
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 40px;
+  }
+}
+
+.js .nav-primary,
+.js .nav-primary-members {
+    display: none;
+    @include media($screen--m) {
+        opacity: 1;
+        display: inline-block;
+    }
+}
+
+.no-js .nav-primary,
+.no-js .nav-primary-members {
+    opacity: 1;
+}
+
+.nav-primary > .wrap,
+.nav-primary-members > .wrap {
+    width: 100%;
+}
+
+/* ## Footer Navigation
+--------------------------------------------- */
+
+.site-footer .genesis-nav-menu {
+  padding-bottom: 20px;
+}
+
+.site-footer .genesis-nav-menu a {
+  padding: 0 20px 10px;
+  border-bottom: none;
+}
+
+.site-footer .genesis-nav-menu a:focus,
+.site-footer .genesis-nav-menu a:hover {
+  border-bottom: none;
+}
+/* Genesis Responsive Menu */
+
+// turn display on now that js has loaded
+.genesis-responsive-menu .genesis-nav-menu {
+    display: block;
+}
+
+.genesis-responsive-menu .wrap {
+  padding: 0;
+}
+
+.genesis-skip-link .skip-link-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+  border-width: 0;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  visibility: visible;
+  @include media($screen--m) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+  border-width: 0;
+}
+
+.menu-toggle {
+  line-height: 22px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle.activated:before {
+  content: "\f335";
+}
+
+.menu-toggle::before {
+  font-size: 1.5em;
+  margin-right: 10px;
+  text-rendering: auto;
+}
+
+.sub-menu-toggle {
+  float: right;
+  padding: 13px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+  background: transparent;
+}
+
+.sub-menu .sub-menu-toggle {
+  padding: 12px 10px;
+}
+
+.sub-menu-toggle::before {
+  display: inline-block;
+  text-rendering: auto;
+  transform: rotate(0);
+  transition: transform .25s ease-in-out;
+}
+
+.sub-menu-toggle.activated::before {
+
+  transform: rotate(180deg);
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item {
+  display: block;
+  float: none;
+  position: relative;
+  text-align: left;
+  @include media($screen--m) {
+    display: inline-block;
+  }
+
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:focus,
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover {
+  position: relative;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item a {
+  border: none;
+  margin-bottom: 0;
+  padding: 15px 20px;
+  width: 100%;
+  @include media($screen--m) {
+    width: auto;
+    display: block;
+    padding: 16px 16px;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  @include media($screen--l) {
+
+    padding: 32px 16px;
+
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu .menu-item a {
+  @include media($screen--m) {
+    width: 300px;
+    max-width: 300px;
+    border: 1px dotted $main-accent-color;
+    border-top: 0;
+    padding: 20px;
+    position: relative;
+    word-wrap: break-word;
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item > a:focus ul.sub-menu,
+.genesis-responsive-menu .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
+  left: 0;
+  margin-left: 0;
+
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+  clear: both;
+  border: none;
+  display: none;
+  margin: 0;
+  opacity: 1;
+  padding-left: 15px;
+  position: static;
+  width: 100%;
+  @include media($screen--m) {
+    border-top: 1px dotted $main-accent-color;
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s ease-in-out;
+    z-index: 99;
+    width: 300px;
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu {
+  @include media($screen--m) {
+    left: auto;
+    opacity: 1;
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+  @include media($screen--m) {
+    padding-left: 0;
+  }
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu .sub-menu {
+  @include media($screen--m) {
+
+    margin: 0 0 0 20px;
+  }
+
+}
+
+.nav-secondary {
+  width: 100%;
+
+}
+
+.nav-secondary .genesis-nav-menu {
+  display: block;
+  text-align: center;
+}
+
+.site-footer .genesis-nav-menu .current-menu-item span,
+.site-footer .genesis-nav-menu a:focus span,
+.site-footer .genesis-nav-menu a:hover span {
+  border-bottom: 2px solid;
+}
+
+.genesis-nav-menu .current-menu-item span,
+.genesis-nav-menu a:focus span,
+.genesis-nav-menu a:hover span {
+  border-bottom: 2px solid;
+}

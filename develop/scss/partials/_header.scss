@@ -1,0 +1,221 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+  position: relative;
+  width: 100%;
+  z-index: 400;
+  @include media($screen--m) {
+    // position: fixed;
+  }
+}
+
+.fixed-header-off .site-header {
+  position: relative;
+}
+
+.js.home .site-header {
+  z-index: 400;
+  position: relative;
+  @include media($screen--m) {
+    position: relative;
+    // background-color: transparent;
+  }
+}
+
+.js.home.fixed-header-on .custom-header-background .site-header {
+  position: relative;
+  z-index: 400;
+  @include media($screen--m) {
+    position: fixed;
+    background-color: transparent;
+  }
+}
+
+.home.fixed-header-on .site-header {
+
+  @include media($screen--m) {
+    background-color: transparent;
+    position: fixed;
+  }
+}
+
+.custom-header-background.light .site-header,
+.fixed-header-off .custom-header-background .site-header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-header > .wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: $max-width;
+  @include media($screen--m) {
+    flex-direction: row;
+  }
+}
+
+.fixed-header-on .custom-header-background {
+  z-index: 100;
+}
+
+.site-header,
+.site-header.sticky {
+	width: 100%;
+	z-index: 99999;
+}
+
+.site-header {
+	// position: absolute;
+}
+
+.site-header.sticky {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    @include media($screen--m) {
+    	position: fixed !important;
+    }
+}
+
+.site-header.sticky.scrolled {
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.7);
+	// background-color: $soft-white;
+}
+
+.admin-bar .site-header.sticky,
+.admin-bar .site-header.sticky.scrolled{
+    @include media($screen--m) {
+        top: 32px;
+    }
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+    float: none;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    @include media($screen--s1){
+        margin-left: auto !important;
+    }
+    @include media($screen--l) {
+        // float: left;
+        padding-left: 25px;
+        width: 300px;
+        margin-left: 0 !important;
+        text-align: left;
+    }
+    @include media($screen--xxl) {
+        padding-left: 0;
+    }
+
+}
+
+.header-image .title-area {
+  margin: 0 auto 0 0;
+  max-width: 300px;
+  padding: 0;
+}
+
+.site-title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.custom-logo .title-area a.custom-logo-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 0;
+}
+
+.custom-logo p.site-title,
+.custom-logo p.site-description {
+    display: none;
+}
+
+.title-area a .svg {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.site-title a {
+    display: block;
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.header-image .site-title > a {
+  background-position: center !important;
+  background-size: contain !important;
+  float: left;
+  min-height: 60px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 0;
+  @include media($screen--m) {
+    margin-bottom: 0;
+  }
+}
+
+.site-description,
+.site-title {
+  margin-bottom: 0;
+  text-align: center;
+  @include media($screen--l) {
+    text-align: left;
+  }
+}
+
+.no-primary-nav .site-description,
+.no-primary-nav .site-title {
+  text-align: center;
+}
+
+.site-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  @include media($screen--m) {
+    margin-bottom: 0;
+  }
+}
+
+.header-image .site-description,
+.header-image .site-title {
+  display: block;
+  text-indent: -9999px;
+}
+
+/* ## Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+  float: right;
+  text-align: center;
+  width: 100%;
+  @include media($screen--m) {
+    text-align: right;
+    width: 620px;
+
+  }
+  @include media($screen--m) {
+    width: 800px;
+  }
+
+}

@@ -1,0 +1,96 @@
+/* Blockquotes and captions
+--------------------------------------------- */
+.entry-content .wp-block-pullquote {
+    margin: 18px 0;
+}
+
+.entry-content .wp-block-pullquote:not(.is-style-solid-color) {
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    background: none;
+    padding: 20px 0;
+    @include media($screen--m){
+        padding: 40px 0;
+    }
+    @include media($screen--l){
+        padding: 54px 0;
+    }
+    blockquote {
+        position: relative;
+        margin: 18px;
+    }
+}
+
+.entry-content .wp-block-pullquote.alignleft,
+.entry-content .wp-block-pullquote.alignright {
+    padding: 3em 0;
+}
+
+.entry-content .wp-block-pullquote.alignleft {
+    margin-right: 2em;
+}
+
+.entry-content .wp-block-pullquote.alignright {
+    margin-left: 2em;
+}
+
+.entry-content .wp-block-pullquote.alignleft p,
+.entry-content .wp-block-pullquote.alignright p {
+    font-size: 20px;
+}
+
+.entry-content .wp-block-pullquote:not(.is-style-solid-color).alignleft,
+.entry-content .wp-block-pullquote:not(.is-style-solid-color).alignright {
+    blockquote {
+        margin: 0;
+    }
+}
+
+.entry-content .wp-block-quote p,
+.entry-content .wp-block-pullquote p {
+    font-size: 28px;
+    line-height: 1.6;
+	font-style: normal;
+    text-align: center;
+}
+
+.entry-content .wp-block-quote.is-large p,
+.entry-content .wp-block-quote.is-style-large p,
+.entry-content .wp-block-pullquote.is-large p,
+.entry-content .wp-block-pullquote.is-style-large p,
+.entry-content .wp-block-quote.alignwide p,
+.entry-content .wp-block-pullquote.alignwide p,
+.entry-content .wp-block-quote.alignfull p,
+.entry-content .wp-block-pullquote.alignfull p {
+	font-size: 26px;
+}
+
+.entry-content .wp-block-pullquote.is-style-solid-color.aligncenter p {
+    text-align: center;
+}
+
+.entry-content .wp-block-quote cite,
+.entry-content .wp-block-pullquote cite {
+	display: block;
+    margin-top: 10px;
+	font-size: 15px;
+    font-style: normal;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+.entry-content .wp-block-audio figcaption,
+.entry-content .wp-block-embed figcaption,
+.entry-content .wp-block-image figcaption {
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.entry-content .wp-block-quote[class*="align"] cite,
+.entry-content .wp-block-pullquote[class*="align"] cite {
+	text-align: center;
+}

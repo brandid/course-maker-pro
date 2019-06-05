@@ -1,0 +1,21 @@
+/* Course Maker - Gutenberg Front-End Styles
+------------------------------------------------------------------------- */
+
+@import 'bourbon';
+@import 'neat';
+
+@import '../partials/variables';
+
+@import 'partials/frontend-general';
+@import 'partials/frontend-alignment';
+@import 'partials/frontend-columns';
+@import 'partials/frontend-coverimage';
+@import 'partials/frontend-buttons';
+@import 'partials/frontend-blockquotes';
+@import 'partials/frontend-tables';
+@import 'partials/frontend-code';
+@import 'partials/frontend-blocks';
+@import 'partials/frontend-shortcodes';
+@import 'partials/frontend-optin';
+@import 'partials/frontend-home';
+@import 'partials/frontend-spslider';

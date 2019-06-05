@@ -1,0 +1,160 @@
+/* Course Maker - Custom LifterLMS Styles
+----------------------------------------------------------------------------- */
+.course .llms-meta-info {
+    margin-bottom: 40px;
+}
+
+.course .llms-meta-title,
+.course .llms-meta-info .llms-meta-title,
+.llms-syllabus-wrapper .llms-section-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.course .llms-meta-info > div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.course .llms-meta-info .llms-meta.llms-course-length p::before,
+.course .llms-meta-info .llms-meta.llms-tracks p::before,
+.course .llms-meta-info .llms-meta.llms-categories p::before,
+.course .llms-meta-info .llms-meta.llms-tags p::before {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.course .llms-meta-info .llms-meta.llms-course-length p::before {
+    content: "\f017";
+}
+
+.course .llms-meta-info .llms-meta.llms-tracks p::before {
+    content: "\f018";
+}
+
+.course .llms-meta-info .llms-meta.llms-categories p::before {
+    content: "\f07c";
+}
+
+.course .llms-meta-info .llms-meta.llms-tags p::before {
+    content: "\f02b";
+}
+
+.llms-instructor-info {
+    margin-bottom: 60px;
+}
+
+.llms-instructor-info .llms-instructors .llms-author,
+.llms-progress .llms-progress-bar,
+.llms-loop-item-content .llms-progress .llms-progress-bar {
+    background: rgba(0,0,0,0.04);
+}
+
+.llms-lesson-preview {
+    border: 2px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+.llms-lesson-preview .llms-lesson-link,
+.llms-lesson-preview .llms-lesson-link-locked,
+.llms-lesson-preview .llms-lesson-link-locked:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.02+0,0.06+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.06) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.02) 0%,rgba(0,0,0,0.06) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.02) 0%,rgba(0,0,0,0.06) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05000000', endColorstr='#0f000000',GradientType=0 ); /* IE6-9 */
+    transition: all .2s ease-in-out;
+}
+
+.llms-lesson-preview .llms-lesson-link:focus,
+.llms-lesson-preview .llms-lesson-link:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.01+0,0.03+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.04) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.04) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.04) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', endColorstr='#08000000',GradientType=0 ); /* IE6-9 */
+}
+
+.llms-lesson-preview.is-complete .llms-lesson-link {
+    background: rgba(0,0,0,0.06);
+    border-top: 4px solid transparent;
+}
+
+.llms-lesson-preview.is-complete .llms-lesson-title {
+    opacity: 0.5;
+}
+
+.llms-syllabus-wrapper {
+    margin-top: 60px;
+}
+
+.llms-lesson-preview {
+    width: 90%;
+}
+
+.llms-lesson-preview .llms-lesson-link {
+    border-bottom: 0;
+}
+
+.progress__indicator {
+    margin-left: 20px;
+}
+
+.llms-course-navigation {
+    margin-top: 60px;
+}
+
+.llms-course-nav .llms-lesson-preview .llms-lesson-link,
+.llms-course-nav .llms-lesson-preview.is-complete .llms-lesson-link {
+    border-top: none !important;
+    border-bottom: 1px solid;
+}
+
+.llms-course-nav .llms-lesson-preview.is-complete .llms-lesson-title {
+    opacity: 1;
+}
+
+.llms-course-nav .llms-lesson-preview:focus .llms-lesson-link,
+.llms-course-nav .llms-lesson-preview:hover .llms-lesson-link {
+    border-color: transparent;
+}
+
+.llms-course-nav .llms-lesson-preview:focus,
+.llms-course-nav .llms-lesson-preview:hover {
+    border-color: transparent !important;
+}
+
+.llms-course-nav .llms-lesson-preview .llms-lesson-link {
+    background: transparent;
+}
+
+.llms-course-nav .llms-lesson-preview .llms-pre-text,
+.llms-course-nav .llms-lesson-preview .llms-lesson-title {
+    letter-spacing: 2px;
+}
+
+.llms-notification .llms-notification-aside::before {
+    content: "\f087"; /* FontAwesome icon: thumbs up */
+    display: block;
+    width: 64px;
+    height: 64px;
+    font-family: 'FontAwesome';
+    font-size: 40px;
+    line-height: 1em;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.llms-notification .llms-notification-aside img {
+    display: none;
+}
+
+.llms-lesson-link-locked,
+.llms-lesson-link-locked:hover {
+    box-shadow: none !important;
+}

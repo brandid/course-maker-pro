@@ -1,0 +1,147 @@
+/* Course Maker - Custom WooCommerce Styles
+----------------------------------------------------------------------------- */
+.woocommerce .site-inner > .entry-title {
+	display: none;
+}
+
+.woocommerce .content-sidebar-wrap main.content {
+	padding: 40px;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.625;
+	padding: 12px 24px;
+	text-decoration: none;
+	white-space: normal;
+	width: auto;
+}
+
+.woocommerce .sidebar-primary a.button,
+.woocommerce .sidebar-primary button.button,
+.woocommerce .sidebar-primary input.button.woocommerce #respond input#submit.alt,
+.woocommerce .sidebar-primary a.button.alt,
+.woocommerce .sidebar-primary button.button.alt,
+.woocommerce .sidebar-primary input.button.alt {
+	background-color: #333;
+	color: #fff;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:focus,
+.woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus,
+.woocommerce .sidebar-primary a.button:hover,
+.woocommerce .sidebar-primary button.button:hover,
+.woocommerce .sidebar-primary input.button.woocommerce #respond input#submit.alt:hover,
+.woocommerce .sidebar-primary a.button.alt:hover,
+.woocommerce .sidebar-primary button.button.alt:hover,
+.woocommerce .sidebar-primary input.button.alt:hover {
+	background-color: #ccc !important;
+	color: #333 !important;
+}
+
+.woocommerce ul.products li.product .price {
+	color: #666;
+}
+
+.woocommerce .sidebar-primary .button {
+	width: 100%;
+}
+
+.woocommerce .entry-title:before {
+	content: none !important;
+	padding-right: 0;
+}
+
+.woocommerce-checkout #customer_details .col-1 {
+	width: 100%;
+	float: none;
+}
+
+.woocommerce-checkout #customer_details .col-2 {
+	display:none;
+}
+
+#add_payment_method #payment ul.payment_methods li,
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li,
+.woocommerce-MyAccount-navigation ul li {
+	list-style: none;
+	list-style-type: none;
+}
+
+.woocommerce-MyAccount-navigation {
+	width: 28% !important;
+	padding-right: 2% !important;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	margin-left: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+	padding: 6px 0;
+	border-top: 1px solid #eee;
+}
+
+.woocommerce-MyAccount-navigation ul li:first-child {
+	border-top: none;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+	color: #999;
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	width: auto !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+
+	.woocommerce-MyAccount-navigation {
+		width: 100% !important;
+		float: none;
+		padding-right: 0 !important;
+	}
+
+	.woocommerce-MyAccount-navigation ul {
+		text-align: center;
+	}
+
+	/* .woocommerce-MyAccount-navigation ul li {
+		display: inline-block;
+		border-top: none;
+		margin:4px 10px;
+		padding: 4px 10px;
+	}*/
+
+}
+
+@media only screen and (max-width: 546px) {
+
+	.woocommerce-cart table.cart td.actions .coupon .input-text,
+	.woocommerce-page table.cart td.actions .coupon .input-text+.button {
+		float: none !important;
+		width: 100% !important;
+	}
+
+	.woocommerce-cart table.cart td.actions .coupon .input-text {
+		margin-bottom: 10px !important;
+	}
+
+}

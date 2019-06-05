@@ -1,0 +1,130 @@
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Genesis eNews Extended
+--------------------------------------------- */
+
+.enews-widget input {
+    font-size: 16px;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.enews-widget input[type="submit"] {
+    margin: 0;
+    width: auto;
+}
+
+.enews form + p {
+    margin-top: 24px;
+}
+
+/* Gravity Form Styles
+--------------------------------------------- */
+
+.gform_wrapper {
+    // background-color: $soft-white;
+    padding: 20px;
+}
+
+.gform_wrapper .gform_fields input {
+    font-size: 16px;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+body:not(.home) main.content .entry .gform_wrapper .gform_fields input,
+body:not(.home) main.content .entry .gform_wrapper .gform_fields textarea {
+    background-color: #f3f1f2;
+}
+
+body:not(.home) main.content .entry .gform_confirmation_message {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid;
+}
+
+.gform_wrapper .gform_fields input[type="submit"] {
+    margin: 0;
+    width: auto;
+}
+
+.gform_wrapper .gform_fields form + p {
+    margin-top: 24px;
+}
+
+.home .site-inner .gform_widget .widget-title {
+    font-size: 30px;
+}
+
+.footer-widgets .gform_wrapper {
+    padding: 0;
+}
+
+.footer-widgets .gform_wrapper ul.gform_fields li.gfield {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widgets .gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),
+.footer-widgets .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    border: 1px solid #989ba2;
+    margin: 0;
+    padding: 16px 26px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.footer-widgets .gform_wrapper .gform_footer {
+    text-align: right;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* Ninja Form Styles
+--------------------------------------------- */
+.ninja-forms-all-fields-wrap {
+    padding: 20px;
+    background-color: $soft-white;
+}
+
+.footer-widgets-2 .ninja-forms-all-fields-wrap,
+.home .ninja-forms-all-fields-wrap {
+    background-color: transparent;
+    padding: 20px;
+}
+
+/* Contact Form 7
+--------------------------------------------- */
+
+.wpcf7-form {
+    padding: 20px;
+    background-color: $soft-white;
+}
+
+.footer-widgets-2 .wpcf7-form,
+.home .wpcf7-form {
+    background-color: transparent;
+    padding: 20px;
+}
+
+/* Form Widgets in Footer 2
+--------------------------------------------- */
+// Set maximum form width for this area.
+.footer-widgets-2 {
+    .gform_widget,
+    .widget_ninja_forms_widget,
+    .wpcf7-form {
+        max-width: 600px;
+    }
+}
+
+/* ## Jetpack
+--------------------------------------------- */
+
+#wpstats {
+    display: none;
+}

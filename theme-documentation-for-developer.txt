@@ -1,0 +1,369 @@
+Developer Documentation Draft for Course Maker Theme
+
+## Prerequisites
+Node and Npm is required.
+
+Here are some helpful info on doing that.
+[How to Install Node.js and NPM on a Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
+
+[How to Install Node.js® and NPM on Windows - Treehouse Blog](http://blog.teamtreehouse.com/install-node-js-npm-windows)
+
+Check your version of node and npm by  typing them  in terminal
+
+```
+node -v
+npm -v
+```
+
+If you a returned a version number for each - you are ready to go to the next step.
+
+If you are creating a new child theme from this theme, delete the ``.git folder``` and run ```git init``` to start a new one. If you are working on this theme and want to push commits back to this theme's remote repo - skip this step.
+
+Next you’ll need to install Gulp globally (if you do not have it installed already). To check, just type `gulp -v` in your terminal window. If you see a version number, then you have gulp installed. If not, follow this step:
+
+from terminal type: `npm install -g gulp`
+
+## Clone the Course Maker theme repo.
+[Bitbucket](https://bitbucket.org/brandid/coursemaker)
+
+Once installed, from the child theme folder in Terminal type:
+
+`npm install`
+
+At the terminal type `gulp watch`
+
+This will fire up the Gulp watch task - and if you make any changes to the source src/.css files and then save, the task will run and process your CSS files and place them in the child theme folder.
+
+************* ************* ************* ************* ************* ************* ************* ************* ************* ************* *************
+*************  WARNING! THIS DOCUMENTATION below NEEDS TO BE UPDATED FOR Course Maker - IT IS A COPY OF COACHING PRO ***********************************
+************* ************* ************* ************* ************* ************* ************* ************* ************* ************* *************
+
+1. { include basic theme installation instructions from our other themes } Once theme is installed and activated - let’s get started.
+
+Recommended Fonts:
+The theme uses and automatically installs two Google fonts: Montserrat and Caveat.
+https://fonts.google.com/specimen/Montserrat
+https://fonts.google.com/specimen/Caveat
+
+Recommended free plugins to set up like demo:
+
+Genesis eNews Extended (Sign up form for mailing list)
+https://wordpress.org/plugins/genesis-enews-extended/
+
+Genesis Simple Edits (Edit footer)
+https://wordpress.org/plugins/genesis-simple-edits/
+
+HTML Widget Text (Easily add HTML to widget titles)
+https://wordpress.org/plugins/html-in-widget-titles/
+
+Image Widget (add images to widget areas)
+https://wordpress.org/plugins/image-widget/
+
+Social Proof (Testimonials) Slider
+https://wordpress.org/plugins/social-proof-testimonials-slider/
+
+Widget CSS Classes
+https://wordpress.org/plugins/widget-css-classes/
+
+WP Featherlight
+https://wordpress.org/plugins/wp-featherlight/
+
+WP Subtitle
+https://wordpress.org/plugins/wp-subtitle/
+
+Nice to Haves (Free):
+
+SVG Support (Use SVGs in WordPress)
+https://wordpress.org/plugins/svg-support/
+
+Ninja Forms
+https://wordpress.org/plugins/ninja-forms/
+
+
+Yoast SEO
+https://wordpress.org/plugins/wordpress-seo/
+
+
+Premium:
+Gravity Forms (instead of Ninja forms or Contact Form 7)
+http://www.gravityforms.com/  (affiliate link )
+
+/*  ------------------- Notes about this theme  -----------------------*/
+
+Default Images:
+The front page includes three default images for Front Page Welcome, Front Page Call to Action and Front Page Offer. In the demo, the first two are images and the third is a graphic png outlined in white. All of these can be replaced with your own images and / or a solid background color.
+
+This theme has no header-right widget area. That area is being used for primary navigation.
+
+The theme has two areas for menus, the primary and footer menu areas.
+
+The theme has built in SVG icons for both social media menus and for some graphic elements displayed on the home page. You do not need a plugin to display your social media icons. These can be added with menu links in either a widget area via a Custom Menu widget or in the footer menu. (see instructions for create that menu).
+
+The theme has four pre-designed color schemes plus a fifth one that you can customize.
+
+Accessibility support: The theme uses all the built in support for accessibility provided by Genesis plus additional features like automatically adding post titles to Read More links for screen readers.
+
+
+/*  ------------------- Instructions to set up website like the demo  -----------------------*/
+
+Setup like the demo:
+
+Install the recommended free plugins and activate them first.
+
+Import demo content (optional).
+
+For your convenience, an export file of the Course Maker theme demo site is available to assist in the setup of your theme. This file contains the demo content for the posts, comments, and categories. If you already have your own content on site, skip this step. This step is for demonstration purposes only and you should not import data to a site with your content already there.
+
+This file can be found in either of these places:
+
+In the Course Maker zip file you downloaded, unzip the file and open the child theme folder.
+The export file is in the xml folder located inside the child theme folder.
+
+Or at this link: http://coursemaker.wpengine.com/wp-content/themes/coursemaker/xml/coursemaker.xml In your browser click File Save As and save it to your hard drive.
+ (Click this link to download the export file for this theme.)
+
+Learn how to use this export file in the How To Import The Demo Site Content tutorial.
+https://my.studiopress.com/documentation/getting-started/demo-content/import-the-demo-site-content/
+
+^^^^ Follow those instructions and substitute the coursemaker.xml where needed.
+
+Setup Home Page:
+
+When you first install the theme, if you do have not set up any of the widgets for the front page, you will see either your blog page or a static front page based on your current WordPress settings.
+
+To set things up similar to the demo site, you’ll need to create two pages. One as a placeholder for your home page (Front page) and one for your Posts page (the page that displays your an archive listing of your blog posts). Once you have both pages created, go to Settings -> Reading and edit your Front Page displays. Choose Static Page and assign the Home Page to Front page and Blog Page to Posts page.
+
+Save your changes.
+
+
+At this point if you have not added any widgets to the Front page sections yet, you will see a static page for your home page with a sidebar. You may use it like this or customize the front page by adding widgets.
+
+Create a Menu:
+
+Create a primary menu and assign it to Primary location. { Need to add more details here on how to set this up. }
+
+Front Page Setup with widgets:
+
+To activate the front page, you’ll need to add a widget to the front-page-welcome widget area.
+
+Go to the dashboard -> Appearance -> Customize -> Widgets
+Add a text widget to the Front Page Welcome Section.
+Edit a title and any content you want displayed below the title.
+
+To add a button, enter the following HTML example:
+
+<a href="#" class="button">Submit</a>
+
+Put this on a separate line in the Content area. Replace the # with your url link and words Button Text with your text you want displayed within your button.
+
+Check Automatically add paragraphs and then Save and Publish.
+
+Click the < button.
+
+Next click -> Site Identity
+Enter your site title and a tagline (if desired).
+{ Need to add instructions about Site Icon }
+
+Click Save and Publish.
+
+Click the < button.
+
+Click Color Scheme and select either one of the four pre-styled color schemes or choose custom. If you choose custom, you may change the colors of various elements on the site.
+The custom palette follows the same pattern as the pre-styled color schemes.
+
+{add an image of home page highlighting what each Custom Color # changes. }
+
+Click Save and Publish.
+
+Click the < button.
+
+
+Click Front Page Background Images
+
+Home Welcome Section Image {This needs to be renamed to Front Page Welcome Section Image }
+
+This is the background image for the welcome section. There is a default image included with the theme, but will most likely want to change that. Click Change Image and select an image from your media library or upload a new image. It is recommended that the image be at lease 2000 pixels wide to accommodate large desktop displays.
+
+The next controls will allow you to customize the display of the background image.
+
+Recommended settings:
+
+Background Repeat: No Repeat
+Background Size: Cover
+Background Position Horizontal: Center
+Background Position Vertical: Center
+Overlay Color: #333333 (hexidecimal code - a soft black)
+Background Overlay: 0.28 (sliding control to increase the opacity of the overlay - in this case, darkening the image.)
+This control when set to 1 will be a solid color. When you set to 0, it has no effect on the image. You have a lot of flexibility in creating a unique effect here.
+
+Style as desired.
+
+Click Save and Publish.
+
+Click the < button.
+
+Front Page 1 - a
+Two options: Video with Image Overlay or Static Image.
+
+Add an image widget. (Note it may appear stretched in the customizer, but it will render properly.)
+
+Add title and Alternate text.
+Related: leave blank
+Caption: Shows below the image.
+For Video: Add url link to your video
+For Image: leave Link blank
+
+Test - > https://www.youtube.com/embed/W-TyGWcMBX8?autoplay=1
+Link ID: leave blank
+Choose: Stay in Window.
+Size: medium_large
+Align: center
+Add coursemaker-video class to the widget
+Click Save and Publish.
+Click the < button.
+
+Front Page 1 - b
+
+Set up text widget similar to Front Page Welcome.
+
+
+Front Page 2
+Set up text widget similar to Front Page Welcome.
+To add a book to the left of the widget as in the demo.
+Add an image widget about the text widget.
+Leave title blank.
+Add Alternate Text: Latest Book
+Choose: Stay in Window.
+Size: medium_large
+Align: none
+Add class front-page-book
+
+
+Front Page 3
+
+Add text widget for How it all works.
+Add image widgets with captions.
+Leave title blank.
+To bold the first line of text in the caption field, use HTML strong tags.
+<strong>Enter your text here</strong>
+Leave a blank line under it, then enter remaining text.
+Check Automatically add paragraphs and then Save and Publish.
+
+
+Front Page Testimonials
+
+Add the Social Proof Testimonial Slider
+Add a few testimonials with a title, author name, author title and testimonial text - also add a featured image.
+
+then set up the widget to display them.
+
+
+
+
+Front Page Call to Action
+Add eNews extended widget to add a subscribe form for your newsletter or mailing list.
+
+Add title, text before and after and a # for the Form Action.
+
+
+
+Front Page Offer
+
+Add a text widget similar to the Front Page Welcome.
+
+Go to the dashboard -> Appearance -> Menus
+
+
+
+First create a menu called Social Menu. Add some Custom links for
+
+https://facebook.com
+
+https://twitter.com
+http://plus.google.com
+http://instagram.com
+Save the menu.
+
+Go to the dashboard -> Appearance -> Customize -> Widgets
+
+Footer 1
+
+Add a Custom Menu widget and assign the menu social-menu to it. Add a title Connect with us.
+
+Add a text Widget for some default contact info.
+
+Footer 2
+
+Add a contact form here using either Gravity Forms or Ninja forms.
+
+
+Finally
+
+Click the < button.
+
+Click Front Page Background Images
+
+Front Page Call to Action Section Image
+
+This is the background image for the call to action section. There is a default image included with the theme, but will most likely want to change that. Click Change Image and select an image from your media library or upload a new image. It is recommended that the image be at lease 2000 pixels wide to accommodate large desktop displays.
+
+The next controls will allow you to customize the display of the background image.
+
+Recommended settings:
+
+Background Repeat: No Repeat
+Background Size: Cover
+Background Position Horizontal: Center
+Background Position Vertical: Center
+Overlay Color: #333333 (hexidecimal code - a soft black)
+Background Overlay: 0.48 (sliding control to increase the opacity of the overlay - in this case, darkening the image.)
+This control when set to 1 will be a solid color. When you set to 0, it has no effect on the image. You have a lot of flexibility in creating a unique effect here.
+
+Style as desired.
+
+
+Front Page Offer Section Image
+
+This is the background image for the offer section. There is a default image included with the theme, but will most likely want to change that. Click Change Image and select an image from your media library or upload a new image. In the demo this is a small transparent image with a white outlines.
+
+The next controls will allow you to customize the display of the background image.
+
+Recommended settings:
+
+Background Repeat: No Repeat
+Background Size: Contain
+Background Position Horizontal: Center
+Background Position Vertical: Center
+Image Opacity: 0.08 (sliding control to increase the opacity)
+This control when set to 1 will be fully opaque. When you set to 0, the image is not visible. You can experiment with tiled displays and various other settings.
+
+Style as desired.
+
+Click Save and Publish.
+
+Click the < button.
+
+
+
+Changing Color of Welcome Text on Home Page:
+
+To change the color of the welcome text. Enter this in the Customizer - Additional CSS section.
+You'll need to target the color scheme you are using:
+Career: .coursemaker-color-scheme-1
+Executives: .coursemaker-color-scheme-2
+Health and Fitness: .coursemaker-color-scheme-3  (default)
+Relationships: .coursemaker-color-scheme-4
+Custom: .coursemaker-color-scheme-custom
+These are automatically added to the body class when you select a color scheme. The default is 3.
+
+For example to change the text color of the welcome message on the Career color scheme, enter:
+
+.coursemaker-color-scheme-1 .front-page-welcome .widget-title {
+  color: #fff;
+}
+
+.coursemaker-color-scheme-1 .front-page-welcome p {
+  color: #fff;
+}
+
+Substitute the #fff for your hexidecimal value (must start with #) or a valid HTML color name like white, blue, red, black, etc.

@@ -1,0 +1,73 @@
+/* OPT-IN
+----------------------------------------------------------------------------- */
+.opt-in .wp-block-columns > .wp-block-column:first-child .wp-block-image {
+    text-align: center;
+    @include media($screen--m) {
+        text-align: left;
+    }
+    img {
+        max-width: 400px;
+        @include media($screen--m) {
+            max-width: 100%;
+        }
+        height: auto;
+    }
+}
+
+.opt-in form {
+  margin: 0 auto 40px auto;
+}
+
+.opt-in form input[type="text"],
+.opt-in form input[type="email"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 16px !important;
+  border: 1px solid #ccc;
+  font-size: 16px !important;
+}
+
+.opt-in form input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.opt-in .gform_wrapper {
+  padding: 30px 0;
+}
+
+.opt-in .gform_wrapper li.hidden_label input {
+  margin-top: 0;
+}
+
+.opt-in .gform_wrapper .top_label .gfield_label,
+.opt-in .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+  display: none;
+}
+
+.opt-in .gform_wrapper .top_label div.ginput_container {
+  margin-top: 0;
+}
+
+.opt-in .gform_wrapper ul.gform_fields li.gfield {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.opt-in .gform_wrapper .gform_footer {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.gform_wrapper .gform_footer input[type=submit] {
+    margin-right: 0 !important;
+}
+
+.gform_wrapper .gform_confirmation_wrapper {
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.05);
+}

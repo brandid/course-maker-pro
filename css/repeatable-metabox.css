@@ -1,0 +1,40 @@
+/*.repeatable-remove-repeatable {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    overflow: hidden;
+    margin: 8px 0 0 0;
+    text-indent: -9999px;
+    width: 10px;
+    height: 10px;
+}*/
+
+.repeatable-repeatable-table thead th h4 {
+    margin-top: 0;
+}
+
+.repeatable-repeatable-table thead th p > span {
+    color: #aaa;
+}
+
+.repeatable-wrapper input[type="text"] {
+    width: 100%;
+    padding: 4px 6px;
+    font-size: 18px;
+}
+
+.repeatable-wrapper .repeatable-remove-repeatable {
+    font-size: 18px;
+    margin-top: 2px;
+    padding: 4px 8px;
+    background: #f2dede;
+    border: none;
+    color: #a94442;
+    cursor: pointer;
+}
+
+.repeatable-wrapper .repeatable-remove-repeatable:hover {
+    background: #ff0000;
+    color: #fff;
+}

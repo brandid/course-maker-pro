@@ -1,0 +1,409 @@
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Avatar
+--------------------------------------------- */
+
+.avatar {
+  border-radius: 50%;
+  float: left;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+  margin-right: 24px;
+}
+
+.alignright .avatar {
+  margin-left: 24px;
+}
+
+.comment .avatar {
+  margin: 0 16px 24px 0;
+}
+
+/* ## Genesis
+--------------------------------------------- */
+
+.breadcrumb {
+  background-color: $white;
+  font-size: 16px;
+  margin-bottom: 1px;
+  padding: 12px 30px;
+}
+
+.after-entry,
+.archive-description,
+.author-box {
+  // background-color: $white;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.after-entry,
+.author-box {
+    padding: 30px;
+    @include media($screen--m) {
+      padding: 30px;
+    }
+}
+
+.after-entry {
+  background-color: $soft-white;
+  margin: 0 0 24px;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+  margin-bottom: 0;
+}
+
+.bypostauthor {
+  margin: auto;
+}
+
+.sticky {
+  margin: auto;
+}
+
+/* ## Search Form
+--------------------------------------------- */
+
+.site-header .search-form {
+  float: none;
+  margin: 16px auto;
+  @include media($screen--s2) {
+    float: right;
+    margin: 12px auto 0;
+  }
+
+}
+
+.post-password-form input[type="submit"],
+.search-form input[type="submit"] {
+  margin-top: 10px;
+}
+
+.genesis-nav-menu .search input[type="submit"],
+.widget_search input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.search-form {
+  position: relative;
+  border: 1px solid;
+}
+
+.search-form .search-submit {
+  bottom: 3px;
+  padding: .5em 1em;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  border-radius: 0;
+}
+
+.search-form .search-submit .icon {
+  height: 24px;
+  top: -4px;
+  width: 24px;
+}
+
+.search-form button {
+
+  fill: $white;
+}
+
+.search-form button:focus,
+.search-form button:hover {
+
+  fill: $white;
+}
+/* #
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+  overflow: hidden;
+}
+
+.entry-content .search-form,
+.site-header .search-form {
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.genesis-nav-menu .search input[type="submit"],
+.widget_search input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* Firefox 18- */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+/* Firefox 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* oldIE 😉 */
+
+.widget_search .search-form {
+  position: relative;
+}
+
+.widget_search .search-form input {
+  padding: 10px;
+  font-size: 14px;
+  font-size: 1.4rem;
+
+}
+
+.widget_search .search-form input[type="submit"] {
+  height: 20px;
+  width: 20px;
+  //  background-color: transparent;
+}
+
+.widget_search .search-form input[type="submit"]:hover {
+  opacity: .5;
+}
+
+.widget_search .search-form input[type="submit"]:focus {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.widget_search .search-form input[type="submit"] {
+  // background: url("images/icon-search.svg") no-repeat;
+  //  background-image: svg("svg-icons.svg#icon-search", "[fill]: #{$base-color-3}");
+}
+
+.search-submit {
+  // background-image: svg("svg-icons.svg#icon-search", "[fill]: #{$white}");
+  // background-repeat: no-repeat;
+  //
+  // padding: 10px;
+}
+/* ## Titles
+--------------------------------------------- */
+
+.archive-description .entry-title,
+// .archive-title,
+.author-box-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.archive-title,
+.first-block-align-center .entry-header > .entry-title {
+    text-align: center;
+}
+
+.archive-title,
+.entry-header .entry-title {
+    font-size: $h1-font-size;
+}
+
+#content > .page-title,
+.entry-header .entry-title {
+    margin-bottom: 40px;
+}
+
+.archive-title,
+.site-inner > .entry-title {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include media($screen--m) {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.entry-title {
+  font-size: 30px;
+}
+
+.entry-title a,
+.sidebar .widget-title a {
+  text-decoration: none;
+  border-bottom: 0;
+  font-weight: 600;
+}
+
+.entry-title a:focus,
+.entry-title a:hover,
+.sidebar .widget-title a:focus,
+.sidebar .widget-title a:hover {
+  border-bottom: 0;
+}
+
+.widget-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sidebar,
+.sidebar .widget-title {
+    text-align: center;
+}
+
+.sidebar .widget-title,
+.footer-widgets .widget-title {
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+/* ## WordPress
+--------------------------------------------- */
+
+a.aligncenter img {
+  display: block;
+  margin: 0 auto;
+}
+
+a.alignnone {
+  display: inline-block;
+}
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+  max-width: 100%;
+}
+
+.aligncenter,
+img.centered {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.alignnone,
+img.alignnone {
+  margin-bottom: 12px;
+}
+
+.wp-caption.alignleft,
+a.alignleft,
+img.alignleft {
+  margin: 0 24px 24px 0;
+}
+
+.wp-caption.alignright,
+a.alignright,
+img.alignright {
+  margin: 0 0 24px 24px;
+}
+
+.gallery-caption,
+.wp-caption-text {
+  font-size: 14px;
+
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+  margin-bottom: 0;
+}
+
+.entry-content .wp-audio-shortcode,
+.entry-content .wp-playlist,
+.entry-content .wp-video {
+  margin: 0 0 28px;
+}
+
+/* # Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+  margin-bottom: 40px;
+  word-wrap: break-word;
+}
+
+.widget p:last-child,
+.widget ul > li:last-of-type,
+.widget-area .widget:last-of-type {
+  margin-bottom: 0;
+}
+
+.widget ul > li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.widget ul > li:last-of-type {
+  padding-bottom: 0;
+}
+
+.widget ol > li {
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.widget li li {
+  border: 0;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.widget_calendar table {
+  width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+  text-align: center;
+}
+
+/* ## Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+  background: none;
+  padding: 0;
+}
+
+.featured-content .entry:last-of-type {
+  margin-bottom: 0;
+}
+
+.featured-content .entry-title {
+  font-size: 20px;
+}

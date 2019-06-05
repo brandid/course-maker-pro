@@ -1,0 +1,191 @@
+/* Course Maker - Gutenberg Editor - General Styles
+--------------------------------------------- */
+body {
+    // background-color: #f3f1f2; 
+    font-family: 'Questrial', sans-serif !important;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.625;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p,
+ul,
+ol,
+dl {
+	font-size: 18px;
+	line-height: 1.625;
+}
+
+/* Regular content width.
+/* 660px + 30px to match paragraph width on front-end and editor.
+--------------------------------------------- */
+.wp-block {
+	max-width: 690px;
+}
+
+/* Width of "wide" blocks
+/* 1062px + 30px so wide images match width in front-end and editor.
+/* 1120px = default column width of 660px + .alignwide negative margin of 360px
+--------------------------------------------- */
+.wp-block[data-align="wide"] {
+	max-width: 940px;
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Typography
+--------------------------------------------- */
+
+a {
+    // color: #ce461c;
+}
+
+a:hover {
+    // color: #ce461c;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Questrial', sans-serif !important;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+b,
+strong {
+    font-weight: 900;
+}
+
+pre {
+    font-family: monospace;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: 'Questrial', sans-serif !important;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 20px;
+}
+
+p.has-drop-cap:not(:focus)::first-letter {
+	margin: 0.02em 0.08em 0 -0.08em;
+}
+
+p.has-larger-font-size.has-drop-cap:not(:focus)::first-letter,
+p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
+	margin-right: 0.01em;
+}
+
+/* COLUMNS
+--------------------------------------------- */
+
+.wp-block-columns .wp-block-column.one-third {
+    flex-basis: 33.333% !important;
+}
+
+.wp-block-columns .wp-block-column.two-thirds {
+    flex-basis: 66.666% !important;
+}
+
+/* TABLES
+--------------------------------------------- */
+.wp-block-table {
+	font-size: 18px;
+	line-height: 2;
+}
+
+.wp-block-table td,
+.wp-block-table th,
+.wp-block-table tr {
+	border: none;
+}
+
+.wp-block-table tr {
+	border-top: 1px solid #eee;
+}
+
+.wp-block-table tbody {
+	border-bottom: 1px solid #eee;
+}
+
+.wp-block-table.is-style-stripes {
+    border-spacing: 0;
+    border-collapse: inherit;
+    border-bottom: 1px solid #f3f4f5;
+}
+
+.wp-block-table.is-style-stripes tr:nth-child(odd) {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.wp-block-table.is-style-stripes td {
+    border-color: transparent;
+}
+
+/* PULL QUOTES
+--------------------------------------------- */
+.wp-block-pullquote blockquote p,
+.wp-block-pullquote blockquote .wp-block-pullquote__citation {
+    text-align: center;
+}
+
+.wp-block-pullquote blockquote .wp-block-pullquote__citation {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Code
+--------------------------------------------- */
+.wp-block-code {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-code code {
+    color: #666;
+}
+
+/* VERSE
+--------------------------------------------- */
+.wp-block-verse {
+    padding-left: 30px;
+    border-left: 4px solid rgba(0, 0, 0, 0.1);
+}

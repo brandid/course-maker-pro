@@ -1,0 +1,135 @@
+/* Course Maker - Shortcode Styles
+--------------------------------------------- */
+
+/* FEATURES
+----------------------------------------------------------------------------- */
+.features {
+  position: relative;
+}
+
+.features > .wrap > .widget:first-child .widget-title {
+  font-size: 48px;
+  font-size: 4.8rem;
+  letter-spacing: 3px;
+}
+
+.features .wp-block-columns.featured {
+  margin-top: 40px;
+}
+
+.features .wp-block-columns.featured .widget-wrap {
+  display: flex;
+  height: 100%;
+}
+
+.features .display-posts-listing {
+  display: flex;
+  flex-direction: column;
+  @include media($screen--m){
+      flex-direction: row;
+  }
+  margin-left: 0;
+}
+
+.features .display-posts-listing .cm-featured-post {
+    list-style-type: none;
+    position: relative;
+    width: 96%;
+    background: transparent;
+    margin: 0 2% 30px 2%;
+    padding: 0;
+}
+
+.features .display-posts-listing .cm-featured-post > .widget-wrap {
+    text-align: center;
+    height: 100%;
+    display: flex;
+}
+
+.features .display-posts-listing .cm-featured-post article {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features .display-posts-listing .cm-featured-post article.entry {
+  padding: 0;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article > .stripe {
+  display: block;
+  content: " ";
+  width: 1%;
+  height: 8px;
+  margin: 0 auto;
+  background-color: #4a6054;
+  opacity: 0;
+  transition: all .3s ease-out;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article:hover > .stripe {
+  width: 100%;
+  opacity: 1;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article > .wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 0px transparent;
+  transition: all .5s ease-out;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article:hover > .wrapper {
+  background: white;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article a.link-has-image {
+  margin-bottom: 0;
+  display: block;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article a.link-has-image img {
+  display: block;
+  width: 100%;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-header,
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-content {
+  padding: 10px 20px;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-header .entry-title {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-header .entry-title,
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-header .entry-title a {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-header .entry-title a:hover {
+  color: #4a6054;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-content {
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-content a.more-link {
+  display: table;
+  margin: 20px auto 0 0;
+}
+
+.features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-content a.more-link::after {
+  display: none;
+}

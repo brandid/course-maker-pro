@@ -1,0 +1,224 @@
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Entries
+--------------------------------------------- */
+
+.entry {
+  // background-color: $white;
+  padding: 30px;
+  margin-bottom: 5%;
+  @include media($screen--s1) {
+    margin-bottom: 40px;
+  }
+}
+
+.full-width-content .entry {
+  padding: 30px;
+  @include media($screen--768) {
+    // padding: 30px 70px;
+  }
+}
+
+.entry-content ol,
+.entry-content ul {
+  margin-bottom: 28px;
+  margin-left: 40px;
+}
+
+.entry-content ol > li {
+  list-style-type: decimal;
+}
+
+.entry-content ul > li {
+  list-style-type: disc;
+}
+
+.entry-content ol ol,
+.entry-content ul ul {
+  margin-bottom: 0;
+}
+
+.entry-content code {
+  // background-color: $base-text-color;
+  // color: $background-color;
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+  display: none;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+  margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+  border-top: 1px solid $background-color;
+  padding-top: 24px;
+}
+
+.entry-categories,
+.entry-tags {
+  display: block;
+}
+
+// .entry-comments-link::before {
+//   content: "\2014";
+//   margin: 0 6px 0 2px;
+// }
+.entry-comments-link {
+  font-family: $accent-font;
+}
+/* ## Pagination
+--------------------------------------------- */
+
+.pagination {
+  clear: both;
+  margin: 5% auto;
+  @include media($screen--s1) {
+    margin: 40px 0;
+  }
+}
+
+.adjacent-entry-pagination {
+  margin-bottom: 0;
+}
+
+.archive-pagination li {
+  display: inline;
+}
+
+.archive-pagination a {
+  background-color: $white;
+  color: $base-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.archive-pagination .active a,
+.archive-pagination a:focus,
+.archive-pagination a:hover {
+  color: $white;
+}
+
+.archive-pagination li a {
+  margin-bottom: 4px;
+  @include media($screen--s1) {
+    margin-bottom: 0;
+  }
+}
+
+/* ## Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+  background-color: $soft-white;
+  font-size: 16px;
+  padding: 30px;
+  margin-bottom: 5%;
+  @include media($screen--s1) {
+    margin-bottom: 40px;
+  }
+
+}
+
+.comment-respond,
+.entry-pings {
+  padding: 60px 60px 32px;
+}
+
+.entry-comments {
+  padding: 60px;
+}
+
+.comment-list li {
+  padding: 40px 0 0 30px;
+}
+
+.comment-list .depth-1 {
+  padding-left: 0;
+}
+
+.comment-header {
+  margin-bottom: 30px;
+}
+
+.comment-content {
+  clear: both;
+}
+
+.comment-content ul > li {
+  list-style-type: disc;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+  width: 100%;
+  @include media($screen--m) {
+    width: 50%;
+  }
+}
+
+.comment-respond label {
+  display: block;
+  margin-right: 12px;
+}
+
+.comment-form-cookies-consent label {
+  display: inline;
+  margin-left: 12px;
+}
+
+.comment-header p {
+  margin-bottom: 0;
+}
+
+.entry-pings .reply {
+  display: none;
+}
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+  font-size: 16px;
+  margin-bottom: 5%;
+  @include media($screen--s1) {
+    margin-bottom: 40px;
+  }
+  .widget {
+    background-color: $white;
+    padding: 30px 20px;
+    margin-bottom: 5%;
+    border-top: 1px solid;
+    @include media($screen--s1) {
+      padding: 40px 20px;
+      margin-bottom: 0;
+    }
+    li a {
+        text-decoration: underline;
+    }
+    li a:hover {
+        text-decoration: none;
+    }
+  }
+  .widget:first-of-type {
+      border-top: none;
+  }
+  .widget.user-profile .avatar {
+      border-radius: 0;
+  }
+}

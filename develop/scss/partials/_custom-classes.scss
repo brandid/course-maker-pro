@@ -1,0 +1,39 @@
+/*
+Custom Classes - for custom class styles
+---------------------------------------------------------------------------------------------------- */
+img.circle {
+	border-radius: 50%;
+}
+
+.dn-subtitle p {
+  font-size: $base-font-size + 2;
+  @include media($screen--m) {
+    font-size: $base-font-size + 4;
+  }
+}
+
+.widget_sp_image-image-link {
+  border-bottom: 1px solid transparent;
+  transition: none;
+}
+
+.link-has-image {
+  border-bottom: 1px solid transparent;
+}
+
+.alignleft.center-mobile,
+.alignright.center-mobile {
+  @include media($screen--phone) {
+    display: block;
+    float: none;
+    margin: 0 auto 24px;
+  }
+}
+
+.more-link:after {
+  content: "\00a0 >>";
+  position: absolute;
+  height: 20px;
+  width: 25px;
+  color: inherit;
+}

@@ -1,0 +1,29 @@
+/* Buttons
+--------------------------------------------- */
+.content .wp-block-button.alignleft,
+.content .wp-block-button.alignright {
+	float: none;
+}
+
+.content .wp-block-button .wp-block-button__link {
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    text-decoration: none;
+	text-align: center;
+	white-space: normal;
+	width: auto;
+}
+
+.content .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+	border: 0 !important;
+}
+
+.content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover {
+	color: #fff;
+}

@@ -1,0 +1,103 @@
+// Colors
+//------------------------------------------------------------------------------
+$black: #000000;
+$soft-black: #333;
+$white: #fff;
+$soft-white: #f3f1f2;
+$light-gray: #ccc;
+$med-gray: #5e6270;
+$dark-gray: #3a3d49;
+
+$main-accent-color: #616e63;
+$linksbuttons: #8e9492;
+$navtext: #717875;
+$hover: #4c4d50;
+$headerbg: #e6e5e3;
+$footerbg: #f2f1ef;
+
+$headerfooter-bg-color: #e6e5e3;
+$main-text-color: #616169;
+$homepage-textwidget-bg-color: $main-accent-color;
+$button-bg-color: $linksbuttons;
+$button-hover-bg-color: $hover;
+
+// $base-color-1: #45c085; // Background color of buttons and link text color
+// $base-color-2: #676767; // Header and Footer Background
+// $base-color-3: #474b57; // Testimonial Background
+// $base-color-4: #965223; // Footer Widget 1 Background
+// $base-color-5: #ffffff; // Menu color and text color on images
+// $base-color-6: #45c085; // Menu Hover
+// $base-color-7: #3f3f3e; // Button Hover
+
+// Background colors
+//------------------------------------------------------------------------------
+$background-color: $white;
+$medium-background-color: #e7e5e7;
+
+// Menu item colors
+//------------------------------------------------------------------------------
+// $menu-color: $base-color-5;
+// $menu-color--hover: $base-color-6;
+// $sub-menu-color: $base-color-5;
+// $sub-menu-background: $base-color-1;
+
+// Base colors for text and links
+//------------------------------------------------------------------------------
+$base-text-color: $soft-black;
+
+// Screen Widths
+//------------------------------------------------------------------------------
+$max-width: 1280px; // Global Screen Sizes
+$small1-screen: 320px;
+$tablet-screen: 768px;
+$small2-screen: 861px;
+$medium-screen: 1023px;
+$large-screen: 1200px;
+$xl-screen: 1341px;
+$xxl-screen: 1600px;
+
+// Global Breakpoints
+//------------------------------------------------------------------------------
+$screen--s1: new-breakpoint(min-width $small1-screen 4); // 320px
+$screen--s2: new-breakpoint(min-width $small2-screen 6); // 861px
+$screen--m: new-breakpoint(min-width $medium-screen 12); // 1023px
+$screen--l: new-breakpoint(min-width $large-screen 12);
+$screen--xl: new-breakpoint(min-width $xl-screen 12);
+$screen--xxl: new-breakpoint(min-width $xxl-screen 12);
+$screen--tablet: new-breakpoint(min-width $tablet-screen 6); // 768px
+$screen--768: new-breakpoint(min-width 768px 6);
+$screen--641: new-breakpoint(min-width 641px 6);
+$screen--phone: new-breakpoint(max-width 414px 6);
+
+// Global Max Width Settings
+//------------------------------------------------------------------------------
+$base-wrap-max-width: $max-width - 372px; // 768px;
+$wrap-max-width-medium: $max-width - 180px; // 960px
+$wrap-max-width-large: $max-width;
+
+// Global Font Families
+//------------------------------------------------------------------------------
+$sans-serif: 'Questrial';
+$accent-font: 'Questrial';
+$mono: 'Courier 10 Pitch', Courier, monospace; // Base Font Families
+
+// Base Typography
+//------------------------------------------------------------------------------
+$html-font-size: 62.5%;
+$base-font-size: 18px;
+$base-font-weight: 300;
+$base-line-height: 1.625;
+$heading-line-height: 1.25;
+$heading-font-weight: 700;
+$base-font-size-smaller: 16px;
+$base-font-size-bigger: $base-font-size * 1.3;
+
+// Heading Font Properties
+//------------------------------------------------------------------------------
+$h1-font-size: 60px;
+$h2-font-size: 50px;
+$h2-font-size-smaller: $h2-font-size * 0.8;
+$h3-font-size: 42px;
+$h4-font-size: 36px;
+$h5-font-size: 24px;
+$h6-font-size: 18px;

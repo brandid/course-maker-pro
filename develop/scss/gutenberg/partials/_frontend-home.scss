@@ -1,0 +1,30 @@
+/* HOMEPAGE ONLY STYLES
+------------------------------------------------------------------------- */
+
+.home .welcome p {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media($screen--m) {
+        font-size: 20px;
+        max-width: 800px;
+    }
+}
+
+.home .welcome p.has-huge-font-size {
+    font-size: 32px;
+    @include media($screen--m) {
+        font-size: 60px;
+        max-width: 900px;
+    }
+}
+
+.home .welcome p.has-large-font-size {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+    @include media($screen--m) {
+        font-size: 32px;
+        max-width: 800px;
+    }
+}

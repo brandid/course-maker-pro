@@ -1,0 +1,29 @@
+/* Course Maker - Custom MemberPress Styles
+----------------------------------------------------------------------------- */
+.mp_wrapper .mp-form-row {
+	margin-bottom: 30px;
+}
+
+.mepr-account-form .mp-form-row.mepr_email {
+	margin-bottom: 10px;
+}
+
+.mp_wrapper input[type="submit"]:hover {
+	background-color: #ccc;
+	color: #333;
+}
+
+.cc-error {
+	font-size: 12px;
+}
+
+.mepr-payment-method {
+	margin-bottom: 30px;
+}
+
+.mepr-payment-method-icon {
+	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+	margin-left: 10px;
+}
