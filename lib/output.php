@@ -13,7 +13,7 @@
 add_action( 'wp_enqueue_scripts', 'course_maker_frontpage_customizer_css' );
 function course_maker_frontpage_customizer_css() {
 
-	$handle = 'course-maker';
+	$handle = 'course-maker-pro';
 
 	$css = '';
 

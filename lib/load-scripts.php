@@ -11,7 +11,7 @@
 add_action( 'wp_enqueue_scripts', 'course_maker_enqueue_scripts_styles' );
 function course_maker_enqueue_scripts_styles() {
 
-	$handle = 'course-maker';
+	$handle = 'course-maker-pro';
 
 	wp_enqueue_style( $handle , CHILD_THEME_URI . "/style.css", false, CHILD_THEME_VERSION );
 

@@ -55,7 +55,7 @@ function course_maker_custom_lifterlms_css() {
 add_action( 'wp_enqueue_scripts', 'course_maker_lifterlms_color_css' );
 function course_maker_lifterlms_color_css(){
 
-    $handle = 'course-maker';
+    $handle = 'course-maker-pro';
 
 	// Load the selected theme colors - from helper-functions.php
 	$color = get_course_maker_theme_colors( 'custom' );

@@ -75,7 +75,7 @@ function course_maker_color_settings() {
 
 	// 'COLOR OPTIONS' SECTION
 	$wp_customize->add_section( 'color_options_section', array(
-		'title' => __( 'Color Scheme', 'course-maker' ),
+		'title' => __( 'Color Scheme', 'course-maker-pro' ),
 		'priority' => 40,
 	));
 
@@ -96,7 +96,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_accentcolor_setting',
 			array(
-				'label'       => __( 'Main Accent Color', 'course-maker' ),
+				'label'       => __( 'Main Accent Color', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_accentcolor_setting',
 			)
@@ -117,7 +117,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_navtext_setting',
 			array(
-				'label'       => __( 'Navigation Text in Header / Footer', 'course-maker' ),
+				'label'       => __( 'Navigation Text in Header / Footer', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_navtext_setting',
 			)
@@ -138,7 +138,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_linksbuttons_setting',
 			array(
-				'label'       => __( 'Text Links / Buttons', 'course-maker' ),
+				'label'       => __( 'Text Links / Buttons', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_linksbuttons_setting',
 			)
@@ -159,7 +159,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_hover_setting',
 			array(
-				'label'       => __( 'Text Links / Buttons Hover', 'course-maker' ),
+				'label'       => __( 'Text Links / Buttons Hover', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_hover_setting',
 			)
@@ -180,7 +180,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_headerbg_setting',
 			array(
-				'label'       => __( 'Header Background', 'course-maker' ),
+				'label'       => __( 'Header Background', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_headerbg_setting',
 			)
@@ -201,7 +201,7 @@ function course_maker_color_settings() {
 			$wp_customize,
 			'course_maker_theme_footerbg_setting',
 			array(
-				'label'       => __( 'Footer Background', 'course-maker' ),
+				'label'       => __( 'Footer Background', 'course-maker-pro' ),
 				'section'     => 'color_options_section',
 				'settings'    => 'course_maker_theme_footerbg_setting',
 			)

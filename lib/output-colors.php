@@ -23,7 +23,7 @@ function load_course_maker_color_css() {
  */
 function course_maker_color_css( $selected_scheme ) {
 
-	$handle = 'course-maker';
+	$handle = 'course-maker-pro';
 
 	// Load the selected theme colors - from helper-functions.php
 	$color = get_course_maker_theme_colors( $selected_scheme );
