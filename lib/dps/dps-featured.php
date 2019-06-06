@@ -1,13 +1,18 @@
 <?php
 
-//* Get the content excerpt
-$original_content = get_the_excerpt();
-
-// Number of chars to show - set in Genesis Settings
+// Get the number of chars to show - set in Genesis Settings
 $char_limit = (int) genesis_get_option( 'content_archive_limit' );
+
+// If char limit setting is not assigned, set a default
+if ( empty( $char_limit ) ) {
+    $char_limit = 140;
+}
 
 // String to append after trimmed chars
 $append_string = '...';
+
+// Get the content excerpt
+$original_content = get_the_excerpt();
 
 // If content is less than or equal to char length, append_string should be empty
 if ( strlen( $original_content ) <= $char_limit ) {
