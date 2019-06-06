@@ -59,6 +59,15 @@ return array(
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'content-sidebar' ),
 		),
+		'blog' => array(
+			'post_title'     => 'Blog',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog.php',
+			'post_type'      => 'page',
+			'post_status'    => 'publish',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
 		'contact' => array(
 			'post_title'     => 'Contact',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/contact.php',
