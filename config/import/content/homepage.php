@@ -28,7 +28,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","textColor":"white"} -->
-<p style="text-align:center" class="has-text-color has-white-color">This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating than you're an authority in your space, without actually saying that -- unless you want it to!</p>
+<p style="text-align:center" class="has-text-color has-white-color">This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you're an authority in your space, without actually saying that -- unless you want it to!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"textColor":"white","align":"center","className":"is-style-squared target-blank"} -->
@@ -37,12 +37,16 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":8,"containerPaddingBottom":5,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":900,"containerBackgroundColor":"#e6e4e3"} -->
-<div style="background-color:#e6e4e3;padding-left:8%;padding-right:8%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:900px"><!-- wp:paragraph {"align":"right"} -->
-<p style="text-align:right">Take a look at this example of the Course Maker theme by brandiD, built exclusively for the Genesis Framework. We like it so much, we use it to market our own Personal Branding class.</p>
+<div style="background-color:#e6e4e3;padding-left:8%;padding-right:8%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:900px"><!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
+<p style="text-align:center" class="has-medium-font-size">The Course Maker Pro theme, built exclusively for the Genesis framework, is packed full of features and functionality to help you market your new online course. </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"align":"right","className":"is-style-squared wp-video-lightbox"} -->
-<div class="wp-block-button alignright is-style-squared wp-video-lightbox"><a class="wp-block-button__link" href="https://www.youtube.com/watch?v=YbRubFUmAtc">Watch Video</a></div>
+<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
+<p style="text-align:center" class="has-medium-font-size">We like the theme so much, we use it for our own personal branding course!</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:button {"align":"center","className":"is-style-squared wp-video-lightbox"} -->
+<div class="wp-block-button aligncenter is-style-squared wp-video-lightbox"><a class="wp-block-button__link" href="https://www.youtube.com/watch?v=YbRubFUmAtc">Watch Video</a></div>
 <!-- /wp:button --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
@@ -96,7 +100,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p style="text-align:center">Over the past six years I've been reading, researching and culling some of the best and exercises from some of the greatest minds out there. Then, I combined all that collective wisdom with practices that I've developed to help me build my business. The outcome of all that intellect is wrapped into a framework that I've been using successfully ever since.</p>
+<p style="text-align:center">Over the past six years I've been reading, researching and culling some of the best exercises from some of the greatest minds out there. Then, I combined all that collective wisdom with practices that I've developed to help me build my business. The outcome is wrapped into a framework that I've been using successfully ever since.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:shortcode -->
@@ -112,7 +116,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"right","textColor":"white"} -->
-<p style="text-align:right" class="has-text-color has-white-color">The <a href="https://wordpress.org/plugins/social-proof-testimonials-slider/" target="_blank" rel="noreferrer noopener">Social Proof Slider</a> by brandiD is perfect for sharing testimonials from people who have taken your course and loved it, or anyone else who has praised your business -- look at our examples.</p>
+<p style="text-align:right" class="has-text-color has-white-color">The <a href="https://wordpress.org/plugins/social-proof-testimonials-slider/" target="_blank" rel="noreferrer noopener">Social Proof Slider</a> by brandiD is perfect for sharing testimonials from people who have taken your course and loved it, or anyone else who has praised your business. Look at our examples.</p>
 <!-- /wp:paragraph --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container --></div>
 <!-- /wp:column -->
