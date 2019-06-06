@@ -10,7 +10,7 @@
  * @link    https://www.studiopress.com/
  */
 
-$course_maker_about_headshot_image_url = CHILD_URL . '/config/import/images/home-about-default.jpg';
+$course_maker_about_image_url = CHILD_URL . '/config/import/images/home-about-default.jpg';
 
 $course_maker_contact_page_url = get_bloginfo('url') . '/contact/';
 

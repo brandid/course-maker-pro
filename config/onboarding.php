@@ -55,9 +55,9 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/about.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
-			'page_template'  => 'page-templates/blocks.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'content-sidebar' ),
 		),
 		'contact' => array(
 			'post_title'     => 'Contact',
@@ -66,6 +66,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 
 		// TODO: ADD 6 SAMPLE BLOG POSTS
