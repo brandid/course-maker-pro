@@ -81,8 +81,15 @@ function course_maker_create_secondary_menu( $content, $imported_post_ids ) {
 
 }
 
-//* Create the 'Social' menu during One-Click Theme Setup
+//* OCTS: Create the 'Social' menu
 add_action( 'genesis_onboarding_after_import_content', 'course_maker_create_secondary_menu', 10, 2 );
+
+//* OCTS: Assign the Blog page
+add_action( 'genesis_onboarding_after_import_content', 'course_maker_assign_blog_page', 20, 2 );
+function course_maker_assign_blog_page( $content, $imported_post_ids ) {
+	$blogpage = get_page_by_title( 'Blog' );
+	update_option( 'page_for_posts', $blog->ID );
+}
 
 //* Add Image Sizes
 add_image_size( 'featured-image', 720, 400, true );
