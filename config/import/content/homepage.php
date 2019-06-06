@@ -79,7 +79,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p style="text-align:center">To display an Opt-in form, simply install your favorite Forms plugin. Then, replace this text with your Form Shortcode or Block.</p>
+<p style="text-align:center"><strong><em>To display an Opt-in form, simply install your favorite Forms plugin. Then, replace this text with your Form Shortcode or Block.</em></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
