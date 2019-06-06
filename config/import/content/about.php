@@ -15,16 +15,28 @@ $course_maker_about_image_url = CHILD_URL . '/config/import/images/home-about-de
 $course_maker_contact_page_url = get_bloginfo('url') . '/contact/';
 
 return <<<CONTENT
-<!-- wp:image {"id":555,"linkDestination":"custom"} -->
-<figure class="wp-block-image"><a href="https://www.youtube.com/watch?v=YbRubFUmAtc" rel="wp-video-lightbox"><img src="$course_maker_about_image_url" alt="" class="wp-image-555"/></a></figure>
+<!-- wp:heading {"level":3} -->
+<h3><strong>About the Course</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Use this section to give visitors a deeper look into the details of your must-take course. Start with a high-level overview of what your class will teach them and why it’s unmissable. Then, get into the nitty gritty. Consider sharing information about your framework or process, explain how participants can use what they learn, and outline the benefits they’ll experience thanks to your course. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3><strong>About the Instructor, Rachel Gogos</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":1,"linkDestination":"custom"} -->
+<figure class="wp-block-image"><a href="https://www.youtube.com/watch?v=YbRubFUmAtc" rel="wp-video-lightbox"><img src="$course_maker_about_image_url" alt="" class="wp-image-1"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat aliquet metus at fringilla. Praesent turpis enim, pellentesque sit amet aliquet id, rhoncus nec dui. Nulla quis dui nisi. Morbi convallis, ante sed aliquam rutrum, massa elit fermentum eros, sed eleifend leo dui sit amet sem. Proin enim purus, ultricies non suscipit a, imperdiet a turpis.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Pellentesque at magna et turpis accumsan posuere. In maximus orci enim, id tincidunt massa ultrices eget. Donec mauris ex, scelerisque ac nisi in, tempus tincidunt arcu. Ut semper eget sapien mattis vehicula.</p>
+<p>When writing your bio, don’t hide your light under a bushel! If you’re uncomfortable tooting your own horn, pretend you’re describing someone else who is a top expert in their field. Include details that help to show off your authority, credibility, and passion for the content you’re teaching. But remember, this isn’t a straight résumé. Sprinkle in some of your personality to help visitors connect to you and trust that you’re the perfect person to teach them this topic—because you are!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"is-style-squared"} -->
