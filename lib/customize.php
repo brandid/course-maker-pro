@@ -119,6 +119,27 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
+	// DISABLE BLOG CATEGORIES SETTING
+	$wp_customize->add_setting('disable_blog_categories', array(
+			'default'    => false,
+			'type'     => 'theme_mod',
+			'sanitize_callback' => 'course_maker_sanitize_checkbox',
+	));
+
+	// DISABLE BLOG CATEGORIES CONTROL
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'disable_blog_categories',
+			array(
+				'label'     => __( 'Disable Blog Categories List', 'coursemaker' ),
+				'section'   => 'coursemakerpro_settings',
+				'settings'  => 'disable_blog_categories',
+				'type'      => 'checkbox',
+			)
+		)
+	);
+
 }
 
 /**

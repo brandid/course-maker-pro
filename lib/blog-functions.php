@@ -225,6 +225,12 @@ function course_maker_blog_header_output() {
 
 	// Get Customizer settings
 	$disable_blog_carousel = get_theme_mod( 'disable_blog_carousel', false );
+	$disable_blog_categories = get_theme_mod( 'disable_blog_categories', false );
+
+	// Exit if both "disable" Customizer settings are set
+	if ( $disable_blog_carousel && $disable_blog_categories ) {
+		return;
+	}
 
     // Start Output Buffering
     ob_start();
@@ -248,11 +254,14 @@ function course_maker_blog_header_output() {
 
     /* Categories list
     ----------------------------------------- */
-    /* TODO: MAKE THIS ENABLED/DISABLED WITH A CUSTOMIZER SETTING */
 
-    $categories_list = course_maker_output_category_list();
+	if ( !$disable_blog_categories ) {
 
-    echo $categories_list;
+	    $categories_list = course_maker_output_category_list();
+
+	    echo $categories_list;
+
+	}
 
     /* Close full-width container
     ----------------------------------------- */
