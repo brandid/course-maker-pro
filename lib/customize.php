@@ -68,31 +68,52 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	/* GENERAL SETTINGS
+	/* COURSE MAKER PRO SETTINGS
 	------------------------------------------------------------------------- */
 
-	// HEADER SETTINGS PANEL
-	$wp_customize->add_section('header_settings' , array(
-			'title'     => __( 'General Settings', 'coursemaker' ),
+	// SETTINGS PANEL
+	$wp_customize->add_section('coursemakerpro_settings' , array(
+			'title'     => __( 'Course Maker Pro Settings', 'coursemaker' ),
 			'priority'  => 30,
 	));
 
-	// FIXED HEADER OFF SETTING
+	// STICKY HEADER OFF SETTING
 	$wp_customize->add_setting('fixed_header_off', array(
 			'default'    => false,
 			'type'     => 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
-	// FIXED HEADER OFF CONTROL
+	// STICKY HEADER OFF CONTROL
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
 			'fixed_header_off',
 			array(
 				'label'     => __( 'Turn off Sticky Header on Desktop (allow header to scroll)', 'coursemaker' ),
-				'section'   => 'header_settings',
+				'section'   => 'coursemakerpro_settings',
 				'settings'  => 'fixed_header_off',
+				'type'      => 'checkbox',
+			)
+		)
+	);
+
+	// DISABLE BLOG CAROUSEL SETTING
+	$wp_customize->add_setting('disable_blog_carousel', array(
+			'default'    => false,
+			'type'     => 'theme_mod',
+			'sanitize_callback' => 'course_maker_sanitize_checkbox',
+	));
+
+	// DISABLE BLOG CAROUSEL CONTROL
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'disable_blog_carousel',
+			array(
+				'label'     => __( 'Disable Featured Articles Carousel', 'coursemaker' ),
+				'section'   => 'coursemakerpro_settings',
+				'settings'  => 'disable_blog_carousel',
 				'type'      => 'checkbox',
 			)
 		)

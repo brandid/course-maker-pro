@@ -223,6 +223,9 @@ function course_maker_blog_header_output() {
         return;
 	}
 
+	// Get Customizer settings
+	$disable_blog_carousel = get_theme_mod( 'disable_blog_carousel', false );
+
     // Start Output Buffering
     ob_start();
 
@@ -234,11 +237,14 @@ function course_maker_blog_header_output() {
 
     /* Featured Articles slider
     ----------------------------------------- */
-    /* TODO: MAKE THIS ENABLED/DISABLED WITH A CUSTOMIZER SETTING */
 
-    $featured_articles_items = course_maker_show_featured_articles();
+	if ( !$disable_blog_carousel ) {
 
-    echo $featured_articles_items;
+	    $featured_articles_items = course_maker_show_featured_articles();
+
+	    echo $featured_articles_items;
+
+	}
 
     /* Categories list
     ----------------------------------------- */
