@@ -3043,10 +3043,6 @@ img.circle {
   .admin-bar .site-container{
     min-height: calc(100vh - 32px);
   }
-  .site-inner,
-  .wrap{
-    width: 1040px;
-  }
   .wrap{
     padding-left: 3%;
     padding-right: 3%;
@@ -3057,6 +3053,7 @@ img.circle {
   }
   .site-inner{
     padding: 40px;
+    padding-bottom: 0;
   }
   .home.no-featured-section .site-inner{
     margin-top: 220px;

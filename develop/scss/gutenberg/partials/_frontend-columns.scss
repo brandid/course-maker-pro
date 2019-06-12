@@ -13,7 +13,7 @@
     padding: 0 60px;
 	@include media($screen--m){
 		padding: 0 30px;
-	} 
+	}
 }
 
 .home .entry-content .wp-block-columns.alignfull {
@@ -41,7 +41,7 @@
 	margin-left: 0;
     @include media($screen--m){
         flex: 1;
-		margin-left: 15px;
+		// margin-left: 15px;
 		margin-right: 15px;
     }
 }
@@ -51,7 +51,7 @@
     @include media($screen--m){
         flex: 1;
 		margin-left: 15px;
-		margin-right: 15px;
+		// margin-right: 15px;
     }
 }
 

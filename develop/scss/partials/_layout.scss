@@ -25,7 +25,7 @@
       width: 100%;
   }
   @include media($screen--m) {
-    width: 1040px;
+    // width: 1040px;
   }
   @include media($screen--l) {
     width: 1200px;
@@ -77,6 +77,7 @@
   word-wrap: break-word;
   @include media($screen--m) {
     padding: 40px;
+    padding-bottom: 0;
   }
   @include media($screen--l) {
     // padding-top: 160px;
@@ -169,7 +170,7 @@ body.content-sidebar .site-inner > #container {
 }
 
 body.content-sidebar .site-inner > #container {
-    padding-top: 30px; 
+    padding-top: 30px;
 }
 
 .content-sidebar .sidebar-primary {
