@@ -7,24 +7,14 @@
 * @package Course Maker Pro
 */
 
-//* Add custom body classes
-function course_maker_archive_body_classes( $classes ) {
+add_filter( 'genesis_pre_get_option_site_layout', 'course_maker_force_fullwidth_layout' );
+function course_maker_force_fullwidth_layout( $opt ) {
 
 	if ( is_archive() ) {
-
-        $classes[] = 'full-width-content';
-
-        // The classes you wish to remove
-        $blacklist = array( 'content-sidebar' );
-
-        // Remove classes from array
-        $classes = array_diff( $classes, $blacklist );
-
+		return 'full-width-content';
 	}
 
-	return $classes;
 }
-add_filter( 'body_class', 'course_maker_archive_body_classes', 20, 1 );
 
 //* Function to output <ul> list of Blog Post Categories
 function course_maker_output_category_list() {

@@ -5,12 +5,14 @@
 * @package Course Maker Pro
 */
 
-//* If 'Course Sidebar' has widgets, change body class on Archive pages
+//* If 'Course Sidebar' has widgets, change body class on LifterLMS Course Catalog page
 add_filter( 'body_class', 'course_maker_lifterlms_sidebar_body_class', 90 );
 function course_maker_lifterlms_sidebar_body_class( $classes ) {
 
-    // If this is an Archive query
-    if ( is_archive() ) {
+    // If this is the LifterLMS Course Catalog page
+    if ( is_courses() ) {
+
+        $classes[] = 'lifterlms-course-catalog';
 
         // If the 'Course Sidebar' is active
         if ( is_active_sidebar( 'llms_course_widgets_side' ) ) {
