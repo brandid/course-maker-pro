@@ -737,6 +737,7 @@ Accessibility Support
 .home .site-inner {
   max-width: 100%;
   width: 100% !important;
+  padding-top: 0;
 }
 
 .home.home-widgets-inactive .site-inner {
