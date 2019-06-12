@@ -93,7 +93,7 @@ return array(
 			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-2.php',
 			'post_type'		 => 'post',
 			'post_status'	 => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeremy Bishop on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
