@@ -120,11 +120,11 @@ msgstr ""
 msgid "Featured Article"
 msgstr ""
 
-#: lib/blog-functions.php:288
+#: lib/blog-functions.php:303
 msgid "New Articles"
 msgstr ""
 
-#: lib/blog-functions.php:393
+#: lib/blog-functions.php:408
 msgid "Learn More"
 msgstr ""
 
@@ -141,11 +141,19 @@ msgid "Show Logo Image"
 msgstr ""
 
 #: lib/customize.php:76
-msgid "General Settings"
+msgid "Course Maker Pro Settings"
 msgstr ""
 
 #: lib/customize.php:93
 msgid "Turn off Sticky Header on Desktop (allow header to scroll)"
+msgstr ""
+
+#: lib/customize.php:114
+msgid "Disable Featured Articles Carousel"
+msgstr ""
+
+#: lib/customize.php:135
+msgid "Disable Blog Categories List"
 msgstr ""
 
 #: lib/load-scripts.php:50
@@ -156,7 +164,7 @@ msgstr ""
 msgid "Submenu"
 msgstr ""
 
-#: lib/theme-setup.php:94
+#: lib/theme-setup.php:147
 msgid "Featured Image"
 msgstr ""
 

@@ -77,8 +77,67 @@ return array(
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
-
-		// TODO: ADD 6 SAMPLE BLOG POSTS
+		// SAMPLE BLOG POSTS
+		'Sample Blog Post 1' => array(
+			'post_title'	 => 'Five Important Things You Should Know About Courses',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-1.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
+		'Sample Blog Post 2' => array(
+			'post_title'	 => 'This Year Will Be The Year of Your Course',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-2.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeremy Bishop on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
+		'Sample Blog Post 3' => array(
+			'post_title'	 => 'Ten Things Your Competitors Know About Courses',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-3.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
+		'Sample Blog Post 4' => array(
+			'post_title'	 => 'Innovative Approaches To Improving Your Courses',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-4.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
+		'Sample Blog Post 5' => array(
+			'post_title'	 => 'The Crucial Step in Courses that Many Overlook',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-5.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
+		'Sample Blog Post 6' => array(
+			'post_title'	 => 'Three Tricks to Putting Your Courses into Overdrive',
+			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-6.php',
+			'post_type'		 => 'post',
+			'post_status'	 => 'publish',
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+		),
 	),
 	'navigation_menus' => array(
 		// Header Navigation

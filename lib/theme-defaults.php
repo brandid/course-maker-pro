@@ -18,11 +18,12 @@ add_filter( 'genesis_theme_settings_defaults', 'course_maker_theme_defaults' );
 function course_maker_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 6;
-	$defaults['content_archive']           = 'full';
-	$defaults['content_archive_limit']     = 0;
-	$defaults['content_archive_thumbnail'] = 0;
+	$defaults['content_archive']           = 'excerpts';
+	$defaults['content_archive_limit']     = 140;
+	$defaults['content_archive_thumbnail'] = 1;
+	$defaults['image_alignment']           = 'aligncenter';
 	$defaults['posts_nav']                 = 'numeric';
-	$defaults['site_layout']               = 'content-sidebar';
+	$defaults['site_layout']               = 'full-width-content';
 
 	return $defaults;
 
@@ -40,11 +41,12 @@ function course_maker_theme_setting_defaults() {
 
 		genesis_update_settings( array(
 			'blog_cat_num'              => 6,
-			'content_archive'           => 'full',
-			'content_archive_limit'     => 0,
-			'content_archive_thumbnail' => 0,
+			'content_archive'           => 'excerpts',
+			'content_archive_limit'     => 140,
+			'content_archive_thumbnail' => 1,
+			'image_alignment'			=> 'aligncenter',
 			'posts_nav'                 => 'numeric',
-			'site_layout'               => 'content-sidebar',
+			'site_layout'               => 'full-width-content',
 		) );
 
 	}
