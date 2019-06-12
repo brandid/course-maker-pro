@@ -21,4 +21,15 @@
     // Add a custom class to the 'Leave a Reply' section on Single Posts
     $(".comment-respond").addClass("alignfull");
 
+    // LIFTERLMS - Grid Style
+    // On Course Syllabus page, wrap all Lessons sections in a div
+    $('.llms-syllabus-wrapper > h3+div, .llms-syllabus-wrapper > h3+div:first-of-type').
+        each(function() {
+            $(this).
+            nextUntil('h3').
+            addBack().
+            wrapAll('<div class="alignfull"><div class="lessons grid-style"></div></div>');
+        }
+    );
+
 })(jQuery);

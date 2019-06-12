@@ -1,7 +1,7 @@
 /* Course Maker - Custom LifterLMS Styles
 ----------------------------------------------------------------------------- */
 .course .llms-meta-info {
-    margin-bottom: 40px;
+    margin: 60px auto;
 }
 
 .course .llms-meta-title,
@@ -87,6 +87,8 @@
     opacity: 0.5;
 }
 
+/* SYLLABUS
+--------------------------------------------- */
 .llms-syllabus-wrapper {
     margin-top: 60px;
 }
@@ -157,4 +159,67 @@
 .llms-lesson-link-locked,
 .llms-lesson-link-locked:hover {
     box-shadow: none !important;
+}
+
+/* GRID STYLE
+--------------------------------------------- */
+.llms-syllabus-wrapper .lessons.grid-style {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
+    width: 100%;
+    flex-basis: 29.333%;
+    flex-grow: 1;
+    margin: 0 2% 30px 2%;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a > * {
+    width: 100%;
+    float: none !important;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a > .llms-extra {
+    flex-basis: 60px;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a > .llms-extra > .llms-lesson-complete {
+    margin-bottom: 0;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a > .llms-main {
+    flex-basis: calc( 100% - 60px );
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > a > .clear {
+    display: none;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
+        flex-basis: 46%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
+        flex-basis: 96%;
+    }
+
 }
