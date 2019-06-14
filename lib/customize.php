@@ -77,68 +77,68 @@ function course_maker_customizer_register( $wp_customize ) {
 			'priority'  => 30,
 	));
 
-	// STICKY HEADER OFF SETTING
-	$wp_customize->add_setting('fixed_header_off', array(
+	// STICKY HEADER SETTING
+	$wp_customize->add_setting('sticky_header', array(
 			'default'    => false,
 			'type'     => 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
-	// STICKY HEADER OFF CONTROL
+	// STICKY HEADER CONTROL
 	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'fixed_header_off',
-			array(
-				'label'     => __( 'Turn off Sticky Header on Desktop (allow header to scroll)', 'coursemaker' ),
-				'section'   => 'coursemakerpro_settings',
-				'settings'  => 'fixed_header_off',
-				'type'      => 'checkbox',
-			)
-		)
-	);
+        new Course_Maker_Toggle_Control(
+            $wp_customize,
+            'sticky_header',
+            array(
+                'label'         => __( 'Sticky Header', 'coursemaker' ),
+                'section'       => 'coursemakerpro_settings',
+                'settings'      => 'sticky_header',
+                'description'   => __( 'Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices.', 'coursemaker' )
+            )
+        )
+    );
 
-	// DISABLE BLOG CAROUSEL SETTING
-	$wp_customize->add_setting('disable_blog_carousel', array(
+	// BLOG CAROUSEL SETTING
+	$wp_customize->add_setting('enable_blog_carousel', array(
 			'default'    => false,
 			'type'     => 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
-	// DISABLE BLOG CAROUSEL CONTROL
+	// BLOG CAROUSEL CONTROL
 	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'disable_blog_carousel',
-			array(
-				'label'     => __( 'Disable Featured Articles Carousel', 'coursemaker' ),
-				'section'   => 'coursemakerpro_settings',
-				'settings'  => 'disable_blog_carousel',
-				'type'      => 'checkbox',
-			)
-		)
-	);
+        new Course_Maker_Toggle_Control(
+            $wp_customize,
+            'enable_blog_carousel',
+            array(
+                'label'         => __( 'Blog "Featured Articles" Slider', 'coursemaker' ),
+                'section'       => 'coursemakerpro_settings',
+                'settings'      => 'enable_blog_carousel',
+                'description'   => __( 'Enable or Disable the Featured Articles Carousel Slider on the Blog Archive pages.', 'coursemaker' )
+            )
+        )
+    );
 
-	// DISABLE BLOG CATEGORIES SETTING
-	$wp_customize->add_setting('disable_blog_categories', array(
+	// BLOG CATEGORIES SETTING
+	$wp_customize->add_setting('enable_blog_categories', array(
 			'default'    => false,
 			'type'     => 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
-	// DISABLE BLOG CATEGORIES CONTROL
+	// BLOG CATEGORIES CONTROL
 	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'disable_blog_categories',
-			array(
-				'label'     => __( 'Disable Blog Categories List', 'coursemaker' ),
-				'section'   => 'coursemakerpro_settings',
-				'settings'  => 'disable_blog_categories',
-				'type'      => 'checkbox',
-			)
-		)
-	);
+        new Course_Maker_Toggle_Control(
+            $wp_customize,
+            'enable_blog_categories',
+            array(
+                'label'         => __( 'Blog Categories List', 'coursemaker' ),
+                'section'       => 'coursemakerpro_settings',
+                'settings'      => 'enable_blog_categories',
+                'description'   => __( 'Enable or Disable the list of Blog Categories on Archive pages.', 'coursemaker' )
+            )
+        )
+    );
 
 }
 
@@ -176,5 +176,53 @@ function course_maker_sanitize_select( $input, $setting ){
 
 	//return input if valid or return default option
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+}
+
+//* On/Off Toggle Switch Controls
+if ( class_exists( 'WP_Customize_Control' ) ) {
+
+    class Course_Maker_Toggle_Control extends WP_Customize_Control {
+
+		public $type = 'light';
+
+    	public function enqueue() {
+    		wp_enqueue_style( 'course-maker-toggle-control-css', CHILD_THEME_URI . '/includes/course-maker-toggle-control.css', array(), CHILD_THEME_VERSION );
+    		$css = '
+    			.disabled-control-title {
+    				color: #a0a5aa;
+    			}
+    			input[type=checkbox].tgl-light:checked + .tgl-btn {
+    				background: #0085ba;
+    			}
+    			input[type=checkbox].tgl-light + .tgl-btn {
+    			  background: #a0a5aa;
+    			}
+    			input[type=checkbox].tgl-light + .tgl-btn:after {
+    			  background: #f7f7f7;
+    			}
+    		';
+    		wp_add_inline_style( 'course-maker-toggle-control-inline-css' , $css );
+    	}
+
+    	public function render_content() {
+    		?>
+    		<label class="customize-control-title">
+				<div style="height: 4px; margin: 0;"></div>
+    			<div style="display:flex;flex-direction: row;justify-content: flex-start;">
+    				<span class="customize-control-title" style="flex: 2 0 0; vertical-align: middle;"><?php echo esc_html( $this->label ); ?></span>
+    				<input id="cb<?php echo $this->instance_number ?>" type="checkbox" class="tgl tgl-<?php echo $this->type?>" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); checked( $this->value() ); ?> />
+    				<label for="cb<?php echo $this->instance_number ?>" class="tgl-btn"></label>
+    			</div>
+    			<?php if ( ! empty( $this->description ) ) : ?>
+    			<span class="description customize-control-description" style="margin-top: 6px;"><?php echo $this->description; ?></span>
+    			<?php endif; ?>
+				<div style="height: 4px; margin: 0;"></div>
+				<hr>
+    		</label>
+    		<?php
+    	}
+
+    }
 
 }

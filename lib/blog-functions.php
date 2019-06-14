@@ -214,11 +214,11 @@ function course_maker_blog_header_output() {
 	}
 
 	// Get Customizer settings
-	$disable_blog_carousel = get_theme_mod( 'disable_blog_carousel', false );
-	$disable_blog_categories = get_theme_mod( 'disable_blog_categories', false );
+	$enable_blog_carousel = get_theme_mod( 'enable_blog_carousel', false );
+	$enable_blog_categories = get_theme_mod( 'enable_blog_categories', false );
 
 	// Exit if both "disable" Customizer settings are set
-	if ( $disable_blog_carousel && $disable_blog_categories ) {
+	if ( !$enable_blog_carousel && !$enable_blog_categories ) {
 		return;
 	}
 
@@ -234,7 +234,7 @@ function course_maker_blog_header_output() {
     /* Featured Articles slider
     ----------------------------------------- */
 
-	if ( !$disable_blog_carousel ) {
+	if ( $enable_blog_carousel ) {
 
 	    $featured_articles_items = course_maker_show_featured_articles();
 
@@ -245,7 +245,7 @@ function course_maker_blog_header_output() {
     /* Categories list
     ----------------------------------------- */
 
-	if ( !$disable_blog_categories ) {
+	if ( $enable_blog_categories ) {
 
 	    $categories_list = course_maker_output_category_list();
 
