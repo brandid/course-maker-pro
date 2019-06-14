@@ -79,8 +79,8 @@ function course_maker_customizer_register( $wp_customize ) {
 
 	// STICKY HEADER SETTING
 	$wp_customize->add_setting('sticky_header', array(
-			'default'    => false,
-			'type'     => 'theme_mod',
+			'default'   => true,
+			'type'		=> 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
@@ -100,8 +100,8 @@ function course_maker_customizer_register( $wp_customize ) {
 
 	// BLOG CAROUSEL SETTING
 	$wp_customize->add_setting('enable_blog_carousel', array(
-			'default'    => false,
-			'type'     => 'theme_mod',
+			'default'   => true,
+			'type'     	=> 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
@@ -121,8 +121,8 @@ function course_maker_customizer_register( $wp_customize ) {
 
 	// BLOG CATEGORIES SETTING
 	$wp_customize->add_setting('enable_blog_categories', array(
-			'default'    => false,
-			'type'     => 'theme_mod',
+			'default'   => true,
+			'type'     	=> 'theme_mod',
 			'sanitize_callback' => 'course_maker_sanitize_checkbox',
 	));
 
