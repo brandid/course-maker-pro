@@ -3218,12 +3218,14 @@ img.circle {
     position: relative;
   }
   .js.home.fixed-header-on .custom-header-background .site-header{
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     background-color: transparent;
   }
   .home.fixed-header-on .site-header{
     background-color: transparent;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .site-header > .wrap{
     -ms-flex-direction: row;

@@ -6,7 +6,7 @@
   width: 100%;
   z-index: 400;
   @include media($screen--m) {
-    // position: fixed;
+    // position: sticky;
   }
 }
 
@@ -27,7 +27,7 @@
   position: relative;
   z-index: 400;
   @include media($screen--m) {
-    position: fixed;
+    position: sticky; 
     background-color: transparent;
   }
 }
@@ -36,7 +36,7 @@
 
   @include media($screen--m) {
     background-color: transparent;
-    position: fixed;
+    position: sticky;
   }
 }
 
