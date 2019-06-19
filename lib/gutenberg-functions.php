@@ -11,7 +11,7 @@
 add_action( 'wp_enqueue_scripts', 'course_maker_gutenberg_page_styles' );
 function course_maker_gutenberg_page_styles() {
 
-	wp_enqueue_style( 'coursemaker-gutenberg-frontend-styles', get_stylesheet_directory_uri() . "/css/gutenberg-frontend-styles.css", array( CHILD_THEME_HANDLE ), CHILD_THEME_VERSION );
+	wp_enqueue_style( CHILD_THEME_HANDLE . '-gutenberg-frontend-styles', get_stylesheet_directory_uri() . "/css/gutenberg-frontend-styles.css", array( CHILD_THEME_HANDLE ), CHILD_THEME_VERSION );
 
 }
 
@@ -24,11 +24,11 @@ function course_maker_gutenberg_editor_styles() {
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
 
 	// Custom Editor Styles
-	wp_enqueue_style( 'coursemaker-gutenberg-editor-styles', get_stylesheet_directory_uri() . "/css/gutenberg-editor-styles.css", array(), CHILD_THEME_VERSION, true );
+	wp_enqueue_style( CHILD_THEME_HANDLE . '-gutenberg-editor-styles', get_stylesheet_directory_uri() . "/css/gutenberg-editor-styles.css", array(), CHILD_THEME_VERSION, true );
 
 	// Add custom CSS to Gutenberg
 	require_once('output-gutenberg-editor-styles.php');
-	wp_add_inline_style( 'coursemaker-gutenberg-editor-styles', course_maker_gutenberg_editor_customizer_css_output(), 'after' );
+	wp_add_inline_style( CHILD_THEME_HANDLE . '-gutenberg-editor-styles', course_maker_gutenberg_editor_customizer_css_output(), 'after' );
 
 }
 
@@ -59,7 +59,7 @@ function coursemaker_blocks_body_classes( $classes ) {
 
 	$post_object = get_post( get_the_ID() );
 
-	$blocks      = (array) parse_blocks( $post_object->post_content );
+	$blocks = (array) parse_blocks( $post_object->post_content );
 
 	if ( isset( $blocks[0]['blockName'] ) ) {
 		$classes[] = 'first-block-' . str_replace( '/', '-', $blocks[0]['blockName'] );
