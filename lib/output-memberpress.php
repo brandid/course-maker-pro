@@ -9,22 +9,20 @@
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_memberpress_css' );
 function course_maker_custom_memberpress_css() {
 
-	$handle  = "coursemaker-memberpress-styles";
-
-	$course_maker_link_color = get_theme_mod( 'course_maker_link_color', course_maker_customizer_get_default_link_color() );
-
 	$css = '';
 
 	$css .= sprintf( '
 
-			.mp_wrapper input[type="submit"] {
-				background-color: %s;
-			}
+		.mp_wrapper input[type="submit"] {
+			background-color: %s;
+		}
 
-			', $course_maker_link_color );
+		',
+		get_course_maker_theme_colors( 'linksbuttons' )
+	);
 
 	if ( $css ) {
-		wp_add_inline_style( $handle, $css );
+		wp_add_inline_style( CHILD_THEME_HANDLE . '-memberpress-styles', $css );
 	}
 
 }

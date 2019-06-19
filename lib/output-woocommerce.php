@@ -14,43 +14,40 @@ add_filter( 'woocommerce_show_page_title', function() {
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_woocommerce_css' );
 function course_maker_custom_woocommerce_css() {
 
-	$handle  = "coursemaker-woocommerce-styles";
-
-	$course_maker_link_color = get_theme_mod( 'course_maker_link_color', course_maker_customizer_get_default_link_color() );
-
 	$css = '';
 
 	$css .= sprintf( '
+		.woocommerce #respond input#submit,
+		.woocommerce a.button,
+		.woocommerce button.button,
+		.woocommerce input.button,
+		.woocommerce input.button.woocommerce #respond input#submit.alt,
+		.woocommerce a.button.alt,
+		.woocommerce button.button.alt,
+		.woocommerce input.button.alt {
+			background-color: %s;
+		}
 
-			.woocommerce #respond input#submit,
-			.woocommerce a.button,
-			.woocommerce button.button,
-			.woocommerce input.button,
-			.woocommerce input.button.woocommerce #respond input#submit.alt,
-			.woocommerce a.button.alt,
-			.woocommerce button.button.alt,
-			.woocommerce input.button.alt {
-				background-color: %s;
-			}
+		.woocommerce div.product p.price,
+		.woocommerce div.product span.price,
+		.woocommerce-message:before,
+		.woocommerce-info:before,
+		.woocommerce-MyAccount-navigation ul li.is-active a,
+		.woocommerce-MyAccount-navigation ul li a:hover {
+			color: %s;
+		}
 
-			.woocommerce div.product p.price,
-			.woocommerce div.product span.price,
-			.woocommerce-message:before,
-			.woocommerce-info:before,
-			.woocommerce-MyAccount-navigation ul li.is-active a,
-			.woocommerce-MyAccount-navigation ul li a:hover {
-				color: %s;
-			}
+		.woocommerce-message,
+		.woocommerce-info {
+			border-top-color: %s;
+		}
 
-			.woocommerce-message,
-			.woocommerce-info {
-				border-top-color: %s;
-			}
-
-			', $course_maker_link_color );
+		',
+		get_course_maker_theme_colors( 'linksbuttons' )
+	);
 
 	if ( $css ) {
-		wp_add_inline_style( $handle, $css );
+		wp_add_inline_style( CHILD_THEME_HANDLE . '-woocommerce-styles', $css );
 	}
 
 }

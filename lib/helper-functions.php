@@ -13,42 +13,18 @@
 /**
  * Loads theme colors.
  *
- * @since  1.0.0
+ * @since  2.0.0
  *
- * @param  string $selected_scheme The selected scheme in the customizer.
+ * @param string $name Name of color to retrieve.
  *
- * @return array $color Return the array $color.
+ * @return string Hex color code for specified color.
  */
-function get_course_maker_theme_colors( $selected_scheme ) {
+function get_course_maker_theme_colors( $name ) {
 
-	if ( empty( $selected_scheme ) || null === $selected_scheme ) {
-		// Set the default theme.
-		$selected_scheme = 'custom';
-	}
+	$colors = genesis_get_config( 'color-palette' );
 
-	// Set defaults
-	$color = array();
-	$default = scheme_custom_default_colors();
+	return $colors[ $name ];
 
-	// accentcolor
-	$color['accentcolor'] = get_theme_mod( 'course_maker_theme_accentcolor_setting' ) ? get_theme_mod( 'course_maker_theme_accentcolor_setting' ) : $default['accentcolor'];
-
-	// linksbuttons
-	$color['linksbuttons'] = get_theme_mod( 'course_maker_theme_linksbuttons_setting' ) ? get_theme_mod( 'course_maker_theme_linksbuttons_setting' ) : $default['linksbuttons'];
-
-	// navtext
-	$color['navtext'] = get_theme_mod( 'course_maker_theme_navtext_setting' ) ? get_theme_mod( 'course_maker_theme_navtext_setting' ) : $default['navtext'];
-
-	// hover
-	$color['hover'] = get_theme_mod( 'course_maker_theme_hover_setting' ) ? get_theme_mod( 'course_maker_theme_hover_setting' ) : $default['hover'];
-
-	// headerbg
-	$color['headerbg'] = get_theme_mod( 'course_maker_theme_headerbg_setting' ) ? get_theme_mod( 'course_maker_theme_headerbg_setting' ) : $default['headerbg'];
-
-	// footerbg
-	$color['footerbg'] = get_theme_mod( 'course_maker_theme_footerbg_setting' ) ? get_theme_mod( 'course_maker_theme_footerbg_setting' ) : $default['footerbg'];
-
-	return $color;
 }
 
 

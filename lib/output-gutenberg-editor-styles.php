@@ -19,30 +19,6 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 	$css = '';
 
-	/* Get Main Accent Color */
-	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', '#616e63' );
-
-	/* Get Links/Buttons Color */
-	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', '#8e9492' );
-
-	/* Get Hover Color */
-	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', '#4c4d50' );
-
-	/* Get Nav Text Color */
-	$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', '#717875' );
-
-	/* Get Header BG Color */
-	$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', '#e6e5e3' );
-
-	/* Get Footer BG Color */
-	$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', '#f2f1ef' );
-
-	/* Other colors not in Customizer */
-	$color_white = '#ffffff';
-	$color_gray = '#5e6270';
-	$color_darkgray = '#464f56';
-	$color_black = '#000000';
-
 	/* Begin Custom CSS
 	------------------------------------------------------------------------- */
 	$css .= '
@@ -90,16 +66,16 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: %s !important;
 		}
 	',
-	$color_accent,
-	$color_accent,
-	$color_accent,
-	course_maker_color_contrast( $color_accent ),
-	$color_accent,
-	$color_accent,
-	course_maker_color_contrast( $color_accent ),
-	$color_accent,
-	$color_accent,
-	$color_accent
+	get_course_maker_theme_colors( 'accent' ),
+	get_course_maker_theme_colors( 'accent' ),
+	get_course_maker_theme_colors( 'accent' ),
+	course_maker_color_contrast( get_course_maker_theme_colors( 'accent' ) ),
+	get_course_maker_theme_colors( 'accent' ),
+	get_course_maker_theme_colors( 'accent' ),
+	course_maker_color_contrast( get_course_maker_theme_colors( 'accent' ) ),
+	get_course_maker_theme_colors( 'accent' ),
+	get_course_maker_theme_colors( 'accent' ),
+	get_course_maker_theme_colors( 'accent' )
 	);
 
 	/* LINKS/BUTTONS COLOR
@@ -137,12 +113,12 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: %s !important;
 		}
 	',
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons
+	get_course_maker_theme_colors( 'linksbuttons' ),
+	get_course_maker_theme_colors( 'linksbuttons' ),
+	get_course_maker_theme_colors( 'linksbuttons' ),
+	get_course_maker_theme_colors( 'linksbuttons' ),
+	get_course_maker_theme_colors( 'linksbuttons' ),
+	get_course_maker_theme_colors( 'linksbuttons' )
 	);
 
 	/* HOVER COLOR
@@ -179,12 +155,12 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: #fff !important;
 		}
 	',
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover
+	get_course_maker_theme_colors( 'hover' ),
+	get_course_maker_theme_colors( 'hover' ),
+	get_course_maker_theme_colors( 'hover' ),
+	get_course_maker_theme_colors( 'hover' ),
+	get_course_maker_theme_colors( 'hover' ),
+	get_course_maker_theme_colors( 'hover' )
 	);
 
 	/* NAV TEXT COLOR
@@ -202,8 +178,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_navtext,
-	$color_navtext
+	get_course_maker_theme_colors( 'navtext' ),
+	get_course_maker_theme_colors( 'navtext' )
 	);
 
 	/* HEADER BG COLOR
@@ -222,8 +198,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_headerbg,
-	$color_headerbg
+	get_course_maker_theme_colors( 'headerbg' ),
+	get_course_maker_theme_colors( 'headerbg' )
 	);
 
 	/* FOOTER BG COLOR
@@ -241,8 +217,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_footerbg,
-	$color_footerbg
+	get_course_maker_theme_colors( 'footerbg' ),
+	get_course_maker_theme_colors( 'footerbg' )
 	);
 
 	/* WHITE COLOR
@@ -260,8 +236,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_white,
-	$color_white
+	get_course_maker_theme_colors( 'white' ),
+	get_course_maker_theme_colors( 'white' )
 	);
 
 	/* GRAY COLOR
@@ -279,8 +255,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_gray,
-	$color_gray
+	get_course_maker_theme_colors( 'gray' ),
+	get_course_maker_theme_colors( 'gray' )
 	);
 
 	/* DARK GRAY COLOR
@@ -298,8 +274,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_darkgray,
-	$color_darkgray
+	get_course_maker_theme_colors( 'darkgray' ),
+	get_course_maker_theme_colors( 'darkgray' )
 	);
 
 	/* BLACK COLOR
@@ -317,8 +293,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_black,
-	$color_black
+	get_course_maker_theme_colors( 'black' ),
+	get_course_maker_theme_colors( 'black' )
 	);
 
 	/* OUTPUT EVERYTHING

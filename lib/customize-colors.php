@@ -6,60 +6,6 @@
  *
  * @package Course Maker Pro
  */
-function scheme_custom_default_colors() {
-	// Defaults
-	$colors['accentcolor'] = '#616e63';		// Main Accent Color
-	$colors['linksbuttons'] = '#8e9492';	// Text Links / Buttons
-	$colors['hover'] = '#4c4d50';			// Text / Button Hover
-	$colors['navtext'] = '#717875';			// Navigation Text in Header / Footer
-	$colors['headerbg'] = '#e6e5e3';		// Header BG
-	$colors['footerbg'] = '#f2f1ef';		// Footer BG
-	return $colors;
-}
-
-/**
- * Get default colors for color schemes
- */
-function get_color_defaults( $scheme, $color ) {
-
-	$colorscheme_num = $scheme;
-
-	$scheme_custom_default_colors = scheme_custom_default_colors();
-
-	$color_default = '';
-
-	if ( 'custom' === $colorscheme_num ) {
-
-		// Custom
-		switch ($color) {
-			case 'accentcolor':
-				$color_default = $scheme_custom_default_colors['accentcolor'];
-				break;
-			case 'linksbuttons':
-				$color_default = $scheme_custom_default_colors['linksbuttons'];
-				break;
-			case 'navtext':
-				$color_default = $scheme_custom_default_colors['navtext'];
-				break;
-			case 'hover':
-				$color_default = $scheme_custom_default_colors['hover'];
-				break;
-			case 'headerbg':
-				$color_default = $scheme_custom_default_colors['headerbg'] ;
-				break;
-			case 'footerbg':
-				$color_default = $scheme_custom_default_colors['footerbg'];
-				break;
-			default:
-				$color_default = '';
-				break;
-		}
-
-	}
-
-	// return default colorX for this scheme
-	return $color_default;
-}
 
 add_action( 'customize_register', 'course_maker_color_settings' );
 /**
@@ -73,20 +19,20 @@ function course_maker_color_settings() {
 
 	global $wp_customize;
 
-	// 'COLOR OPTIONS' SECTION
+	// 'COLOR PALETTE' SECTION
 	$wp_customize->add_section( 'color_options_section', array(
-		'title' => __( 'Color Scheme', 'course-maker-pro' ),
+		'title' => __( 'Color Palette', 'course-maker-pro' ),
 		'priority' => 40,
 	));
 
-	/* COLOR SCHEME
+	/* COLORS
 	========================================================================= */
 
 	/* Main Accent Color
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_accentcolor_setting', array(
-		'default' => get_color_defaults( 'custom','accentcolor' ), // accentcolor
+		'default' => get_course_maker_theme_colors( 'accent' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -107,7 +53,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_navtext_setting', array(
-		'default' => get_color_defaults( 'custom','navtext' ), // navtext
+		'default' => get_course_maker_theme_colors( 'navtext' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -128,7 +74,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_linksbuttons_setting', array(
-		'default' => get_color_defaults( 'custom','linksbuttons' ), // linksbuttons
+		'default' => get_course_maker_theme_colors( 'linksbuttons' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -149,7 +95,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_hover_setting', array(
-		'default' => get_color_defaults( 'custom','hover' ), // hover
+		'default' => get_course_maker_theme_colors( 'hover' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -170,7 +116,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_headerbg_setting', array(
-		'default' => get_color_defaults( 'custom','headerbg' ), // headerbg
+		'default' => get_course_maker_theme_colors( 'headerbg' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -191,7 +137,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_footerbg_setting', array(
-		'default' => get_color_defaults( 'custom','footerbg' ), // footerbg
+		'default' => get_course_maker_theme_colors( 'footerbg' ),
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 

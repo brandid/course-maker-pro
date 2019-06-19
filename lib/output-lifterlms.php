@@ -57,14 +57,6 @@ function course_maker_custom_lifterlms_css() {
 add_action( 'wp_enqueue_scripts', 'course_maker_lifterlms_color_css' );
 function course_maker_lifterlms_color_css(){
 
-    $handle = 'course-maker-pro';
-
-	// Load the selected theme colors - from helper-functions.php
-	$color = get_course_maker_theme_colors( 'custom' );
-
-	// Get default colors - from customize-colors.php
-	$default_color = scheme_custom_default_colors();
-
     // Function to convert Hex colors to RGBA
     function hex2rgba($color, $opacity = false) {
 
@@ -158,12 +150,12 @@ function course_maker_lifterlms_color_css(){
             background-color: %s !important;
         }
         ',
-        $color['accentcolor'],
-        $color['accentcolor'],
-        $color['accentcolor'],
-        course_maker_color_contrast( $color['hover'] ),
-        $color['accentcolor'],
-        hex2rgba($color['accentcolor'], 0.1)
+        get_course_maker_theme_colors( 'accent' ),
+        get_course_maker_theme_colors( 'accent' ),
+        get_course_maker_theme_colors( 'accent' ),
+        course_maker_color_contrast( get_course_maker_theme_colors( 'accent' ) ),
+        get_course_maker_theme_colors( 'accent' ),
+        hex2rgba( get_course_maker_theme_colors( 'accent' ), 0.1)
 	);
 
 	/* LINKS / BUTTONS
@@ -174,7 +166,7 @@ function course_maker_lifterlms_color_css(){
             background-color: %s !important;
         }
         ',
-		$color['linksbuttons']
+		get_course_maker_theme_colors( 'linksbuttons' )
 	);
 
 	/* HOVER
@@ -207,17 +199,17 @@ function course_maker_lifterlms_color_css(){
             color: %s !important;
         }
         ',
-		$color['hover'],
-        $color['hover'],
-        course_maker_color_contrast( $color['hover'] ),
-        $color['hover'],
-        $color['hover'],
-        course_maker_color_contrast( $color['hover'] )
+		get_course_maker_theme_colors( 'hover' ),
+        get_course_maker_theme_colors( 'hover' ),
+        course_maker_color_contrast( get_course_maker_theme_colors( 'hover' ) ),
+        get_course_maker_theme_colors( 'hover' ),
+        get_course_maker_theme_colors( 'hover' ),
+        course_maker_color_contrast( get_course_maker_theme_colors( 'hover' ) )
 	);
 
 	/* OUTPUT INLINE STYLES */
 	if ( $css ) {
-		wp_add_inline_style( $handle, $css );
+		wp_add_inline_style( CHILD_THEME_HANDLE . '-lifterlms-styles', $css );
 	}
 
 }

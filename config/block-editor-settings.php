@@ -12,22 +12,22 @@
  */
 
 /* Get Main Accent Color */
-$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', '#616e63' );
+$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', get_course_maker_theme_colors( 'accent' ) );
 
 /* Get Links/Buttons Color */
-$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', '#8e9492' );
+$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', get_course_maker_theme_colors( 'linksbuttons' ) );
 
 /* Get Hover Color */
-$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', '#4c4d50' );
+$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', get_course_maker_theme_colors( 'hover' ) );
 
 /* Get Nav Text Color */
-$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', '#717875' );
+$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', get_course_maker_theme_colors( 'navtext' ) );
 
 /* Get Header BG Color */
-$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', '#e6e5e3' );
+$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', get_course_maker_theme_colors( 'headerbg' ) );
 
 /* Get Footer BG Color */
-$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', '#f2f1ef' );
+$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', get_course_maker_theme_colors( 'footerbg' ) );
 
 return array(
 	'editor-color-palette' => array(
