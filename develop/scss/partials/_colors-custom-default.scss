@@ -3,7 +3,7 @@ Colors - All of the elements for default Custom Scheme
 ---------------------------------------------------------------------------------------------------- */
 .site-header .site-title a,
 .site-header .site-description {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .home .site-header.sticky:not(.scrolled) .site-title a,
@@ -266,20 +266,20 @@ input[type="submit"]:hover,
 .fixed-header-on .custom-header-background.light .site-header,
 .home.no-featured-section .site-header,
 .site-header {
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   background-color: $soft-white;
 }
 
 .fixed-header-off .custom-header-background .site-header {
   @include media($screen--m) {
-    transition: background-color .3s linear .2s;
+    transition: background-color 0.3s linear .2s;
   }
 }
 
 .js.fixed-header-on .custom-header-background .site-header {
   @include media($screen--m) {
     // background-color: transparent;
-    transition: background-color .3s linear .2s;
+    transition: background-color 0.3s linear .2s;
   }
 }
 

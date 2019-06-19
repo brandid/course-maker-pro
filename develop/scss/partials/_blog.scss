@@ -186,7 +186,7 @@
     transform: translateY(-50%);
 	z-index: 1;
     opacity: 0.1;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
     background-color: #fff !important;
 }
 
@@ -356,7 +356,7 @@
     margin: 0 auto;
     background-color: #4a6054;
     opacity: 0;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .entry-content.blog-posts-grid .blog-posts-wrapper .cm-featured-post .widget-wrap > article:hover > .stripe {
@@ -372,7 +372,7 @@
     left: 0;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 0px transparent;
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .entry-content.blog-posts-grid .blog-posts-wrapper .cm-featured-post .widget-wrap > article:hover > .wrapper {
