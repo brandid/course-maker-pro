@@ -332,11 +332,7 @@ function course_maker_do_members_nav() {
 		return;
 
 	//* Assign CSS classes to navigation
-	$class = 'menu genesis-nav-menu menu-primary';
-
-	if ( genesis_superfish_enabled() ) {
-		$class .= ' js-superfish';
-	}
+	$class = 'menu genesis-nav-menu menu-primary members';
 
 	if ( genesis_a11y( 'headings' ) ) {
 		printf( '<h2 class="screen-reader-text">%s</h2>', __( 'Main navigation', 'genesis' ) );

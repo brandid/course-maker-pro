@@ -34,35 +34,14 @@ function course_maker_enqueue_scripts_styles() {
 
 	}
 
-	// Responsive Menu
-	wp_enqueue_script( 'coursemaker-responsive-menu', CHILD_THEME_URI. "/js/responsive-menus.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
-	wp_localize_script( 'coursemaker-responsive-menu', 'genesis_responsive_menu', course_maker_responsive_menu_settings() );
-
 	//* Smooth scroll
 	wp_enqueue_script( 'coursemaker-smooth-scroll', get_stylesheet_directory_uri() . '/js/smooth-scroll.js', array( 'jquery' ), '1.0.0', true );
 
 }
 
-//* Define Responsive Menu settings
-function course_maker_responsive_menu_settings() {
-
-	$settings = array(
-	'mainMenu'          => __( 'Menu', 'coursemaker' ),
-	'menuIconClass'     => 'dashicons-before dashicons-menu',
-	'subMenu'           => __( 'Submenu', 'coursemaker' ),
-	'subMenuIconsClass' => 'dashicons-before dashicons-arrow-down-alt2',
-	'menuClasses'       => array(
-		'combine' => array(
-			'.nav-primary',
-			'.nav-primary-members',
-			'.nav-header',
-		),
-		'others'  => array(),
-	),
-	);
-
-	return $settings;
-
+// Responsive Menu
+if ( function_exists( 'genesis_register_responsive_menus' ) ) {
+	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
 }
 
 //* Third-Party Plugin integrations custom styles
