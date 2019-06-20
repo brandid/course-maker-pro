@@ -187,7 +187,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public $type = 'light';
 
     	public function enqueue() {
-    		wp_enqueue_style( 'course-maker-toggle-control-css', CHILD_THEME_URI . '/includes/course-maker-toggle-control.css', array(), CHILD_THEME_VERSION );
+    		wp_enqueue_style( genesis_get_theme_handle() . '-toggle-control-css', CHILD_THEME_URI . '/includes/course-maker-toggle-control.css', array(), genesis_get_theme_version() );
     		$css = '
     			.disabled-control-title {
     				color: #a0a5aa;
@@ -202,7 +202,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     			  background: #f7f7f7;
     			}
     		';
-    		wp_add_inline_style( 'course-maker-toggle-control-inline-css' , $css );
+    		wp_add_inline_style( genesis_get_theme_handle() . '-toggle-control-inline-css' , $css );
     	}
 
     	public function render_content() {

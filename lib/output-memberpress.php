@@ -22,7 +22,7 @@ function course_maker_custom_memberpress_css() {
 	);
 
 	if ( $css ) {
-		wp_add_inline_style( CHILD_THEME_HANDLE . '-memberpress-styles', $css );
+		wp_add_inline_style( genesis_get_theme_handle() . '-memberpress-styles', $css );
 	}
 
 }

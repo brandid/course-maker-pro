@@ -8,27 +8,7 @@
 * @link    https://thebrandidthemes.com/
 */
 
-add_action( 'wp_enqueue_scripts', 'course_maker_color_css' );
-/**
- * Checks the settings for the colors.
- *
- * @since  1.0.0
- *
- * @param  array $selected_scheme scheme in use
- */
-function course_maker_color_css() {
-
-	// // Load the selected theme colors - from helper-functions.php
-	// $color = get_course_maker_theme_colors( $selected_scheme );
-	//
-	// // Get default colors - from customize-colors.php
-	// $default_color = scheme_custom_default_colors();
-
-	// // Other colors
-	// $color_white = '#ffffff';
-	// $color_gray = '#5e6270';
-	// $color_darkgray = '#464f56';
-	// $color_black = '#000000';
+function course_maker_colors_css() {
 
 	$css = '';
 
@@ -374,7 +354,8 @@ function course_maker_color_css() {
 
 	/* OUTPUT INLINE STYLES IF NEEDED */
 	if ( $css ) {
-		wp_add_inline_style( CHILD_THEME_HANDLE . '-colors-styles', $css );
+		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'course_maker_colors_css' );

@@ -49,7 +49,7 @@ function course_maker_lifterlms_sidebar_body_class( $classes ) {
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_lifterlms_css' );
 function course_maker_custom_lifterlms_css() {
 
-    wp_enqueue_style( 'coursemaker-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css' );
+    wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css' );
 
 }
 
@@ -209,7 +209,7 @@ function course_maker_lifterlms_color_css(){
 
 	/* OUTPUT INLINE STYLES */
 	if ( $css ) {
-		wp_add_inline_style( CHILD_THEME_HANDLE . '-lifterlms-styles', $css );
+		wp_add_inline_style( genesis_get_theme_handle() . '-lifterlms-styles', $css );
 	}
 
 }

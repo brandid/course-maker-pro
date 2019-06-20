@@ -24,10 +24,6 @@ $child_theme = wp_get_theme();
 define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
 define( 'CHILD_THEME_URI', get_stylesheet_directory_uri() );
 
-// Child theme (do not remove)
-define( 'CHILD_THEME_HANDLE', sanitize_title_with_dashes( wp_get_theme()->get( 'Name' ) ) );
-define( 'CHILD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
-
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
 
@@ -61,7 +57,7 @@ include_once( CHILD_THEME_DIR . '/lib/customize.php' );
 include_once( CHILD_THEME_DIR . '/lib/customize-colors.php' );
 
 // Include Customizer CSS for home page
-include_once( CHILD_THEME_DIR . '/lib/output.php' );
+// include_once( CHILD_THEME_DIR . '/lib/output.php' );
 
 // Add the helper functions
 include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
@@ -74,9 +70,6 @@ add_action( 'after_setup_theme', 'course_maker_gutenberg_support' );
 function course_maker_gutenberg_support() {
 	require_once( get_stylesheet_directory() . '/lib/gutenberg-functions.php' );
 }
-
-// Output Customizer Colors CSS
-include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );
 
 // Load Scripts and Styles
 include_once( CHILD_THEME_DIR . '/lib/load-scripts.php' );
@@ -110,3 +103,6 @@ if ( class_exists( 'MeprUser' ) ) {
 if ( class_exists( 'RCP_Member' ) ) {
 	include_once( CHILD_THEME_DIR . '/lib/output-rcp.php' );
 }
+
+// Output Customizer Colors CSS
+include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );

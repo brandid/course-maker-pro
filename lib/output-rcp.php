@@ -20,7 +20,7 @@ function course_maker_custom_rcp_css() {
 	);
 
 	if ( $css ) {
-		wp_add_inline_style( CHILD_THEME_HANDLE . '-rcp-styles', $css );
+		wp_add_inline_style( genesis_get_theme_handle() . '-rcp-styles', $css );
 	}
 
 }
