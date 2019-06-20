@@ -38,7 +38,7 @@ add_action( 'after_setup_theme','course_maker_localization_setup' );
  * @since  1.0.0
  */
 function course_maker_localization_setup() {
-	load_child_theme_textdomain( 'coursemaker', apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', 'coursemaker' ) );
+	load_child_theme_textdomain( genesis_get_theme_handle(), apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', 'coursemaker' ) );
 }
 
 // Load Theme Setup and Configuration
@@ -56,9 +56,6 @@ include_once( CHILD_THEME_DIR . '/lib/customize.php' );
 // Add Color Scheme settings to WordPress Theme Customizer
 include_once( CHILD_THEME_DIR . '/lib/customize-colors.php' );
 
-// Include Customizer CSS for home page
-// include_once( CHILD_THEME_DIR . '/lib/output.php' );
-
 // Add the helper functions
 include_once( CHILD_THEME_DIR . '/lib/helper-functions.php' );
 
@@ -73,6 +70,9 @@ function course_maker_gutenberg_support() {
 
 // Load Scripts and Styles
 include_once( CHILD_THEME_DIR . '/lib/load-scripts.php' );
+
+// Output Customizer Colors CSS
+include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );
 
 // Display Posts Shortcode
 if ( is_plugin_active( 'display-posts-shortcode/display-posts-shortcode.php' ) ) {
@@ -103,6 +103,3 @@ if ( class_exists( 'MeprUser' ) ) {
 if ( class_exists( 'RCP_Member' ) ) {
 	include_once( CHILD_THEME_DIR . '/lib/output-rcp.php' );
 }
-
-// Output Customizer Colors CSS
-include_once( CHILD_THEME_DIR . '/lib/output-colors.php' );

@@ -1,6 +1,6 @@
 <?php
 /**
-* This file adds the required CSS to the front end of Course Maker theme.
+* This file adds the custom colors CSS to the front end of Course Maker theme.
 *
 * @package Course Maker Pro
 * @author  The BrandiD

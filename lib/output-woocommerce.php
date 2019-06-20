@@ -52,8 +52,6 @@ function course_maker_custom_woocommerce_css() {
 
 }
 
-
-
 // *OPTIONAL* Removes Order Notes - Additional Information - Title
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
