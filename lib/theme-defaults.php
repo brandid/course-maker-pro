@@ -9,26 +9,6 @@
 * @link    http://www.studiopress.com/
 */
 
-add_filter( 'genesis_theme_settings_defaults', 'course_maker_theme_defaults' );
-/**
-* Updates theme settings on reset.
-*
-* @since 2.2.3
-*/
-function course_maker_theme_defaults( $defaults ) {
-
-	$defaults['blog_cat_num']              = 6;
-	$defaults['content_archive']           = 'excerpts';
-	$defaults['content_archive_limit']     = 140;
-	$defaults['content_archive_thumbnail'] = 1;
-	$defaults['image_alignment']           = 'aligncenter';
-	$defaults['posts_nav']                 = 'numeric';
-	$defaults['site_layout']               = 'full-width-content';
-
-	return $defaults;
-
-}
-
 add_action( 'after_switch_theme', 'course_maker_theme_setting_defaults' );
 /**
 * Updates theme settings on activation.
