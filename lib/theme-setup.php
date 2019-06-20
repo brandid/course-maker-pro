@@ -181,14 +181,6 @@ function course_maker_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'course_maker_body_classes' );
 
-//* Remove unused admin settings metaboxes.
-add_action( 'genesis_theme_settings_metaboxes', 'course_maker_remove_metaboxes' );
-function course_maker_remove_metaboxes( $_genesis_admin_settings ) {
-	remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
-	remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
-	remove_meta_box( 'genesis-theme-settings-blogpage', 'toplevel_page_genesis', 'main' );
-}
-
 /**
  * Remove the blog page settings metabox from the Genesis Theme Settings
  * Desired if following the suggestion by Bill Erickson to not use the Blog page template
