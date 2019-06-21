@@ -79,6 +79,8 @@ function course_maker_show_featured_articles() {
 
             $featured_article_query->the_post();
 
+			$post_id = get_the_ID();
+
 			// Create character limit for blog post titles
 			$title_char_limit = 60;
 
