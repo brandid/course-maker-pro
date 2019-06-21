@@ -7,7 +7,7 @@
 * @package Course Maker Pro
 */
 
-add_action( 'after_setup_theme', 'genesis_sample_theme_support' );
+add_action( 'after_setup_theme', 'course_maker_theme_support', 9 );
 /**
  * Add desired theme supports.
  *
@@ -15,7 +15,7 @@ add_action( 'after_setup_theme', 'genesis_sample_theme_support' );
  *
  * @since 3.0.0
  */
-function genesis_sample_theme_support() {
+function course_maker_theme_support() {
 
 	$theme_supports = genesis_get_config( 'theme-supports' );
 
