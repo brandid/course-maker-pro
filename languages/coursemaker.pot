@@ -44,56 +44,44 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: config/block-editor-settings.php:35
+#: config/appearance.php:36
 msgid "Accent Color"
 msgstr ""
 
-#: config/block-editor-settings.php:40
+#: config/appearance.php:41
 msgid "Links/Buttons Color"
 msgstr ""
 
-#: config/block-editor-settings.php:45
+#: config/appearance.php:46
 msgid "Links/Buttons Hover Color"
 msgstr ""
 
-#: config/block-editor-settings.php:50
+#: config/appearance.php:51
 msgid "Nav Text Color"
 msgstr ""
 
-#: config/block-editor-settings.php:55
+#: config/appearance.php:56
 msgid "Header BG Color"
 msgstr ""
 
-#: config/block-editor-settings.php:60
+#: config/appearance.php:61
 msgid "Footer BG Color"
 msgstr ""
 
-#: config/block-editor-settings.php:65
+#: config/appearance.php:66
 msgid "White"
 msgstr ""
 
-#: config/block-editor-settings.php:70
-msgid "Gray"
-msgstr ""
-
-#: config/block-editor-settings.php:75
-msgid "Dark Gray"
-msgstr ""
-
-#: config/block-editor-settings.php:80
+#: config/appearance.php:71
 msgid "Black"
 msgstr ""
 
-#: config/menus.php:14
-msgid "Header Right Menu"
+#: config/appearance.php:76
+msgid "Gray"
 msgstr ""
 
-#: config/menus.php:15
-msgid "Header Right Menu - Members"
-msgstr ""
-
-#: config/menus.php:16
-msgid "Footer Menu"
+#: config/appearance.php:81
+msgid "Dark Gray"
 msgstr ""
 
 #: config/onboarding.php:17
@@ -116,16 +104,56 @@ msgstr ""
 msgid "WP Video Lightbox"
 msgstr ""
 
-#: lib/blog-functions.php:110, lib/metaboxes.php:18, lib/metaboxes.php:42
+#: config/theme-supports.php:34
+msgid "Header Right Menu"
+msgstr ""
+
+#: config/theme-supports.php:35
+msgid "Header Right Menu - Members"
+msgstr ""
+
+#: config/theme-supports.php:36
+msgid "Footer Menu"
+msgstr ""
+
+#: lib/blog-functions.php:100, lib/metaboxes.php:18, lib/metaboxes.php:42
 msgid "Featured Article"
 msgstr ""
 
-#: lib/blog-functions.php:303
+#: lib/blog-functions.php:293
 msgid "New Articles"
 msgstr ""
 
-#: lib/blog-functions.php:408
+#: lib/blog-functions.php:398
 msgid "Learn More"
+msgstr ""
+
+#: lib/customize-colors.php:26
+msgid "Color Palette"
+msgstr ""
+
+#: lib/customize-colors.php:47
+msgid "Main Accent Color"
+msgstr ""
+
+#: lib/customize-colors.php:68
+msgid "Navigation Text in Header / Footer"
+msgstr ""
+
+#: lib/customize-colors.php:89
+msgid "Text Links / Buttons"
+msgstr ""
+
+#: lib/customize-colors.php:110
+msgid "Text Links / Buttons Hover"
+msgstr ""
+
+#: lib/customize-colors.php:131
+msgid "Header Background"
+msgstr ""
+
+#: lib/customize-colors.php:152
+msgid "Footer Background"
 msgstr ""
 
 #: lib/customize.php:60
@@ -145,26 +173,38 @@ msgid "Course Maker Pro Settings"
 msgstr ""
 
 #: lib/customize.php:93
-msgid "Turn off Sticky Header on Desktop (allow header to scroll)"
+msgid "Sticky Header"
+msgstr ""
+
+#: lib/customize.php:96
+msgid "Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices."
 msgstr ""
 
 #: lib/customize.php:114
-msgid "Disable Featured Articles Carousel"
+msgid "Blog \"Featured Articles\" Slider"
+msgstr ""
+
+#: lib/customize.php:117
+msgid "Enable or Disable the Featured Articles Carousel Slider on the Blog Archive pages."
 msgstr ""
 
 #: lib/customize.php:135
-msgid "Disable Blog Categories List"
+msgid "Blog Categories List"
 msgstr ""
 
-#: lib/load-scripts.php:50
-msgid "Menu"
+#: lib/customize.php:138
+msgid "Enable or Disable the list of Blog Categories on Archive pages."
 msgstr ""
 
-#: lib/load-scripts.php:52
-msgid "Submenu"
+#: lib/icon-functions.php:46
+msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: lib/theme-setup.php:147
+#: lib/icon-functions.php:51
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: lib/theme-setup.php:150
 msgid "Featured Image"
 msgstr ""
 
