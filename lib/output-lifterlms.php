@@ -98,6 +98,12 @@ function course_maker_lifterlms_color_css(){
 
     }
 
+    $appearance = genesis_get_config( 'appearance' );
+
+    $color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
+	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+
 	$css = '';
 
 	/* MAIN ACCENT
@@ -150,12 +156,12 @@ function course_maker_lifterlms_color_css(){
             background-color: %s !important;
         }
         ',
-        get_course_maker_theme_colors( 'accent' ),
-        get_course_maker_theme_colors( 'accent' ),
-        get_course_maker_theme_colors( 'accent' ),
-        course_maker_color_contrast( get_course_maker_theme_colors( 'accent' ) ),
-        get_course_maker_theme_colors( 'accent' ),
-        hex2rgba( get_course_maker_theme_colors( 'accent' ), 0.1)
+        $color_accent,
+        $color_accent,
+        $color_accent,
+        course_maker_color_contrast( $color_accent ),
+        $color_accent,
+        hex2rgba( $color_accent, 0.1)
 	);
 
 	/* LINKS / BUTTONS
@@ -166,7 +172,7 @@ function course_maker_lifterlms_color_css(){
             background-color: %s !important;
         }
         ',
-		get_course_maker_theme_colors( 'linksbuttons' )
+		$color_linksbuttons
 	);
 
 	/* HOVER
@@ -199,12 +205,12 @@ function course_maker_lifterlms_color_css(){
             color: %s !important;
         }
         ',
-		get_course_maker_theme_colors( 'hover' ),
-        get_course_maker_theme_colors( 'hover' ),
-        course_maker_color_contrast( get_course_maker_theme_colors( 'hover' ) ),
-        get_course_maker_theme_colors( 'hover' ),
-        get_course_maker_theme_colors( 'hover' ),
-        course_maker_color_contrast( get_course_maker_theme_colors( 'hover' ) )
+		$color_hover,
+        $color_hover,
+        course_maker_color_contrast( $color_hover ),
+        $color_hover,
+        $color_hover,
+        course_maker_color_contrast( $color_hover )
 	);
 
 	/* OUTPUT INLINE STYLES */

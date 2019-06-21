@@ -11,16 +11,16 @@
 add_action( 'wp_enqueue_scripts', 'course_maker_enqueue_scripts_styles' );
 function course_maker_enqueue_scripts_styles() {
 
-	$block_editor_settings = genesis_get_config( 'block-editor-settings' );
+	$appearance = genesis_get_config( 'appearance' );
 
 	// Google Fonts
-	wp_enqueue_style( genesis_get_theme_handle() . '-fonts', $block_editor_settings['fonts-url'], array(), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-fonts', $appearance['fonts-url'], array(), genesis_get_theme_version() );
 
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
 
 	// Font Awesome
-	wp_enqueue_style( 'font-awesome', $block_editor_settings['fontawesome-css-url'] );
+	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'] );
 
 	// Global JS
 	wp_enqueue_script( genesis_get_theme_handle() . '-global-scripts', CHILD_THEME_URI . "/js/global.js", array( 'jquery' ), genesis_get_theme_version(), true );

@@ -19,6 +19,8 @@ function course_maker_color_settings() {
 
 	global $wp_customize;
 
+	$appearance = genesis_get_config( 'appearance' );
+
 	// 'COLOR PALETTE' SECTION
 	$wp_customize->add_section( 'color_options_section', array(
 		'title' => __( 'Color Palette', 'coursemaker' ),
@@ -32,7 +34,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_accentcolor_setting', array(
-		'default' => get_course_maker_theme_colors( 'accent' ),
+		'default' => $appearance['default-colors']['accent'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -53,7 +55,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_navtext_setting', array(
-		'default' => get_course_maker_theme_colors( 'navtext' ),
+		'default' => $appearance['default-colors']['navtext'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -74,7 +76,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_linksbuttons_setting', array(
-		'default' => get_course_maker_theme_colors( 'linksbuttons' ),
+		'default' => $appearance['default-colors']['linksbuttons'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -95,7 +97,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_hover_setting', array(
-		'default' => get_course_maker_theme_colors( 'hover' ),
+		'default' => $appearance['default-colors']['hover'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -116,7 +118,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_headerbg_setting', array(
-		'default' => get_course_maker_theme_colors( 'headerbg' ),
+		'default' => $appearance['default-colors']['headerbg'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
@@ -137,7 +139,7 @@ function course_maker_color_settings() {
 	------------------------------------------------------ */
 	// setting
 	$wp_customize->add_setting( 'course_maker_theme_footerbg_setting', array(
-		'default' => get_course_maker_theme_colors( 'footerbg' ),
+		'default' => $appearance['default-colors']['footerbg'],
 		'sanitize_callback' => 'sanitize_hex_color',
 	));
 

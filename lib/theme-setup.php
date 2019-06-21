@@ -7,14 +7,23 @@
 * @package Course Maker Pro
 */
 
-//* Add HTML5 markup structure
-add_theme_support( 'html5', genesis_get_config( 'html5' ) );
+add_action( 'after_setup_theme', 'genesis_sample_theme_support' );
+/**
+ * Add desired theme supports.
+ *
+ * See config file at `config/theme-supports.php`.
+ *
+ * @since 3.0.0
+ */
+function genesis_sample_theme_support() {
 
-//* Add Accessibility support
-add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
+	$theme_supports = genesis_get_config( 'theme-supports' );
 
-//* Adds custom logo in Customizer > Site Identity.
-add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
+
+}
 
 //* Use the search form from WordPress core
 remove_filter( 'get_search_form', 'genesis_search_form' );
@@ -26,9 +35,6 @@ function course_maker_stickynav_class( $attributes ) {
 	$attributes['class'] = ( !$sticky_header ? $attributes['class'] : $attributes['class'] . ' sticky' );
 	return $attributes;
 }
-
-//* Get Config for 'Primary', and 'Members' nav menus
-add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
 
 //* Make a new 'Social' nav menu, assign to the 'secondary' location, and add Custom Link menu items
 function course_maker_create_secondary_menu( $content, $imported_post_ids ) {
@@ -143,12 +149,6 @@ add_filter( 'image_size_names_choose', 'course_maker_show_custom_image_sizes' );
 function course_maker_show_custom_image_sizes( $sizes ) {
 	return array_merge( $sizes, array( 'featured-image' => __( 'Featured Image', 'coursemaker' ) ) );
 }
-
-//* Add support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-//* Add support for up to 3 footer widgets
-add_theme_support( 'genesis-footer-widgets', 3 );
 
 //* Add support for 'Genesis Connect for WooCommerce' plugin
 add_theme_support( 'genesis-connect-woocommerce' );

@@ -19,12 +19,12 @@ function course_maker_gutenberg_page_styles() {
 add_action( 'enqueue_block_editor_assets', 'course_maker_gutenberg_editor_styles' );
 function course_maker_gutenberg_editor_styles() {
 
-	//* Get Block Editor Settings
-	$block_editor_settings = genesis_get_config( 'block-editor-settings' );
+	//* Get Appearance Settings
+	$appearance = genesis_get_config( 'appearance' );
 
 	// Fonts
-	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-fonts', $block_editor_settings['fonts-url'], array(), genesis_get_theme_version() );
-	wp_enqueue_style( 'font-awesome', $block_editor_settings['fontawesome-css-url'] );
+	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-fonts', $appearance['fonts-url'], array(), genesis_get_theme_version() );
+	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'] );
 
 	// Custom Editor Styles
 	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-editor-styles', get_stylesheet_directory_uri() . "/css/gutenberg-editor-styles.css", array(), genesis_get_theme_version(), true );
@@ -88,10 +88,10 @@ add_theme_support( 'align-wide' );
 add_theme_support( 'responsive-embeds' );
 
 //* Get Block Editor Settings
-$block_editor_settings = genesis_get_config( 'block-editor-settings' );
+$appearance = genesis_get_config( 'appearance' );
 
 //* Editor Color Palette
-add_theme_support( 'editor-color-palette', $block_editor_settings['editor-color-palette'] );
+add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
 //* Force full-width-content layout for Gutenberg pages
 add_filter( 'genesis_site_layout', 'setGutenbergPageLayout' );

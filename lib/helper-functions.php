@@ -10,22 +10,31 @@
 * @link    https://thebrandidthemes.com/
 */
 
-/**
- * Loads theme colors.
- *
- * @since  2.0.0
- *
- * @param string $name Name of color to retrieve.
- *
- * @return string Hex color code for specified color.
- */
-function get_course_maker_theme_colors( $name ) {
-
-	$colors = genesis_get_config( 'color-palette' );
-
-	return $colors[ $name ];
-
-}
+// /**
+//  * Loads theme colors.
+//  *
+//  * @since  2.0.0
+//  *
+//  * @param string $name Name of color to retrieve.
+//  *
+//  * @return string Hex color code for specified color.
+//  */
+// function get_course_maker_theme_colors( $slug ) {
+//
+// 	//* Get Appearance Settings
+// 	$appearance = genesis_get_config( 'appearance' );
+//
+// 	$editor_color_palette = $appearance['editor-color-palette'];
+//
+// 	$palette_colors = array_column( $editor_color_palette, 'slug' );
+//
+// 	$the_color = array_search( $slug, $palette_colors );
+//
+// 	$result = $editor_color_palette[$the_color]['color'];
+//
+// 	return $result;
+//
+// }
 
 
 function course_maker_convert_hex2rgba( $color, $opacity = false ) {

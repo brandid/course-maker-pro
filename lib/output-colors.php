@@ -10,13 +10,47 @@
 
 function course_maker_colors_css() {
 
+	$appearance = genesis_get_config( 'appearance' );
+
+	$editor_color_palette = $appearance['editor-color-palette'];
+
+	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
+	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+	$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', $appearance['default-colors']['navtext'] );
+	$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
+	$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', $appearance['default-colors']['footerbg'] );
+
 	$css = '';
+
+	foreach ( $editor_color_palette as $color_info ) {
+
+		$css .= "
+
+		.site-container .has-{$color_info['slug']}-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
+			color: {$color_info['color']};
+		}
+		.site-container .has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
+			background-color: {$color_info['color']};
+		}
+
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-background-color {
+			background-color: transparent !important;
+			border-color: {$color_info['color']} !important;
+			color: {$color_info['color']} !important;
+		}
+		";
+
+	}
 
 	/* MAIN ACCENT
 	------------------------------------------------------------------------- */
 	$css .= sprintf('
 		/* ---------- MAIN ACCENT ---------- */
-		.has-accent-color,
 		.home .site-header.sticky.scrolled .site-title a,
 		body:not(.home) .site-header .site-title a,
 		.entry-content .featured-articles button.slick-arrow > span,
@@ -26,9 +60,7 @@ function course_maker_colors_css() {
 			color: %s !important;
 		}
 
-		.has-accent-background-color,
 		.wp-block-button .wp-block-button__link:not(.has-background),
-		.wp-block-button .wp-block-button__link.has-accent-background-color,
 		.ab-block-button .ab-button,
 		.menu-toggle,
 		.home .welcome .wp-block-button > a:hover,
@@ -37,8 +69,7 @@ function course_maker_colors_css() {
 			background-color: %s !important;
 		}
 
-		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color),
-		.wp-block-button.is-style-outline .wp-block-button__link.has-accent-background-color {
+		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 			background-color: transparent !important;
 			border-color: %s !important;
 			color: %s !important;
@@ -48,11 +79,11 @@ function course_maker_colors_css() {
 		body:not(.home) main.content .entry .gform_confirmation_message {
 			border-color: %s !important;
 		}',
-		get_course_maker_theme_colors( 'accent' ),
-		get_course_maker_theme_colors( 'accent' ),
-		get_course_maker_theme_colors( 'accent' ),
-		get_course_maker_theme_colors( 'accent' ),
-		get_course_maker_theme_colors( 'accent' )
+		$color_accent,
+		$color_accent,
+		$color_accent,
+		$color_accent,
+		$color_accent
 	);
 
 	/* LINKS / BUTTONS
@@ -70,19 +101,17 @@ function course_maker_colors_css() {
 		.menu-toggle:hover,
 		.archive-pagination li a:focus,
 		.archive-pagination li a:hover,
-		.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background),
-		.has-linksbuttons-background-color  {
+		.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
 			background-color: %s !important;
 		}
 
 		.site-inner a:not(.button):not(.wp-block-button__link),
-		.has-linksbuttons-color,
 		.subtitle,
-		.footer-widgets .footer-widgets-2 a, {
+		.footer-widgets a, {
 			color: %s !important;
 		}
 
-		.footer-widgets .footer-widgets-2 a,
+		.footer-widgets a,
 		.front-page-testimonials .testimonial-author-img img,
 		.menu-toggle,
 		.menu-toggle:focus,
@@ -96,25 +125,23 @@ function course_maker_colors_css() {
 			fill: %s !important;
 		}
 
-		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color),
-		.wp-block-button.is-style-outline .wp-block-button__link.has-linksbuttons-background-color {
+		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 			background-color: transparent !important;
 		    border-color: %s !important;
 			color: %s !important;
 		}',
-		get_course_maker_theme_colors( 'linksbuttons' ),
-		get_course_maker_theme_colors( 'linksbuttons' ),
-		get_course_maker_theme_colors( 'linksbuttons' ),
-		get_course_maker_theme_colors( 'linksbuttons' ),
-		get_course_maker_theme_colors( 'linksbuttons' ),
-		get_course_maker_theme_colors( 'linksbuttons' )
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons
 	);
 
 	/* HOVER
 	------------------------------------------------------------------------- */
 	$css .= sprintf( '
 		/* ---------- HOVER ---------- */
-		.has-hover-color,
 		.home .site-header.sticky.scrolled .site-title a:hover,
 		.home .site-header.sticky.scrolled .site-title a:focus,
 		body:not(.home) .site-header .site-title a:hover,
@@ -139,7 +166,6 @@ function course_maker_colors_css() {
 			color: %s !important;
 		}
 
-		.has-hover-background-color,
 		.sidebar .enews-widget input[type="submit"]:focus,
 		.sidebar .enews-widget input[type="submit"]:hover,
 		.home #genesis-content > div:not(.home-welcome) .button:focus,
@@ -201,22 +227,21 @@ function course_maker_colors_css() {
 		#menu-social-menu li > a:hover svg {
 			fill: %s !important;
 		}',
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' ),
-		course_maker_color_contrast( get_course_maker_theme_colors( 'hover' ) ),
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' ),
-		get_course_maker_theme_colors( 'hover' )
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		course_maker_color_contrast( $color_hover ),
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		$color_hover
 	);
 
 	/* NAV TEXT
 	------------------------------------------------------------------------- */
 	$css .= sprintf( '
 		/* ---------- NAV TEXT ---------- */
-		.has-navtext-color,
 		#menu-social-menu li,
 		#menu-social-menu li > a:focus,
 		#menu-social-menu li > a:hover,
@@ -236,25 +261,16 @@ function course_maker_colors_css() {
 		.site-footer a {
 			border-bottom-color: %s !important;
 		}
-
-		.has-navtext-background-color {
-			background-color: %s !important;
-		}
 		',
-		get_course_maker_theme_colors( 'navtext' ),
-		get_course_maker_theme_colors( 'navtext' ),
-		get_course_maker_theme_colors( 'navtext' )
+		$color_navtext,
+		$color_navtext,
+		$color_navtext
 	);
 
 	/* HEADER BG
 	------------------------------------------------------------------------- */
 	$css .= sprintf( '
 		/* ---------- HEADER BG ---------- */
-		.has-headerbg-color {
-			color: %s !important;
-		}
-
-		.has-headerbg-background-color,
 		.home .site-header:not(.sticky),
 		.home .site-header.sticky.scrolled,
 		body:not(.home) .site-header {
@@ -266,93 +282,22 @@ function course_maker_colors_css() {
 				background-color: %s !important;
 			}
 		}',
-		get_course_maker_theme_colors( 'headerbg' ),
-		get_course_maker_theme_colors( 'headerbg' ),
-		get_course_maker_theme_colors( 'headerbg' )
+		$color_headerbg,
+		$color_headerbg
 	);
 
 	/* FOOTER BG
 	------------------------------------------------------------------------- */
 	$css .= sprintf( '
 		/* ---------- FOOTER BG ---------- */
-		.has-footerbg-color {
-			color: %s !important;
-		}
-
-		.has-footerbg-background-color,
 		.site-footer {
 			background-color: %s !important;
 		}
 		',
-		get_course_maker_theme_colors( 'footerbg' ),
-		get_course_maker_theme_colors( 'footerbg' )
+		$color_footerbg
 	);
 
-	/* WHITE
-	------------------------------------------------------------------------- */
-	$css .= sprintf( '
-		/* ---------- WHITE ---------- */
-		.has-white-color {
-			color: %s !important;
-		}
-
-		.has-white-background-color {
-			 background-color: %s !important;
-		}
-	',
-	get_course_maker_theme_colors( 'white' ),
-	get_course_maker_theme_colors( 'white' )
-	);
-
-	/* GRAY COLOR
-	-------------------------------------------- */
-	$css .= sprintf( '
-		/* ---------- GRAY ---------- */
-		.has-gray-color {
-			color: %s !important;
-		}
-
-		.has-gray-background-color {
-			 background-color: %s !important;
-		}
-	',
-	get_course_maker_theme_colors( 'gray' ),
-	get_course_maker_theme_colors( 'gray' )
-	);
-
-	/* DARK GRAY COLOR
-	-------------------------------------------- */
-	$css .= sprintf( '
-		/* ---------- DARK GRAY ---------- */
-		.has-darkgray-color {
-			color: %s !important;
-		}
-
-		.has-darkgray-background-color {
-			 background-color: %s !important;
-		}
-	',
-	get_course_maker_theme_colors( 'darkgray' ),
-	get_course_maker_theme_colors( 'darkgray' )
-	);
-
-	/* BLACK COLOR
-	-------------------------------------------- */
-	$css .= sprintf( '
-		/* ---------- BLACK ---------- */
-		.has-black-color {
-			color: %s !important;
-		}
-
-		.has-black-background-color {
-			 background-color: %s !important;
-		}
-	',
-	get_course_maker_theme_colors( 'black' ),
-	get_course_maker_theme_colors( 'black' )
-	);
-
-	/* OUTPUT INLINE STYLES IF NEEDED */
+	/* Output inline styles */
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}

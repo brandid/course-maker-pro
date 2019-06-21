@@ -14,6 +14,12 @@ add_filter( 'woocommerce_show_page_title', function() {
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_woocommerce_css' );
 function course_maker_custom_woocommerce_css() {
 
+	$appearance = genesis_get_config( 'appearance' );
+
+	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
+	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+
 	$css = '';
 
 	$css .= sprintf( '
@@ -43,7 +49,7 @@ function course_maker_custom_woocommerce_css() {
 		}
 
 		',
-		get_course_maker_theme_colors( 'linksbuttons' )
+		$color_linksbuttons
 	);
 
 	if ( $css ) {
