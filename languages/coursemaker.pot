@@ -204,7 +204,7 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/theme-setup.php:94
+#: lib/theme-setup.php:110
 msgid "Featured Image"
 msgstr ""
 

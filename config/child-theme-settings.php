@@ -2,12 +2,9 @@
 /**
  * Course Maker theme settings.
  *
- * Genesis 3.0 updates these settings when themes are activated.
+ * Genesis 2.9+ updates these settings when themes are activated.
  *
  * @package Course Maker Pro
- * @author  StudioPress
- * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 return array(
 	GENESIS_SETTINGS_FIELD => array(
@@ -20,7 +17,7 @@ return array(
 		'breadcrumb_archive'        => 0,
 		'breadcrumb_404'            => 0,
 		'breadcrumb_attachment'     => 0,
-		'content_archive'           => 'content',
+		'content_archive'           => 'full',
 		'content_archive_limit'     => 140,
 		'content_archive_thumbnail' => 1,
 		'image_size'                => 'featured-image',
