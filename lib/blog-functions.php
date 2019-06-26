@@ -412,6 +412,8 @@ function course_maker_add_single_post_featured_image() {
 
 	if ( has_post_thumbnail() ) {
 
+		$post_id = get_the_ID();
+
 		echo '<div class="featured-image">';
 		echo '<div class="stripe"></div>';
 		echo '<a href="' . get_the_permalink() . '">';
