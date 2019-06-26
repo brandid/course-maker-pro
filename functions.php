@@ -27,9 +27,6 @@ define( 'CHILD_THEME_URI', get_stylesheet_directory_uri() );
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
 
-// Setup Theme
-include_once( CHILD_THEME_DIR . '/lib/theme-defaults.php' );
-
 // Set Localization (do not remove)
 add_action( 'after_setup_theme','course_maker_localization_setup' );
 /**
