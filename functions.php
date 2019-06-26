@@ -44,6 +44,9 @@ function course_maker_localization_setup() {
 // Load Theme Setup and Configuration
 include_once( CHILD_THEME_DIR . '/lib/theme-setup.php' );
 
+// Load custom Onboarding functions
+include_once( CHILD_THEME_DIR . '/lib/onboarding-functions.php' );
+
 // Add the social icons functions
 include_once( CHILD_THEME_DIR . '/lib/icon-functions.php' );
 
@@ -86,6 +89,7 @@ if ( is_plugin_active( 'course-maker-modules/course-maker-modules.php' ) ) {
 
 // LifterLMS
 if ( is_plugin_active( 'lifterlms/lifterlms.php' ) ) {
+    include_once( CHILD_THEME_DIR . '/lib/lifterlms-functions.php' );
     include_once( CHILD_THEME_DIR . '/lib/output-lifterlms.php' );
 }
 

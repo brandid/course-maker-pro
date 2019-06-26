@@ -116,15 +116,15 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/blog-functions.php:100, lib/metaboxes.php:18, lib/metaboxes.php:42
+#: lib/blog-functions.php:102, lib/metaboxes.php:18, lib/metaboxes.php:42
 msgid "Featured Article"
 msgstr ""
 
-#: lib/blog-functions.php:293
+#: lib/blog-functions.php:295
 msgid "New Articles"
 msgstr ""
 
-#: lib/blog-functions.php:398
+#: lib/blog-functions.php:400
 msgid "Learn More"
 msgstr ""
 
@@ -204,7 +204,7 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/theme-setup.php:150
+#: lib/theme-setup.php:94
 msgid "Featured Image"
 msgstr ""
 

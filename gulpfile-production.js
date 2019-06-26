@@ -8,7 +8,7 @@
  * @version    1.0
  */
 
-/* To run this file enter: gulp build  --gulpfile gulpfile-production.js from command line */
+/* To run this file enter: gulp build --gulpfile gulpfile-production.js from command line */
 /* Also run svgo svg-icons.svg -o svg-icons.min.svg from command line to minify SVG */
 'use strict';
 
