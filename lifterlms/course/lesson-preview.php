@@ -58,10 +58,12 @@ $data_msg = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( s
 				<p class="learn-more">
 					<?php
 					$student = llms_get_student( get_current_user_id() );
-					if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
-						echo __( 'Revisit Lesson', 'coursemaker' );
-					} else {
-						echo __( 'Let\'s Begin', 'coursemaker' );
+					if ( $student ){
+						if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
+							echo __( 'Revisit Lesson', 'coursemaker' );
+						} else {
+							echo __( 'Let\'s Begin', 'coursemaker' );
+						}
 					}
 					?>
 				</p>

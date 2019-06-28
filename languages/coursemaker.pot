@@ -204,7 +204,7 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/theme-setup.php:110
+#: lib/theme-setup.php:94
 msgid "Featured Image"
 msgstr ""
 
@@ -214,4 +214,12 @@ msgstr ""
 
 #: page-templates/landing.php:7
 msgid "Landing"
+msgstr ""
+
+#: lifterlms/course/lesson-preview.php:62
+msgid "Revisit Lesson"
+msgstr ""
+
+#: lifterlms/course/lesson-preview.php:64
+msgid "Let's Begin"
 msgstr ""
