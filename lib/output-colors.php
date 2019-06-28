@@ -273,7 +273,8 @@ function course_maker_colors_css() {
 		/* ---------- HEADER BG ---------- */
 		.home .site-header:not(.sticky),
 		.home .site-header.sticky.scrolled,
-		body:not(.home) .site-header {
+		body:not(.home) .site-header,
+		.entry-content.blog-posts-grid > .alignfull {
 			background-color: %s !important;
 		}
 

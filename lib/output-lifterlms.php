@@ -55,6 +55,7 @@ function course_maker_lifterlms_color_css(){
     $color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
 	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
 	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+    $color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
 
 	$css = '';
 
@@ -81,7 +82,8 @@ function course_maker_lifterlms_color_css(){
         .llms-access-plan .stamp,
         .llms-access-plan-title,
         .llms-checkout-wrapper .llms-form-heading,
-        .llms-sd-widgets .llms-sd-widget .llms-sd-widget-title {
+        .llms-sd-widgets .llms-sd-widget .llms-sd-widget-title,
+        .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > .stripe {
             background-color: %s !important;
         }
 
@@ -92,8 +94,6 @@ function course_maker_lifterlms_color_css(){
 
         .llms-instructor-info .llms-instructors .llms-author,
         .llms-instructor-info .llms-instructors .llms-author .avatar,
-        .llms-lesson-preview:hover,
-        .llms-lesson-preview.is-complete .llms-lesson-link,
         .llms-notice,
         .llms-notification,
         .llms-notification .llms-notification-aside::before,
@@ -164,6 +164,17 @@ function course_maker_lifterlms_color_css(){
         $color_hover,
         course_maker_color_contrast( $color_hover )
 	);
+
+    /* HEADER BG COLOR
+    ------------------------------------------------------------------------- */
+    $css .= sprintf( '
+		/* ---------- HEADER BG COLOR ---------- */
+        .llms-syllabus-wrapper > .alignfull {
+            background-color: %s !important;
+        }
+        ',
+        $color_headerbg
+    );
 
 	/* OUTPUT INLINE STYLES */
 	if ( $css ) {
