@@ -235,6 +235,7 @@ gulp.task('zip', ['pot'], () =>
     'js/*',
     'languages/*',
     'lib/**/*',
+    'lifterlms/**/*',
     'page-templates/*',
     'xml/*',
     '*.php',

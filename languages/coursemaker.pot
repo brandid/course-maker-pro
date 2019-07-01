@@ -216,10 +216,10 @@ msgstr ""
 msgid "Landing"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:62
+#: lifterlms/course/lesson-preview.php:63
 msgid "Revisit Lesson"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:64
+#: lifterlms/course/lesson-preview.php:65
 msgid "Let's Begin"
 msgstr ""
