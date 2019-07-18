@@ -65,16 +65,15 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-columns -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"className":"opt-in"} -->
-<div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container opt-in ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns -->
-<div class="wp-block-columns has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":122} -->
+<div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container opt-in ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-equal"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:image {"id":122} -->
 <figure class="wp-block-image"><img src="$course_maker_homepage_optin_image_url" alt="" class="wp-image-122"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
+<!-- /wp:image --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":5,"containerPaddingBottom":5,"containerPaddingLeft":5} -->
-<div style="padding-left:5%;padding-right:5%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"textColor":"accent","fontSize":"large"} -->
+<!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"accent","fontSize":"large"} -->
 <p class="has-text-color has-large-font-size has-accent-color">Start building your brand for free.</p>
 <!-- /wp:paragraph -->
 
@@ -84,10 +83,9 @@ return <<<CONTENT
 
 <!-- wp:paragraph -->
 <p>Sign up and we'll email you a free PDF about Personal Branding. We respect your privacy, and never share your information.</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#e6e4e3","className":"features"} -->
@@ -123,25 +121,23 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-columns -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200} -->
-<div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns -->
-<div class="wp-block-columns has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":5,"containerPaddingBottom":5,"containerPaddingLeft":5} -->
-<div style="padding-left:5%;padding-right:5%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"textColor":"gray","fontSize":"large"} -->
+<div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-equal"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"gray","fontSize":"large"} -->
 <p class="has-text-color has-large-font-size has-gray-color">About Rachel Gogos</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
 <p>This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you’re an authority in your space, without actually saying so — unless you want it to!</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column -->
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":129,"linkDestination":"custom"} -->
+<!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:image {"id":129,"linkDestination":"custom"} -->
 <figure class="wp-block-image"><a href="https://www.youtube.com/watch?v=YbRubFUmAtc" rel="wp-video-lightbox"><img src="$course_maker_homepage_about_image_url" alt="" class="wp-image-129"/></a></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
+<!-- /wp:image --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":900,"containerBackgroundColor":"#e6e4e3"} -->
