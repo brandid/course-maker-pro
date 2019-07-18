@@ -50,23 +50,19 @@ return <<<CONTENT
 <!-- /wp:button --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
-<!-- wp:columns {"align":"full"} -->
-<div class="wp-block-columns alignfull has-2-columns"><!-- wp:column {"className":"one-third"} -->
-<div class="wp-block-column one-third"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":10,"containerPaddingBottom":10,"containerPaddingLeft":10,"containerMarginTop":0,"containerMarginBottom":0,"className":"fullheight"} -->
-<div style="padding-left:10%;padding-right:10%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container fullheight ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"align":"right","textColor":"accent","fontSize":"large"} -->
+<!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-wideright","align":"full"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-wideright alignfull"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"paddingUnit":"%","padding":10,"paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner" style="padding-top:6%;padding-right:10%;padding-bottom:6%;padding-left:10%"><!-- wp:paragraph {"align":"right","textColor":"accent","fontSize":"large"} -->
 <p style="text-align:right" class="has-text-color has-large-font-size has-accent-color">Build your brand, build your business.</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column -->
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column {"className":"two-thirds"} -->
-<div class="wp-block-column two-thirds"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":10,"containerPaddingBottom":5,"containerPaddingLeft":10,"containerMarginTop":0,"containerMarginBottom":0,"containerBackgroundColor":"#616e63"} -->
-<div style="background-color:#616e63;padding-left:10%;padding-right:10%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"align":"left","textColor":"white"} -->
-<p style="text-align:left" class="has-text-color has-white-color">This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you’re an authority in your space, without actually saying so — unless you want it to!<br></p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
+<!-- wp:atomic-blocks/ab-column {"backgroundColor":"accent","textColor":"white","paddingUnit":"%","paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner has-accent-background-color has-white-color" style="padding-top:6%;padding-right:10%;padding-bottom:6%;padding-left:10%"><!-- wp:paragraph {"align":"left","textColor":"white"} -->
+<p style="text-align:left" class="has-text-color has-white-color">This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you’re an authority in your space, without actually saying so — unless you want it to!</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"className":"opt-in"} -->
 <div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container opt-in ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns -->
@@ -104,31 +100,27 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:shortcode -->
-[display-posts category="courses" image-size="featured" posts_per_page="4" layout="featured"]
+[display-posts category="general" image-size="featured" posts_per_page="4" layout="featured"]
 <!-- /wp:shortcode --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
-<!-- wp:columns {"align":"full"} -->
-<div class="wp-block-columns alignfull has-2-columns"><!-- wp:column {"className":"one-third"} -->
-<div class="wp-block-column one-third"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":10,"containerPaddingBottom":10,"containerPaddingLeft":10,"containerMarginTop":0,"containerMarginBottom":0,"containerBackgroundColor":"#616e63","className":"fullheight"} -->
-<div style="background-color:#616e63;padding-left:10%;padding-right:10%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container fullheight ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"align":"right","textColor":"white","fontSize":"large"} -->
+<!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-wideright","align":"full"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-wideright alignfull"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"backgroundColor":"accent","paddingUnit":"%","paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner has-accent-background-color" style="padding-top:6%;padding-right:10%;padding-bottom:6%;padding-left:10%"><!-- wp:paragraph {"align":"right","textColor":"white","fontSize":"large"} -->
 <p style="text-align:right" class="has-text-color has-large-font-size has-white-color">Praise</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"right","textColor":"white"} -->
 <p style="text-align:right" class="has-text-color has-white-color">The <a href="https://wordpress.org/plugins/social-proof-testimonials-slider/" target="_blank" rel="noreferrer noopener">Social Proof Slider</a> by brandiD is perfect for sharing testimonials from people who have taken your course and loved it, or anyone else who has praised your business. Look at our examples.</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column -->
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column {"className":"two-thirds"} -->
-<div class="wp-block-column two-thirds"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":5,"containerPaddingBottom":5,"containerPaddingLeft":5,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1200} -->
-<div style="padding-left:5%;padding-right:5%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:shortcode -->
+<!-- wp:atomic-blocks/ab-column {"paddingUnit":"%","paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner" style="padding-top:6%;padding-right:10%;padding-bottom:6%;padding-left:10%"><!-- wp:shortcode -->
 [social-proof-slider]
-<!-- /wp:shortcode --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
+<!-- /wp:shortcode --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200} -->
 <div style="padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns -->

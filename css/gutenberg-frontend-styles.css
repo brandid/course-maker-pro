@@ -97,18 +97,6 @@ body.content-sidebar .site-inner {
   margin-right: 0;
 }
 
-.entry-content .wp-block-columns .wp-block-column.one-third {
-  -ms-flex-preferred-size: 33.333% !important;
-      flex-basis: 33.333% !important;
-  float: none;
-}
-
-.entry-content .wp-block-columns .wp-block-column.two-thirds {
-  -ms-flex-preferred-size: 66.666% !important;
-      flex-basis: 66.666% !important;
-  float: none;
-}
-
 /* Cover Image
 --------------------------------------------- */
 .full-width-content .entry-content .wp-block-cover.alignfull {

@@ -1,7 +1,7 @@
 /* Course Maker - Gutenberg Editor - General Styles
 --------------------------------------------- */
 body {
-    // background-color: #f3f1f2; 
+    // background-color: #f3f1f2;
     font-family: 'Questrial', sans-serif !important;
 	font-size: 18px;
 	font-weight: 400;
@@ -112,17 +112,6 @@ p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
 	margin-right: 0.01em;
 }
 
-/* COLUMNS
---------------------------------------------- */
-
-.wp-block-columns .wp-block-column.one-third {
-    flex-basis: 33.333% !important;
-}
-
-.wp-block-columns .wp-block-column.two-thirds {
-    flex-basis: 66.666% !important;
-}
-
 /* TABLES
 --------------------------------------------- */
 .wp-block-table {
@@ -188,4 +177,11 @@ p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
 .wp-block-verse {
     padding-left: 30px;
     border-left: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+/* AB BLOCKS
+--------------------------------------------- */
+.block-editor-block-list__block[data-type="atomic-blocks/ab-columns"] .block-editor-block-list__layout {
+    margin-left: 1px;
+    margin-right: 1px;
 }
