@@ -171,4 +171,40 @@ return array(
 			),
 		),
 	),
+	/* // WIDGET IMPORT - Ready for Genesis 3.1 // */
+	'widgets' => array (
+		'footer-1' => array (
+			array (
+				'type' => 'text',
+				'args' => array (
+					'title'  => 'About Course Maker Pro',
+					'text'   => '<p>This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you’re an authority in your space, without actually saying that — unless you want it to!</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
+		'footer-2' => array (
+			array (
+				'type' => 'text',
+				'args' => array (
+					'title'  => 'Your Add/Drop Policy',
+					'text'   => '<p>Write a really solid guarantee for your class and place it here. Something like “If you’re not totally satisfied with this course, we’ll give 100% of your money back, no questions asked. Oh, and you can keep all the downloadable audiobooks and audio course. That’s how absolutely certain we are that you’ll find tremendous, life-changing value in every lesson.”</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
+		'footer-3' => array (
+			array (
+				'type' => 'text',
+				'args' => array (
+					'title'  => 'Start building Your Brand For Free',
+					'text'   => '<p><strong><em>To display an Opt-in form, simply install your favorite Forms plugin. Then, replace this text with your Form widget or shortcode.</em></strong></p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
+	),
 );
