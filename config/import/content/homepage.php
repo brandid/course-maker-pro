@@ -51,7 +51,7 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-wideright","align":"full"} -->
-<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-wideright alignfull"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"paddingUnit":"%","padding":10,"paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-wideright alignfull"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"paddingUnit":"%","paddingTop":6,"paddingRight":10,"paddingBottom":6,"paddingLeft":10,"columnVerticalAlignment":"center"} -->
 <div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner" style="padding-top:6%;padding-right:10%;padding-bottom:6%;padding-left:10%"><!-- wp:paragraph {"align":"right","textColor":"accent","fontSize":"large"} -->
 <p style="text-align:right" class="has-text-color has-large-font-size has-accent-color">Build your brand, build your business.</p>
 <!-- /wp:paragraph --></div></div>
