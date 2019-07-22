@@ -88,8 +88,8 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#e6e4e3","className":"features"} -->
-<div style="background-color:#e6e4e3;padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container features ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"center","textColor":"gray","fontSize":"huge"} -->
+<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#e6e5e3","className":"features"} -->
+<div style="background-color:#e6e5e3;padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container features ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"center","textColor":"gray","fontSize":"huge"} -->
 <p style="text-align:center" class="has-text-color has-huge-font-size has-gray-color">Course Experience</p>
 <!-- /wp:paragraph -->
 
@@ -182,25 +182,23 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-accordion --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#f3f1f2"} -->
-<div style="background-color:#f3f1f2;padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns -->
-<div class="wp-block-columns has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":131} -->
+<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#f2f1ef"} -->
+<div style="background-color:#f2f1ef;padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-equal"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:image {"id":131} -->
 <figure class="wp-block-image"><img src="$course_maker_homepage_policy_image_url" alt="" class="wp-image-131"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
+<!-- /wp:image --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":5,"containerPaddingBottom":5,"containerPaddingLeft":5} -->
-<div style="padding-left:5%;padding-right:5%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:paragraph {"textColor":"navtext","fontSize":"large"} -->
-<p class="has-text-color has-large-font-size has-navtext-color">Your Add/Drop Policy</p>
+<!-- wp:atomic-blocks/ab-column {"columnVerticalAlignment":"center"} -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"gray","fontSize":"large"} -->
+<p class="has-text-color has-large-font-size has-gray-color">Your Add/Drop Policy</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
 <p>Write a really solid guarantee for your class and place it here. Something like “If you’re not totally satisfied with this course, we’ll give 100% of your money back, no questions asked. Oh, and you can keep all the downloadable audiobooks and audio course. That’s how absolutely certain we are that you’ll find tremendous, life-changing value in every lesson.”</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 CONTENT;
