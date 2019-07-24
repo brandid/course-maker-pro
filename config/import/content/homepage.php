@@ -171,7 +171,7 @@ return <<<CONTENT
 
 <!-- wp:atomic-blocks/ab-accordion -->
 <div class="wp-block-atomic-blocks-ab-accordion ab-block-accordion ab-font-size-18"><details><summary class="ab-accordion-title">Where do my lessons and course material go?</summary><div class="ab-accordion-text"><!-- wp:paragraph -->
-<p>If you're using the <a href="https://wordpress.org/plugins/course-maker-modules/" rel="noreferrer noopener" target="_blank">Course Maker Modules plugin</a>, Lessons and course material should be added to the “lessons” post type accessible from the WordPress dashboard. As with the rest of the site, these posts are fully customizable and can be adjusted to your needs—add as many or as few lessons as you’d like.</p>
+<p>If you're using the <a href="https://lifterlms.com" rel="noreferrer noopener" target="_blank">LifterLMS plugin</a>, Lessons and course material should be added to the “lessons” post type accessible from the WordPress dashboard. As with the rest of the site, these posts are fully customizable and can be adjusted to your needs—add as many or as few lessons as you’d like.</p>
 <!-- /wp:paragraph --></div></details></div>
 <!-- /wp:atomic-blocks/ab-accordion -->
 
