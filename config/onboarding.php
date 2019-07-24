@@ -77,7 +77,7 @@ return array(
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
-		// SAMPLE BLOG POSTS
+		/* SAMPLE BLOG POSTS */
 		'Sample Blog Post 1' => array(
 			'post_title'	 => 'Five Important Things You Should Know About Courses',
 			'post_content'	 => require dirname( __FILE__ ) . '/import/content/sample-blog-post-1.php',
@@ -140,7 +140,7 @@ return array(
 		),
 	),
 	'navigation_menus' => array(
-		// Header Navigation
+		/* Header Navigation */
 		'primary' => array(
 			'homepage' => array(
 				'title' => 'Home',
@@ -155,7 +155,7 @@ return array(
 				'title' => 'Contact',
 			),
 		),
-		// Logged-In Members Navigation
+		/* Logged-In Members Navigation */
 		'primary-members' => array(
 			'homepage' => array(
 				'title' => 'Home',
@@ -171,7 +171,7 @@ return array(
 			),
 		),
 	),
-	/* // WIDGET IMPORT - Ready for Genesis 3.1 // */
+	/* WIDGET IMPORT - Ready for Genesis 3.1 */
 	'widgets' => array (
 		'footer-1' => array (
 			array (
