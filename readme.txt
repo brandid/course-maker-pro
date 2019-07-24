@@ -1,26 +1,25 @@
-Course Maker Theme for BrandID
-A WordPress Personal Branding Theme from brandiD
+Course Maker Pro
+- A Course Authoring WordPress Theme from brandiD
 
-PURCHASE
-https://thebrandidthemes.com/product/coursemaker-personal-branding-wordpress-theme/
+DESCRIPTION
+Lead your online class with style, organization and the most user-friendly course interface in the StudioPress / Genesis suite, which can be customized to reflect your style and sensibility.
 
-INSTALL
-1. Make sure you have the Genesis Framework installed first.
-2. Go to WordPress dashboard. Click Appearance -> Themes and then Add New, then Upload Theme.
-3. Click Choose File and Upload the coursemaker.zip
-4. Activate the Course Maker theme.
+The homepage layout will drive traffic to your site and engage users with your course materials while communicating that you're an authority in your space, without actually saying that — unless you want it to!
 
-For theme documentation, please visit https://thebrandidthemes.com/category/coursemaker-theme/.
+The Course Maker Pro theme, built exclusively for the Genesis framework, is packed full of features and functionality to help you market your new online course. We like it so much, we're using it for our own personal branding course!
 
-NOTE: Course Maker theme uses minified css and js files. The uncompressed files are included, but if you edit them, you'll need to recreate the minified versions.
-If you want to test using uncompressed js files, add a constant course_maker_DEBUG and set to true in your wp-config.php file.
-
-define( 'course_maker_DEBUG', true );
-
-See changelog.md for changes.
+PURCHASE THEME
+To purchase the theme, please visit:
+https://thebrandidthemes.com/product/course-maker-theme/
 
 THEME DEMO
-https://coursemaker.personalbranding.thebrandid.com/
+To see a demo of the theme in action, please visit:
+https://demo.coursemakerpro.thebrandid.com/
 
-SUPPORT
-Please visit https://thebrandidthemes.com/category/coursemaker-theme/#support-form for theme support.
+DOCUMENTATION
+For theme documentation, please visit:
+https://thebrandidthemes.com/docs/course-maker-pro/
+
+SUPPORT FORUM
+For theme support, please visit:
+https://thebrandidthemes.com/forum/support/themes/course-maker-pro/

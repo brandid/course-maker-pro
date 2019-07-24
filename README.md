@@ -10,13 +10,17 @@ The homepage layout will drive traffic to your site and engage users with your c
 The Course Maker Pro theme, built exclusively for the Genesis framework, is packed full of features and functionality to help you market your new online course. We like it so much, we're using it for our own personal branding course!
 
 ## Purchase Theme
+To purchase the theme, please visit:
 https://thebrandidthemes.com/product/course-maker-theme/
 
 ## Theme Demo
-Coming soon!
+To see a demo of the theme in action, please visit:
+https://demo.coursemakerpro.thebrandid.com/
 
-## Installation
-For Theme installation and setup documentation, please visit: https://thebrandidthemes.com/category/coursemaker-theme/.
+## Documentation
+For theme documentation, please visit:
+https://thebrandidthemes.com/docs/course-maker-pro/
 
 ## Support Forum
-For Theme support, please visit: https://thebrandidthemes.com/forum/support/themes/course-maker-pro/
+For theme support, please visit:
+https://thebrandidthemes.com/forum/support/themes/course-maker-pro/
