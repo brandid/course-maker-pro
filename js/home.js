@@ -66,7 +66,7 @@
 	function updateSiteInnerTopPadding(){
 
 		// Set target element to receive padding-top
-		var el = $( "main.content > article.page > .entry-content > div" );
+		var el = $( "main.content > article.page > .entry-content > div.welcome" );
 
         // Get bottom padding of target element -- to be used as "default" for top padding
         var pb = $(el).prop('style')['padding-bottom'];
