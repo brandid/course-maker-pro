@@ -31,7 +31,7 @@ remove_filter( 'get_search_form', 'genesis_search_form' );
 //* If Sticky Nav is not disabled, add a CSS class to the site-header element
 add_filter( 'genesis_attr_site-header', 'course_maker_stickynav_class' );
 function course_maker_stickynav_class( $attributes ) {
-	$sticky_header = get_theme_mod( 'sticky_header', false );
+	$sticky_header = get_theme_mod( 'sticky_header', true );
 	$attributes['class'] = ( !$sticky_header ? $attributes['class'] : $attributes['class'] . ' sticky' );
 	return $attributes;
 }

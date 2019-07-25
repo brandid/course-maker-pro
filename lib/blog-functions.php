@@ -216,8 +216,8 @@ function course_maker_blog_header_output() {
 	}
 
 	// Get Customizer settings
-	$enable_blog_carousel = get_theme_mod( 'enable_blog_carousel', false );
-	$enable_blog_categories = get_theme_mod( 'enable_blog_categories', false );
+	$enable_blog_carousel = get_theme_mod( 'enable_blog_carousel', true );
+	$enable_blog_categories = get_theme_mod( 'enable_blog_categories', true );
 
 	// Exit if both "disable" Customizer settings are set
 	if ( !$enable_blog_carousel && !$enable_blog_categories ) {
