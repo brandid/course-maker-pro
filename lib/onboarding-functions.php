@@ -65,3 +65,39 @@ function course_maker_remove_default_blog_meta( $content, $imported_post_ids ) {
 	}
 
 }
+
+//* Update display settings for SP Testimonials Slider
+add_action( 'genesis_onboarding_after_import_content', 'course_maker_update_spslider_settings', 30, 2 );
+function course_maker_update_spslider_settings( $content, $imported_post_ids ) {
+
+	// Enable Auto-play
+	if ( get_option( 'social_proof_slider_autoplay' ) !== 1 ) {
+	    update_option( 'social_proof_slider_autoplay', 1 );
+	}
+
+	// Set Display Time
+	if ( get_option( 'social_proof_slider_displaytime' ) == '' || empty( get_option( 'social_proof_slider_displaytime' ) ) ) {
+		update_option( 'social_proof_slider_displaytime', 3000 );
+	}
+
+	// Set Animation Style
+	if ( get_option( 'social_proof_slider_animationstyle' ) !== 'fade' ) {
+		update_option( 'social_proof_slider_animationstyle', 'fade' );
+	}
+
+	// Set vertical align middle
+	if ( get_option( 'social_proof_slider_verticalalign' ) !== 'align_middle' ) {
+	    update_option( 'social_proof_slider_verticalalign', 'align_middle' );
+	}
+
+	// Set show dots
+	if ( get_option( 'social_proof_slider_showdots' ) !== 1 ) {
+	    update_option( 'social_proof_slider_showdots', 1 );
+	}
+
+	// Set dots color
+	if ( get_option( 'social_proof_slider_dotscolor' ) == '' || empty( get_option( 'social_proof_slider_dotscolor' ) ) ) {
+		update_option( 'social_proof_slider_dotscolor', '#666666' );
+	}
+
+}
