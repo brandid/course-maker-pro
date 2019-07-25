@@ -580,6 +580,11 @@ hr.wp-block-separator {
   margin-left: 0;
 }
 
+/* AB BLOCKS
+------------------------------------------------------------------------- */
+.ab-accordion-title {
+  cursor: pointer;
+}
 @media screen and (min-width: 1023px) {
   body.content-sidebar .content-sidebar-wrap,
   body.content-sidebar .site-inner {
@@ -650,7 +655,6 @@ hr.wp-block-separator {
     padding: 0 50px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .entry-content .wp-block-pullquote:not(.is-style-solid-color) {
     padding: 54px 0;
