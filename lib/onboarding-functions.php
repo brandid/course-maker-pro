@@ -101,3 +101,19 @@ function course_maker_update_spslider_settings( $content, $imported_post_ids ) {
 	}
 
 }
+
+//* Set Genesis Defaults
+add_action( 'genesis_onboarding_after_import_content', 'course_maker_onboarding_set_genesis_defaults', 35, 2 );
+function course_maker_onboarding_set_genesis_defaults( $content, $imported_post_ids ) {
+
+	if ( ! function_exists( 'genesis_update_settings' ) ) {
+		return;
+	}
+
+	$settings = array(
+		'content_archive_thumbnail' => 1,	// Show blog post Featured Images
+	);
+
+	genesis_update_settings( $settings );
+
+}

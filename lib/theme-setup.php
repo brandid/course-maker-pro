@@ -7,14 +7,8 @@
 * @package Course Maker Pro
 */
 
+//* Add theme supports
 add_action( 'after_setup_theme', 'course_maker_theme_support', 9 );
-/**
- * Add desired theme supports.
- *
- * See config file at `config/theme-supports.php`.
- *
- * @since 3.0.0
- */
 function course_maker_theme_support() {
 
 	$theme_supports = genesis_get_config( 'theme-supports' );
@@ -22,6 +16,22 @@ function course_maker_theme_support() {
 	foreach ( $theme_supports as $feature => $args ) {
 		add_theme_support( $feature, $args );
 	}
+
+}
+
+//* Set Genesis Defaults
+add_action( 'after_switch_theme', 'course_maker_set_genesis_defaults' );
+function course_maker_set_genesis_defaults() {
+
+	if ( ! function_exists( 'genesis_update_settings' ) ) {
+		return;
+	}
+
+	$settings = array(
+		'content_archive_thumbnail' => 1,	// Show blog post Featured Images
+	);
+
+	genesis_update_settings( $settings );
 
 }
 
