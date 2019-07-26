@@ -153,7 +153,9 @@ function course_maker_lifterlms_color_css(){
         }
 
         .llms-course-nav .llms-lesson-preview:hover .llms-pre-text,
-        .llms-course-nav .llms-lesson-preview:hover .llms-lesson-title {
+        .llms-course-nav .llms-lesson-preview:hover .llms-lesson-title,
+        .llms-course-nav .llms-lesson-preview:hover .llms-lesson-excerpt p,
+        .llms-course-nav .llms-lesson-preview:hover .llms-extra {
             color: %s !important;
         }
         ',
