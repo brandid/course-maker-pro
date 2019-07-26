@@ -1494,6 +1494,7 @@ img.alignright {
 }
 
 .entry-content.blog-posts-grid .blog-posts-wrapper .cm-featured-post article {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
