@@ -86,7 +86,10 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+			'meta_input'     => array(
+				'_genesis_layout' => 'full-width-content',
+				'_featured_article' => 1,
+			),
 		),
 		'Sample Blog Post 2' => array(
 			'post_title'	 => 'This Year Will Be The Year of Your Course',
@@ -106,7 +109,10 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+			'meta_input'     => array(
+				'_genesis_layout' => 'full-width-content',
+				'_featured_article' => 1,
+			),
 		),
 		'Sample Blog Post 4' => array(
 			'post_title'	 => 'Innovative Approaches To Improving Your Courses',
@@ -126,7 +132,10 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
+			'meta_input'     => array(
+				'_genesis_layout' => 'full-width-content',
+				'_featured_article' => 1,
+			),
 		),
 		'Sample Blog Post 6' => array(
 			'post_title'	 => 'Three Tricks to Putting Your Courses into Overdrive',
