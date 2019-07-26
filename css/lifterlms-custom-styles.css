@@ -1,5 +1,19 @@
 /* Course Maker - Custom LifterLMS Styles
 ----------------------------------------------------------------------------- */
+
+/* COURSE LIST
+--------------------------------------------- */
+.llms-course-list .llms-loop-item .llms-loop-item-content h4.llms-loop-title {
+    font-size: 20px;
+}
+
+.llms-course-list .llms-loop-item .llms-loop-item-content .llms-author {
+    display: flex;
+    align-items: center;
+}
+
+/* COURSES
+--------------------------------------------- */
 .course .llms-meta-info {
     margin: 60px auto;
 }
