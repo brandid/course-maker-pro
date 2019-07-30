@@ -31,8 +31,8 @@ return <<<CONTENT
 <p style="text-align:center" class="has-text-color has-white-color">This theme is packed full of features and functionality to help you market your new course. The homepage layout will drive traffic to your site and engage users with your online course materials while communicating that you're an authority in your space, without actually saying that -- unless you want it to!</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"textColor":"white","align":"center","className":"is-style-squared target-blank"} -->
-<div class="wp-block-button aligncenter is-style-squared target-blank"><a class="wp-block-button__link has-text-color has-white-color" href="https://thebrandidthemes.com/product/course-maker-theme/">Buy The Theme</a></div>
+<!-- wp:button {"backgroundColor":"accent","textColor":"white","align":"center","className":"is-style-squared target-blank"} -->
+<div class="wp-block-button aligncenter is-style-squared target-blank"><a class="wp-block-button__link has-text-color has-white-color has-background has-accent-background-color" href="https://thebrandidthemes.com/product/course-maker-theme/">Buy The Theme</a></div>
 <!-- /wp:button --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
