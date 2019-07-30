@@ -63,7 +63,6 @@ function course_maker_colors_css() {
 		.wp-block-button .wp-block-button__link:not(.has-background),
 		.ab-block-button .ab-button,
 		.menu-toggle,
-		.home .welcome .wp-block-button > a:hover,
 		.cm-featured-post .widget-wrap > article > .stripe,
 		.entry-content .featured-articles .featured-article {
 			background-color: %s !important;
