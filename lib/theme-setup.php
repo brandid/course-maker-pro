@@ -29,6 +29,8 @@ function course_maker_set_genesis_defaults() {
 
 	$settings = array(
 		'content_archive_thumbnail' => 1,	// Show blog post Featured Images
+		'comments_posts' => 1,	// Enable comments on Posts
+		'comments_pages' => 1,	// Enable comments on Pages
 	);
 
 	genesis_update_settings( $settings );
