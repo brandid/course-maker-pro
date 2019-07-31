@@ -105,11 +105,11 @@ msgid "WP Video Lightbox"
 msgstr ""
 
 #: config/theme-supports.php:34
-msgid "Header Right Menu"
+msgid "Header Menu - Standard"
 msgstr ""
 
 #: config/theme-supports.php:35
-msgid "Header Right Menu - Members"
+msgid "Header Menu - Members"
 msgstr ""
 
 #: config/theme-supports.php:36
@@ -204,7 +204,7 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: lib/theme-setup.php:94
+#: lib/theme-setup.php:106
 msgid "Featured Image"
 msgstr ""
 
@@ -222,4 +222,24 @@ msgstr ""
 
 #: lifterlms/course/lesson-preview.php:65
 msgid "Let's Begin"
+msgstr ""
+
+#: config/import/content/sample-testimonial-1.php:13
+msgid "Author's Name"
+msgstr ""
+
+#: config/import/content/sample-testimonial-1.php:14, config/import/content/sample-testimonial-2.php:14, config/import/content/sample-testimonial-3.php:14
+msgid "Business or Professional Title"
+msgstr ""
+
+#: config/import/content/sample-testimonial-1.php:15
+msgid "Rachel is an amazing teacher. Her personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business."
+msgstr ""
+
+#: config/import/content/sample-testimonial-2.php:13
+msgid "Testimonial Author"
+msgstr ""
+
+#: config/import/content/sample-testimonial-3.php:13
+msgid "Quote Author"
 msgstr ""
