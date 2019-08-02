@@ -22,7 +22,8 @@ function course_maker_output_category_list() {
     // Create array of arguments
     $category_args = array(
         'title_li' => '',
-        'echo' => '0'
+        'echo' => '0',
+		'parent' => 0	// only show top-level categories
     );
 
     // Assign var with all categories
