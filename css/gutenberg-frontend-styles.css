@@ -65,6 +65,13 @@ body.content-sidebar .site-inner {
   width: 100%;
 }
 
+.full-width-content .site-container .alignwide {
+  margin-left: calc( -99vw / 2 + 100% / 2);
+  margin-right: calc( -99vw / 2 + 100% / 2);
+  max-width: 99vw;
+  width: auto;
+}
+
 /* Columns
 --------------------------------------------- */
 .entry-content .wp-block-columns {
@@ -267,11 +274,11 @@ table.alignfull {
   width: 100vw;
 }
 
-.full-width-content .site-container .alignwide,
 .full-width-content .site-container table.alignwide {
   margin-left: calc( -99vw / 2 + 100% / 2);
   margin-right: calc( -99vw / 2 + 100% / 2);
   max-width: 99vw;
+  width: auto;
 }
 
 .full-width-content .site-container table.alignfull {
@@ -462,6 +469,24 @@ hr.wp-block-separator {
 
 .features .display-posts-listing .cm-featured-post .widget-wrap > article .entry-content a.more-link::after {
   display: none;
+}
+
+/* Videos
+--------------------------------------------- */
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-1-1 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-1-2 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-4-3 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-9-16 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-18-9 .wp-block-embed__wrapper iframe,
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-21-9 .wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* OPT-IN
@@ -656,10 +681,14 @@ hr.wp-block-separator {
   }
 }
 @media screen and (min-width: 1200px) {
+  .full-width-content .site-container .alignwide {
+    margin-left: -180px;
+    margin-right: -180px;
+    max-width: 1020px;
+  }
   .entry-content .wp-block-pullquote:not(.is-style-solid-color) {
     padding: 54px 0;
   }
-  .full-width-content .site-container .alignwide,
   .full-width-content .site-container table.alignwide {
     margin-left: -180px;
     margin-right: -180px;

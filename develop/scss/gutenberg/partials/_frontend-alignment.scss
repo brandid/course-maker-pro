@@ -38,3 +38,15 @@
 		margin-right: -180px;
 	}
 }
+
+.full-width-content .site-container .alignwide {
+	margin-left: calc( -99vw / 2 + 100% / 2);
+    margin-right: calc( -99vw / 2 + 100% / 2);
+    max-width: 99vw;
+    width: auto;
+	@include media($screen--l){
+	    margin-left: -180px;
+	    margin-right: -180px;
+	    max-width: 1020px;
+	}
+}
