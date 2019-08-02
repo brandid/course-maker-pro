@@ -34,8 +34,8 @@
 
 .full-width-content .entry-content .alignwide {
     @include media($screen--m){
-		margin-left: -180px;
-		margin-right: -180px;
+		margin-left: -146px;
+		margin-right: -146px;
 	}
 }
 
@@ -45,8 +45,8 @@
     max-width: 99vw;
     width: auto;
 	@include media($screen--l){
-	    margin-left: -180px;
-	    margin-right: -180px;
+	    margin-left: -146px;
+	    margin-right: -146px;
 	    max-width: 1020px;
 	}
 }
