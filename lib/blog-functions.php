@@ -391,6 +391,44 @@ add_action( 'genesis_entry_footer', 'course_maker_close_entry_wrap', 99 );
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
 
+//* Shorten long post titles on Blog Archive page
+add_action( 'genesis_before', 'course_maker_custom_blog_post_titles' );
+function course_maker_custom_blog_post_titles() {
+
+	// If we are on a category page
+	if ( is_category() ) {
+
+		add_filter( 'genesis_post_title_text', 'course_maker_shorten_long_post_titles', 1 );
+		function course_maker_shorten_long_post_titles( $title ) {
+
+			// Get title
+			$title = get_the_title();
+
+			// Get title length
+			$title_length = strlen( $title );
+
+			// Create character limit
+			$title_char_limit = 80;
+
+			// If title is longer than limit
+			if ( $title_length > $title_char_limit ) {
+
+				// Create new var that is substring of original string
+				$newtitle = substr( $title, 0, $title_char_limit );
+
+				// Add ellipses
+				$title = $newtitle . "...";
+
+			}
+
+			return $title;
+
+		}
+
+	}
+
+}
+
 //* Add Learn More link
 function course_maker_add_readmore_link() {
 
