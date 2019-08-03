@@ -1196,6 +1196,10 @@ img.alignright {
   font-size: 2rem;
 }
 
+.featured-content .entry.sticky {
+  margin: 0;
+}
+
 /* Blog Styles
 --------------------------------------------------------------------------------------------------- */
 /* Blog intro text
