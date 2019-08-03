@@ -116,15 +116,15 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: lib/blog-functions.php:102, lib/metaboxes.php:18, lib/metaboxes.php:42
+#: lib/blog-functions.php:103, lib/metaboxes.php:18, lib/metaboxes.php:42
 msgid "Featured Article"
 msgstr ""
 
-#: lib/blog-functions.php:295
+#: lib/blog-functions.php:296
 msgid "New Articles"
 msgstr ""
 
-#: lib/blog-functions.php:400
+#: lib/blog-functions.php:439
 msgid "Learn More"
 msgstr ""
 
