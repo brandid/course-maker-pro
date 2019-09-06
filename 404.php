@@ -10,7 +10,7 @@
  * @link    https://thebrandidthemes.com/
  */
 
-//* Remove default loop
+// * Remove default loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_loop', 'genesis_404' );
@@ -21,17 +21,17 @@ add_action( 'genesis_loop', 'genesis_404' );
  */
 function genesis_404() {
 
-	//get filtering params
+	// get filtering params
 	$params = array();
 	global $query_string;
 	$args = explode( '&', $query_string );
 
 	foreach ( $args as $value ) {
-		$query = explode( '=',$value );
+		$query               = explode( '=', $value );
 		$params[ $query[0] ] = urldecode( $query[1] );
 	}
 	// if (function_exists('d')) {
-	//  d($args);
+	// d($args);
 	// }
 
 	echo genesis_html5() ? '<article class="entry">' : '<div class="post hentry">';
@@ -46,13 +46,13 @@ function genesis_404() {
 		get_search_form();
 
 			else :
-	?>
+				?>
 
 			<p><?php printf( __( 'The page you are looking for no longer exists. Perhaps you can return back to the site\'s <a href="%s">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below.', 'coursemaker' ), trailingslashit( home_url() ) ); ?></p>
 
 
 
-	<?php
+				<?php
 			endif;
 
 			if ( ! genesis_html5() ) {
