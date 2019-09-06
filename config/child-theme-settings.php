@@ -25,5 +25,5 @@ return array(
 		'posts_nav'                 => 'numeric',
 		'site_layout'               => 'full-width-content',
 	),
-	'posts_per_page' => 6,
+	'posts_per_page'       => 6,
 );
