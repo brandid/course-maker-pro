@@ -1,15 +1,16 @@
 <?php
 /**
  * Template for a lesson preview element
- * @author 		LifterLMS
- * @package 	LifterLMS/Templates
+ *
+ * @author      LifterLMS
+ * @package     LifterLMS/Templates
  * @since       1.0.0
  * @version     3.19.2
  */
 defined( 'ABSPATH' ) || exit;
 
 $restrictions = llms_page_restricted( $lesson->get( 'id' ), get_current_user_id() );
-$data_msg = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( strip_tags( llms_get_restriction_message( $restrictions ) ) ) . '"' : '';
+$data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( strip_tags( llms_get_restriction_message( $restrictions ) ) ) . '"' : '';
 ?>
 
 <div class="llms-lesson-preview<?php echo $lesson->get_preview_classes(); ?>">
@@ -22,12 +23,12 @@ $data_msg = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( s
 
 			<?php if ( 'course' === get_post_type( get_the_ID() ) ) : ?>
 
-				<?php  if ( apply_filters( 'llms_display_outline_thumbnails', true ) ) : ?>
+				<?php if ( apply_filters( 'llms_display_outline_thumbnails', true ) ) : ?>
 
 					<?php if ( has_post_thumbnail( $lesson->get( 'id' ) ) ) : ?>
 
 						<div class="llms-lesson-thumbnail">
-							<?php echo get_the_post_thumbnail( $lesson->get( 'id' ) ) ?>
+							<?php echo get_the_post_thumbnail( $lesson->get( 'id' ) ); ?>
 						</div>
 
 					<?php endif; ?>
@@ -44,7 +45,7 @@ $data_msg = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( s
 
 				<?php endif; ?>
 
-				<h5 class="llms-h5 llms-lesson-title"><?php echo get_the_title( $lesson->get( 'id' ) ) ?></h5>
+				<h5 class="llms-h5 llms-lesson-title"><?php echo get_the_title( $lesson->get( 'id' ) ); ?></h5>
 
 				<?php if ( apply_filters( 'llms_show_preview_excerpt', true ) && llms_get_excerpt( $lesson->get( 'id' ) ) ) : ?>
 
@@ -58,7 +59,7 @@ $data_msg = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( s
 				<p class="learn-more">
 					<?php
 					$student = llms_get_student( get_current_user_id() );
-					if ( $student ){
+					if ( $student ) {
 						if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
 							echo __( 'Revisit Lesson', 'coursemaker' );
 						} else {
