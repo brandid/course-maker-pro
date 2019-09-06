@@ -244,6 +244,8 @@ gulp.task('zip', ['pot'], () =>
     'readme.txt',
     'screenshot.png',
     '*.css',
+    '!composer-setup.php',
+    '!wpcs/**',
   ], {
     base: '.'
   })
@@ -282,10 +284,10 @@ gulp.task('build', ['styles', 'zip']);
 // });
 
 gulp.task('pot', function() {
-  return gulp.src(['./**/*.php'])
+  return gulp.src(['./**/*.php','!composer-setup.php','!wpcs/**'])
     .pipe(wpPot({
       domain: 'coursemaker',
-      package: 'Course Maker'
+      package: 'Course Maker Pro'
     }))
     .pipe(gulp.dest('languages/coursemaker.pot'));
 });

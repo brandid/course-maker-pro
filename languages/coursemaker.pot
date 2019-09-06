@@ -1,8 +1,8 @@
-# Copyright (C) 2019 Course Maker
-# This file is distributed under the same license as the Course Maker package.
+# Copyright (C) 2019 Course Maker Pro
+# This file is distributed under the same license as the Course Maker Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Course Maker\n"
+"Project-Id-Version: Course Maker Pro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
