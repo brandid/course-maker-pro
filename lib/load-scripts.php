@@ -1,13 +1,13 @@
 <?php
 /**
-* Loads scripts and stylesheets for Course Maker theme.
-*
-* @since 1.0
-*
-* @package Course Maker Pro
-*/
+ * Loads scripts and stylesheets for the Course Maker Pro theme.
+ *
+ * @since 1.0
+ *
+ * @package Course Maker Pro
+ */
 
-//* Enqueue Scripts, Styles and Icons
+// * Enqueue Scripts, Styles and Icons
 add_action( 'wp_enqueue_scripts', 'course_maker_enqueue_scripts_styles' );
 function course_maker_enqueue_scripts_styles() {
 
@@ -23,16 +23,16 @@ function course_maker_enqueue_scripts_styles() {
 	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'] );
 
 	// Global JS
-	wp_enqueue_script( genesis_get_theme_handle() . '-global-scripts', CHILD_THEME_URI . "/js/global.js", array( 'jquery' ), genesis_get_theme_version(), true );
+	wp_enqueue_script( genesis_get_theme_handle() . '-global-scripts', CHILD_THEME_URI . '/js/global.js', array( 'jquery' ), genesis_get_theme_version(), true );
 
 	if ( is_front_page() ) {
 
 		// Enqueue scripts
-		wp_enqueue_script( genesis_get_theme_handle() . '-homepage-scripts', CHILD_THEME_URI . "/js/home.js", array( 'jquery' ), genesis_get_theme_version(), true );
+		wp_enqueue_script( genesis_get_theme_handle() . '-homepage-scripts', CHILD_THEME_URI . '/js/home.js', array( 'jquery' ), genesis_get_theme_version(), true );
 
 	}
 
-	//* Smooth scroll
+	// * Smooth scroll
 	wp_enqueue_script( genesis_get_theme_handle() . '-smooth-scroll', get_stylesheet_directory_uri() . '/js/smooth-scroll.js', array( 'jquery' ), '1.0.0', true );
 
 }
@@ -42,7 +42,7 @@ if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
 }
 
-//* Third-Party Plugin integrations custom styles
+// * Third-Party Plugin integrations custom styles
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_plugin_styles' );
 function course_maker_custom_plugin_styles() {
 

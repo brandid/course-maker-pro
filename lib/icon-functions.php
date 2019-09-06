@@ -1,11 +1,6 @@
 <?php
-/*
-* This code was adapted from the WordPress Twentyseventeen theme
-* https://wordpress.org/themes/twentyseventeen/
-*/
-
 /**
- * Adds custom SVG icons to theme.
+ * Adds custom SVG icons to the Course Maker Pro theme.
  *
  * @author Jackie D'Elia
  * @package Genesis Theme code
@@ -23,7 +18,7 @@ function course_maker_include_svg_icons() {
 	$svg_icons = CHILD_THEME_DIR . '/images/svg-icons.min.svg';
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {
-		require_once( $svg_icons );
+		require_once $svg_icons;
 	}
 }
 add_action( 'genesis_before_footer', 'course_maker_include_svg_icons', 9999 );
@@ -53,10 +48,10 @@ function course_maker_get_svg( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
-		'icon'        => '',
-		'title'       => '',
-		'desc'        => '',
-		'fallback'    => false,
+		'icon'     => '',
+		'title'    => '',
+		'desc'     => '',
+		'fallback' => false,
 	);
 
 	// Parse args.
@@ -146,7 +141,7 @@ function course_maker_nav_menu_social_icons( $item_output, $item, $depth, $args 
 
 		$social_menu_id = $menu_object->term_id;
 		if ( is_object( $args->menu ) ) {
-			$cur_obj = $args->menu;
+			$cur_obj  = $args->menu;
 			$cur_menu = $cur_obj->term_id;
 		} else {
 			$cur_menu = $args->menu;
@@ -156,8 +151,8 @@ function course_maker_nav_menu_social_icons( $item_output, $item, $depth, $args 
 		// Change SVG icon inside social links menu if there is supported URL.
 		if ( $social_menu_id === $cur_menu ) {
 
-			$item_output = str_replace( 'itemprop="url">', 'itemprop="url"><span class="screen-reader-text">' , $item_output );
-			$item_output = str_replace( '</a>', '</span></a>' , $item_output );
+			$item_output = str_replace( 'itemprop="url">', 'itemprop="url"><span class="screen-reader-text">', $item_output );
+			$item_output = str_replace( '</a>', '</span></a>', $item_output );
 			foreach ( $social_icons as $attr => $value ) {
 				if ( false !== strpos( $item_output, $attr ) ) {
 					$item_output = str_replace( '</span>', '</span>' . course_maker_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );

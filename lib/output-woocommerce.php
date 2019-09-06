@@ -1,14 +1,17 @@
 <?php
 /**
-* Custom WooCommerce functions for Course Maker theme.
-*
-* @package Course Maker Pro
-*/
+ * Custom WooCommerce functions for the Course Maker Pro theme.
+ *
+ * @package Course Maker Pro
+ */
 
-//* Remove h1.page-title on WooCommerce product archives
-add_filter( 'woocommerce_show_page_title', function() {
-	return false;
-} );
+// * Remove h1.page-title on WooCommerce product archives
+add_filter(
+	'woocommerce_show_page_title',
+	function() {
+		return false;
+	}
+);
 
 // Color WooCommerce elements with "Link Color" from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_woocommerce_css' );
@@ -16,13 +19,14 @@ function course_maker_custom_woocommerce_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_accent       = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
 	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
-	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+	$color_hover        = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
 
 	$css = '';
 
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		.woocommerce #respond input#submit,
 		.woocommerce a.button,
 		.woocommerce button.button,
@@ -62,7 +66,7 @@ function course_maker_custom_woocommerce_css() {
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
 // *OPTIONAL* Removes Order Notes - Additional Information - Field
-add_filter( 'woocommerce_checkout_fields' , 'remove_order_notes' );
+add_filter( 'woocommerce_checkout_fields', 'remove_order_notes' );
 function remove_order_notes( $fields ) {
 
 	unset( $fields['order']['order_comments'] );

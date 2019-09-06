@@ -1,8 +1,6 @@
 <?php
 /**
- * Course Maker - Gutenberg Editor Styles
- *
- * This file adds custom CSS to the Gutenberg Editor
+ * Adds custom CSS to the Gutenberg Editor
  *
  * @package Course Maker Pro
  * @author  brandiD
@@ -21,26 +19,28 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 	$editor_color_palette = $appearance['editor-color-palette'];
 
-	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_accent       = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
 	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
-	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
-	$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', $appearance['default-colors']['navtext'] );
-	$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
-	$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', $appearance['default-colors']['footerbg'] );
-	$color_white = $appearance['default-colors']['white'];
-	$color_black = $appearance['default-colors']['black'];
-	$color_gray = $appearance['default-colors']['gray'];
-	$color_darkgray = $appearance['default-colors']['darkgray'];
+	$color_hover        = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+	$color_navtext      = get_theme_mod( 'course_maker_theme_navtext_setting', $appearance['default-colors']['navtext'] );
+	$color_headerbg     = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
+	$color_footerbg     = get_theme_mod( 'course_maker_theme_footerbg_setting', $appearance['default-colors']['footerbg'] );
+	$color_white        = $appearance['default-colors']['white'];
+	$color_black        = $appearance['default-colors']['black'];
+	$color_gray         = $appearance['default-colors']['gray'];
+	$color_darkgray     = $appearance['default-colors']['darkgray'];
 
 	$css = '';
 
-	/* Begin Custom CSS
+	/*
+	 Begin Custom CSS
 	------------------------------------------------------------------------- */
 	$css .= '
 	/* ----------------- // CUSTOMIZER STYLES // ----------------- */
 	';
 
-	/* BUTTONS
+	/*
+	 BUTTONS
 	------------------------------------------ */
 	$css .= '
 		/* ---------- BUTTONS ---------- */
@@ -50,9 +50,11 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 		}
 	';
 
-	/* ACCENT COLOR
+	/*
+	 ACCENT COLOR
 	------------------------------------------ */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- ACCENT ---------- */
 
 		/* text-color */
@@ -81,21 +83,23 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: %s !important;
 		}
 	',
-	$color_accent,
-	$color_accent,
-	$color_accent,
-	course_maker_color_contrast( $color_accent ),
-	$color_accent,
-	$color_accent,
-	course_maker_color_contrast( $color_accent ),
-	$color_accent,
-	$color_accent,
-	$color_accent
+		$color_accent,
+		$color_accent,
+		$color_accent,
+		course_maker_color_contrast( $color_accent ),
+		$color_accent,
+		$color_accent,
+		course_maker_color_contrast( $color_accent ),
+		$color_accent,
+		$color_accent,
+		$color_accent
 	);
 
-	/* LINKS/BUTTONS COLOR
+	/*
+	 LINKS/BUTTONS COLOR
 	------------------------------------------ */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- LINKS/BUTTONS ---------- */
 
 		/* text-color */
@@ -128,17 +132,19 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: %s !important;
 		}
 	',
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons,
-	$color_linksbuttons
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons,
+		$color_linksbuttons
 	);
 
-	/* HOVER COLOR
+	/*
+	 HOVER COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- HOVER ---------- */
 
 		/* text-color */
@@ -170,17 +176,19 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			color: #fff !important;
 		}
 	',
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover,
-	$color_hover
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		$color_hover,
+		$color_hover
 	);
 
-	/* NAV TEXT COLOR
+	/*
+	 NAV TEXT COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- NAV TEXT ---------- */
 
 		/* text-color */
@@ -193,13 +201,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_navtext,
-	$color_navtext
+		$color_navtext,
+		$color_navtext
 	);
 
-	/* HEADER BG COLOR
+	/*
+	 HEADER BG COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- HEADER BG ---------- */
 
 		/* text-color */
@@ -213,13 +223,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_headerbg,
-	$color_headerbg
+		$color_headerbg,
+		$color_headerbg
 	);
 
-	/* FOOTER BG COLOR
+	/*
+	 FOOTER BG COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- FOOTER BG ---------- */
 
 		/* text-color */
@@ -232,13 +244,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_footerbg,
-	$color_footerbg
+		$color_footerbg,
+		$color_footerbg
 	);
 
-	/* WHITE COLOR
+	/*
+	 WHITE COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- WHITE ---------- */
 
 		/* text-color */
@@ -251,13 +265,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_white,
-	$color_white
+		$color_white,
+		$color_white
 	);
 
-	/* GRAY COLOR
+	/*
+	 GRAY COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- GRAY ---------- */
 
 		/* text-color */
@@ -270,13 +286,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_gray,
-	$color_gray
+		$color_gray,
+		$color_gray
 	);
 
-	/* DARK GRAY COLOR
+	/*
+	 DARK GRAY COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- DARK GRAY ---------- */
 
 		/* text-color */
@@ -289,13 +307,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_darkgray,
-	$color_darkgray
+		$color_darkgray,
+		$color_darkgray
 	);
 
-	/* BLACK COLOR
+	/*
+	 BLACK COLOR
 	-------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- BLACK ---------- */
 
 		/* text-color */
@@ -308,11 +328,12 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 			 background-color: %s !important;
 		}
 	',
-	$color_black,
-	$color_black
+		$color_black,
+		$color_black
 	);
 
-	/* OUTPUT EVERYTHING
+	/*
+	 OUTPUT EVERYTHING
 	-------------------------------------------- */
 	if ( $css ) {
 		return wp_strip_all_tags( $css );

@@ -1,25 +1,25 @@
 <?php
 /**
-* Loads Gutenberg Editor functions for Course Maker theme.
-*
-* @since 2.0
-*
-* @package Course Maker Pro
-*/
+ * Loads Gutenberg Editor functions for the Course Maker Pro theme.
+ *
+ * @since 2.0
+ *
+ * @package Course Maker Pro
+ */
 
-//* Gutenberg Front-end styles
+// * Gutenberg Front-end styles
 add_action( 'wp_enqueue_scripts', 'course_maker_gutenberg_page_styles' );
 function course_maker_gutenberg_page_styles() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-frontend-styles', get_stylesheet_directory_uri() . "/css/gutenberg-frontend-styles.css", array( genesis_get_theme_handle() ), genesis_get_theme_version() );
+	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-frontend-styles', get_stylesheet_directory_uri() . '/css/gutenberg-frontend-styles.css', array( genesis_get_theme_handle() ), genesis_get_theme_version() );
 
 }
 
-//* Gutenberg Editor assets
+// * Gutenberg Editor assets
 add_action( 'enqueue_block_editor_assets', 'course_maker_gutenberg_editor_styles' );
 function course_maker_gutenberg_editor_styles() {
 
-	//* Get Appearance Settings
+	// * Get Appearance Settings
 	$appearance = genesis_get_config( 'appearance' );
 
 	// Fonts
@@ -27,15 +27,15 @@ function course_maker_gutenberg_editor_styles() {
 	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'] );
 
 	// Custom Editor Styles
-	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-editor-styles', get_stylesheet_directory_uri() . "/css/gutenberg-editor-styles.css", array(), genesis_get_theme_version(), true );
+	wp_enqueue_style( genesis_get_theme_handle() . '-gutenberg-editor-styles', get_stylesheet_directory_uri() . '/css/gutenberg-editor-styles.css', array(), genesis_get_theme_version(), true );
 
 	// Add custom CSS to Gutenberg
-	require_once('output-gutenberg-editor-styles.php');
+	require_once 'output-gutenberg-editor-styles.php';
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg-editor-inline-styles', course_maker_gutenberg_editor_customizer_css_output(), 'after' );
 
 }
 
-//* Add custom CSS class to Body
+// * Add custom CSS class to Body
 add_filter( 'body_class', 'coursemaker_blocks_body_classes' );
 /**
  * Adds body classes to help with block styling.
@@ -75,32 +75,32 @@ function coursemaker_blocks_body_classes( $classes ) {
 	return $classes;
 }
 
-//* Add support for Editor Styles
+// * Add support for Editor Styles
 add_theme_support( 'editor-styles' );
 
-//* Enqueue styles for the Editor
+// * Enqueue styles for the Editor
 add_editor_style( '/css/gutenberg-editor-styles.css' );
 
-//* Enable Wide Blocks
+// * Enable Wide Blocks
 add_theme_support( 'align-wide' );
 
-//* Make media embeds responsive
+// * Make media embeds responsive
 add_theme_support( 'responsive-embeds' );
 
-//* Get Block Editor Settings
+// * Get Block Editor Settings
 $appearance = genesis_get_config( 'appearance' );
 
-//* Editor Color Palette
+// * Editor Color Palette
 add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
-//* Force full-width-content layout for Gutenberg pages
+// * Force full-width-content layout for Gutenberg pages
 add_filter( 'genesis_site_layout', 'setGutenbergPageLayout' );
-function setGutenbergPageLayout(){
-    if ( function_exists( 'the_gutenberg_project' ) && has_blocks( get_the_ID() ) ) {
-        return 'full-width-content';
-    }
+function setGutenbergPageLayout() {
+	if ( function_exists( 'the_gutenberg_project' ) && has_blocks( get_the_ID() ) ) {
+		return 'full-width-content';
+	}
 }
 
-//* Remove custom position of the Entry Title
+// * Remove custom position of the Entry Title
 remove_action( 'genesis_before_entry', 'course_maker_remove_conditional_post_titles' );
 remove_action( 'genesis_after_header', 'course_maker_conditional_post_titles' );

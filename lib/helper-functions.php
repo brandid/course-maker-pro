@@ -1,41 +1,12 @@
 <?php
 /**
-* Course Maker Theme
-*
-* This file adds helper functions to the Course Maker theme.
-*
-* @package Course Maker Pro
-* @author  thebrandiD
-* @license GPL-2.0+
-* @link    https://thebrandidthemes.com/
-*/
-
-// /**
-//  * Loads theme colors.
-//  *
-//  * @since  2.0.0
-//  *
-//  * @param string $name Name of color to retrieve.
-//  *
-//  * @return string Hex color code for specified color.
-//  */
-// function get_course_maker_theme_colors( $slug ) {
-//
-// 	//* Get Appearance Settings
-// 	$appearance = genesis_get_config( 'appearance' );
-//
-// 	$editor_color_palette = $appearance['editor-color-palette'];
-//
-// 	$palette_colors = array_column( $editor_color_palette, 'slug' );
-//
-// 	$the_color = array_search( $slug, $palette_colors );
-//
-// 	$result = $editor_color_palette[$the_color]['color'];
-//
-// 	return $result;
-//
-// }
-
+ * Adds helper functions to the Course Maker Pro theme.
+ *
+ * @package Course Maker Pro
+ * @author  thebrandiD
+ * @license GPL-2.0+
+ * @link    https://thebrandidthemes.com/
+ */
 
 function course_maker_convert_hex2rgba( $color, $opacity = false ) {
 	$default = 'rgb(0,0,0)';
@@ -51,7 +22,9 @@ function course_maker_convert_hex2rgba( $color, $opacity = false ) {
 		$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
 	} elseif ( strlen( $color ) === 3 ) {
 		$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
-	} else { 		return $default; }
+	} else {
+		return $default;
+	}
 
 	$rgb = array_map( 'hexdec', $hex );
 
@@ -64,7 +37,7 @@ function course_maker_convert_hex2rgba( $color, $opacity = false ) {
 		$output = 'rgb(' . implode( ',', $rgb ) . ')';
 	}
 
-    return $output;
+	return $output;
 }
 
 /**

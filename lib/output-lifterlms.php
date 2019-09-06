@@ -1,67 +1,70 @@
 <?php
 /**
-* Custom LifterLMS colors for Course Maker theme.
-*
-* @package Course Maker Pro
-*/
+ * Custom LifterLMS colors for the Course Maker Pro theme.
+ *
+ * @package Course Maker Pro
+ */
 
-//* Force LifterLMS elements to use Colors from Customizer
+// * Force LifterLMS elements to use Colors from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_lifterlms_color_css' );
-function course_maker_lifterlms_color_css(){
+function course_maker_lifterlms_color_css() {
 
-    // Function to convert Hex colors to RGBA
-    function hex2rgba($color, $opacity = false) {
+	// Function to convert Hex colors to RGBA
+	function hex2rgba( $color, $opacity = false ) {
 
-    	$default = 'rgb(0,0,0)';
+		$default = 'rgb(0,0,0)';
 
-    	//Return default if no color provided
-    	if ( empty( $color ) ) {
-            return $default;
-        }
+		// Return default if no color provided
+		if ( empty( $color ) ) {
+			return $default;
+		}
 
-        //Sanitize $color if "#" is provided
-        if ($color[0] == '#' ) {
-        	$color = substr( $color, 1 );
-        }
+		// Sanitize $color if "#" is provided
+		if ( $color[0] == '#' ) {
+			$color = substr( $color, 1 );
+		}
 
-        //Check if color has 6 or 3 characters and get values
-        if (strlen($color) == 6) {
-                $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-        } elseif ( strlen( $color ) == 3 ) {
-                $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
-        } else {
-                return $default;
-        }
+		// Check if color has 6 or 3 characters and get values
+		if ( strlen( $color ) == 6 ) {
+				$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+		} elseif ( strlen( $color ) == 3 ) {
+				$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+		} else {
+				return $default;
+		}
 
-        //Convert hexadec to rgb
-        $rgb =  array_map('hexdec', $hex);
+		// Convert hexadec to rgb
+		$rgb = array_map( 'hexdec', $hex );
 
-        //Check if opacity is set(rgba or rgb)
-        if($opacity){
-        	if(abs($opacity) > 1)
-        		$opacity = 1.0;
-        	$output = 'rgba('.implode(",",$rgb).','.$opacity.')';
-        } else {
-        	$output = 'rgb('.implode(",",$rgb).')';
-        }
+		// Check if opacity is set(rgba or rgb)
+		if ( $opacity ) {
+			if ( abs( $opacity ) > 1 ) {
+				$opacity = 1.0;
+			}
+			$output = 'rgba(' . implode( ',', $rgb ) . ',' . $opacity . ')';
+		} else {
+			$output = 'rgb(' . implode( ',', $rgb ) . ')';
+		}
 
-        //Return rgb(a) color string
-        return $output;
+		// Return rgb(a) color string
+		return $output;
 
-    }
+	}
 
-    $appearance = genesis_get_config( 'appearance' );
+	$appearance = genesis_get_config( 'appearance' );
 
-    $color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_accent       = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
 	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
-	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
-    $color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
+	$color_hover        = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+	$color_headerbg     = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
 
 	$css = '';
 
-	/* MAIN ACCENT
+	/*
+	 MAIN ACCENT
 	------------------------------------------------------------------------- */
-	$css .= sprintf('
+	$css .= sprintf(
+		'
 		/* ---------- MAIN ACCENT ---------- */
         .course .llms-meta-info .llms-meta.llms-course-length p::before,
         .course .llms-meta-info .llms-meta.llms-tracks p::before,
@@ -108,17 +111,19 @@ function course_maker_lifterlms_color_css(){
             background-color: %s !important;
         }
         ',
-        $color_accent,
-        $color_accent,
-        $color_accent,
-        course_maker_color_contrast( $color_accent ),
-        $color_accent,
-        hex2rgba( $color_accent, 0.1)
+		$color_accent,
+		$color_accent,
+		$color_accent,
+		course_maker_color_contrast( $color_accent ),
+		$color_accent,
+		hex2rgba( $color_accent, 0.1 )
 	);
 
-	/* LINKS / BUTTONS
+	/*
+	 LINKS / BUTTONS
 	------------------------------------------------------------------------- */
-	$css .= sprintf('
+	$css .= sprintf(
+		'
 		/* ---------- LINKS / BUTTONS ---------- */
         .llms-button-primary {
             background-color: %s !important;
@@ -127,9 +132,11 @@ function course_maker_lifterlms_color_css(){
 		$color_linksbuttons
 	);
 
-	/* HOVER
+	/*
+	 HOVER
 	------------------------------------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- HOVER ---------- */
         .llms-loop-item-content .llms-loop-title:hover {
             color: %s !important;
@@ -160,23 +167,25 @@ function course_maker_lifterlms_color_css(){
         }
         ',
 		$color_hover,
-        $color_hover,
-        course_maker_color_contrast( $color_hover ),
-        $color_hover,
-        $color_hover,
-        course_maker_color_contrast( $color_hover )
+		$color_hover,
+		course_maker_color_contrast( $color_hover ),
+		$color_hover,
+		$color_hover,
+		course_maker_color_contrast( $color_hover )
 	);
 
-    /* HEADER BG COLOR
-    ------------------------------------------------------------------------- */
-    $css .= sprintf( '
+	/*
+	 HEADER BG COLOR
+	------------------------------------------------------------------------- */
+	$css .= sprintf(
+		'
 		/* ---------- HEADER BG COLOR ---------- */
         .llms-syllabus-wrapper > .alignfull {
             background-color: %s !important;
         }
         ',
-        $color_headerbg
-    );
+		$color_headerbg
+	);
 
 	/* OUTPUT INLINE STYLES */
 	if ( $css ) {

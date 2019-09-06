@@ -1,12 +1,12 @@
 <?php
 /**
-* This file adds the custom colors CSS to the front end of Course Maker theme.
-*
-* @package Course Maker Pro
-* @author  The BrandiD
-* @license GPL-2.0+
-* @link    https://thebrandidthemes.com/
-*/
+ * Adds custom colors CSS to the front end of the Course Maker Pro theme.
+ *
+ * @package Course Maker Pro
+ * @author  The BrandiD
+ * @license GPL-2.0+
+ * @link    https://thebrandidthemes.com/
+ */
 
 function course_maker_colors_css() {
 
@@ -14,12 +14,12 @@ function course_maker_colors_css() {
 
 	$editor_color_palette = $appearance['editor-color-palette'];
 
-	$color_accent = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
+	$color_accent       = get_theme_mod( 'course_maker_theme_accentcolor_setting', $appearance['default-colors']['accent'] );
 	$color_linksbuttons = get_theme_mod( 'course_maker_theme_linksbuttons_setting', $appearance['default-colors']['linksbuttons'] );
-	$color_hover = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
-	$color_navtext = get_theme_mod( 'course_maker_theme_navtext_setting', $appearance['default-colors']['navtext'] );
-	$color_headerbg = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
-	$color_footerbg = get_theme_mod( 'course_maker_theme_footerbg_setting', $appearance['default-colors']['footerbg'] );
+	$color_hover        = get_theme_mod( 'course_maker_theme_hover_setting', $appearance['default-colors']['hover'] );
+	$color_navtext      = get_theme_mod( 'course_maker_theme_navtext_setting', $appearance['default-colors']['navtext'] );
+	$color_headerbg     = get_theme_mod( 'course_maker_theme_headerbg_setting', $appearance['default-colors']['headerbg'] );
+	$color_footerbg     = get_theme_mod( 'course_maker_theme_footerbg_setting', $appearance['default-colors']['footerbg'] );
 
 	$css = '';
 
@@ -47,9 +47,11 @@ function course_maker_colors_css() {
 
 	}
 
-	/* MAIN ACCENT
+	/*
+	 MAIN ACCENT
 	------------------------------------------------------------------------- */
-	$css .= sprintf('
+	$css .= sprintf(
+		'
 		/* ---------- MAIN ACCENT ---------- */
 		.home .site-header.sticky.scrolled .site-title a,
 		body:not(.home) .site-header .site-title a,
@@ -85,9 +87,11 @@ function course_maker_colors_css() {
 		$color_accent
 	);
 
-	/* LINKS / BUTTONS
+	/*
+	 LINKS / BUTTONS
 	------------------------------------------------------------------------- */
-	$css .= sprintf('
+	$css .= sprintf(
+		'
 		/* ---------- LINKS / BUTTONS ---------- */
 		archive-pagination .active a,
 		body:not(.home) .button,
@@ -137,9 +141,11 @@ function course_maker_colors_css() {
 		$color_linksbuttons
 	);
 
-	/* HOVER
+	/*
+	 HOVER
 	------------------------------------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- HOVER ---------- */
 		.home .site-header.sticky.scrolled .site-title a:hover,
 		.home .site-header.sticky.scrolled .site-title a:focus,
@@ -237,9 +243,11 @@ function course_maker_colors_css() {
 		$color_hover
 	);
 
-	/* NAV TEXT
+	/*
+	 NAV TEXT
 	------------------------------------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- NAV TEXT ---------- */
 		#menu-social-menu li,
 		#menu-social-menu li > a:focus,
@@ -266,9 +274,11 @@ function course_maker_colors_css() {
 		$color_navtext
 	);
 
-	/* HEADER BG
+	/*
+	 HEADER BG
 	------------------------------------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- HEADER BG ---------- */
 		.home .site-header:not(.sticky),
 		.home .site-header.sticky.scrolled,
@@ -286,9 +296,11 @@ function course_maker_colors_css() {
 		$color_headerbg
 	);
 
-	/* FOOTER BG
+	/*
+	 FOOTER BG
 	------------------------------------------------------------------------- */
-	$css .= sprintf( '
+	$css .= sprintf(
+		'
 		/* ---------- FOOTER BG ---------- */
 		.site-footer {
 			background-color: %s !important;
