@@ -10,13 +10,13 @@
  * @link    https://www.studiopress.com/
  */
 
-//* Default Images
-$course_maker_homepage_hero_image_url = CHILD_URL . '/config/import/images/home-hero-default-bg.jpg';
-$course_maker_homepage_optin_image_url = CHILD_URL . '/config/import/images/home-optin-default.jpg';
-$course_maker_homepage_about_image_url = CHILD_URL . '/config/import/images/home-about-default.jpg';
+// * Default Images
+$course_maker_homepage_hero_image_url   = CHILD_URL . '/config/import/images/home-hero-default-bg.jpg';
+$course_maker_homepage_optin_image_url  = CHILD_URL . '/config/import/images/home-optin-default.jpg';
+$course_maker_homepage_about_image_url  = CHILD_URL . '/config/import/images/home-about-default.jpg';
 $course_maker_homepage_policy_image_url = CHILD_URL . '/config/import/images/home-policy-default.jpg';
 
-//* Begin Creating Content Output
+// * Begin Creating Content Output
 return <<<CONTENT
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":8,"containerPaddingBottom":10,"containerPaddingLeft":8,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#313131","containerImgID":120,"containerDimRatio":70,"className":"welcome"} -->
 <div style="background-color:#313131;padding-left:8%;padding-right:8%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container welcome ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$course_maker_homepage_hero_image_url" alt=""/></div><div class="ab-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"huge"} -->
