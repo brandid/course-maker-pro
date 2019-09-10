@@ -10,12 +10,12 @@
  * @link    https://thebrandidthemes.com/
  */
 
-// Start the engine
+// Start the engine.
 require_once get_template_directory() . '/lib/init.php';
 
-// * Include functions file which checks for plugins
+// Include functions file which checks for plugins.
 if ( ! function_exists( 'is_plugin_active' ) ) {
-	 include_once ABSPATH . 'wp-admin/includes/plugin.php';
+	include_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
 
 // Load constants - use constants in code instead of functions to improve performance. Hat Tip to Tonya at Knowthecode.io.
@@ -27,7 +27,7 @@ define( 'CHILD_THEME_URI', get_stylesheet_directory_uri() );
 define( 'ROOT_DOMAIN_URL', home_url() );
 define( 'CHILD_SITE_NAME', get_bloginfo( 'name' ) );
 
-// Set Localization (do not remove)
+// Set Localization - do not remove!
 add_action( 'after_setup_theme', 'course_maker_localization_setup' );
 /**
  * Loads text Domain
@@ -38,69 +38,72 @@ function course_maker_localization_setup() {
 	load_child_theme_textdomain( genesis_get_theme_handle(), apply_filters( 'child_theme_textdomain', CHILD_THEME_DIR . '/languages', 'coursemaker' ) );
 }
 
-// Load Theme Setup and Configuration
+// Load Theme Setup and Configuration.
 require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
-// Load custom Onboarding functions
+// Load custom Onboarding functions.
 require_once CHILD_THEME_DIR . '/lib/onboarding-functions.php';
 
-// Add the social icons functions
+// Add the social icons functions.
 require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 
-// Add the custom meta boxes
+// Add the custom meta boxes.
 require_once CHILD_THEME_DIR . '/lib/metaboxes.php';
 
-// Add Image upload and Color select to WordPress Theme Customizer
+// Add Image upload and Color select to WordPress Theme Customizer.
 require_once CHILD_THEME_DIR . '/lib/customize.php';
 
-// Add Color Scheme settings to WordPress Theme Customizer
+// Add Color Scheme settings to WordPress Theme Customizer.
 require_once CHILD_THEME_DIR . '/lib/customize-colors.php';
 
-// Add the helper functions
+// Add the helper functions.
 require_once CHILD_THEME_DIR . '/lib/helper-functions.php';
 
-// Add the blog functions
+// Add the blog functions.
 require_once CHILD_THEME_DIR . '/lib/blog-functions.php';
 
-// Add Gutenberg functions
-add_action( 'after_setup_theme', 'course_maker_gutenberg_support' );
-function course_maker_gutenberg_support() {
+// Add Gutenberg functions.
+add_action( 'after_setup_theme', 'course_maker_gutenberg_functions' );
+/**
+ * Adds Gutenberg functions to the theme
+ */
+function course_maker_gutenberg_functions() {
 	require_once get_stylesheet_directory() . '/lib/gutenberg-functions.php';
 }
 
-// Load Scripts and Styles
+// Load Scripts and Styles.
 require_once CHILD_THEME_DIR . '/lib/load-scripts.php';
 
-// Output Customizer Colors CSS
+// Output Customizer Colors CSS.
 require_once CHILD_THEME_DIR . '/lib/output-colors.php';
 
-// Display Posts Shortcode
+// Display Posts Shortcode.
 if ( is_plugin_active( 'display-posts-shortcode/display-posts-shortcode.php' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/dps-functions.php';
 }
 
-// Course Maker Modules
+// Output for Course Maker Modules plugin.
 if ( is_plugin_active( 'course-maker-modules/course-maker-modules.php' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-coursemakermodules.php';
 }
 
-// LifterLMS
+// Output for LifterLMS plugin.
 if ( is_plugin_active( 'lifterlms/lifterlms.php' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/lifterlms-functions.php';
 	include_once CHILD_THEME_DIR . '/lib/output-lifterlms.php';
 }
 
-// WooCommerce
+// Output for WooCommerce plugin.
 if ( class_exists( 'WooCommerce' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-woocommerce.php';
 }
 
-// MemberPress
+// Output for MemberPress plugin.
 if ( class_exists( 'MeprUser' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-memberpress.php';
 }
 
-// Restrict Content Pro
+// Output for Restrict Content Pro plugin.
 if ( class_exists( 'RCP_Member' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/output-rcp.php';
 }
