@@ -6,6 +6,7 @@
  *
  * @package Course Maker Pro
  */
+
 return array(
 	GENESIS_SETTINGS_FIELD => array(
 		'blog_cat_num'              => 6,

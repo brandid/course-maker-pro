@@ -10,12 +10,12 @@
  * @link    https://www.studiopress.com/
  */
 
-$authorName      = __( "Author's Name", 'coursemaker' );
-$authorTitle     = __( 'Business or Professional Title', 'coursemaker' );
-$testimonialText = __( "Rachel is an amazing teacher. Her personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business.", 'coursemaker' );
+$author_name      = __( "Author's Name", 'coursemaker' );
+$author_title     = __( 'Business or Professional Title', 'coursemaker' );
+$testimonial_text = __( "Rachel is an amazing teacher. Her personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business.", 'coursemaker' );
 
 return array(
-	'socialproofslider_testimonial_author_name'  => '<p>' . $authorName . '</p>',
-	'socialproofslider_testimonial_author_title' => '<p>' . $authorTitle . '</p>',
-	'socialproofslider_testimonial_text'         => '<p>' . $testimonialText . '</p>',
+	'socialproofslider_testimonial_author_name'  => '<p>' . $author_name . '</p>',
+	'socialproofslider_testimonial_author_title' => '<p>' . $author_title . '</p>',
+	'socialproofslider_testimonial_text'         => '<p>' . $testimonial_text . '</p>',
 );

@@ -83,7 +83,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-1.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
@@ -96,7 +96,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-2.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
@@ -106,7 +106,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-3.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
@@ -119,7 +119,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-4.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
@@ -129,7 +129,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-5.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
@@ -142,7 +142,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-6.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash
+			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),

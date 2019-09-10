@@ -10,12 +10,12 @@
  * @link    https://www.studiopress.com/
  */
 
-$authorName      = __( 'Quote Author', 'coursemaker' );
-$authorTitle     = __( 'Business or Professional Title', 'coursemaker' );
-$testimonialText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis bibendum ipsum, nec scelerisque metus. Suspendisse ultrices in risus et aliquam. Maecenas ut risus mauris. Sed luctus diam vitae faucibus venenatis.';
+$author_name      = __( 'Quote Author', 'coursemaker' );
+$author_title     = __( 'Business or Professional Title', 'coursemaker' );
+$testimonial_text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis bibendum ipsum, nec scelerisque metus. Suspendisse ultrices in risus et aliquam. Maecenas ut risus mauris. Sed luctus diam vitae faucibus venenatis.';
 
 return array(
-	'socialproofslider_testimonial_author_name'  => '<p>' . $authorName . '</p>',
-	'socialproofslider_testimonial_author_title' => '<p>' . $authorTitle . '</p>',
-	'socialproofslider_testimonial_text'         => '<p>' . $testimonialText . '</p>',
+	'socialproofslider_testimonial_author_name'  => '<p>' . $author_name . '</p>',
+	'socialproofslider_testimonial_author_title' => '<p>' . $author_title . '</p>',
+	'socialproofslider_testimonial_text'         => '<p>' . $testimonial_text . '</p>',
 );
