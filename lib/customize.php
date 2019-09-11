@@ -40,9 +40,7 @@ function course_maker_customizer_register( $wp_customize ) {
 
 	global $wp_customize;
 
-	/*
-	 SITE TITLE DISPLAY
-	--------------------------------------------------------------------- */
+	// Add Site Title Display Setting.
 	$wp_customize->add_setting(
 		'site_title_display',
 		array(
@@ -53,6 +51,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
+	// Add Site Title Display Control.
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
@@ -69,11 +68,9 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	/*
-	 COURSE MAKER PRO SETTINGS
-	------------------------------------------------------------------------- */
+	// COURSE MAKER PRO SETTINGS.
 
-	// SETTINGS PANEL
+	// Add Settings Panel.
 	$wp_customize->add_section(
 		'coursemakerpro_settings',
 		array(
@@ -82,7 +79,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// STICKY HEADER SETTING
+	// Add Sticky Header Setting.
 	$wp_customize->add_setting(
 		'sticky_header',
 		array(
@@ -92,7 +89,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// STICKY HEADER CONTROL
+	// Add Sticky Header Control.
 	$wp_customize->add_control(
 		new Course_Maker_Toggle_Control(
 			$wp_customize,
@@ -106,7 +103,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// BLOG CAROUSEL SETTING
+	// Add Blog Carousel Setting.
 	$wp_customize->add_setting(
 		'enable_blog_carousel',
 		array(
@@ -116,7 +113,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// BLOG CAROUSEL CONTROL
+	// Add Blog Carousel Control.
 	$wp_customize->add_control(
 		new Course_Maker_Toggle_Control(
 			$wp_customize,
@@ -130,7 +127,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// BLOG CATEGORIES SETTING
+	// Add Blog Categories List Setting.
 	$wp_customize->add_setting(
 		'enable_blog_categories',
 		array(
@@ -140,7 +137,7 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// BLOG CATEGORIES CONTROL
+	// Add Blog Categories List Control.
 	$wp_customize->add_control(
 		new Course_Maker_Toggle_Control(
 			$wp_customize,
@@ -182,66 +179,13 @@ function course_maker_sanitize_checkbox( $checked ) {
  */
 function course_maker_sanitize_select( $input, $setting ) {
 
-	// input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	// The input var must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only.
 	$input = sanitize_key( $input );
 
-	// get the list of possible select options
+	// Get the list of possible select options.
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 
-	// return input if valid or return default option
+	// Return the input if it is valid, else return the default option.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
-}
-
-// * On/Off Toggle Switch Controls
-if ( class_exists( 'WP_Customize_Control' ) ) {
-
-	class Course_Maker_Toggle_Control extends WP_Customize_Control {
-
-		public $type = 'light';
-
-		public function enqueue() {
-			wp_enqueue_style( genesis_get_theme_handle() . '-toggle-control-css', CHILD_THEME_URI . '/includes/course-maker-toggle-control.css', array(), genesis_get_theme_version() );
-			$css = '
-    			.disabled-control-title {
-    				color: #a0a5aa;
-    			}
-    			input[type=checkbox].tgl-light:checked + .tgl-btn {
-    				background: #0085ba;
-    			}
-    			input[type=checkbox].tgl-light + .tgl-btn {
-    			  background: #a0a5aa;
-    			}
-    			input[type=checkbox].tgl-light + .tgl-btn:after {
-    			  background: #f7f7f7;
-    			}
-    		';
-			wp_add_inline_style( genesis_get_theme_handle() . '-toggle-control-inline-css', $css );
-		}
-
-		public function render_content() {
-			?>
-			<label class="customize-control-title">
-				<div style="height: 4px; margin: 0;"></div>
-				<div style="display:flex;flex-direction: row;justify-content: flex-start;">
-					<span class="customize-control-title" style="flex: 2 0 0; vertical-align: middle;"><?php echo esc_html( $this->label ); ?></span>
-					<input id="cb<?php echo $this->instance_number; ?>" type="checkbox" class="tgl tgl-<?php echo $this->type; ?>" value="<?php echo esc_attr( $this->value() ); ?>"
-											<?php
-											$this->link();
-											checked( $this->value() );
-											?>
-					 />
-					<label for="cb<?php echo $this->instance_number; ?>" class="tgl-btn"></label>
-				</div>
-				<?php if ( ! empty( $this->description ) ) : ?>
-				<span class="description customize-control-description" style="margin-top: 6px;"><?php echo $this->description; ?></span>
-				<?php endif; ?>
-				<div style="height: 4px; margin: 0;"></div>
-				<hr>
-			</label>
-			<?php
-		}
-
-	}
 
 }

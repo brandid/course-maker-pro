@@ -8,6 +8,9 @@
  * @link    https://thebrandidthemes.com/
  */
 
+/**
+ * Gather all custom colors CSS, then enqueue it on the front end.
+ */
 function course_maker_colors_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
@@ -47,9 +50,7 @@ function course_maker_colors_css() {
 
 	}
 
-	/*
-	 MAIN ACCENT
-	------------------------------------------------------------------------- */
+	// MAIN ACCENT COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- MAIN ACCENT ---------- */
@@ -87,9 +88,7 @@ function course_maker_colors_css() {
 		$color_accent
 	);
 
-	/*
-	 LINKS / BUTTONS
-	------------------------------------------------------------------------- */
+	// LINKS / BUTTONS COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- LINKS / BUTTONS ---------- */
@@ -141,9 +140,7 @@ function course_maker_colors_css() {
 		$color_linksbuttons
 	);
 
-	/*
-	 HOVER
-	------------------------------------------------------------------------- */
+	// HOVER COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- HOVER ---------- */
@@ -243,9 +240,7 @@ function course_maker_colors_css() {
 		$color_hover
 	);
 
-	/*
-	 NAV TEXT
-	------------------------------------------------------------------------- */
+	// NAV TEXT COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- NAV TEXT ---------- */
@@ -274,9 +269,7 @@ function course_maker_colors_css() {
 		$color_navtext
 	);
 
-	/*
-	 HEADER BG
-	------------------------------------------------------------------------- */
+	// HEADER BG COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- HEADER BG ---------- */
@@ -296,9 +289,7 @@ function course_maker_colors_css() {
 		$color_headerbg
 	);
 
-	/*
-	 FOOTER BG
-	------------------------------------------------------------------------- */
+	// FOOTER BG COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- FOOTER BG ---------- */
@@ -309,7 +300,7 @@ function course_maker_colors_css() {
 		$color_footerbg
 	);
 
-	/* Output inline styles */
+	// Output inline styles.
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}

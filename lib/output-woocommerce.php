@@ -5,7 +5,7 @@
  * @package Course Maker Pro
  */
 
-// * Remove h1.page-title on WooCommerce product archives
+// Remove h1.page-title on WooCommerce product archives.
 add_filter(
 	'woocommerce_show_page_title',
 	function() {
@@ -13,8 +13,10 @@ add_filter(
 	}
 );
 
-// Color WooCommerce elements with "Link Color" from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_woocommerce_css' );
+/**
+ * Forces the WooCommerce elements to use the "Link Color" Customizer setting.
+ */
 function course_maker_custom_woocommerce_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
@@ -62,11 +64,17 @@ function course_maker_custom_woocommerce_css() {
 
 }
 
-// *OPTIONAL* Removes Order Notes - Additional Information - Title
+// OPTIONAL: Removes Order Notes - Additional Information - Title.
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
-// *OPTIONAL* Removes Order Notes - Additional Information - Field
+// OPTIONAL: Removes Order Notes - Additional Information - Field.
 add_filter( 'woocommerce_checkout_fields', 'remove_order_notes' );
+/**
+ * Removes Order Notes - Additional Information - Field.
+ *
+ * @param array $fields An array of fields to modify.
+ * @return array A modified array of fields.
+ */
 function remove_order_notes( $fields ) {
 
 	unset( $fields['order']['order_comments'] );

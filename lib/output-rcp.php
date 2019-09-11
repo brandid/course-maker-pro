@@ -5,8 +5,10 @@
  * @package Course Maker Pro
  */
 
-// Color Restrict Content Pro elements with "Link Color" from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_rcp_css' );
+/**
+ * Forces the Restrict Content Pro elements to use the "Link Color" Customizer setting.
+ */
 function course_maker_custom_rcp_css() {
 
 	$appearance = genesis_get_config( 'appearance' );

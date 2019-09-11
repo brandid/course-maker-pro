@@ -7,6 +7,7 @@
  * @since       1.0.0
  * @version     3.24.0
  */
+
 defined( 'ABSPATH' ) || exit;
 global $post;
 $course   = new LLMS_Course( $post );
@@ -21,14 +22,14 @@ $sections = $course->get_sections();
 
 		<?php if ( ! $sections ) : ?>
 
-			<?php _e( 'This course does not have any sections.', 'lifterlms' ); ?>
+			<?php esc_html_e( 'This course does not have any sections.', 'lifterlms' ); ?>
 
 		<?php else : ?>
 
 			<?php foreach ( $sections as $section ) : ?>
 
 				<?php if ( apply_filters( 'llms_display_outline_section_titles', true ) ) : ?>
-					<h3 class="llms-h3 llms-section-title"><?php echo get_the_title( $section->get( 'id' ) ); ?></h3>
+					<h3 class="llms-h3 llms-section-title"><?php echo esc_html( get_the_title( $section->get( 'id' ) ) ); ?></h3>
 				<?php endif; ?>
 
 				<?php $lessons = $section->get_lessons(); ?>
@@ -54,7 +55,7 @@ $sections = $course->get_sections();
 
 				<?php else : ?>
 
-					<?php _e( 'This section does not have any lessons.', 'lifterlms' ); ?>
+					<?php esc_html_e( 'This section does not have any lessons.', 'lifterlms' ); ?>
 
 				<?php endif; ?>
 

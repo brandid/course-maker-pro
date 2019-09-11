@@ -8,6 +8,12 @@
  */
 
 add_filter( 'genesis_pre_get_option_site_layout', 'course_maker_force_fullwidth_layout' );
+/**
+ * Forces the site layout option to be full-width.
+ *
+ * @param object $opt The option to modify.
+ * @return string
+ */
 function course_maker_force_fullwidth_layout( $opt ) {
 
 	if ( is_archive() ) {
@@ -16,29 +22,33 @@ function course_maker_force_fullwidth_layout( $opt ) {
 
 }
 
-// * Function to output <ul> list of Blog Post Categories
+/**
+ * Outputs a <ul> list of blog post categories.
+ *
+ * @return string
+ */
 function course_maker_output_category_list() {
 
-	// Create array of arguments
+	// Create an array of arguments.
 	$category_args = array(
 		'title_li' => '',
 		'echo'     => '0',
-		'parent'   => 0,   // only show top-level categories
+		'parent'   => 0, // Only show top-level categories.
 	);
 
-	// Assign var with all categories
+	// Assign var with all categories.
 	$categories = wp_list_categories( $category_args );
 
-	// Get Blog URL
-	$blogURL = get_post_type_archive_link( 'post' );
+	// Get Blog URL.
+	$blog_url = get_post_type_archive_link( 'post' );
 
-	// Add 'ALL' item to list of categories
-	$categories .= '<li class="cat-item-all"><a href="' . $blogURL . '">All</a></li>';
+	// Add 'ALL' item to list of categories.
+	$categories .= '<li class="cat-item-all"><a href="' . $blog_url . '">All</a></li>';
 
-	// If 'current-cat' class does not exist in the list of categories
-	if ( strpos( $categories, 'current-cat' ) == false ) {
+	// If 'current-cat' class does not exist in the list of categories.
+	if ( strpos( $categories, 'current-cat' ) === false ) {
 
-		// add the class to the 'All' item
+		// Add the class to the 'All' item.
 		$categories = str_replace( 'cat-item-all', 'cat-item-all current-cat', $categories );
 
 	}
@@ -47,7 +57,11 @@ function course_maker_output_category_list() {
 
 }
 
-// * Function to output all posts with "Featured Article" meta data
+/**
+ * Outputs all posts with "Featured Article" meta data.
+ *
+ * @return string
+ */
 function course_maker_show_featured_articles() {
 
 	$args = array(
@@ -60,18 +74,18 @@ function course_maker_show_featured_articles() {
 		),
 	);
 
-	// New WP_Query
+	// Create a new WP_Query.
 	$featured_article_query = new WP_Query( $args );
 
-	// Exit if no posts are marked as "Featured Articles"
+	// Exit if no posts are marked as "Featured Articles".
 	if ( ! $featured_article_query->have_posts() ) {
 		return;
 	}
 
-	// Begin Output Buffering
+	// Begin Output Buffering.
 	ob_start();
 
-	// Open container
+	// Open the featured articles content container.
 	echo '<div class="featured-articles">';
 
 	if ( $featured_article_query->have_posts() ) {
@@ -82,91 +96,91 @@ function course_maker_show_featured_articles() {
 
 			$post_id = get_the_ID();
 
-			// Create character limit for blog post titles
+			// Create character limit for blog post titles.
 			$title_char_limit = 60;
 
-			// Create var with shortened post title
-			$post_title = substr( get_the_title(), 0, $title_char_limit ); // Limit the title to 60 chars
+			// Create var with shortened post title.
+			$post_title = substr( get_the_title(), 0, $title_char_limit ); // Limit the title to 60 characters.
 
-			// If title is longer than limit, add ellipses
+			// If title is longer than limit, add ellipses.
 			if ( strlen( $post_title > $title_char_limit ) ) {
 				$post_title .= '...';
 			}
 
-			// Open container
+			// Open article container.
 			echo '<div class="featured-article">';
 
-			// Open text container
+			// Open text container.
 			echo '<div class="text-container">';
 
-			// 'Featured Article' header text
-			echo '<div class="featured-article-item-header">' . __( 'Featured Article', 'coursemaker' ) . '</div>';
+			// Show the 'Featured Article' header text.
+			echo '<div class="featured-article-item-header">' . esc_html__( 'Featured Article', 'coursemaker' ) . '</div>';
 
-			// Post Title
-			echo '<h2 class="entry-title"><a href="' . get_the_permalink() . '" class="entry-title-link">' . $post_title . '</a></h2>';
+			// Show the Post Title.
+			echo '<h2 class="entry-title"><a href="' . esc_url( get_the_permalink() ) . '" class="entry-title-link">' . esc_html( $post_title ) . '</a></h2>';
 
-			// Open Author info container
+			// Open the Author info container.
 			echo '<div class="author-info">';
 
-			// Get the Author
-			$theAuthor   = get_the_author();
-			$theAuthorID = get_the_author_meta( 'ID' );
+			// Get the Author info.
+			$the_author    = get_the_author();
+			$the_author_id = get_the_author_meta( 'ID' );
 
-			// Get the link to the Author page
-			$theAuthorLink = get_author_posts_url( $theAuthorID );
+			// Get the link to the Author page.
+			$the_author_link = get_author_posts_url( $the_author_id );
 
-			// Get the categories of the current post
+			// Get the categories of the current post.
 			$category = get_the_category();
 
-			// Assign var to the first category
-			$firstCategory = $category[0]->cat_name;
+			// Assign a var to the first category.
+			$first_category = $category[0]->cat_name;
 
-			// Get link to first category
-			$firstCategoryLink = get_category_link( $category[0] );
+			// Get the link to the first category.
+			$first_category_link = get_category_link( $category[0] );
 
-			// Author Image
+			// Show the Author Image.
 			echo '<div class="image">';
 
-			echo '<a href="' . $theAuthorLink . '">' . get_avatar( $theAuthorID, 64 ) . '</a>';
+			echo '<a href="' . esc_html( $the_author_link ) . '">' . get_avatar( $the_author_id, 64 ) . '</a>';
 
 			echo '</div>';
 
-			// Author Text
+			// Show the Author Text.
 			echo '<div class="author-text">';
 
-			echo '<p class="author-name"><a href="' . $theAuthorLink . '">' . $theAuthor . '</a></p>';
+			echo '<p class="author-name"><a href="' . esc_html( $the_author_link ) . '">' . esc_html( $the_author ) . '</a></p>';
 
-			echo '<p class="post-category"><a href="' . $firstCategoryLink . '">' . $firstCategory . '</a></p>';
+			echo '<p class="post-category"><a href="' . esc_html( $first_category_link ) . '">' . esc_html( $first_category ) . '</a></p>';
 
 			echo '</div>';
 
-			// Close Author info container
+			// Close the Author Info container.
 			echo '</div>';
 
-			// Close text container
+			// Close the text container.
 			echo '</div>';
 
-			// Featured Image
+			// Show the Featured Image.
 			if ( has_post_thumbnail() ) {
 
 				echo '<div class="featured-img">';
-				echo '<a href="' . get_the_permalink() . '">';
+				echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 				echo get_the_post_thumbnail( $post_id, 'featured-article' );
 				echo '</a>';
 				echo '</div>';
 
 			}
 
-			// Close container
+			// Close the article container.
 			echo '</div>';
 
 		}
 	}
 
-	// Close container
+	// Close the featured articles content container.
 	echo '</div>';
 
-	// JS output
+	// Output the JS.
 	?>
 	<script type="text/javascript">
 	jQuery(document).ready(function ($) {
@@ -194,110 +208,107 @@ function course_maker_show_featured_articles() {
 	</script>
 	<?php
 
-	// Save contents to a var
+	// Save the contents to a var.
 	$output = ob_get_contents();
 
-	// End Output Buffering
+	// End the Output Buffering.
 	ob_end_clean();
 
-	// Restore original Post Data
+	// Restore the original Post Data.
 	wp_reset_postdata();
 
-	// Return everything
+	// Return everything.
 	return $output;
 
 }
 
-// * Blog Header Output
+/**
+ * Modify the output of the Blog Header.
+ *
+ * @return string
+ */
 function course_maker_blog_header_output() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	// Get Customizer settings
+	// Get the Customizer settings.
 	$enable_blog_carousel   = get_theme_mod( 'enable_blog_carousel', true );
 	$enable_blog_categories = get_theme_mod( 'enable_blog_categories', true );
 
-	// Exit if both "disable" Customizer settings are set
+	// Exit if both "disable" Customizer settings are set.
 	if ( ! $enable_blog_carousel && ! $enable_blog_categories ) {
 		return;
 	}
 
-	// Start Output Buffering
+	// Start Output Buffering.
 	ob_start();
 
-	/*
-	 Open full-width container
-	----------------------------------------- */
+	// Open the full-width container.
 	echo '<div class="entry-content blog-header-extras">';
 	echo '<div class="alignfull" style="padding: 0 8%;">';
 	echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
 
-	/*
-	 Featured Articles slider
-	----------------------------------------- */
-
+	// Show the Featured Articles slider.
 	if ( $enable_blog_carousel ) {
 
 		$featured_articles_items = course_maker_show_featured_articles();
 
-		echo $featured_articles_items;
+		echo $featured_articles_items; // phpcs:ignore
 
 	}
 
-	/*
-	 Categories list
-	----------------------------------------- */
-
+	// Show the Blog Categories list.
 	if ( $enable_blog_categories ) {
 
 		$categories_list = course_maker_output_category_list();
 
-		echo $categories_list;
+		echo $categories_list; // phpcs:ignore
 
 	}
 
-	/*
-	 Close full-width container
-	----------------------------------------- */
+	// Close the full-width container.
 	echo '</div></div></div>';
 
-	// Put all content into a var
+	// Put all the content into a var.
 	$content = ob_get_contents();
 
-	// Stop Output Buffering
+	// Stop the Output Buffering.
 	ob_end_clean();
 
-	// Display everything
-	echo $content;
+	// Display everything.
+	echo $content; // phpcs:ignore
 
 }
 add_action( 'genesis_before_loop', 'course_maker_blog_header_output', 20 );
 
-// * Open blog posts container
+/**
+ * Opens the blog posts container
+ *
+ * @return string
+ */
 function course_maker_blog_posts_wrapper_open() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	// Open container divs
+	// Open the container divs.
 	echo '<div class="entry-content blog-posts-grid">';
 	echo '<div class="alignfull">';
 	echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
 
-	// * Show 'New Articles' header text on first Blog page
+	// Show 'New Articles' header text on first Blog page.
 	if ( is_home() ) {
 
-		// Get value of 'paged' var to determine current page - if null set to 1
+		// Get value of 'paged' var to determine current page - if null set to 1.
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-		// If this is the first page
-		if ( 1 == $paged ) {
+		// If this is the first page.
+		if ( 1 === $paged ) {
 
-			echo '<h2 class="blog-posts-title">' . __( 'New Articles', 'coursemaker' ) . '</h2>';
-			/* TODO: MAKE THIS EDITABLE WITH A CUSTOMIZER SETTING */
+			echo '<h2 class="blog-posts-title">' . esc_html__( 'New Articles', 'coursemaker' ) . '</h2>';
 
 		}
 	}
@@ -310,48 +321,64 @@ add_action( 'genesis_before_loop', 'course_maker_blog_posts_wrapper_open', 30 );
 // * Remove default Pagination
 remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
 
-// * Close blog posts container
+/**
+ * Closes the blog posts container
+ *
+ * @return string
+ */
 function course_maker_blog_posts_wrapper_close() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	echo '</div>'; // close .blog-posts-wrapper
+	echo '</div>';
 
 }
 add_action( 'genesis_after_endwhile', 'course_maker_blog_posts_wrapper_close', 20 );
 
-// * Add Pagination after 'blog-posts-wrapper'
+/**
+ * Adds Pagination after 'blog-posts-wrapper' element
+ *
+ * @return string
+ */
 function course_maker_reposition_pagination() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	// Default Pagination
+	// Use the default Pagination.
 	genesis_posts_nav();
 
-	// Close container divs
+	// Close container divs.
 	echo '</div></div></div>';
 
 }
 add_action( 'genesis_after_endwhile', 'course_maker_reposition_pagination', 30 );
 
-// * Open Article Wrapper
+/**
+ * Opens the Article Wrapper
+ *
+ * @return string
+ */
 function course_maker_open_article_wrap() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	echo '<section class="cm-featured-post widget featured-content post-' . get_the_ID() . ' type-' . get_post_type() . '">';
+	echo '<section class="cm-featured-post widget featured-content post-' . get_the_ID() . ' type-' . esc_attr( get_post_type() ) . '">';
 	echo '<div class="widget-wrap">';
 
 }
 add_action( 'genesis_before_entry', 'course_maker_open_article_wrap', 1 );
 
-// * Close Article Wrapper
+/**
+ * Closes the Article Wrapper
+ *
+ * @return string
+ */
 function course_maker_close_article_wrap() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
@@ -364,7 +391,11 @@ function course_maker_close_article_wrap() {
 }
 add_action( 'genesis_after_entry', 'course_maker_close_article_wrap', 1 );
 
-// * Open Entry Wrapper
+/**
+ * Opens the Entry Wrapper
+ *
+ * @return string
+ */
 function course_maker_open_entry_wrap() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
@@ -377,7 +408,11 @@ function course_maker_open_entry_wrap() {
 }
 add_action( 'genesis_entry_header', 'course_maker_open_entry_wrap', 0 );
 
-// * Close Entry Wrapper
+/**
+ * Closes the Entry Wrapper
+ *
+ * @return string
+ */
 function course_maker_close_entry_wrap() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
@@ -393,32 +428,42 @@ add_action( 'genesis_entry_footer', 'course_maker_close_entry_wrap', 99 );
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
 
-// * Shorten long post titles on Blog Archive page
-add_action( 'genesis_before', 'course_maker_custom_blog_post_titles' );
+/**
+ * Shortens long post titles on Blog Archive page
+ *
+ * @return string
+ */
 function course_maker_custom_blog_post_titles() {
 
-	// If we are on a category page
+	// If we are on a category page...
 	if ( is_category() ) {
 
 		add_filter( 'genesis_post_title_text', 'course_maker_shorten_long_post_titles', 1 );
+
+		/**
+		 * Shortens long post titles on Blog Archive page
+		 *
+		 * @param string $title The title text to modify.
+		 * @return string
+		 */
 		function course_maker_shorten_long_post_titles( $title ) {
 
-			// Get title
+			// Get the title.
 			$title = get_the_title();
 
-			// Get title length
+			// Get the title length.
 			$title_length = strlen( $title );
 
-			// Create character limit
+			// Create a character limit.
 			$title_char_limit = 80;
 
-			// If title is longer than limit
+			// If the title is longer than our limit...
 			if ( $title_length > $title_char_limit ) {
 
-				// Create new var that is substring of original string
+				// Create a new var that is substring of the original string.
 				$newtitle = substr( $title, 0, $title_char_limit );
 
-				// Add ellipses
+				// Add the ellipses.
 				$title = $newtitle . '...';
 
 			}
@@ -429,21 +474,31 @@ function course_maker_custom_blog_post_titles() {
 	}
 
 }
+add_action( 'genesis_before', 'course_maker_custom_blog_post_titles' );
 
-// * Add Learn More link
+/**
+ * Adds the Learn More link
+ *
+ * @return string
+ */
 function course_maker_add_readmore_link() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	echo '<a href="' . get_the_permalink() . '" class="more-link">' . __( 'Learn More', 'coursemaker' ) . '</a>';
+	echo '<a href="' . esc_url( get_the_permalink() ) . '" class="more-link">' . esc_html__( 'Learn More', 'coursemaker' ) . '</a>';
 
 }
 add_action( 'genesis_entry_content', 'course_maker_add_readmore_link', 20 );
 
 // * SINGLE POST - Add Featured Image above Post Title
 add_action( 'genesis_before_entry', 'course_maker_add_single_post_featured_image', 50 );
+/**
+ * Adds the Featured Image above the Post Title
+ *
+ * @return string
+ */
 function course_maker_add_single_post_featured_image() {
 
 	if ( ! is_singular() ) {
@@ -456,7 +511,7 @@ function course_maker_add_single_post_featured_image() {
 
 		echo '<div class="featured-image">';
 		echo '<div class="stripe"></div>';
-		echo '<a href="' . get_the_permalink() . '">';
+		echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 		echo get_the_post_thumbnail( $post_id, 'featured-image' );
 		echo '</a>';
 		echo '</div>';
@@ -465,7 +520,12 @@ function course_maker_add_single_post_featured_image() {
 
 }
 
-// * SINGLE POST - Add extra CSS class to .content element
+/**
+ * Adds extra CSS classes to the .content element
+ *
+ * @param array $attributes An array of Attributes to modify.
+ * @return array
+ */
 function course_maker_add_single_post_content_class( $attributes ) {
 
 	if ( ! is_singular() ) {

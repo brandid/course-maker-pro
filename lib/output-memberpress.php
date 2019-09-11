@@ -5,8 +5,10 @@
  * @package Course Maker Pro
  */
 
-// Color MemberPress elements with "Link Color" from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_custom_memberpress_css' );
+/**
+ * Forces the MemberPress elements to use the "Link Color" Customizer setting.
+ */
 function course_maker_custom_memberpress_css() {
 
 	$appearance = genesis_get_config( 'appearance' );

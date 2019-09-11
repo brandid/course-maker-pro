@@ -1,6 +1,6 @@
 <?php
 /**
- * Adds helper functions to the Course Maker Pro theme.
+ * This file adds helper functions to the Course Maker Pro theme.
  *
  * @package Course Maker Pro
  * @author  thebrandiD
@@ -8,6 +8,13 @@
  * @link    https://thebrandidthemes.com/
  */
 
+/**
+ * Converts Hex colors to RGBA format.
+ *
+ * @param string $color The color to be converted.
+ * @param string $opacity An opacity value to assign.
+ * @return string The converted color.
+ */
 function course_maker_convert_hex2rgba( $color, $opacity = false ) {
 	$default = 'rgb(0,0,0)';
 
@@ -41,9 +48,10 @@ function course_maker_convert_hex2rgba( $color, $opacity = false ) {
 }
 
 /**
- * Calculate the color contrast.
+ * Takes a color value and returns a contrasting Hex color value.
  *
- * @return string Hex color code for contrast color
+ * @param string $color The initial color to be calculated.
+ * @return string The new contrasting Hex color.
  */
 function course_maker_color_contrast( $color ) {
 

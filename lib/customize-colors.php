@@ -12,8 +12,6 @@ add_action( 'customize_register', 'course_maker_color_settings' );
  * Register settings and controls with the Customizer.
  *
  * @since 1.0.0
- *
- * @param WP_Customize_Manager $wp_customize Customizer object.
  */
 function course_maker_color_settings() {
 
@@ -21,7 +19,7 @@ function course_maker_color_settings() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	// 'COLOR PALETTE' SECTION
+	// Add 'Color Palette' Section.
 	$wp_customize->add_section(
 		'color_options_section',
 		array(
@@ -30,14 +28,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 COLORS
-	========================================================================= */
-
-	/*
-	 Main Accent Color
-	------------------------------------------------------ */
-	// setting
+	// Add 'Main Accent Color' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_accentcolor_setting',
 		array(
@@ -46,7 +37,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Main Accent Color' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -59,10 +50,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 Navigation Text
-	------------------------------------------------------ */
-	// setting
+	// Add 'Navigation Text' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_navtext_setting',
 		array(
@@ -71,7 +59,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Navigation Text' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -84,10 +72,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 Links / Buttons
-	------------------------------------------------------ */
-	// setting
+	// Add 'Links/Buttons' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_linksbuttons_setting',
 		array(
@@ -96,7 +81,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Links/Buttons' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -109,10 +94,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 Hover Color
-	------------------------------------------------------ */
-	// setting
+	// Add 'Hover Color' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_hover_setting',
 		array(
@@ -121,7 +103,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Hover Color' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -134,10 +116,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 Header BG
-	------------------------------------------------------ */
-	// setting
+	// Add 'Header BG' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_headerbg_setting',
 		array(
@@ -146,7 +125,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Header BG' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -159,10 +138,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	/*
-	 Footer BG
-	------------------------------------------------------ */
-	// setting
+	// Add 'Footer BG' Setting.
 	$wp_customize->add_setting(
 		'course_maker_theme_footerbg_setting',
 		array(
@@ -171,7 +147,7 @@ function course_maker_color_settings() {
 		)
 	);
 
-	// control
+	// Add 'Footer BG' Control.
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,

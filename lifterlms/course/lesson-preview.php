@@ -7,19 +7,20 @@
  * @since       1.0.0
  * @version     3.19.2
  */
+
 defined( 'ABSPATH' ) || exit;
 
 $restrictions = llms_page_restricted( $lesson->get( 'id' ), get_current_user_id() );
-$data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( strip_tags( llms_get_restriction_message( $restrictions ) ) ) . '"' : '';
+$data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( wp_strip_all_tags( llms_get_restriction_message( $restrictions ) ) ) . '"' : '';
 ?>
 
-<div class="llms-lesson-preview<?php echo $lesson->get_preview_classes(); ?>">
+<div class="llms-lesson-preview<?php echo $lesson->get_preview_classes(); // phpcs:ignore ?>">
 
 	<div class="stripe"></div>
 
 	<div class="wrapper">
 
-		<a class="llms-lesson-link<?php echo $restrictions['is_restricted'] ? ' llms-lesson-link-locked' : ''; ?>" href="<?php echo ( ! $restrictions['is_restricted'] ) ? get_permalink( $lesson->get( 'id' ) ) : '#llms-lesson-locked'; ?>"<?php echo $data_msg; ?>>
+		<a class="llms-lesson-link<?php echo $restrictions['is_restricted'] ? ' llms-lesson-link-locked' : ''; ?>" href="<?php echo ( ! $restrictions['is_restricted'] ) ? get_permalink( $lesson->get( 'id' ) ) : '#llms-lesson-locked'; ?>"<?php echo $data_msg; // phpcs:ignore ?>>
 
 			<?php if ( 'course' === get_post_type( get_the_ID() ) ) : ?>
 
@@ -41,15 +42,15 @@ $data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_htm
 
 				<?php if ( 'lesson' === get_post_type( get_the_ID() ) ) : ?>
 
-					<h6 class="llms-pre-text"><?php echo $pre_text; ?></h6>
+					<h6 class="llms-pre-text"><?php echo $pre_text; // phpcs:ignore ?></h6>
 
 				<?php endif; ?>
 
-				<h5 class="llms-h5 llms-lesson-title"><?php echo get_the_title( $lesson->get( 'id' ) ); ?></h5>
+				<h5 class="llms-h5 llms-lesson-title"><?php echo esc_html( get_the_title( $lesson->get( 'id' ) ) ); ?></h5>
 
 				<?php if ( apply_filters( 'llms_show_preview_excerpt', true ) && llms_get_excerpt( $lesson->get( 'id' ) ) ) : ?>
 
-					<div class="llms-lesson-excerpt"><?php echo llms_get_excerpt( $lesson->get( 'id' ) ); ?></div>
+					<div class="llms-lesson-excerpt"><?php echo llms_get_excerpt( $lesson->get( 'id' ) ); // phpcs:ignore ?></div>
 
 				<?php endif; ?>
 
@@ -61,16 +62,16 @@ $data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_htm
 					$student = llms_get_student( get_current_user_id() );
 					if ( $student ) {
 						if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
-							echo __( 'Revisit Lesson', 'coursemaker' );
+							echo esc_html_e( 'Revisit Lesson', 'coursemaker' );
 						} else {
-							echo __( 'Let\'s Begin', 'coursemaker' );
+							echo esc_html_e( 'Let\'s Begin', 'coursemaker' );
 						}
 					}
 					?>
 				</p>
 				<p class="extras">
-					<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), $lesson->get_order(), $total_lessons ); ?></span>
-					<?php echo $lesson->get_preview_icon_html(); ?>
+					<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), $lesson->get_order(), $total_lessons ); // phpcs:ignore ?></span>
+					<?php echo $lesson->get_preview_icon_html(); // phpcs:ignore ?>
 				</p>
 			</section>
 

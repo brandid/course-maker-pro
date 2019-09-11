@@ -50,7 +50,10 @@ require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 // Add the custom meta boxes.
 require_once CHILD_THEME_DIR . '/lib/metaboxes.php';
 
-// Add Image upload and Color select to WordPress Theme Customizer.
+// Import Customizer custom toggle control.
+require_once CHILD_THEME_DIR . '/lib/class-course-maker-toggle-control.php';
+
+// Add Course Maker Pro Settings to the WordPress Customizer.
 require_once CHILD_THEME_DIR . '/lib/customize.php';
 
 // Add Color Scheme settings to WordPress Theme Customizer.

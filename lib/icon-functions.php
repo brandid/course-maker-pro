@@ -1,17 +1,18 @@
 <?php
 /**
- * Adds custom SVG icons to the Course Maker Pro theme.
+ * This file adds custom SVG icons to the Course Maker Pro theme.
  *
- * @author Jackie D'Elia
- * @package Genesis Theme code
- * @since  1.0.0
- * @license GPL-2.0+
- * @link    https://thebrandid.com
+ * @author   brandiD
+ * @package  Course Maker Pro
+ * @since    1.0.0
+ * @license  GPL-2.0+
+ * @link     https://thebrandid.com
  */
 
 // This code is used if you want to place social icons in a specific location.
+
 /**
- * Add SVG definitions to the footer.
+ * Adds SVG definitions to the footer.
  */
 function course_maker_include_svg_icons() {
 	// Define SVG sprite file.
@@ -24,7 +25,7 @@ function course_maker_include_svg_icons() {
 add_action( 'genesis_before_footer', 'course_maker_include_svg_icons', 9999 );
 
 /**
- * Return SVG markup.
+ * Returns SVG markup.
  *
  * @param array $args {
  *     Parameters needed to display an SVG.
@@ -64,9 +65,7 @@ function course_maker_get_svg( $args = array() ) {
 	$aria_labelledby = '';
 
 	/*
-	 * BrandiD Starter Theme doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
-	 *
-	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
+	 * You can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
 	 * Example 1 with title: <?php echo course_maker_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
 	 *
@@ -115,15 +114,6 @@ function course_maker_get_svg( $args = array() ) {
 	return $svg;
 }
 
-
-// add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
-//
-// function your_custom_menu_item ( $items, $args ) {
-//
-// d( $items, $args );
-// return $items;
-//
-// }
 /**
  * Display SVG icons in social links menu.
  *
@@ -134,6 +124,7 @@ function course_maker_get_svg( $args = array() ) {
  * @return string  $item_output The menu item output with social icon.
  */
 function course_maker_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+
 	// Get supported social icons.
 	$menu_object = wp_get_nav_menu_object( 'social-menu' );
 
@@ -177,7 +168,7 @@ add_filter( 'walker_nav_menu_start_el', 'course_maker_nav_menu_social_icons', 10
  * @return string $title The menu item's title with dropdown icon.
  */
 function course_maker_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
-	// d( $args );
+
 	if ( 'primary' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
@@ -189,6 +180,7 @@ function course_maker_dropdown_icon_to_menu_link( $title, $item, $args, $depth )
 	return $title;
 }
 add_filter( 'nav_menu_item_title', 'course_maker_dropdown_icon_to_menu_link', 10, 4 );
+
 /**
  * Returns an array of supported social links (URL and icon name).
  *
@@ -235,9 +227,7 @@ function course_maker_social_links_icons() {
 	);
 
 	/**
-	 * Filter BrandiD Starter Themesocial links icons.
-	 *
-	 * @since BrandiD Starter Theme1.0
+	 * Filter social links icons.
 	 *
 	 * @param array $social_links_icons
 	 */

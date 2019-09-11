@@ -2,6 +2,8 @@
 /**
  * Loads custom Display Posts Shortcode plugin functions for the Course Maker Pro theme.
  *
+ * See: https://displayposts.com/2019/01/04/use-template-parts-to-match-your-themes-styling/
+ *
  * @since 2.0
  *
  * @package Course Maker Pro
@@ -10,12 +12,12 @@
 /**
  * Template Parts with Display Posts Shortcode
  *
- * @param   string $output,             current output of post
- * @param   array  $original_atts,      original attributes passed to shortcode
- * @return  string     $output
+ * @param string $output The current output of the post.
+ * @param array  $original_atts The original attributes passed to the shortcode.
+ * @return string $output
  */
 function cm_dps_template_part( $output, $original_atts ) {
-	// Return early if our "layout" attribute is not specified
+	// Return early if our "layout" attribute is not specified.
 	if ( empty( $original_atts['layout'] ) ) {
 		return $output;
 	}

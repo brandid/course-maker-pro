@@ -5,38 +5,45 @@
  * @package Course Maker Pro
  */
 
-// * Force LifterLMS elements to use Colors from Customizer
 add_action( 'wp_enqueue_scripts', 'course_maker_lifterlms_color_css' );
+/**
+ * Force LifterLMS elements to use Colors from Customizer.
+ */
 function course_maker_lifterlms_color_css() {
 
-	// Function to convert Hex colors to RGBA
+	/**
+	 * Converts Hex colors to RGBA.
+	 *
+	 * @param string $color The color to convert.
+	 * @param string $opacity An opacity value to use.
+	 */
 	function hex2rgba( $color, $opacity = false ) {
 
 		$default = 'rgb(0,0,0)';
 
-		// Return default if no color provided
+		// Return default if no color provided.
 		if ( empty( $color ) ) {
 			return $default;
 		}
 
-		// Sanitize $color if "#" is provided
-		if ( $color[0] == '#' ) {
+		// Sanitize $color if "#" is provided.
+		if ( '#' === $color[0] ) {
 			$color = substr( $color, 1 );
 		}
 
-		// Check if color has 6 or 3 characters and get values
-		if ( strlen( $color ) == 6 ) {
+		// Check if color has 6 or 3 characters and get values.
+		if ( 6 === strlen( $color ) ) {
 				$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-		} elseif ( strlen( $color ) == 3 ) {
+		} elseif ( 3 === strlen( $color ) ) {
 				$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
 		} else {
 				return $default;
 		}
 
-		// Convert hexadec to rgb
+		// Convert hex color to RGB.
 		$rgb = array_map( 'hexdec', $hex );
 
-		// Check if opacity is set(rgba or rgb)
+		// Check if the opacity is set(rgba or rgb).
 		if ( $opacity ) {
 			if ( abs( $opacity ) > 1 ) {
 				$opacity = 1.0;
@@ -46,7 +53,7 @@ function course_maker_lifterlms_color_css() {
 			$output = 'rgb(' . implode( ',', $rgb ) . ')';
 		}
 
-		// Return rgb(a) color string
+		// Return rgb(a) color string.
 		return $output;
 
 	}
@@ -60,9 +67,7 @@ function course_maker_lifterlms_color_css() {
 
 	$css = '';
 
-	/*
-	 MAIN ACCENT
-	------------------------------------------------------------------------- */
+	// MAIN ACCENT COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- MAIN ACCENT ---------- */
@@ -119,9 +124,7 @@ function course_maker_lifterlms_color_css() {
 		hex2rgba( $color_accent, 0.1 )
 	);
 
-	/*
-	 LINKS / BUTTONS
-	------------------------------------------------------------------------- */
+	// LINKS / BUTTONS COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- LINKS / BUTTONS ---------- */
@@ -132,9 +135,7 @@ function course_maker_lifterlms_color_css() {
 		$color_linksbuttons
 	);
 
-	/*
-	 HOVER
-	------------------------------------------------------------------------- */
+	// HOVER COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- HOVER ---------- */
@@ -174,9 +175,7 @@ function course_maker_lifterlms_color_css() {
 		course_maker_color_contrast( $color_hover )
 	);
 
-	/*
-	 HEADER BG COLOR
-	------------------------------------------------------------------------- */
+	// HEADER BG COLOR.
 	$css .= sprintf(
 		'
 		/* ---------- HEADER BG COLOR ---------- */
