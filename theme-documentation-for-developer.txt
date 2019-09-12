@@ -1,4 +1,4 @@
-Developer Documentation Draft for Course Maker Theme
+Developer Documentation Draft for Course Maker Pro Theme
 
 ## Prerequisites
 Node and npm are required for Gulp and SASS, and to compile the project.

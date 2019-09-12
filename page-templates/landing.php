@@ -2,7 +2,7 @@
 /**
  * Course Maker - Landing Page template
  *
- * This file adds the landing page template to the Course Maker Theme.
+ * This file adds the landing page template to the Course Maker Pro Theme.
  *
  * Template Name: Landing
  *

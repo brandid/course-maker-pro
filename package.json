@@ -40,7 +40,7 @@
 	"description": "A Gutenberg-Optimized child theme for the Genesis WordPress framework",
 	"author": "The brandiD",
 	"authoruri": "https://thebrandid.com/",
-	"version": "2.0.0",
+	"version": "2.0.2",
 	"tags": "one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready",
 	"license": "GPL-2.0-or-later",
 	"licenseuri": "https://www.gnu.org/licenses/gpl-2.0.html",

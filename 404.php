@@ -1,8 +1,8 @@
 <?php
 /**
- * Course Maker Theme
+ * Course Maker Pro Theme
  *
- * This file adds 404 page to the Course Maker theme.
+ * This file adds 404 page to the Course Maker Pro Theme.
  *
  * @package Course Maker Pro
  * @author  thebrandiD

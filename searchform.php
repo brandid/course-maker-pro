@@ -1,8 +1,8 @@
 <?php
 /**
- * Course Maker Theme
+ * Course Maker Pro Theme
  *
- * This file adds custom search form to the Course Maker theme.
+ * This file adds custom search form to the Course Maker Pro Theme.
  *
  * @package Course Maker Pro
  * @author  thebrandiD

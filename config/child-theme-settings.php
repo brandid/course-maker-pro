@@ -1,6 +1,6 @@
 <?php
 /**
- * Course Maker theme settings.
+ * Course Maker Pro Theme settings.
  *
  * Genesis 2.9+ updates these settings when themes are activated.
  *

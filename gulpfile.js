@@ -1,11 +1,11 @@
 /**
  * Gulp tasks for automating our compile and build process.
  *
- * @package    Course Maker Theme
+ * @package    Course Maker Pro Theme
  * @author     brandiD
  * @link       http://thebrandid.com
  * @license    GPL-2.0+
- * @version    1.0
+ * @version    2.0.2
  */
 
 'use strict';
