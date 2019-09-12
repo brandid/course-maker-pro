@@ -332,7 +332,7 @@ function course_maker_do_members_nav() {
 	$class = 'menu genesis-nav-menu menu-primary members';
 
 	if ( genesis_a11y( 'headings' ) ) {
-		printf( '<h2 class="screen-reader-text">%s</h2>', esc_html_e( 'Main navigation', 'coursemaker' ) );
+		printf( '<h2 class="screen-reader-text">%s</h2>', esc_html__( 'Main navigation', 'coursemaker' ) );
 	}
 
 	genesis_nav_menu(
@@ -459,7 +459,7 @@ function course_maker_do_posts_page_heading() {
 	$content = get_post( get_option( 'page_for_posts' ) )->post_content;
 
 	if ( $content ) {
-		echo '<div class="blog-intro">' . esc_html( wpautop( $content ) ) . '</div>';
+		echo '<div class="blog-intro">' . $content . '</div>'; // phpcs:ignore
 	}
 	echo '</div>';
 
