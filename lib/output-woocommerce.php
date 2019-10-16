@@ -37,7 +37,7 @@ function course_maker_custom_woocommerce_css() {
 		.woocommerce a.button.alt,
 		.woocommerce button.button.alt,
 		.woocommerce input.button.alt {
-			background-color: %s;
+			background-color: %1$s;
 		}
 
 		.woocommerce div.product p.price,
@@ -46,12 +46,12 @@ function course_maker_custom_woocommerce_css() {
 		.woocommerce-info:before,
 		.woocommerce-MyAccount-navigation ul li.is-active a,
 		.woocommerce-MyAccount-navigation ul li a:hover {
-			color: %s;
+			color: %1$s;
 		}
 
 		.woocommerce-message,
 		.woocommerce-info {
-			border-top-color: %s;
+			border-top-color: %1$s;
 		}
 
 		',
