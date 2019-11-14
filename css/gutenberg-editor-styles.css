@@ -30,7 +30,8 @@ dl {
 /* Regular content width.
 /* 660px + 30px to match paragraph width on front-end and editor.
 --------------------------------------------- */
-.wp-block {
+.wp-block,
+.wp-block-group__inner-container {
   max-width: 690px;
 }
 
@@ -43,7 +44,14 @@ dl {
 }
 
 .wp-block[data-align="full"] {
-  max-width: none;
+  max-width: 100vw;
+}
+
+/* Group Blocks */
+.wp-block[data-align="wide"] .wp-block-group *,
+.wp-block[data-align="full"] .wp-block-group * {
+  max-width: 100%;
+  margin-left: 0;
 }
 
 /* Typography
