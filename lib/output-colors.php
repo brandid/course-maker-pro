@@ -60,7 +60,7 @@ function course_maker_colors_css() {
 		.entry-content .featured-articles ul.slick-dots li button::before,
 		.entry-content .featured-articles ul.slick-dots li.slick-active button:before,
 		body:not(.home) main.content .entry .gform_confirmation_message {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		.wp-block-button .wp-block-button__link:not(.has-background),
@@ -68,23 +68,19 @@ function course_maker_colors_css() {
 		.menu-toggle,
 		.cm-featured-post .widget-wrap > article > .stripe,
 		.entry-content .featured-articles .featured-article {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 			background-color: transparent !important;
-			border-color: %s !important;
-			color: %s !important;
+			border-color: %1$s !important;
+			color: %1$s !important;
 		}
 
 		.sidebar .widget,
 		body:not(.home) main.content .entry .gform_confirmation_message {
-			border-color: %s !important;
+			border-color: %1$s !important;
 		}',
-		$color_accent,
-		$color_accent,
-		$color_accent,
-		$color_accent,
 		$color_accent
 	);
 
@@ -104,13 +100,13 @@ function course_maker_colors_css() {
 		.archive-pagination li a:focus,
 		.archive-pagination li a:hover,
 		.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		.site-inner a:not(.button):not(.wp-block-button__link),
 		.subtitle,
 		.footer-widgets a, {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		.footer-widgets a,
@@ -119,24 +115,19 @@ function course_maker_colors_css() {
 		.menu-toggle:focus,
 		.menu-toggle:hover,
 		.sub-menu-toggle {
-			border-color: %s !important;
+			border-color: %1$s !important;
 		}
 
 		#menu-social-menu li > a svg,
 		#menu-social-menu li > a svg {
-			fill: %s !important;
+			fill: %1$s !important;
 		}
 
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color) {
 			background-color: transparent !important;
-		    border-color: %s !important;
-			color: %s !important;
+		    border-color: %1$s !important;
+			color: %1$s !important;
 		}',
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
 		$color_linksbuttons
 	);
 
@@ -165,7 +156,7 @@ function course_maker_colors_css() {
 		.site-inner a:not(.button):not(.wp-block-button__link):hover,
 		.site-inner a:not(.button):not(.wp-block-button__link):focus,
 		.entry-content ul.blog-categories > li.current-cat a {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		.sidebar .enews-widget input[type="submit"]:focus,
@@ -192,19 +183,19 @@ function course_maker_colors_css() {
 		.content .wp-block-button .wp-block-button__link:focus,
 		.gform_wrapper .gform_footer input.button:hover,
 		.gform_wrapper .gform_footer input.button:focus {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		.wp-block-button .wp-block-button__link:not(.has-background):not(.has-text-color):hover {
-		    background-color: %s !important;
-			color: %s;
+		    background-color: %1$s !important;
+			color: %2$s;
 		}
 
 		/* Outline Buttons */
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
 		.wp-block-button.is-style-outline .wp-block-button__link.has-linksbuttons-background-color:hover {
 			background-color: %s !important;
-		    border-color: %s !important;
+		    border-color: %1$s !important;
 			color: #fff !important;
 		}
 
@@ -218,26 +209,19 @@ function course_maker_colors_css() {
 		body:not(.home) .site-header .genesis-nav-menu a:hover > span,
 		.site-footer a:focus,
 		.site-footer a:hover {
-			border-bottom-color: %s !important;
+			border-bottom-color: %1$s !important;
 		}
 
 		.front-page-testimonials .testimonial-author-img img {
-			border-color: %s !important;
+			border-color: %1$s !important;
 		}
 
 		#menu-social-menu li > a:focus svg,
 		#menu-social-menu li > a:hover svg {
-			fill: %s !important;
+			fill: %1$s !important;
 		}',
 		$color_hover,
-		$color_hover,
-		$color_hover,
-		course_maker_color_contrast( $color_hover ),
-		$color_hover,
-		$color_hover,
-		$color_hover,
-		$color_hover,
-		$color_hover
+		course_maker_color_contrast( $color_hover )
 	);
 
 	// NAV TEXT COLOR.
@@ -257,15 +241,13 @@ function course_maker_colors_css() {
 		.body.home .site-header:not(.sticky) .site-description,
 		.body:not(.home) .site-header .site-description,
 		site-footer .genesis-nav-menu a {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		.site-footer a {
-			border-bottom-color: %s !important;
+			border-bottom-color: %1$s !important;
 		}
 		',
-		$color_navtext,
-		$color_navtext,
 		$color_navtext
 	);
 
@@ -277,15 +259,14 @@ function course_maker_colors_css() {
 		.home .site-header.sticky.scrolled,
 		body:not(.home) .site-header,
 		.entry-content.blog-posts-grid > .alignfull {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		@media screen and (max-width: 1024px) {
 			.home .site-header {
-				background-color: %s !important;
+				background-color: %1$s !important;
 			}
 		}',
-		$color_headerbg,
 		$color_headerbg
 	);
 
