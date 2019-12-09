@@ -527,3 +527,6 @@ function custom_footer_navmenu() {
 
 // Default Footer text - show after Footer widgets and menu.
 add_action( 'genesis_footer', 'genesis_do_footer' );
+
+// Disable the Yoast schema.
+add_filter( 'wpseo_json_ld_output', '__return_false' );
