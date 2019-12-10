@@ -180,7 +180,8 @@
 .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
     width: 100%;
     flex-basis: 29.333%;
-    flex-grow: 1;
+    /* un-comment the next line to make grid items fill the remaining row width */
+    /* flex-grow: 1; */
     margin: 0 2% 30px 2%;
 }
 
