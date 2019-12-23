@@ -131,7 +131,10 @@ p.entry-meta {
   @include media($screen--s1) {
     margin-bottom: 40px;
   }
-
+  > * {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
 }
 
 .comment-respond,
