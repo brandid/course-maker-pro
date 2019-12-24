@@ -8,7 +8,9 @@ body {
 }
 
 body.content-sidebar .content-sidebar-wrap,
-body.content-sidebar .site-inner {
+body.content-sidebar .site-inner,
+body.sidebar-content .content-sidebar-wrap,
+body.sidebar-content .site-inner {
     display: flex;
     flex-direction: column;
     @include media($screen--m){

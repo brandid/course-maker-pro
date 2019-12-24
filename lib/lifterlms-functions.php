@@ -18,7 +18,7 @@ add_filter( 'body_class', 'course_maker_lifterlms_sidebar_body_class', 90 );
  */
 function course_maker_lifterlms_sidebar_body_class( $classes ) {
 
-	// If this is the LifterLMS Course Catalog page...
+	// If this is the LifterLMS Course Syllabus page...
 	if ( is_courses() ) {
 
 		$classes[] = 'lifterlms-course-catalog';
@@ -41,8 +41,8 @@ function course_maker_lifterlms_sidebar_body_class( $classes ) {
 				}
 			}
 
-			// Add 'content-sidebar' class to the array of body classes.
-			$classes[] = 'content-sidebar';
+			// Add the default layout as a class in the array of body classes.
+			$classes[] = genesis_get_default_layout();
 
 		}
 	}
