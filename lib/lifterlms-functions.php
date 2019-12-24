@@ -69,6 +69,9 @@ add_action( 'wp_enqueue_scripts', 'course_maker_custom_lifterlms_css' );
  */
 function course_maker_custom_lifterlms_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css', array(), genesis_get_theme_version() );
+	$force_llms_default_styles = get_theme_mod( 'force_llms_default_styles', false );
+	if ( ! $force_llms_default_styles ) {
+		wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css', array(), genesis_get_theme_version() );
+	}
 
 }
