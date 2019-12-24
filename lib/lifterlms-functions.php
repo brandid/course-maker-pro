@@ -8,6 +8,16 @@
 // Enable Lesson short descriptions in the lesson previews.
 add_filter( 'llms_show_preview_excerpt', '__return_true' );
 
+/**
+ * Declare explicit theme support for LifterLMS Course and Lesson sidebars
+ *
+ * @return   void
+ */
+function declare_llms_theme_sidebars() {
+	add_theme_support( 'lifterlms-sidebars' );
+}
+add_action( 'after_setup_theme', 'declare_llms_theme_sidebars' );
+
 // If 'Course Sidebar' has widgets, change body class on LifterLMS Course Catalog page.
 add_filter( 'body_class', 'course_maker_lifterlms_sidebar_body_class', 90 );
 /**
