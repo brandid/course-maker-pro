@@ -18,7 +18,9 @@ body {
 }
 
 body.content-sidebar .content-sidebar-wrap,
-body.content-sidebar .site-inner {
+body.content-sidebar .site-inner,
+body.sidebar-content .content-sidebar-wrap,
+body.sidebar-content .site-inner {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -641,7 +643,9 @@ hr.wp-block-separator {
 }
 @media screen and (min-width: 1023px) {
   body.content-sidebar .content-sidebar-wrap,
-  body.content-sidebar .site-inner {
+  body.content-sidebar .site-inner,
+  body.sidebar-content .content-sidebar-wrap,
+  body.sidebar-content .site-inner {
     -ms-flex-direction: row;
     flex-direction: row;
   }

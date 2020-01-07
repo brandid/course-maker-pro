@@ -32,7 +32,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"backgroundColor":"accent","textColor":"white","align":"center","className":"is-style-squared target-blank"} -->
-<div class="wp-block-button aligncenter is-style-squared target-blank"><a class="wp-block-button__link has-text-color has-white-color has-background has-accent-background-color" href="https://thebrandidthemes.com/product/course-maker-theme/">Buy The Theme</a></div>
+<div class="wp-block-button aligncenter is-style-squared target-blank"><a class="wp-block-button__link has-text-color has-white-color has-background has-accent-background-color" href="https://buildmybrandid.com/product/course-maker-theme/" rel="noopener">Buy The Theme</a></div>
 <!-- /wp:button --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
@@ -109,7 +109,7 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"right","textColor":"white"} -->
-<p style="text-align:right" class="has-text-color has-white-color">The <a href="https://wordpress.org/plugins/social-proof-testimonials-slider/" target="_blank" rel="noreferrer noopener">Social Proof Slider</a> by brandiD is perfect for sharing testimonials from people who have taken your course and loved it, or anyone else who has praised your business. Look at our examples.</p>
+<p style="text-align:right" class="has-text-color has-white-color">The <a href="https://wordpress.org/plugins/social-proof-testimonials-slider/" target="_blank" rel="noopener">Social Proof Slider</a> by brandiD is perfect for sharing testimonials from people who have taken your course and loved it, or anyone else who has praised your business. Look at our examples.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:atomic-blocks/ab-column -->
 
@@ -165,13 +165,13 @@ return <<<CONTENT
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>If you need specific support, please consult our <a href="https://thebrandidthemes.com/forum/" rel="noreferrer noopener" target="_blank">Support Forum</a>.</p>
+<p>If you need specific support, please consult our <a href="https://buildmybrandid.com/forum/" rel="noopener" target="_blank">Support Forum</a>.</p>
 <!-- /wp:paragraph --></div></details></div>
 <!-- /wp:atomic-blocks/ab-accordion -->
 
 <!-- wp:atomic-blocks/ab-accordion -->
 <div class="wp-block-atomic-blocks-ab-accordion ab-block-accordion ab-font-size-18"><details><summary class="ab-accordion-title">Where do my lessons and course material go?</summary><div class="ab-accordion-text"><!-- wp:paragraph -->
-<p>If you're using the <a href="https://lifterlms.com" rel="noreferrer noopener" target="_blank">LifterLMS plugin</a>, Lessons and course material should be added to the “lessons” post type accessible from the WordPress dashboard. As with the rest of the site, these posts are fully customizable and can be adjusted to your needs—add as many or as few lessons as you’d like.</p>
+<p>If you're using the <a href="https://lifterlms.com" rel="noopener" target="_blank">LifterLMS plugin</a>, Lessons and course material should be added to the “lessons” post type accessible from the WordPress dashboard. As with the rest of the site, these posts are fully customizable and can be adjusted to your needs—add as many or as few lessons as you’d like.</p>
 <!-- /wp:paragraph --></div></details></div>
 <!-- /wp:atomic-blocks/ab-accordion -->
 

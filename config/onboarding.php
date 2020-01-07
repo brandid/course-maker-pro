@@ -80,7 +80,7 @@ return array(
 		/* SAMPLE BLOG POSTS */
 		'Sample Blog Post 1'   => array(
 			'post_title'     => 'Five Important Things You Should Know About Courses',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-1.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-1.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-1.jpg', // Photo by Matthew T Rader on Unsplash.
@@ -93,7 +93,7 @@ return array(
 		),
 		'Sample Blog Post 2'   => array(
 			'post_title'     => 'This Year Will Be The Year of Your Course',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-2.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-2.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash.
@@ -103,7 +103,7 @@ return array(
 		),
 		'Sample Blog Post 3'   => array(
 			'post_title'     => 'Ten Things Your Competitors Know About Courses',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-3.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-3.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-3.jpg', // Photo by Henri Meilhac on Unsplash.
@@ -116,7 +116,7 @@ return array(
 		),
 		'Sample Blog Post 4'   => array(
 			'post_title'     => 'Innovative Approaches To Improving Your Courses',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-4.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-4.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash.
@@ -126,7 +126,7 @@ return array(
 		),
 		'Sample Blog Post 5'   => array(
 			'post_title'     => 'The Crucial Step in Courses that Many Overlook',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-5.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-5.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-5.jpg', // Photo by Clem Onojeghuo on Unsplash.
@@ -139,7 +139,7 @@ return array(
 		),
 		'Sample Blog Post 6'   => array(
 			'post_title'     => 'Three Tricks to Putting Your Courses into Overdrive',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/sample-blog-post-6.php',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/sample-blog-post-6.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash.
@@ -155,7 +155,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => require dirname( __FILE__ ) . '/import/content/sample-testimonial-1.php',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
 		),
 		'Sample Testimonial 2' => array(
 			'post_title'     => 'Sample Testimonial 2',
@@ -164,7 +164,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => require dirname( __FILE__ ) . '/import/content/sample-testimonial-2.php',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
 		),
 		'Sample Testimonial 3' => array(
 			'post_title'     => 'Sample Testimonial 3',
@@ -173,7 +173,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => require dirname( __FILE__ ) . '/import/content/sample-testimonial-3.php',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
 		),
 	),
 	'navigation_menus' => array(
