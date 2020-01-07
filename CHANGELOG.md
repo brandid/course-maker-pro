@@ -1,4 +1,19 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.3] - Jan 7, 2020
+This release includes the following updates:
+* Add: Adds JSON Sample Course import files
+* Add: Adds new Customizer setting for "LifterLMS: Use Default Styles"
+* Fix: Adds a border to the WooCommerce Cart/Checkout input fields. Ensures custom WooCommerce styles are enqueued on Cart and Checkout pages.
+* Fix: Removes flexbox flex-grow on Lesson items in the Course Syllabus page
+* Fix: Sets a max-width on Comments container items
+* Fix: Updates Theme URI
+* Fix: Update LifterLMS functions to apply the selected default site layout as a body class (replaces the hard-coded "content-sidebar" class). Adds styles for "sidebar-content" layout on LifterLMS pages.
+* Fix: Declares explicit theme support for LifterLMS course and lesson sidebars
+* Fix: Conditionally loads custom LifterLMS CSS file based on the current Site Layout setting
+* Fix: Adjusts LifterLMS Syllabus and Lesson Preview templates to conditionally show Custom Layout based on the current Site Layout setting
+* Update: Moves OCTS import content into folders for clearer organization
+* Update: Disables Yoast SEO plugin schema
+
 ## [2.0.2] - Initial release
 The initial release of the Course Maker Pro theme.
