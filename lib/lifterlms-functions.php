@@ -8,6 +8,16 @@
 // Enable Lesson short descriptions in the lesson previews.
 add_filter( 'llms_show_preview_excerpt', '__return_true' );
 
+/**
+ * Declare explicit theme support for LifterLMS Course and Lesson sidebars
+ *
+ * @return   void
+ */
+function declare_llms_theme_sidebars() {
+	add_theme_support( 'lifterlms-sidebars' );
+}
+add_action( 'after_setup_theme', 'declare_llms_theme_sidebars' );
+
 // If 'Course Sidebar' has widgets, change body class on LifterLMS Course Catalog page.
 add_filter( 'body_class', 'course_maker_lifterlms_sidebar_body_class', 90 );
 /**
@@ -18,7 +28,7 @@ add_filter( 'body_class', 'course_maker_lifterlms_sidebar_body_class', 90 );
  */
 function course_maker_lifterlms_sidebar_body_class( $classes ) {
 
-	// If this is the LifterLMS Course Catalog page...
+	// If this is the LifterLMS Course Syllabus page...
 	if ( is_courses() ) {
 
 		$classes[] = 'lifterlms-course-catalog';
@@ -41,8 +51,8 @@ function course_maker_lifterlms_sidebar_body_class( $classes ) {
 				}
 			}
 
-			// Add 'content-sidebar' class to the array of body classes.
-			$classes[] = 'content-sidebar';
+			// Add the default layout as a class in the array of body classes.
+			$classes[] = genesis_get_default_layout();
 
 		}
 	}
@@ -59,6 +69,9 @@ add_action( 'wp_enqueue_scripts', 'course_maker_custom_lifterlms_css' );
  */
 function course_maker_custom_lifterlms_css() {
 
-	wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css', array(), genesis_get_theme_version() );
+	$force_llms_default_styles = get_theme_mod( 'force_llms_default_styles', false );
+	if ( ! $force_llms_default_styles ) {
+		wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css', array(), genesis_get_theme_version() );
+	}
 
 }

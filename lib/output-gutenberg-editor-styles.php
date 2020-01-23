@@ -53,40 +53,32 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-accent-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-accent-background-color {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link.has-accent-background-color,
 		.editor-styles-wrapper .ab-block-button .ab-button  {
-			background-color: %s !important;
-			color: %s !important;
+			background-color: %1$s !important;
+			color: %2$s !important;
 		}
 
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-		    background-color: %s !important;
+		    background-color: %1$s !important;
 		}
 
 		.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link.has-accent-background-color {
 			background-color: transparent !important;
-		    border-color: %s !important;
-			color: %s !important;
+		    border-color: %1$s !important;
+			color: %2$s !important;
 		}
 	',
 		$color_accent,
-		$color_accent,
-		$color_accent,
-		course_maker_color_contrast( $color_accent ),
-		$color_accent,
-		$color_accent,
-		course_maker_color_contrast( $color_accent ),
-		$color_accent,
-		$color_accent,
-		$color_accent
+		course_maker_color_contrast( $color_accent )
 	);
 
 	// LINKS/BUTTONS COLOR.
@@ -97,22 +89,22 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 		/* text-color */
 		.editor-styles-wrapper a:not(.wp-block-button),
 		.editor-styles-wrapper .has-linksbuttons-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-linksbuttons-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 
 		/* Default buttons with no background color */
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background) {
-		    background-color: %s !important;
+		    background-color: %1$s !important;
 		}
 
 		/* Default buttons with no background or text color */
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background):not(.has-text-color) {
-			background-color: %s !important;
+			background-color: %1$s !important;
 			color: #fff !important;
 		}
 
@@ -120,15 +112,10 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 		.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color),
 		.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link.has-linksbuttons-background-color {
 			background-color: transparent !important;
-		    border-color: %s !important;
-			color: %s !important;
+		    border-color: %1$s !important;
+			color: %1$s !important;
 		}
 	',
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
-		$color_linksbuttons,
 		$color_linksbuttons
 	);
 
@@ -139,38 +126,33 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-hover-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-hover-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 
 		/* Links */
 		.editor-styles-wrapper a:not(.wp-block-button):hover {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* Default buttons with no background or text color */
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link:not(.has-background):not(.has-text-color):hover {
-		    background-color: %s !important;
+		    background-color: %1$s !important;
 			color: #fff !important;
 		}
 
 		/* Outline buttons */
 		.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
 		.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link.has-linksbuttons-background-color:hover {
-			background-color: %s !important;
-		    border-color: %s !important;
+			background-color: %1$s !important;
+		    border-color: %1$s !important;
 			color: #fff !important;
 		}
 	',
-		$color_hover,
-		$color_hover,
-		$color_hover,
-		$color_hover,
-		$color_hover,
 		$color_hover
 	);
 
@@ -181,15 +163,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-navtext-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-navtext-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_navtext,
 		$color_navtext
 	);
 
@@ -200,16 +181,15 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-headerbg-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-headerbg-background-color,
 		.entry-content.blog-posts > .alignfull {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_headerbg,
 		$color_headerbg
 	);
 
@@ -220,15 +200,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-footerbg-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-footerbg-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_footerbg,
 		$color_footerbg
 	);
 
@@ -239,15 +218,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-white-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-white-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_white,
 		$color_white
 	);
 
@@ -258,15 +236,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-gray-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-gray-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_gray,
 		$color_gray
 	);
 
@@ -277,15 +254,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-darkgray-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-darkgray-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_darkgray,
 		$color_darkgray
 	);
 
@@ -296,15 +272,14 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 
 		/* text-color */
 		.editor-styles-wrapper .has-black-color {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
 		/* background-color */
 		.editor-styles-wrapper .has-black-background-color {
-			 background-color: %s !important;
+			 background-color: %1$s !important;
 		}
 	',
-		$color_black,
 		$color_black
 	);
 

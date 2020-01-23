@@ -53,8 +53,10 @@ add_action( 'wp_enqueue_scripts', 'course_maker_custom_plugin_styles' );
 function course_maker_custom_plugin_styles() {
 
 	// Check if WooCommerce is active.
-	if ( class_exists( 'WooCommerce' ) && is_woocommerce() ) {
-		wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-styles', get_stylesheet_directory_uri() . '/css/woocommerce-custom-styles.css', array(), genesis_get_theme_version() );
+	if ( class_exists( 'WooCommerce' ) ) {
+		if ( is_woocommerce() || is_page( array( 'cart', 'checkout' ) ) ) {
+			wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-styles', get_stylesheet_directory_uri() . '/css/woocommerce-custom-styles.css', array(), genesis_get_theme_version() );
+		}
 	}
 
 	// Check if MemberPress is active.

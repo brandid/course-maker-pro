@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Course Maker Pro
+# Copyright (C) 2020 Course Maker Pro
 # This file is distributed under the same license as the Course Maker Pro package.
 msgid ""
 msgstr ""
@@ -200,6 +200,14 @@ msgstr ""
 msgid "Enable or Disable the list of Blog Categories on Archive pages."
 msgstr ""
 
+#: lib/customize.php:172
+msgid "LifterLMS: Use Default Styles"
+msgstr ""
+
+#: lib/customize.php:175
+msgid "Disable custom LifterLMS CSS and use the default styles."
+msgstr ""
+
 #: lib/icon-functions.php:42
 msgid "Please define default parameters in the form of an array."
 msgstr ""
@@ -224,30 +232,30 @@ msgstr ""
 msgid "Landing"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:65
+#: lifterlms/course/lesson-preview.php:48
 msgid "Revisit Lesson"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:67
+#: lifterlms/course/lesson-preview.php:50
 msgid "Let's Begin"
 msgstr ""
 
-#: config/import/content/sample-testimonial-1.php:13
+#: config/import/content/testimonials/sample-testimonial-1.php:13
 msgid "Author's Name"
 msgstr ""
 
-#: config/import/content/sample-testimonial-1.php:14, config/import/content/sample-testimonial-2.php:14, config/import/content/sample-testimonial-3.php:14
+#: config/import/content/testimonials/sample-testimonial-1.php:14, config/import/content/testimonials/sample-testimonial-2.php:14, config/import/content/testimonials/sample-testimonial-3.php:14
 msgid "Business or Professional Title"
 msgstr ""
 
-#: config/import/content/sample-testimonial-1.php:15
+#: config/import/content/testimonials/sample-testimonial-1.php:15
 msgid "Rachel is an amazing teacher. Her personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business."
 msgstr ""
 
-#: config/import/content/sample-testimonial-2.php:13
+#: config/import/content/testimonials/sample-testimonial-2.php:13
 msgid "Testimonial Author"
 msgstr ""
 
-#: config/import/content/sample-testimonial-3.php:13
+#: config/import/content/testimonials/sample-testimonial-3.php:13
 msgid "Quote Author"
 msgstr ""

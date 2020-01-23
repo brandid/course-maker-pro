@@ -81,7 +81,7 @@ function course_maker_lifterlms_color_css() {
         .llms-loop-item-content .llms-loop-title:hover,
         .llms-lesson-preview.is-free .llms-lesson-complete,
         .llms-lesson-preview.is-complete .llms-lesson-complete {
-			color: %s !important;
+			color: %1$s !important;
 		}
 
         .llms-instructor-info .llms-instructors .llms-author .avatar,
@@ -92,12 +92,12 @@ function course_maker_lifterlms_color_css() {
         .llms-checkout-wrapper .llms-form-heading,
         .llms-sd-widgets .llms-sd-widget .llms-sd-widget-title,
         .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview > .stripe {
-            background-color: %s !important;
+            background-color: %1$s !important;
         }
 
         .llms-access-plan-title {
-            background-color: %s !important;
-            color: %s !important;
+            background-color: %1$s !important;
+            color: %2$s !important;
         }
 
         .llms-instructor-info .llms-instructors .llms-author,
@@ -109,18 +109,15 @@ function course_maker_lifterlms_color_css() {
         .llms-access-plan.featured .llms-access-plan-footer,
         .llms-checkout-wrapper form.llms-login,
         .llms-checkout-section {
-            border-color: %s !important;
+            border-color: %1$s !important;
         }
 
         .llms-notice {
-            background-color: %s !important;
+            background-color: %3$s !important;
         }
         ',
 		$color_accent,
-		$color_accent,
-		$color_accent,
 		course_maker_color_contrast( $color_accent ),
-		$color_accent,
 		hex2rgba( $color_accent, 0.1 )
 	);
 
@@ -140,37 +137,33 @@ function course_maker_lifterlms_color_css() {
 		'
 		/* ---------- HOVER ---------- */
         .llms-loop-item-content .llms-loop-title:hover {
-            color: %s !important;
+            color: %1$s !important;
         }
 
         .site-inner .wp-block-llms-course-continue-button a.llms-button-primary:hover,
         .site-inner .wp-block-llms-course-continue-button a.llms-button-primary:focus,
         .llms-course-nav .llms-lesson-preview:hover .llms-lesson-link {
-            background-color: %s !important;
-            color: %s !important;
+            background-color: %1$s !important;
+            color: %2$s !important;
             border-bottom: none !important;
         }
 
         .llms-course-nav .llms-lesson-preview .llms-lesson-link,
         .llms-course-nav .llms-lesson-preview.is-complete .llms-lesson-link  {
-            border-color: %s !important;
+            border-color: %1$s !important;
         }
 
         .llms-course-nav .llms-lesson-preview:hover .llms-lesson-link {
-            background-color: %s !important;
+            background-color: %1$s !important;
         }
 
         .llms-course-nav .llms-lesson-preview:hover .llms-pre-text,
         .llms-course-nav .llms-lesson-preview:hover .llms-lesson-title,
         .llms-course-nav .llms-lesson-preview:hover .llms-lesson-excerpt p,
         .llms-course-nav .llms-lesson-preview:hover .llms-extra {
-            color: %s !important;
+            color: %2$s !important;
         }
         ',
-		$color_hover,
-		$color_hover,
-		course_maker_color_contrast( $color_hover ),
-		$color_hover,
 		$color_hover,
 		course_maker_color_contrast( $color_hover )
 	);

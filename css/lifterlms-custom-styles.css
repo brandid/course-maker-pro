@@ -180,7 +180,8 @@
 .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
     width: 100%;
     flex-basis: 29.333%;
-    flex-grow: 1;
+    /* un-comment the next line to make grid items fill the remaining row width */
+    /* flex-grow: 1; */
     margin: 0 2% 30px 2%;
 }
 
@@ -219,6 +220,7 @@
     flex-wrap: wrap;
     background: transparent !important;
     padding: 0;
+    height: 100%;
 }
 
 .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > * {
@@ -249,9 +251,16 @@
 }
 
 .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0,0,0,0.0);
+    transition: all .3s ease-in-out;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview:hover a > .llms-extra {
+    background-color: rgba(0,0,0,0.05);
 }
 
 .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra > p {

@@ -110,6 +110,11 @@
 	width: auto !important;
 }
 
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
 

@@ -151,6 +151,34 @@ function course_maker_customizer_register( $wp_customize ) {
 		)
 	);
 
+	if ( is_plugin_active( 'lifterlms/lifterlms.php' ) ) {
+
+		// Add Default Lifter Styles Setting.
+		$wp_customize->add_setting(
+			'force_llms_default_styles',
+			array(
+				'default'           => false,
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'course_maker_sanitize_checkbox',
+			)
+		);
+
+		// Add Default Lifter Styles Control.
+		$wp_customize->add_control(
+			new Course_Maker_Toggle_Control(
+				$wp_customize,
+				'force_llms_default_styles',
+				array(
+					'label'       => __( 'LifterLMS: Use Default Styles', 'coursemaker' ),
+					'section'     => 'coursemakerpro_settings',
+					'settings'    => 'force_llms_default_styles',
+					'description' => __( 'Disable custom LifterLMS CSS and use the default styles.', 'coursemaker' ),
+				)
+			)
+		);
+
+	}
+
 }
 
 /**
