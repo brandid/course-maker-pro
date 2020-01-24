@@ -72,7 +72,7 @@ return <<<CONTENT
 <!-- /wp:image --></div></div>
 <!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:atomic-blocks/ab-column {""paddingUnit":"%","paddingTop":5,"paddingRight":5,"paddingBottom":5,"paddingLeft":5,columnVerticalAlignment":"center"} -->
+<!-- wp:atomic-blocks/ab-column {"paddingUnit":"%","paddingTop":5,"paddingRight":5,"paddingBottom":5,"paddingLeft":5,columnVerticalAlignment":"center"} -->
 <div class="wp-block-atomic-blocks-ab-column ab-block-layout-column ab-is-vertically-aligned-center"><div class="ab-block-layout-column-inner" style="padding-top:5%;padding-right:5%;padding-bottom:5%;padding-left:5%"><!-- wp:paragraph {"textColor":"accent","fontSize":"large"} -->
 <p class="has-text-color has-large-font-size has-accent-color">Start building your personal brand for free.</p>
 <!-- /wp:paragraph -->
