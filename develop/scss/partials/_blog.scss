@@ -39,7 +39,13 @@
     @include media($screen--m) {
         padding: 30px 60px;
     }
+}
 
+body.content-sidebar .entry-content .featured-articles .featured-article .text-container,
+body.sidebar-content .entry-content .featured-articles .featured-article .text-container {
+    @include media($screen--m) {
+        padding: 20px 40px;
+    }
 }
 
 .entry-content .featured-articles .featured-article .text-container .featured-article-item-header {
@@ -57,6 +63,14 @@
     }
 }
 
+body.content-sidebar .entry-content .featured-articles .featured-article .text-container .featured-article-item-header,
+body.sidebar-content .entry-content .featured-articles .featured-article .text-container .featured-article-item-header {
+    @include media($screen--m) {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+
 .entry-content .featured-articles .featured-article .text-container .entry-title {
     font-size: 16px;
     @include media($screen--tablet) {
@@ -68,6 +82,14 @@
         letter-spacing: 4px;
     }
     font-weight: normal;
+}
+
+body.content-sidebar .entry-content .featured-articles .featured-article .text-container .entry-title,
+body.sidebar-content .entry-content .featured-articles .featured-article .text-container .entry-title {
+    @include media($screen--m) {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
 }
 
 .entry-content .featured-articles .featured-article .text-container .entry-title a {
@@ -112,6 +134,13 @@
     }
 }
 
+body.content-sidebar .entry-content .featured-articles .featured-article .text-container .author-info .image img,
+body.sidebar-content .entry-content .featured-articles .featured-article .text-container .author-info .image img {
+    @include media($screen--m) {
+        width: 32px;
+    }
+}
+
 .entry-content .featured-articles .featured-article .text-container .author-info .author-text p {
     font-size: 10px;
     @include media($screen--tablet) {
@@ -121,6 +150,13 @@
         font-size: 15px;
     }
     margin-bottom: 0;
+}
+
+body.content-sidebar .entry-content .featured-articles .featured-article .text-container .author-info .author-text p,
+body.sidebar-content .entry-content .featured-articles .featured-article .text-container .author-info .author-text p {
+    @include media($screen--m) {
+        font-size: 13px;
+    }
 }
 
 .entry-content .featured-articles .featured-article .text-container .author-info .author-text p.post-category {

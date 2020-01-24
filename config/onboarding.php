@@ -57,7 +57,6 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'content-sidebar' ),
 		),
 		'blog'                 => array(
 			'post_title'     => 'Blog',
@@ -75,7 +74,6 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 		/* SAMPLE BLOG POSTS */
 		'Sample Blog Post 1'   => array(
@@ -87,7 +85,6 @@ return array(
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
-				'_genesis_layout'   => 'full-width-content',
 				'_featured_article' => 1,
 			),
 		),
@@ -99,7 +96,6 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-2.jpg', // Photo by Jeff Isaak on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 		'Sample Blog Post 3'   => array(
 			'post_title'     => 'Ten Things Your Competitors Know About Courses',
@@ -110,7 +106,6 @@ return array(
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
-				'_genesis_layout'   => 'full-width-content',
 				'_featured_article' => 1,
 			),
 		),
@@ -122,7 +117,6 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-4.jpg', // Photo by Nathan Dumlao on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 		'Sample Blog Post 5'   => array(
 			'post_title'     => 'The Crucial Step in Courses that Many Overlook',
@@ -133,7 +127,6 @@ return array(
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array(
-				'_genesis_layout'   => 'full-width-content',
 				'_featured_article' => 1,
 			),
 		),
@@ -145,7 +138,6 @@ return array(
 			'featured_image' => CHILD_URL . '/config/import/images/sample-blog-post-6.jpg', // Photo by Jeremy Bishop on Unsplash.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 		/* SAMPLE TESTIMONIALS */
 		'Sample Testimonial 1' => array(

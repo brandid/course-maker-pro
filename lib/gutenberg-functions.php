@@ -96,18 +96,6 @@ $appearance = genesis_get_config( 'appearance' );
 // Add support for the Block Editor Color Palette.
 add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
-add_filter( 'genesis_site_layout', 'set_block_editor_page_layout' );
-/**
- * Forces full-width-content layout for Block Editor pages
- *
- * @return string The modified content layout class.
- */
-function set_block_editor_page_layout() {
-	if ( has_blocks( get_the_ID() ) ) {
-		return 'full-width-content';
-	}
-}
-
 // Remove the custom position of the Entry Title.
 remove_action( 'genesis_before_entry', 'course_maker_remove_conditional_post_titles' );
 remove_action( 'genesis_after_header', 'course_maker_conditional_post_titles' );

@@ -245,10 +245,38 @@ function course_maker_blog_header_output() {
 	// Start Output Buffering.
 	ob_start();
 
-	// Open the full-width container.
+	// Open the container elements.
 	echo '<div class="entry-content blog-header-extras">';
-	echo '<div class="alignfull" style="padding: 0 8%;">';
-	echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
+
+	// Get the current page layout.
+	global $post;
+	$page_layout         = '';
+	$default_page_layout = genesis_get_default_layout();
+	$current_page_layout = genesis_get_layout( $post->ID );
+	if ( empty( $current_page_layout ) ) {
+		$current_page_layout = $default_page_layout;
+	}
+	if ( ( 'content-sidebar' === $current_page_layout ) || ( 'sidebar-content' === $current_page_layout ) ) {
+		$page_layout = 'sidebar';
+	} else {
+		$page_layout = 'fullwidth';
+	}
+
+	// Assign a padding amount when the page is set to full-width layout.
+	if ( 'sidebar' === $page_layout ) {
+		$padding_str = '';
+	} else {
+		$padding_str = 'style="padding: 0 8%;"';
+	}
+
+	// Apply padding if the current page layout is set to full-width.
+	echo '<div class="alignfull" ' . $padding_str . '>';
+
+	if ( 'sidebar' === $page_layout ) {
+		echo '<div class="container-content" style="max-width: 924px; margin: 0 auto;">';
+	} else {
+		echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
+	}
 
 	// Show the Featured Articles slider.
 	if ( $enable_blog_carousel ) {

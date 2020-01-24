@@ -27,6 +27,18 @@ body.sidebar-content .site-inner {
       flex-direction: column;
 }
 
+body.content-sidebar .content-sidebar-wrap,
+body.sidebar-content .content-sidebar-wrap {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.content-sidebar .content-sidebar-wrap > #genesis-content,
+body.sidebar-content .content-sidebar-wrap > #genesis-content {
+  max-width: 100%;
+}
+
 /* No top padding when AB Container Block is first element on the page */
 .page-template-blocks.first-block-atomic-blocks-ab-container .content > .entry {
   margin-bottom: 0;
@@ -648,6 +660,10 @@ hr.wp-block-separator {
   body.sidebar-content .site-inner {
     -ms-flex-direction: row;
     flex-direction: row;
+  }
+  body.content-sidebar .content-sidebar-wrap > #genesis-content,
+  body.sidebar-content .content-sidebar-wrap > #genesis-content {
+    width: 65%;
   }
   .full-width-content .content {
     width: 65%;

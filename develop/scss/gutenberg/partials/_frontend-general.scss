@@ -18,6 +18,21 @@ body.sidebar-content .site-inner {
     }
 }
 
+body.content-sidebar .content-sidebar-wrap,
+body.sidebar-content .content-sidebar-wrap {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.content-sidebar .content-sidebar-wrap > #genesis-content,
+body.sidebar-content .content-sidebar-wrap > #genesis-content {
+    max-width: 100%;
+    @include media($screen--m){
+        width: 65%;
+    }
+}
+
 .full-width-content .content {
     @include media($screen--m){
         width: 65%;
