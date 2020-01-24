@@ -237,7 +237,7 @@ gulp.task('zip', ['pot'], () =>
     'lib/**/*',
     'lifterlms/**/*',
     'page-templates/*',
-    'sample-data/sample-course.json',
+    'sample-course/**',
     'xml/*',
     '*.php',
     'CHANGELOG.md',
