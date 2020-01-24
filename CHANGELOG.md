@@ -4,8 +4,10 @@
 This release includes the following updates:
 * Add: Adds JSON Sample Course import files
 * Add: Adds new Customizer setting for "LifterLMS: Use Default Styles"
+* Add: Adds compatibility for Featured Articles Slider and Categories List to work with content/sidebar and sidebar/content page layouts
 * Fix: Adds a border to the WooCommerce Cart/Checkout input fields. Ensures custom WooCommerce styles are enqueued on Cart and Checkout pages.
 * Fix: Removes flexbox flex-grow on Lesson items in the Course Syllabus page
+* Fix: Removes forced full-width page layout on pages using the Block Editor
 * Fix: Sets a max-width on Comments container items
 * Fix: Updates Theme URI
 * Fix: Update LifterLMS functions to apply the selected default site layout as a body class (replaces the hard-coded "content-sidebar" class). Adds styles for "sidebar-content" layout on LifterLMS pages.

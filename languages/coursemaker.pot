@@ -13,37 +13,17 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:39
-msgid "Not found, error 404"
-msgstr ""
-
-#: 404.php:50, 404.php:64
-msgid "The page you are looking for no longer exists. Perhaps you can return back to the site's"
-msgstr ""
-
-#: 404.php:51, 404.php:65
-msgid "homepage"
-msgstr ""
-
-#: 404.php:52, 404.php:66
-msgid "and see if you can find what you are looking for. Or, you can try finding it by using the search form below."
-msgstr ""
-
-#: 404.php:76
-msgid "Sitemap"
-msgstr ""
-
-#: searchform.php:19
+#: searchform.php:18
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:21
+#: searchform.php:20
 msgctxt "placeholder"
-msgid "Search &hellip;"
+msgid "Search this website &hellip;"
 msgstr ""
 
-#: searchform.php:23
+#: searchform.php:22
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
@@ -124,11 +104,11 @@ msgstr ""
 msgid "Featured Article"
 msgstr ""
 
-#: lib/blog-functions.php:311
+#: lib/blog-functions.php:339
 msgid "New Articles"
 msgstr ""
 
-#: lib/blog-functions.php:490, lib/dps/dps-featured.php:50
+#: lib/blog-functions.php:518, lib/dps/dps-featured.php:50
 msgid "Learn More"
 msgstr ""
 
@@ -232,11 +212,11 @@ msgstr ""
 msgid "Landing"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:48
+#: lifterlms/course/lesson-preview.php:55
 msgid "Revisit Lesson"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:50
+#: lifterlms/course/lesson-preview.php:57
 msgid "Let's Begin"
 msgstr ""
 
