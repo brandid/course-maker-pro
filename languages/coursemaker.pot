@@ -20,7 +20,7 @@ msgstr ""
 
 #: searchform.php:20
 msgctxt "placeholder"
-msgid "Search this website &hellip;"
+msgid "Search &hellip;"
 msgstr ""
 
 #: searchform.php:22
