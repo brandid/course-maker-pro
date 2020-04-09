@@ -113,6 +113,11 @@ a {
     border-color: $main-accent-color;
 }
 
+button.llms-button-secondary,
+button.llms-button-secondary:hover {
+    color: $white;
+}
+
 // base color 2
 
 // .genesis-nav-menu .sub-menu,

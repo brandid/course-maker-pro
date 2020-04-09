@@ -1724,6 +1724,10 @@ img.alignright {
   display: none;
 }
 
+.llms_certificate-template-default .footer-widgets {
+  display: none;
+}
+
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
 /* ## Genesis eNews Extended
@@ -2798,6 +2802,11 @@ a {
   border-color: #616e63;
 }
 
+button.llms-button-secondary,
+button.llms-button-secondary:hover {
+  color: #fff;
+}
+
 .entry-title a:focus,
 .entry-title a:hover,
 a:focus,
@@ -3562,6 +3571,9 @@ img.circle {
     padding-top: 0;
     position: relative;
     top: -100px;
+  }
+  .llms_certificate-template-default .site-inner{
+    top: 0;
   }
   .author-box{
     margin-bottom: 0;
