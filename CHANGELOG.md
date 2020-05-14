@@ -1,5 +1,15 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.4] - May 13, 2020
+* Fix: Corrects AB column padding issue in the demo homepage import content file
+* Fix: Fixes a PHP undefined variable notice
+* Fix: Removes unnecessary 404 page template
+* Fix: Removes forced full-width page layout when Block Editor is used
+* Fix: Removes assigned demo content page layouts - pages will use the global Customizer setting unless assigned discretely (blog page remains assigned full-width by default for aesthetics)
+* Fix: Fixes styles for Search input field so submit button is Accessible and visible at all times
+* Fix: Fixes print styles for LifterLMS Certificate page
+* Add: Adds support for Featured Articles Slider on Content/Sidebar and Sidebar/Content page layouts
+
 ## [2.0.3] - Jan 7, 2020
 This release includes the following updates:
 * Add: Adds JSON Sample Course import files
