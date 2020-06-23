@@ -1,5 +1,8 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.5] - Jun 23, 2020
+* Fix: Corrects header of the theme overlapping the dropdown options from the WordPress admin bar
+
 ## [2.0.4] - May 13, 2020
 * Fix: Corrects AB column padding issue in the demo homepage import content file
 * Fix: Fixes a PHP undefined variable notice

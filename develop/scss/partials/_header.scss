@@ -27,7 +27,7 @@
   position: relative;
   z-index: 400;
   @include media($screen--m) {
-    position: sticky; 
+    position: sticky;
     background-color: transparent;
   }
 }
@@ -65,7 +65,7 @@
 .site-header,
 .site-header.sticky {
 	width: 100%;
-	z-index: 99999;
+	z-index: 99998;
 }
 
 .site-header {
