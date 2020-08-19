@@ -28,32 +28,48 @@ jQuery(document).ready(function ($) {
 	deBouncer(jQuery,'smartresize', 'resize', 50);
     deBouncer(jQuery,'smartscroll', 'scroll', 50);
 
-	setTimeout(function () {
-		if (location.hash) {
-			/* we need to scroll to the top of the window first, because the browser will always jump to the anchor first before JavaScript is ready, thanks Stack Overflow: http://stackoverflow.com/a/3659116 */
-			window.scrollTo(0, 0);
-			target = location.hash.split('#');
-			smoothScrollTo($('#' + target[1]) );
-		}
-	}, 1);
+	/**
+     * Adds smooth scrolling functionality to the site.
+     * Supports URL hashes.
+     *
+     */
 
-	// taken from: http://css-tricks.com/snippets/jquery/smooth-scrolling/
-	$('nav > ul > li > a[href*=#]:not([href=#]), a[href*=#]:not([href=#])').click(function () { // ensures that Reviews tab works in WooCommerce single product pages by limiting the scope to only the # links in nav
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			smoothScrollTo($(this.hash));
-			return false;
-		}
-	});
-
-	function smoothScrollTo(target) {
-		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-		if (target.length) {
-			$('html,body').animate({
-				scrollTop: target.offset().top-62 /* where 63px is the height of fixed header */
-			}, 2000);
-		}
-	}
+    // taken from: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        // On-page links
+        if ( location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+				// Get header height
+				var headerheight = getSiteHeaderHeight();
+				var targetoffset = target.offset().top - parseFloat(headerheight);
+                $('html, body').animate({
+                    scrollTop: targetoffset
+                }, 2000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
 
 	function addScrolled() {
 		if (window.innerWidth > 1022) {
@@ -68,14 +84,47 @@ jQuery(document).ready(function ($) {
 	// Get the current .site-header height in px
 	function getSiteHeaderHeight() {
 
-		// The SiteHeader element to target
-		var sh = $( ".site-header" );
+		// Only needed above 1023px
+		if (window.innerWidth > 1023) {
 
-		// Set OuterHeight var
-		var oh = $( sh ).outerHeight();
+			// The SiteHeader element to target
+			var sh = $( ".site-header" );
 
-		// Log in console
-		// console.log( 'site header height: ' + oh + 'px' );
+			// Set OuterHeight var
+			var oh = $( sh ).outerHeight();
+
+			// Add 30px for spacing
+			oh = parseFloat(oh + 30);
+
+			// Move further for Admin Bar
+			if ( $( 'body' ).hasClass( "admin-bar" ) ) {
+
+				oh = parseFloat( oh + 32);
+
+			}
+
+			// // Log in console
+			// console.log( 'oh: ' + oh + 'px' );
+
+		} else {
+
+			// Set OuterHeight var
+			var oh = 0;
+
+			// Add 30px for spacing
+			oh = parseFloat(oh + 30);
+
+			// Move further for Admin Bar
+			if ( $( 'body' ).hasClass( "admin-bar" ) ) {
+
+				oh = parseFloat( oh + 46);
+
+			}
+
+			// // Log in console
+			// console.log( 'oh: ' + oh + 'px' );
+
+		}
 
 		// Return the val
 		return oh;
