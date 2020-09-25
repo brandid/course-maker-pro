@@ -23,10 +23,15 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**Website (please complete the following information):**
+- WordPress version: [e.g. 5.5]
+- Course Maker Pro version: [e.g. 2.0.6]
+- LifterLMS version (if applicable) : [e.g. 4.4.4]
+
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - Browser: [e.g. chrome, safari]
+ - Version: [e.g. 22]
 
 **Smartphone (please complete the following information):**
  - Device: [e.g. iPhone6]
