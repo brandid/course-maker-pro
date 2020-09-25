@@ -12,9 +12,11 @@ defined( 'ABSPATH' ) || exit;
 $restrictions = llms_page_restricted( $lesson->get( 'id' ), get_current_user_id() );
 $data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_html( wp_strip_all_tags( llms_get_restriction_message( $restrictions ) ) ) . '"' : '';
 
+// Get Customizer setting to Force LifterLMS styles.
 $force_llms_default_styles = get_theme_mod( 'force_llms_default_styles', false );
+
+// If Customizer setting is disabled, use custom template.
 if ( ! $force_llms_default_styles ) {
-	// USE CUSTOM LLMS TEMPLATE.
 	?>
 
 	<div class="llms-lesson-preview<?php echo $lesson->get_preview_classes(); // phpcs:ignore ?>">
@@ -47,23 +49,24 @@ if ( ! $force_llms_default_styles ) {
 
 				<section class="llms-extra">
 
-					<p class="learn-more">
-						<?php
-						$student = llms_get_student( get_current_user_id() );
-						if ( $student ) {
-							if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
-								echo esc_html_e( 'Revisit Lesson', 'coursemaker' );
-							} else {
-								echo esc_html_e( 'Let\'s Begin', 'coursemaker' );
-							}
+					<?php
+					$student = llms_get_student( get_current_user_id() );
+					$learnmoretext = '';
+					if ( $student ) {
+						if ( $student->is_complete( $lesson->get( 'id' ), 'lesson' ) ) {
+							$learnmoretext = __( 'Revisit Lesson', 'coursemaker' );
+						} else {
+							$learnmoretext = __( 'Let\'s Begin', 'coursemaker' );
 						}
-						?>
-					</p>
+					}
+					?>
+					<p class="learn-more"><?php echo $learnmoretext; ?></p>
+
 
 					<?php if ( 'course' === get_post_type( get_the_ID() ) ) { ?>
 					<p class="extras">
-						<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), $lesson->get_order(), $total_lessons ); // phpcs:ignore ?></span>
-						<?php echo $lesson->get_preview_icon_html(); // phpcs:ignore ?>
+						<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), isset( $order ) ? $order : $lesson->get_order(), $total_lessons ); ?></span>
+						<?php echo $lesson->get_preview_icon_html(); ?>
 					</p>
 					<?php } ?>
 
@@ -80,7 +83,7 @@ if ( ! $force_llms_default_styles ) {
 
 <?php
 } else {
-	// USE DEFAULT LLMS TEMPLATE.
+	// Customizer setting is enabled, use default LifterLMS template.
 	?>
 
 	<div class="llms-lesson-preview<?php echo $lesson->get_preview_classes(); ?>">
@@ -97,7 +100,7 @@ if ( ! $force_llms_default_styles ) {
 				<?php endif; ?>
 
 				<aside class="llms-extra">
-					<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), $lesson->get_order(), $total_lessons ); ?></span>
+					<span class="llms-lesson-counter"><?php printf( _x( '%1$d of %2$d', 'lesson order within section', 'lifterlms' ), isset( $order ) ? $order : $lesson->get_order(), $total_lessons ); ?></span>
 					<?php echo $lesson->get_preview_icon_html(); ?>
 				</aside>
 
