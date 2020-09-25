@@ -1,5 +1,11 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.7] - Sept 25, 2020
+* Fix: Updates a custom LifterLMS template file with the latest code.
+
+## [2.0.6] - Aug 19, 2020
+* Fix: Fixes header issues caused after updating to WordPress 5.5
+
 ## [2.0.5] - Jun 23, 2020
 * Fix: Corrects header of the theme overlapping the dropdown options from the WordPress admin bar
 
