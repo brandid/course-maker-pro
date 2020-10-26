@@ -190,6 +190,31 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('js'))
 });
 
+gulp.task('zip', function() {
+    gulp.src([
+        'config/**/*',
+        'css/**/*',
+        'images/**/*',
+        'includes/**/*',
+        'js/**/*',
+        'languages/*',
+        'lib/**/*',
+        'lifterlms/**/*',
+        'page-templates/**/*',
+        'sample-course/**/*',
+        '*.php',
+        'CHANGELOG.md',
+        'LICENSE.md',
+        'readme.txt',
+        'screenshot.png',
+        '*.css'
+    ], {
+        base: '.'
+    })
+    .pipe(zip('course-maker-pro.zip'))
+    .pipe(gulp.dest('dist'))
+});
+
 /********************
  * All Tasks Listeners
  *******************/
@@ -212,7 +237,7 @@ gulp.task('watch', function() {
 // gulp.task('scripts', [''])
 gulp.task('styles', ['clean', 'sass:lint', 'lintgutenberg']);
 
-// gulp.task('build', ['styles', 'compress', 'zip']);
+gulp.task('build', ['styles', 'compress', 'zip']);
 
 //* "CLEAN" TASK - REMOVE ALL CSS FILES
 gulp.task('clean', function() {
