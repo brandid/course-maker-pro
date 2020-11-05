@@ -39,8 +39,9 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
   max-width: 100%;
 }
 
-/* No top padding when AB Container Block is first element on the page */
-.page-template-blocks.first-block-atomic-blocks-ab-container .content > .entry {
+/* No top padding when AB Container Block or GB Container Block is first element on the page */
+.page-template-blocks.first-block-atomic-blocks-ab-container .content > .entry,
+.page-template-blocks.first-block-genesis-blocks-gb-container .content > .entry {
   margin-bottom: 0;
   padding-top: 0 !important;
   padding-bottom: 0;
@@ -623,6 +624,7 @@ hr.wp-block-separator {
 ----------------------------------------------------------------------------- */
 .widget__socialproofslider {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .social-proof-slider-wrap {
@@ -653,6 +655,18 @@ hr.wp-block-separator {
 .ab-accordion-title {
   cursor: pointer;
 }
+
+/* GENESIS BLOCKS
+------------------------------------------------------------------------- */
+.gb-accordion-title {
+  cursor: pointer;
+}
+
+.gb-block-button .gb-button,
+.gb-block-button .gb-button:hover {
+  border-bottom: 0;
+}
+
 @media screen and (min-width: 1023px) {
   body.content-sidebar .content-sidebar-wrap,
   body.content-sidebar .site-inner,
@@ -725,6 +739,7 @@ hr.wp-block-separator {
     padding: 0 50px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .alignwide {
     margin-left: -146px;

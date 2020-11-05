@@ -23,15 +23,23 @@ return <<<CONTENT
 <p>Use this section to give visitors a deeper look into the details of your must-take course. Start with a high-level overview of what your class will teach them and why it’s unmissable. Then, get into the nitty gritty. Consider sharing information about your framework or process, explain how participants can use what they learn, and outline the benefits they’ll experience thanks to your course. </p>
 <!-- /wp:paragraph -->
 
+<!-- wp:spacer {"height":40} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
 <!-- /wp:separator -->
+
+<!-- wp:spacer {"height":40} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
 <!-- wp:heading {"level":3} -->
 <h3><strong>About the Instructor, Rachel Gogos</strong></h3>
 <!-- /wp:heading -->
 
-<!-- wp:image {"id":1,"linkDestination":"custom"} -->
+<!-- wp:image {"id":694} -->
 <figure class="wp-block-image"><a href="https://www.youtube.com/watch?v=YbRubFUmAtc" rel="wp-video-lightbox"><img src="$course_maker_about_image_url" alt="" class="wp-image-1"/></a></figure>
 <!-- /wp:image -->
 
@@ -39,7 +47,9 @@ return <<<CONTENT
 <p>When writing your bio, don’t hide your light under a bushel! If you’re uncomfortable tooting your own horn, pretend you’re describing someone else who is a top expert in their field. Include details that help to show off your authority, credibility, and passion for the content you’re teaching. But remember, this isn’t a straight résumé. Sprinkle in some of your personality to help visitors connect to you and trust that you’re the perfect person to teach them this topic—because you are!</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="$course_maker_contact_page_url">Contact Me</a></div>
-<!-- /wp:button -->
+<!-- wp:buttons {"align":"center"} -->
+<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":0,"align":"none"} -->
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="$course_maker_contact_page_url">Contact Me</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 CONTENT;

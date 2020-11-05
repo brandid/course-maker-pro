@@ -14,14 +14,14 @@ return array(
 	'dependencies'     => array(
 		'plugins' => array(
 			array(
-				'name'       => __( 'Atomic Blocks', 'coursemaker' ),
-				'slug'       => 'atomic-blocks/atomicblocks.php',
-				'public_url' => 'https://atomicblocks.com/',
-			),
-			array(
 				'name'       => __( 'Display Posts Shortcode', 'coursemaker' ),
 				'slug'       => 'display-posts-shortcode/display-posts-shortcode.php',
 				'public_url' => 'https://displayposts.com',
+			),
+			array(
+				'name'       => __( 'Genesis Blocks', 'coursemaker' ),
+				'slug'       => 'genesis-blocks/genesis-blocks.php',
+				'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
 			),
 			array(
 				'name'       => __( 'LifterLMS', 'coursemaker' ),

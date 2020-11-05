@@ -23,6 +23,6 @@ https://demo.coursemakerpro.thebrandid.com/
 For theme documentation, please visit:
 https://buildmybrandid.com/docs/course-maker-pro/
 
-## Support Forum
-For theme support, please visit:
-https://buildmybrandid.com/forum/support/themes/course-maker-pro/
+## Product Support
+For product support, please visit:
+https://buildmybrandid.com/product-support/

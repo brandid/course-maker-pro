@@ -1,5 +1,8 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.8] - Nov 5, 2020
+* Fix: Genesis Blocks update! Now the theme uses Genesis Blocks in place of the Atomic Blocks plugin used previously. If you use the One-Click Theme Setup feature, your Demo pages will now be built with Genesis Blocks. We've also migrated our custom Atomic Blocks styles over to the Genesis Blocks plugin.
+
 ## [2.0.7] - Sept 25, 2020
 * Fix: Updates a custom LifterLMS template file with the latest code.
 

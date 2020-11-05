@@ -228,7 +228,8 @@ function handleErrors() {
 // })
 
 gulp.task('zip', ['pot'], () =>
-  gulp.src(['config/**/*',
+  gulp.src([
+    'config/**/*',
     'css/*',
     'images/*',
     'includes/**/*',

@@ -20,6 +20,6 @@ DOCUMENTATION
 For theme documentation, please visit:
 https://thebrandidthemes.com/docs/course-maker-pro/
 
-SUPPORT FORUM
-For theme support, please visit:
-https://thebrandidthemes.com/forum/support/themes/course-maker-pro/
+PRODUCT SUPPORT
+For product support, please visit:
+https://buildmybrandid.com/product-support/

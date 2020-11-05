@@ -65,6 +65,7 @@ function course_maker_colors_css() {
 
 		.wp-block-button .wp-block-button__link:not(.has-background),
 		.ab-block-button .ab-button,
+		.gb-block-button .gb-button,
 		.menu-toggle,
 		.cm-featured-post .widget-wrap > article > .stripe,
 		.entry-content .featured-articles .featured-article {
@@ -103,7 +104,7 @@ function course_maker_colors_css() {
 			background-color: %1$s !important;
 		}
 
-		.site-inner a:not(.button):not(.wp-block-button__link),
+		.site-inner a:not(.button):not(.wp-block-button__link):not(.ab-button):not(.gb-button),
 		.subtitle,
 		.footer-widgets a, {
 			color: %1$s !important;
@@ -153,8 +154,8 @@ function course_maker_colors_css() {
 		.site-footer a:focus,
 		.footer-widgets .footer-widgets-2 a:hover,
 		.footer-widgets .footer-widgets-2 a:focus,
-		.site-inner a:not(.button):not(.wp-block-button__link):hover,
-		.site-inner a:not(.button):not(.wp-block-button__link):focus,
+		.site-inner a:not(.button):not(.wp-block-button__link):not(.ab-button):not(.gb-button):hover,
+		.site-inner a:not(.button):not(.wp-block-button__link):not(.ab-button):not(.gb-button):focus,
 		.entry-content ul.blog-categories > li.current-cat a {
 			color: %1$s !important;
 		}

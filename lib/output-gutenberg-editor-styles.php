@@ -62,7 +62,8 @@ function course_maker_gutenberg_editor_customizer_css_output() {
 		}
 
 		.editor-styles-wrapper .wp-block-button .wp-block-button__link.has-accent-background-color,
-		.editor-styles-wrapper .ab-block-button .ab-button  {
+		.editor-styles-wrapper .ab-block-button .ab-button,
+		.editor-styles-wrapper .gb-block-button .gb-button  {
 			background-color: %1$s !important;
 			color: %2$s !important;
 		}

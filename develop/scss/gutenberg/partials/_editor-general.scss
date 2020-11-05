@@ -198,3 +198,10 @@ p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
     margin-left: 1px;
     margin-right: 1px;
 }
+
+/* GENESIS BLOCKS
+--------------------------------------------- */
+.block-editor-block-list__block[data-type="genesis-blocks/gb-columns"] .block-editor-block-list__layout {
+    margin-left: 1px;
+    margin-right: 1px;
+}

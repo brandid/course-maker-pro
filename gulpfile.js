@@ -193,21 +193,24 @@ gulp.task('compress', function() {
 gulp.task('zip', function() {
     gulp.src([
         'config/**/*',
-        'css/**/*',
-        'images/**/*',
+        'css/*',
+        'images/*',
         'includes/**/*',
-        'js/**/*',
+        'js/*',
         'languages/*',
         'lib/**/*',
         'lifterlms/**/*',
-        'page-templates/**/*',
-        'sample-course/**/*',
+        'page-templates/*',
+        'sample-course/**',
+        'xml/*',
         '*.php',
         'CHANGELOG.md',
         'LICENSE.md',
         'readme.txt',
         'screenshot.png',
-        '*.css'
+        '*.css',
+        '!composer-setup.php',
+        '!wpcs/**',
     ], {
         base: '.'
     })
