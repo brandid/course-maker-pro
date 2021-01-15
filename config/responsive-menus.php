@@ -24,5 +24,6 @@ return array(
 	),
 	'extras' => array(
 		'media_query_width' => '960px',
+		'enable_non_AMP'    => true,
 	),
 );

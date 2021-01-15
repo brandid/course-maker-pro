@@ -140,9 +140,6 @@ add_theme_support( 'genesis-connect-woocommerce' );
 // * Enable Shortcodes in widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
-// * Removes header right widget area
-unregister_sidebar( 'header-right' );
-
 // * Removes secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
 

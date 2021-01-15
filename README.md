@@ -13,7 +13,7 @@ Course Maker Pro is a Child theme for the [Genesis framework](https://www.studio
 
 ## Purchase Theme
 To purchase the theme, please visit:
-https://buildmybrandid.com/product/course-maker-theme/
+https://buildmybrandid.com/wordpress-themes/
 
 ## Theme Demo
 To see a demo of the theme in action, please visit:
