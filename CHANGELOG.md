@@ -1,10 +1,14 @@
 # Course Maker Pro Theme Changelog
 
+## [2.0.9] - Mar 30, 2021
+* Fix: Fixes alignment for Buttons blocks after WP 5.7 update
+* Fix: Fixes Quote blocks style to match the Page Editor experience
+
 ## [2.0.8] - Nov 5, 2020
 * Fix: Genesis Blocks update! Now the theme uses Genesis Blocks in place of the Atomic Blocks plugin used previously. If you use the One-Click Theme Setup feature, your Demo pages will now be built with Genesis Blocks. We've also migrated our custom Atomic Blocks styles over to the Genesis Blocks plugin.
 
 ## [2.0.7] - Sept 25, 2020
-* Fix: Updates a custom LifterLMS template file with the latest code.
+* Fix: Updates a custom LifterLMS template file with the latest code
 
 ## [2.0.6] - Aug 19, 2020
 * Fix: Fixes header issues caused after updating to WordPress 5.5
@@ -40,4 +44,4 @@ This release includes the following updates:
 * Update: Disables Yoast SEO plugin schema
 
 ## [2.0.2] - Initial release
-The initial release of the Course Maker Pro theme.
+The initial release of the Course Maker Pro theme
