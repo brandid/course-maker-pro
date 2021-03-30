@@ -159,6 +159,11 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
   float: none;
 }
 
+.wp-block-buttons.aligncenter {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 .content .wp-block-button .wp-block-button__link {
   display: inline-block;
   color: #fff;
