@@ -410,6 +410,37 @@ function course_maker_post_info_filter( $post_info ) {
 
 }
 
+// Output the Author posts link, outside the loop.
+add_shortcode( 'post_author_posts_link_outside_loop', 'course_maker_post_author_posts_link_shortcode' );
+function course_maker_post_author_posts_link_shortcode( $atts ) {
+
+	if ( ! is_singular() ) {
+		return;
+	}
+
+	$defaults = array();
+	$atts = shortcode_atts( $defaults, $atts, 'post_author_posts_link_outside_loop' );
+
+	global $post;
+	$author_id = $post->post_author;
+	$author = get_the_author_meta( 'display_name', $author_id );
+	$url = get_author_posts_url( $author_id );
+
+	if ( genesis_html5() ) {
+		$output  = sprintf( '<span %s>', genesis_attr( 'entry-author' ) );
+		$output .= sprintf( '<a href="%s" %s>', $url, genesis_attr( 'entry-author-link' ) );
+		$output .= sprintf( '<span %s>', genesis_attr( 'entry-author-name' ) );
+		$output .= esc_html( $author );
+		$output .= '</span></a></span>';
+	} else {
+		$link   = sprintf( '<a href="%s" rel="author">%s</a>', esc_url( $url ), esc_html( $author ) );
+		$output = sprintf( '<span class="author vcard"><span class="fn">%s</span></span>', $link );
+	}
+
+	return apply_filters( 'genesis_post_author_posts_link_shortcode', $output, $atts );
+
+}
+
 add_action( 'genesis_after_header', 'course_maker_add_post_info_conditionally' );
 /**
  * Adds the post info before the content-sidebar wrap on Posts.
