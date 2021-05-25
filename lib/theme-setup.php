@@ -342,7 +342,13 @@ function course_maker_do_members_nav() {
 }
 
 // * Add typical attributes for primary-members navigation elements.
-add_filter( 'genesis_attr_nav-primary-members', 'genesis_attributes_nav' );
+add_filter( 'genesis_attr_nav-primary-members', 'course_maker_attr_nav_primary' );
+function course_maker_attr_nav_primary( $attributes ) {
+	$attributes['itemscope'] = true;
+	$attributes['itemtype']  = 'https://schema.org/SiteNavigationElement';
+
+	return $attributes;
+}
 
 // * Add ID markup to the primary-members elements to jump to
 add_filter( 'genesis_attr_nav-primary-members', 'genesis_skiplinks_attr_nav_primary' );
