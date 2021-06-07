@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Course Maker Pro
+# Copyright (C) 2021 Course Maker Pro
 # This file is distributed under the same license as the Course Maker Pro package.
 msgid ""
 msgstr ""
@@ -69,11 +69,11 @@ msgid "Dark Gray"
 msgstr ""
 
 #: config/onboarding.php:17
-msgid "Atomic Blocks"
+msgid "Display Posts Shortcode"
 msgstr ""
 
 #: config/onboarding.php:22
-msgid "Display Posts Shortcode"
+msgid "Genesis Blocks"
 msgstr ""
 
 #: config/onboarding.php:27
@@ -200,7 +200,7 @@ msgstr ""
 msgid "Featured Image"
 msgstr ""
 
-#: lib/theme-setup.php:335
+#: lib/theme-setup.php:352
 msgid "Main navigation"
 msgstr ""
 
@@ -212,12 +212,12 @@ msgstr ""
 msgid "Landing"
 msgstr ""
 
-#: lifterlms/course/lesson-preview.php:55
-msgid "Revisit Lesson"
+#: lifterlms/course/lesson-preview.php:59
+msgid "Let's Begin"
 msgstr ""
 
 #: lifterlms/course/lesson-preview.php:57
-msgid "Let's Begin"
+msgid "Revisit Lesson"
 msgstr ""
 
 #: config/import/content/testimonials/sample-testimonial-1.php:13
