@@ -1,5 +1,9 @@
 # Course Maker Pro Theme Changelog
 
+## [2.1.0] - Jun 7, 2021
+* Update: Removes extra top padding on pages - was previously used for the Classic Editor
+* Update: Removes obsolete 'Blocks' page template
+
 ## [2.0.9] - Mar 30, 2021
 * Fix: Fixes alignment for Buttons blocks after WP 5.7 update
 * Fix: Fixes Quote blocks style to match the Page Editor experience

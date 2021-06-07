@@ -6,7 +6,7 @@ Description: Lead your online class with style, organization and the most user-f
 Author: The brandiD
 Author URI: https://thebrandid.com/
 
-Version: 2.0.9
+Version: 2.1.0
 
 Tags: block-styles, classes, courses, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, lifter-lms, membership, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -1035,8 +1035,7 @@ input:focus:-ms-input-placeholder {
 
 .archive-title,
 .entry-header .entry-title {
-  font-size: 60px;
-  font-size: 6rem;
+  font-size: calc(4.0vw + 1rem);
 }
 
 #content > .page-title,
@@ -2022,6 +2021,10 @@ body:not(.home) main.content .entry .gform_confirmation_message {
 
 .full-width-content .entry {
   padding: 30px;
+}
+
+.page .entry.type-page {
+  padding-top: 0;
 }
 
 .entry-content ol,
@@ -3216,6 +3219,11 @@ img.circle {
   .entry-content .search-form,
   .site-header .search-form{
     width: 50%;
+  }
+  .archive-title,
+  .entry-header .entry-title{
+    font-size: 60px;
+    font-size: 6rem;
   }
   .archive-title,
   .site-inner > .entry-title{

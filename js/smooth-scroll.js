@@ -93,15 +93,13 @@ jQuery(document).ready(function ($) {
 			// Set OuterHeight var
 			var oh = $( sh ).outerHeight();
 
-			// Add 30px for spacing
-			oh = parseFloat(oh + 30);
+			// // Add 30px for spacing
+			// oh = parseFloat(oh + 30);
 
-			// Move further for Admin Bar
-			if ( $( 'body' ).hasClass( "admin-bar" ) ) {
-
-				oh = parseFloat( oh + 32);
-
-			}
+			// // Move further for Admin Bar
+			// if ( $( 'body' ).hasClass( "admin-bar" ) ) {
+			// 	oh = parseFloat( oh + 32);
+			// }
 
 			// // Log in console
 			// console.log( 'oh: ' + oh + 'px' );
@@ -111,15 +109,13 @@ jQuery(document).ready(function ($) {
 			// Set OuterHeight var
 			var oh = 0;
 
-			// Add 30px for spacing
-			oh = parseFloat(oh + 30);
+			// // Add 30px for spacing
+			// oh = parseFloat(oh + 30);
 
-			// Move further for Admin Bar
-			if ( $( 'body' ).hasClass( "admin-bar" ) ) {
-
-				oh = parseFloat( oh + 46);
-
-			}
+			// // Move further for Admin Bar
+			// if ( $( 'body' ).hasClass( "admin-bar" ) ) {
+			// 	oh = parseFloat( oh + 46);
+			// }
 
 			// // Log in console
 			// console.log( 'oh: ' + oh + 'px' );
@@ -153,15 +149,15 @@ jQuery(document).ready(function ($) {
 				// Get header height and set as NewHeight var
 				var nh = getSiteHeaderHeight();
 
-				// Add 30px for spacing
-				nh = parseInt(nh + 30);
+				// // Add 30px for spacing
+				// nh = parseInt(nh + 30);
 
 				// Manually set target element padding-top
 				$( si ).css("padding-top", nh);
 			}
 		} else {
 			// Remove top padding
-			$( si ).css("padding-top", "30px");
+			$( si ).css("padding-top", "0");
 		}
 	}
 

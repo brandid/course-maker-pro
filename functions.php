@@ -85,11 +85,6 @@ if ( is_plugin_active( 'display-posts-shortcode/display-posts-shortcode.php' ) )
 	include_once CHILD_THEME_DIR . '/lib/dps-functions.php';
 }
 
-// Output for Course Maker Modules plugin.
-if ( is_plugin_active( 'course-maker-modules/course-maker-modules.php' ) ) {
-	include_once CHILD_THEME_DIR . '/lib/output-coursemakermodules.php';
-}
-
 // Output for LifterLMS plugin.
 if ( is_plugin_active( 'lifterlms/lifterlms.php' ) ) {
 	include_once CHILD_THEME_DIR . '/lib/lifterlms-functions.php';

@@ -148,6 +148,26 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 
+add_action( 'genesis_before_content_sidebar_wrap', 'course_maker_set_homepage_layout' );
+function course_maker_set_homepage_layout() {
+
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	// Remove the entry header markup and page title.
+	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+
+	// Forces full width content layout.
+	add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
+	// Removes the breadcrumbs.
+	remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+
+}
+
 /**
  * Adds custom body classes
  *
@@ -486,9 +506,9 @@ function course_maker_do_posts_page_heading() {
 		return;
 	}
 
-	printf( '<div %s>', esc_attr( genesis_attr( 'posts-page-description' ) ) );
+	printf( '<div %s>', genesis_attr( 'posts-page-description' ) );
 
-	printf( '<h1 %s>%s</h1>', esc_attr( genesis_attr( 'archive-title' ) ), esc_html( get_the_title( $posts_page ) ) );
+	printf( '<h1 %s>%s</h1>', genesis_attr( 'archive-title' ), esc_html( get_the_title( $posts_page ) ) );
 
 	$content = get_post( get_option( 'page_for_posts' ) )->post_content;
 
