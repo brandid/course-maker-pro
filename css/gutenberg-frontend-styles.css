@@ -40,8 +40,8 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
 }
 
 /* No top padding when AB Container Block or GB Container Block is first element on the page */
-.page-template-blocks.first-block-atomic-blocks-ab-container .content > .entry,
-.page-template-blocks.first-block-genesis-blocks-gb-container .content > .entry {
+.first-block-atomic-blocks-ab-container .content > .entry,
+.first-block-genesis-blocks-gb-container .content > .entry {
   margin-bottom: 0;
   padding-top: 0 !important;
   padding-bottom: 0;

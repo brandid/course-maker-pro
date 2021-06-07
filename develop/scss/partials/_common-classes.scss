@@ -233,7 +233,10 @@ input:focus:-ms-input-placeholder {
 
 .archive-title,
 .entry-header .entry-title {
-    font-size: $h1-font-size;
+    font-size: calc(4.0vw + 1rem);
+    @include media($screen--m) {
+        font-size: $h1-font-size;
+    }
 }
 
 #content > .page-title,
