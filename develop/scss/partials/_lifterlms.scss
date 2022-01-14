@@ -1,0 +1,48 @@
+// From: https://wpdatatables.com/how-to-make-a-table-responsive/
+.llms-sd-grades table {
+	width: 100%;
+
+	thead {
+		display: none;
+		@include media($screen--tablet) {
+			display: table-header-group;
+		}
+	}
+	tr:nth-of-type(2n) {
+		background-color: inherit;
+	}
+	tr td:first-child {
+
+		@include media($screen--tablet) {
+			background: inherit;
+			font-weight: inherit;
+			font-size: inherit;
+		}
+	}
+	tbody td {
+		display: block;
+		text-align: center;
+
+		@include media($screen--tablet) {
+			display: table-cell;
+			text-align: inherit;
+		}
+	}
+	tbody td:before {
+		content: attr(data-th);
+		display: block;
+		text-align: center;
+		width: 100%;
+		font-weight: 700;
+
+		@include media($screen--tablet) {
+			display: none;
+		}
+	}
+	tfoot {
+		display: none;
+		@include media($screen--tablet) {
+			display: table-footer-group;
+		}
+	}
+}
