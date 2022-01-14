@@ -332,8 +332,8 @@ blockquote {
 }
 
 .bigger {
-  font-size: 23.4px;
-  font-size: 2.34rem;
+  font-size: 24.7px;
+  font-size: 2.47rem;
 }
 
 /* ## Headings
@@ -2962,8 +2962,8 @@ img.circle {
 }
 
 .dn-subtitle p {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 21px;
+  font-size: 2.1rem;
 }
 
 .widget_sp_image-image-link {
@@ -3066,20 +3066,20 @@ img.circle {
 
 @media screen and (min-width: 861px){
   body > div{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
   body{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
   .site-header .search-form{
     float: right;
     margin: 12px auto 0;
   }
   .footer-widgets .wrap .widget-area p{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
 }
 
@@ -3433,8 +3433,8 @@ img.circle {
     transition: background-color 0.3s linear .2s;
   }
   .dn-subtitle p{
-    font-size: 22px;
-    font-size: 2.2rem;
+    font-size: 23px;
+    font-size: 2.3rem;
   }
 }
 
