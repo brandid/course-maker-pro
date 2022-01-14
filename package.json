@@ -10,6 +10,12 @@
   "bugs": {
     "url": "https://github.com/brandid/course-maker-pro/"
   },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "homepage": "https://thebrandid.com",
   "devDependencies": {
     "bourbon": "^4.2.6",
@@ -31,6 +37,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-wp-pot": "^2.2.0",
     "gulp-zip": "^4.0.0",
+    "node-sass": "^4.14.1",
     "postcss-pxtorem": "^4.0.1",
     "postcss-svg": "^1.0.6"
   },
