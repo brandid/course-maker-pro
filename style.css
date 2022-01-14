@@ -345,29 +345,29 @@ h4,
 h5,
 h6 {
   font-family: "Questrial";
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
   margin: 0 0 10px;
 }
 
 h1 {
-  font-size: 60px;
-  font-size: 6rem;
+  font-size: 70px;
+  font-size: 7rem;
 }
 
 h2 {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 61px;
+  font-size: 6.1rem;
 }
 
 h3 {
-  font-size: 42px;
-  font-size: 4.2rem;
+  font-size: 35px;
+  font-size: 3.5rem;
 }
 
 h4 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 h5 {
@@ -3222,8 +3222,8 @@ img.circle {
   }
   .archive-title,
   .entry-header .entry-title{
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 70px;
+    font-size: 7rem;
   }
   .archive-title,
   .site-inner > .entry-title{
