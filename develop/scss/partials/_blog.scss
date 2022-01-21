@@ -29,7 +29,38 @@
 }
 
 .entry-content .featured-articles .featured-article {
-    display: flex;
+    display: grid;
+    grid-template-columns: 33.3333% 1fr;
+
+    &.no-thumbnail {
+        grid-template-columns: 1fr;
+    }
+
+    .text-container .entry-title {
+        font-size: 30px;
+        letter-spacing: 0.2em;
+        line-height: 1.2em;
+        font-weight: 300;
+    }
+
+    .author-name {
+        font-size: 16px;
+        letter-spacing: 0.15em;
+    }
+
+    .post-category {
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    .featured-article-item-header {
+        font-size: 20px;
+    }
+
+    .featured-img {
+        max-width: 100%;
+    }
 }
 
 .entry-content .featured-articles .featured-article > * {
@@ -38,17 +69,20 @@
 }
 
 .entry-content .featured-articles .featured-article .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: left;
     padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
     @include media($screen--tablet) {
         justify-content: space-between;
         padding: 10px 30px;
     }
     @include media($screen--m) {
         padding: 30px 60px;
+    }
+
+    div, h2 {
+        width: 100%;
     }
 }
 
@@ -87,10 +121,13 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
     @include media($screen--tablet) {
         font-size: 24px;
         letter-spacing: 2px;
+        font-weight: 300;
     }
     @include media($screen--m) {
-        font-size: 40px;
-        letter-spacing: 4px;
+        font-size: 30px;
+        letter-spacing: 0.2em;
+        line-height: 1.2em;
+        font-weight: 300;
     }
     font-weight: normal;
 }
@@ -125,7 +162,13 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 .entry-content .featured-articles .featured-article .text-container .author-info {
     display: none !important;
     @include media($screen--tablet) {
-        display: flex !important;
+        display: grid !important;
+        grid-template-columns: 64px 1fr;
+        align-items: center;
+        
+        .image {
+            padding-right: 12px;
+        }
     }
     align-items: center;
 }
@@ -179,7 +222,6 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 }
 
 .entry-content .featured-articles .featured-article .featured-img {
-    max-width: 33.333%;
     .link-has-image {
         display: flex;
 

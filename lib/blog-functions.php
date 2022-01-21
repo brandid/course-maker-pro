@@ -108,7 +108,11 @@ function course_maker_show_featured_articles() {
 			}
 
 			// Open article container.
-			echo '<div class="featured-article">';
+			if ( has_post_thumbnail() ) {
+				echo '<div class="featured-article">';
+			} else {
+				echo '<div class="featured-article no-thumbnail">';
+			}
 
 			// Open text container.
 			echo '<div class="text-container">';
@@ -193,7 +197,8 @@ function course_maker_show_featured_articles() {
 		$(".blog-header-extras .featured-articles").not(".slick-initialized").slick({
 			autoplay: true,
 			autoplaySpeed: 5000,
-			adaptiveHeight: false,
+			adaptiveHeight: true,
+			pauseOnFocus: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: false,
@@ -273,7 +278,7 @@ function course_maker_blog_header_output() {
 	echo '<div class="alignfull" ' . $padding_str . '>';
 
 	if ( 'sidebar' === $page_layout ) {
-		echo '<div class="container-content" style="max-width: 924px; margin: 0 auto;">';
+		echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
 	} else {
 		echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
 	}
