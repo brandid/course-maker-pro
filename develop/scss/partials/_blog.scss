@@ -30,8 +30,11 @@
 
 .entry-content .featured-articles .featured-article {
     display: grid;
-    grid-template-columns: 33.3333% 1fr;
+    grid-template-columns: 45% 1fr;
 
+    @include media($screen--tablet) {
+        grid-template-columns: 33.3333% 1fr;
+    }
     &.no-thumbnail {
         grid-template-columns: 1fr;
     }
@@ -60,6 +63,11 @@
 
     .featured-img {
         max-width: 100%;
+        display: flex;
+
+        @include media($screen--tablet) {
+            display: block;
+        }
     }
 }
 
