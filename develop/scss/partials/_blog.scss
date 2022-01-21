@@ -1,5 +1,14 @@
 /* Blog Styles
 --------------------------------------------------------------------------------------------------- */
+/* Blog title
+------------------------------------- */
+.blog .archive-title {
+    color: $black-coral;
+    letter-spacing: 0.2em;
+    padding: 70px 0 45px 0;
+    margin-bottom: 0;
+    font-size: 77px;
+}
 
 /* Blog intro text
 ------------------------------------- */
@@ -7,6 +16,8 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
+    letter-spacing: 0.2em;
 }
 
 /* Featured Articles Slider
@@ -122,6 +133,9 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 .entry-content .featured-articles .featured-article .text-container .author-info .image {
     margin-right: 10px;
 }
+.entry-content .featured-articles .featured-article .text-container .author-info .image a {
+    display: inline-block;
+}
 
 .entry-content .featured-articles .featured-article .text-container .author-info .image img {
     width: 24px;
@@ -166,6 +180,13 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 
 .entry-content .featured-articles .featured-article .featured-img {
     max-width: 33.333%;
+    .link-has-image {
+        display: flex;
+
+        img {
+            object-fit: cover;
+        }
+    }
 }
 
 .entry-content .featured-articles .featured-article .featured-img a {
