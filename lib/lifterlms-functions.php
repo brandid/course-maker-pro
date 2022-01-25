@@ -73,5 +73,41 @@ function course_maker_custom_lifterlms_css() {
 	if ( ! $force_llms_default_styles ) {
 		wp_enqueue_style( genesis_get_theme_handle() . '-lifterlms-styles', get_stylesheet_directory_uri() . '/css/lifterlms-custom-styles.css', array(), genesis_get_theme_version() );
 	}
+}
 
+/**
+ * Hook into mygrades for responsive tables.
+ */
+add_action( 'llms_student_dashboard_after_my_grades', 'course_maker_lifterlms_my_grades' );
+/**
+ * Hook into mygrades and insert some JavaScript.
+ *
+ * Script from: https://wpdatatables.com/how-to-make-a-table-responsive/.
+ */
+function course_maker_lifterlms_my_grades() {
+	?>
+		<script>
+			var headertext = [];
+			var headers = document.querySelectorAll( '.llms-sd-grades thead' );
+			var tablebody = document.querySelectorAll( '.llms-sd-grades tbody' );
+
+			console.log( tablebody );
+
+			for ( var i = 0; i < headers.length; i++ ) {
+				headertext[ i ] = [];
+				for ( var j = 0, headrow; headrow = headers[ i ].rows[ 0 ].cells[ j ]; j++ ) {
+					var current = headrow;
+					headertext[ i ].push( current.textContent );
+				}
+			}
+
+			for ( var h = 0, tbody; tbody = tablebody[ h ]; h++ ) {
+				for ( var i = 0, row; row = tbody.rows[ i ]; i++ ) {
+					for ( var j = 0, col; col = row.cells[ j ]; j++ ) {
+						col.setAttribute( 'data-th', headertext[ h ][ j ] );
+					}
+				}
+			}
+		</script>
+	<?php
 }
