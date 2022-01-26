@@ -3066,6 +3066,35 @@ img.circle {
 /* # Print Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
+.llms-sd-grades table {
+  width: 100%;
+}
+
+.llms-sd-grades table thead {
+  display: none;
+}
+
+.llms-sd-grades table tr:nth-of-type(2n) {
+  background-color: inherit;
+}
+
+.llms-sd-grades table tbody td {
+  display: block;
+  text-align: center;
+}
+
+.llms-sd-grades table tbody td:before {
+  content: attr(data-th);
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+}
+
+.llms-sd-grades table tfoot {
+  display: none;
+}
+
 @media screen and (min-width: 320px){
   .site-inner,
   .wrap{
@@ -3156,6 +3185,24 @@ img.circle {
   .entry-content.blog-posts-grid .blog-posts-wrapper .cm-featured-post{
     -ms-flex-preferred-size: 46%;
     flex-basis: 46%;
+  }
+  .llms-sd-grades table thead{
+    display: table-header-group;
+  }
+  .llms-sd-grades table tr td:first-child{
+    background: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+  .llms-sd-grades table tbody td{
+    display: table-cell;
+    text-align: inherit;
+  }
+  .llms-sd-grades table tbody td:before{
+    display: none;
+  }
+  .llms-sd-grades table tfoot{
+    display: table-footer-group;
   }
 }
 
