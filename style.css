@@ -242,7 +242,7 @@ body > div {
 
 body {
   background-color: #fff;
-  color: #333;
+  color: #5E6270;
   font-family: "Questrial";
   font-size: 16px;
   font-size: 1.6rem;
@@ -332,8 +332,8 @@ blockquote {
 }
 
 .bigger {
-  font-size: 23.4px;
-  font-size: 2.34rem;
+  font-size: 24.7px;
+  font-size: 2.47rem;
 }
 
 /* ## Headings
@@ -345,29 +345,29 @@ h4,
 h5,
 h6 {
   font-family: "Questrial";
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
   margin: 0 0 10px;
 }
 
 h1 {
-  font-size: 60px;
-  font-size: 6rem;
+  font-size: 70px;
+  font-size: 7rem;
 }
 
 h2 {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 61px;
+  font-size: 6.1rem;
 }
 
 h3 {
-  font-size: 42px;
-  font-size: 4.2rem;
+  font-size: 35px;
+  font-size: 3.5rem;
 }
 
 h4 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 h5 {
@@ -487,7 +487,7 @@ select,
 textarea {
   background-color: #fff;
   border: 1px solid #fff;
-  color: #333;
+  color: #5E6270;
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 400;
@@ -507,12 +507,12 @@ input[type="radio"] {
 }
 
 ::-moz-placeholder {
-  color: #333;
+  color: #5E6270;
   opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-  color: #333;
+  color: #5E6270;
 }
 
 .button,
@@ -639,7 +639,7 @@ Accessibility Support
   background: #fff;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  color: #333;
+  color: #5E6270;
   display: block;
   font-size: 1em;
   font-weight: bold;
@@ -2090,7 +2090,7 @@ p.entry-meta {
 
 .archive-pagination a {
   background-color: #fff;
-  color: #333;
+  color: #5E6270;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -2940,7 +2940,7 @@ a:hover {
 .footer-widgets-2 .widget-title,
 .front-page-3 .widget_sp_image-description p:first-child,
 .sidebar .widget-title a {
-  color: #333;
+  color: #5E6270;
 }
 
 .genesis-nav-menu .current-menu-item > a > span,
@@ -2962,8 +2962,8 @@ img.circle {
 }
 
 .dn-subtitle p {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 21px;
+  font-size: 2.1rem;
 }
 
 .widget_sp_image-image-link {
@@ -3113,20 +3113,20 @@ img.circle {
 
 @media screen and (min-width: 861px){
   body > div{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
   body{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
   .site-header .search-form{
     float: right;
     margin: 12px auto 0;
   }
   .footer-widgets .wrap .widget-area p{
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
   }
 }
 
@@ -3269,8 +3269,8 @@ img.circle {
   }
   .archive-title,
   .entry-header .entry-title{
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 70px;
+    font-size: 7rem;
   }
   .archive-title,
   .site-inner > .entry-title{
@@ -3480,8 +3480,8 @@ img.circle {
     transition: background-color 0.3s linear .2s;
   }
   .dn-subtitle p{
-    font-size: 22px;
-    font-size: 2.2rem;
+    font-size: 23px;
+    font-size: 2.3rem;
   }
 }
 
