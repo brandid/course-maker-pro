@@ -10,6 +10,10 @@
     font-size: 77px;
 }
 
+.blog .blog-posts-grid .alignfull {
+    background: $blog-archive-bg;
+}
+
 /* Blog intro text
 ------------------------------------- */
 .blog-intro {
@@ -426,6 +430,12 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 
 .entry-content.blog-posts-grid > .alignfull {
     padding: 125px 8% 0 8%;
+
+    .container-content {
+        .pagination {
+            padding-bottom: 65px;
+        }
+    }
 }
 
 .entry-content.blog-posts-grid .blog-posts-wrapper {

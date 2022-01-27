@@ -343,6 +343,9 @@ function course_maker_blog_posts_wrapper_open() {
 
 			echo '<h2 class="blog-posts-title">' . esc_html__( 'New Articles', 'coursemaker' ) . '</h2>';
 
+		} else {
+			/* Translators: %d is the page number */
+			echo '<h2 class="blog-posts-title">' . sprintf( esc_html__( 'Articles Page %d', 'coursemaker' ), absint( $paged ) ) . '</h2>';
 		}
 	}
 
