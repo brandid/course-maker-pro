@@ -3221,6 +3221,10 @@ img.circle {
     -ms-flex-preferred-size: 46%;
     flex-basis: 46%;
   }
+  .pagination{
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
   .llms-sd-grades table thead{
     display: table-header-group;
   }
