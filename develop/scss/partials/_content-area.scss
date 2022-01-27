@@ -84,6 +84,40 @@ p.entry-meta {
 .pagination {
   clear: both;
   margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.archive-pagination {
+    ul {
+      li {
+        &.pagination-next,
+        &.pagination-previous {
+          letter-spacing: 0.08em;
+        }
+        &.active a {
+          background: $green-cyan;
+
+          &:hover {
+            background: $white;
+            color: $green-cyan;
+          }
+        }
+        a {
+          line-height: 1.0em;
+          padding: 15px;
+          font-size: 1.8rem;
+
+          &:hover {
+            background: $green-cyan;
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+
+  
   @include media($screen--s1) {
     margin: 40px 2%;
   }
@@ -98,12 +132,12 @@ p.entry-meta {
 }
 
 .archive-pagination a {
-  background-color: $white;
-  color: $base-text-color;
+  background-color: transparent;
+  color: $dark-red;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 8px 12px;
   text-decoration: none;
   border-bottom: none;

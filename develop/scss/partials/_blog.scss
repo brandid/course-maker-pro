@@ -232,9 +232,15 @@ body.sidebar-content .entry-content .featured-articles .featured-article .text-c
 .entry-content .featured-articles .featured-article .featured-img {
     .link-has-image {
         display: flex;
+        max-height: 220px;
 
+            @include media($screen--tablet) {
+                max-height: 420px;
+            }
         img {
             object-fit: cover;
+            object-position: center;
+            
         }
     }
 }

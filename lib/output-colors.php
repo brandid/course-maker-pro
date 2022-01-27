@@ -89,7 +89,6 @@ function course_maker_colors_css() {
 	$css .= sprintf(
 		'
 		/* ---------- LINKS / BUTTONS ---------- */
-		archive-pagination .active a,
 		body:not(.home) .button,
 		.sidebar .enews-widget input[type="submit"],
 		button:not([id*="slick-"]):not([class*="gs-faq__question"]),
@@ -98,12 +97,12 @@ function course_maker_colors_css() {
 		input[type="submit"],
 		.menu-toggle:focus,
 		.menu-toggle:hover,
-		.archive-pagination li a:focus,
-		.archive-pagination li a:hover,
 		.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
 			background-color: %1$s !important;
 		}
-
+		.site-inner .archive-pagination li a {
+			color: #808482 !important;
+		}
 		.site-inner a:not(.button):not(.wp-block-button__link):not(.ab-button):not(.gb-button),
 		.subtitle,
 		.footer-widgets a, {
@@ -136,6 +135,12 @@ function course_maker_colors_css() {
 	$css .= sprintf(
 		'
 		/* ---------- HOVER ---------- */
+		.site-inner .archive-pagination li a:hover {
+			color: #FFF !important;
+			background: #808482 !important;
+		}
+		.site-inner .archive-pagination li.active a {
+			color: #FFF !important;
 		.home .site-header.sticky.scrolled .site-title a:hover,
 		.home .site-header.sticky.scrolled .site-title a:focus,
 		body:not(.home) .site-header .site-title a:hover,

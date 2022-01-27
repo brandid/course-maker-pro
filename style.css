@@ -1380,10 +1380,12 @@ img.alignright {
 .entry-content .featured-articles .featured-article .featured-img .link-has-image {
   display: -ms-flexbox;
   display: flex;
+  max-height: 220px;
 }
 
 .entry-content .featured-articles .featured-article .featured-img .link-has-image img {
   object-fit: cover;
+  object-position: center;
 }
 
 .entry-content .featured-articles .featured-article .featured-img a {
@@ -2158,6 +2160,36 @@ p.entry-meta {
 .pagination {
   clear: both;
   margin: 5% auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.pagination.archive-pagination ul li.pagination-next, .pagination.archive-pagination ul li.pagination-previous {
+  letter-spacing: 0.08em;
+}
+
+.pagination.archive-pagination ul li.active a {
+  background: #808482;
+}
+
+.pagination.archive-pagination ul li.active a:hover {
+  background: #fff;
+  color: #808482;
+}
+
+.pagination.archive-pagination ul li a {
+  line-height: 1.0em;
+  padding: 15px;
+  font-size: 1.8rem;
+}
+
+.pagination.archive-pagination ul li a:hover {
+  background: #808482;
+  color: #fff !important;
 }
 
 .adjacent-entry-pagination {
@@ -2169,13 +2201,13 @@ p.entry-meta {
 }
 
 .archive-pagination a {
-  background-color: #fff;
-  color: #5E6270;
+  background-color: transparent;
+  color: #2E2D2D;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 8px 12px;
   text-decoration: none;
   border-bottom: none;
@@ -3172,6 +3204,9 @@ img.circle {
   .entry-content .featured-articles .featured-article .text-container .author-info .author-text p{
     font-size: 13px;
     font-size: 1.3rem;
+  }
+  .entry-content .featured-articles .featured-article .featured-img .link-has-image{
+    max-height: 420px;
   }
   .entry-content .featured-articles button.slick-arrow{
     display: inline-block !important;
