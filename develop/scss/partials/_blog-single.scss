@@ -21,11 +21,14 @@ $single-article-font-size: 20px;
 			text-transform: capitalize;
 			margin: 0;
 
+			line-height: 1.25;
+			padding: 25px 0;
+			font-size: 28px;
+			letter-spacing: 0.2em;
+
 			@include media($screen--tablet){
-				font-size: 36px;
-				letter-spacing: 0.2em;
-				line-height: 1.25;
 				padding: 56px 0;
+				font-size: 36px;
 			}
 		}
 
