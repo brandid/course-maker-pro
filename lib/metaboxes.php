@@ -127,7 +127,11 @@ function course_maker_display_featured_article_image_meta_box( $post ) {
 	?>
 	<div class='inside'>
 
-		<div>meta interface</div>
+		<div>
+			<button id="featured-article-image-add-edit" type="button" class="button-secondary">
+				Add a Featured Article Image
+			</button>
+		</div>
 
 	</div>
 	<?php
@@ -144,7 +148,7 @@ function course_maker_display_featured_article_image_scripts( $hook ) {
 		return;
 	}
 	wp_enqueue_media();
-	$script_deps = array( 'media-editor', 'jquery' );
+	$script_deps = array( 'media-editor', 'jquery', 'wp-i18n' );
 	wp_enqueue_script(
 		genesis_get_theme_handle() . 'featured-article-image',
 		get_stylesheet_directory_uri() . '/js/featured-article-image.js',
