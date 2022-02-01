@@ -33,11 +33,20 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
     }
 }
 
-.full-width-content .content {
-    @include media($screen--m){
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
+.full-width-content {
+    .content {
+        @include media($screen--tablet){
+            width: 100%;
+            max-width: 730px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.single {
+        .content {
+            padding-top: 56px;
+        }
     }
 }
 
