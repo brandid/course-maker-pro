@@ -23,6 +23,8 @@ class Meta_Attachments {
 	/**
 	 * Unique slug for the meta box (see sanitize_title).
 	 *
+	 * Can be the same as $id.
+	 *
 	 * @var string $slug
 	 */
 	private string $slug = '';
@@ -63,6 +65,13 @@ class Meta_Attachments {
 	private string $meta_location = 'side';
 
 	/**
+	 * The meta add attachment button label.
+	 *
+	 * @var string $attachment_button_label
+	 */
+	private string $attachment_button_label = '';
+
+	/**
 	 * Class constructor.
 	 *
 	 * @param array $args {
@@ -78,13 +87,15 @@ class Meta_Attachments {
 	public function __construct( $args ) {
 		// Set defaults.
 		$defaults = array(
-			'meta_key' => 'coursemaker_attachment_image',
+			'id' => 'course_maker_featured_article_image',
+			'meta_key' => 'course_maker_featured_article_image',
 			'post_types' => array(
 				'post',
 			),
 			'meta_label' => __( 'Add Image', 'coursemaker' ),
 			'meta_priority' => 'high',
 			'meta_location' => 'side',
+			'attachment_button_label' => __( 'Add Image', 'coursemaker' ),
 		);
 
 		// Merge arguments.
@@ -95,52 +106,62 @@ class Meta_Attachments {
 			$this->{ $key } = $value;
 		}
 	}
-}
 
-/**
- * Registers the 'Featured Article' Image Meta box.
- *
- * @param object $post The current post object.
- */
-function course_maker_add_featuredarticle_image_meta_box( $post ) {
-	add_meta_box(
-		'featured_article_image',
-		__( 'Featured Article Image', 'coursemaker' ),
-		'course_maker_display_featured_article_image_meta_box',
-		'post',
-		'side',
-		'high'
-	);
-}
-add_action( 'add_meta_boxes_post', 'course_maker_add_featuredarticle_image_meta_box' );
+	/**
+	 * Run the hooks associated with this class.
+	 */
+	public function run_hooks() {
+		foreach ( $this->post_types as $post_type ) {
+			add_action( 'add_meta_boxes_' . $post_type, array( $this, 'add_meta_box_callback' ) );
+		}
 
-/**
- * Displays the 'Featured Article Image' meta box.
- *
- * @param object $post The current post object.
- */
-function course_maker_display_featured_article_image_meta_box( $post ) {
-	// Create a new nonce.
-	wp_nonce_field( basename( __FILE__ ), 'featured_article_image_meta_box_nonce' );
+		// Load the attachment script.
+		add_action( 'admin_enqueue_scripts', 'course_maker_display_featured_article_image_scripts' );
+	}
 
-	// Get the _featured_article current value.
-	// $current_featured_article_value = get_post_meta( $post->ID, '_featured_article', true );
+	/**
+	 * Registers the Attachment Meta box.
+	 *
+	 * @param object $post The current post object.
+	 */
+	public function add_meta_box_callback( $post ) {
+		add_meta_box(
+			sanitize_title( $this->meta_slug ),
+			$this->meta_label,
+			array( $this, 'display_meta_box' ),
+			get_post_type( $post ),
+			$this->meta_location,
+			$this->meta_priority
+		);
+	}
 
-	// Show the fields.
-	?>
-	<div class='inside'>
+	/**
+	 * Displays the meta box.
+	 *
+	 * @param object $post The current post object.
+	 */
+	public function display_meta_box( $post ) {
+		// Create a new nonce.
+		wp_nonce_field( basename( __FILE__ ), sanitize_title( $slug ) . '_nonce' );
 
-		<div>
-			<button id="featured-article-image-add-edit" type="button" class="button-secondary">
-				Add a Featured Article Image
-			</button>
+		$attachment_image = get_post_meta( $post->ID, $this->id, true );
+
+		// Get the _featured_article current value.
+		// $current_featured_article_value = get_post_meta( $post->ID, '_featured_article', true );
+
+		// Show the fields.
+		?>
+		<div class='inside'>
+
+			<div>
+				<button id="<?php echo esc_html( $this->id ); ?>" type="button" class="button-secondary">
+					<?php echo esc_html( $this->attachment_button_label ); ?>
+				</button>
+			</div>
+
 		</div>
-
-	</div>
-	<?php
-	// Enqueue media for the post.
-	// Callback for other scripts/styles.
-	
+		<?php
+	}
 }
 
 /**
@@ -160,4 +181,6 @@ function course_maker_display_featured_article_image_scripts( $hook ) {
 		true
 	);
 }
-add_action( 'admin_enqueue_scripts', 'course_maker_display_featured_article_image_scripts' );
+
+
+

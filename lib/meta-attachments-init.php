@@ -15,15 +15,18 @@ function course_maker_add_attachment_image_init() {
 	if ( class_exists( 'Meta_Attachments' ) ) {
 		// Set args.
 		$args = array(
-			'meta_key'      => 'coursemaker_featured_article_image', // phpcs:ignore
+			'id'            => 'course-maker-featured-article-image',
+			'meta_key'      => 'course-maker-featured-article-image', // phpcs:ignore
 			'post_types'    => array(
 				'post',
 			),
-			'meta_label'    => __( 'Add Featured Article Image', 'coursemaker' ),
+			'meta_label'    => __( 'Featured Article Image', 'coursemaker' ),
 			'meta_priority' => 'high',
 			'meta_location' => 'side',
+			'attachment_button_label' => __( 'Add Featured Article Image', 'coursemaker' ),
 		);
-		new Meta_Attachments( $args );
+		$meta_attachments = new Meta_Attachments( $args );
+		$meta_attachments->run_hooks();
 	}
 }
 add_action( 'admin_init', 'course_maker_add_attachment_image_init' );

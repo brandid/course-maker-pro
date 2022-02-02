@@ -177,6 +177,6 @@
 		mediaUploader.open();
 	};
 
-	$( '#featured-article-image-add-edit' ).on( 'click', handleUpload );
+	jQuery( '#course-maker-featured-article-image' ).on( 'click', handleUpload );
 
 })(jQuery);
