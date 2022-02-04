@@ -50,6 +50,9 @@ require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 // Add the custom meta boxes.
 require_once CHILD_THEME_DIR . '/lib/metaboxes.php';
 
+// Add custom sidebars.
+require_once CHILD_THEME_DIR . '/lib/sidebars.php';
+
 // Import Customizer custom toggle control.
 require_once CHILD_THEME_DIR . '/lib/class-course-maker-toggle-control.php';
 
