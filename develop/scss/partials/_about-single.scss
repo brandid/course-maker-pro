@@ -1,0 +1,13 @@
+$single-about-font-size: 24px;
+
+.about-page {
+	& > div {
+		font-size: $single-about-font-size;
+		line-height: 1.8em;
+	}
+
+	article.type-page.entry {
+		padding-top: 20px;
+	}
+	
+}
