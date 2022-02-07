@@ -1829,6 +1829,10 @@ img.alignright {
   line-height: 1.8em;
 }
 
+.about-page article.type-page.entry {
+  padding-top: 20px;
+}
+
 /* Widgets
 ---------------------------------------------------------------------------------------------------- */
 /* # Widgets
@@ -1918,6 +1922,31 @@ img.alignright {
 
 /* # General Widget styles.
 ---------------------------------------------------------------------------------------------------- */
+
+.widget-general {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.widget-general a {
+  color: #878C8A;
+}
+
+.widget-general h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.3;
+}
+
+.widget-general.widget_search h4 {
+  text-align: left;
+}
+
+.widget-general.widget_categories {
+  text-align: left;
+}
+
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
 /* ## Genesis eNews Extended
@@ -3596,6 +3625,9 @@ img.circle {
   .widget .button{
     font-size: 20px;
     font-size: 2rem;
+  }
+  .page-template-about aside.sidebar-primary{
+    padding-top: 60px;
   }
   .js.home .site-header{
     position: relative;

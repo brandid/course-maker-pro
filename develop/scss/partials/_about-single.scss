@@ -5,5 +5,9 @@ $single-about-font-size: 24px;
 		font-size: $single-about-font-size;
 		line-height: 1.8em;
 	}
+
+	article.type-page.entry {
+		padding-top: 20px;
+	}
 	
 }
