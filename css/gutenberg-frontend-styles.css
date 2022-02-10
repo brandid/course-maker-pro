@@ -172,10 +172,11 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
   display: inline-block;
   color: #fff;
   cursor: pointer;
-  letter-spacing: 3px;
-  font-size: 18px;
+  line-height: 1;
+  font-size: 16px;
   text-transform: uppercase;
-  padding: 12px 24px;
+  padding: 17px 32px;
+  letter-spacing: 0.2em;
   text-decoration: none;
   text-align: center;
   white-space: normal;
@@ -194,7 +195,7 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
 /* Blockquotes and captions
 --------------------------------------------- */
 .entry-content .wp-block-quote {
-  border-left: .25em solid;
+  border-left: 0.25em solid #ccc;
   padding-left: 1em;
 }
 
@@ -264,15 +265,18 @@ body.sidebar-content .content-sidebar-wrap > #genesis-content {
   margin-top: 10px;
   font-size: 15px;
   font-style: normal;
+  letter-spacing: 0.08em;
 }
 
 .entry-content .wp-block-audio figcaption,
 .entry-content .wp-block-embed figcaption,
 .entry-content .wp-block-image figcaption {
   font-size: 16px;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 30px;
   margin-top: 10px;
+  text-align: center;
+  letter-spacing: 0.08em;
 }
 
 /* Tables
@@ -689,7 +693,7 @@ hr.wp-block-separator {
   }
   body.content-sidebar .content-sidebar-wrap > #genesis-content,
   body.sidebar-content .content-sidebar-wrap > #genesis-content {
-    width: 65%;
+    width: 60.1%;
   }
   .entry-content .wp-block-columns {
     display: -ms-flexbox;

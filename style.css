@@ -818,7 +818,7 @@ body.content-sidebar .site-inner > #container {
 /* ## About Page Layout
 --------------------------------------------- */
 .about-page .entry-content#genesis-content {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 /* # Common Classes
@@ -1823,7 +1823,12 @@ img.alignright {
   vertical-align: middle;
 }
 
-.about-page > div {
+.about-page {
+  /* Layout */
+}
+
+.about-page > div,
+.about-page blockquote {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 1.8em;
@@ -1831,6 +1836,45 @@ img.alignright {
 
 .about-page article.type-page.entry {
   padding-top: 20px;
+}
+
+.about-page .entry-header > h1.entry-title {
+  text-align: left;
+  letter-spacing: 0.2em;
+  font-size: 60px;
+  font-size: 6rem;
+  line-height: 1.15em;
+  margin-bottom: 16px;
+}
+
+.about-page h2, .about-page h3, .about-page h4, .about-page h5, .about-page h6 {
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.about-page h2 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+.about-page h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.about-page h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.about-page h5 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.about-page .site-inner {
+  max-width: 1100px;
 }
 
 /* Widgets
