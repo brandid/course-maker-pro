@@ -79,3 +79,24 @@ $single-article-font-size: 20px;
 		}
 	}
 }
+
+/* Responsive images with text */
+.wp-block-image > figure.alignright,
+.wp-block-image > figure.alignleft {
+  text-align: center;
+  margin: 0 20px;
+  @include media($screen--m) {
+	margin: inherit;
+    text-align: inherit;
+  }
+}
+
+.entry-content > .wp-block-image > figure > figcaption {
+	margin-bottom: 0;
+	margin-top: 0;
+
+	@include media($screen--m) {
+		margin-bottom: inherit;
+		margin-top: inherit;
+	}
+}

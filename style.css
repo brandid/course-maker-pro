@@ -818,7 +818,7 @@ body.content-sidebar .site-inner > #container {
 /* ## About Page Layout
 --------------------------------------------- */
 .about-page .entry-content#genesis-content {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 /* # Common Classes
@@ -1823,14 +1823,70 @@ img.alignright {
   vertical-align: middle;
 }
 
-.about-page > div {
-  font-size: 24px;
-  font-size: 2.4rem;
+/* Responsive images with text */
+.wp-block-image > figure.alignright,
+.wp-block-image > figure.alignleft {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.entry-content > .wp-block-image > figure > figcaption {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.about-page {
+  /* Layout */
+}
+
+.about-page > div,
+.about-page blockquote {
   line-height: 1.8em;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .about-page article.type-page.entry {
   padding-top: 20px;
+}
+
+.about-page .entry-header > h1.entry-title {
+  text-align: left;
+  letter-spacing: 0.2em;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.15em;
+  margin-bottom: 16px;
+}
+
+.about-page h2, .about-page h3, .about-page h4, .about-page h5, .about-page h6 {
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.about-page h2 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+.about-page h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.about-page h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.about-page h5 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.about-page .site-inner {
+  max-width: 1100px;
 }
 
 /* Widgets
@@ -1933,10 +1989,12 @@ img.alignright {
   color: #878C8A;
 }
 
-.widget-general h4 {
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.3;
+.widget-general .widget-wrap .entry-header h4.entry-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.2em;
 }
 
 .widget-general.widget_search h4 {
@@ -3621,6 +3679,24 @@ img.circle {
   .entry-content.blog-posts-grid .blog-posts-wrapper .cm-featured-post{
     -ms-flex-preferred-size: 29.333%;
     flex-basis: 29.333%;
+  }
+  .wp-block-image > figure.alignright,
+  .wp-block-image > figure.alignleft{
+    margin: inherit;
+    text-align: inherit;
+  }
+  .entry-content > .wp-block-image > figure > figcaption{
+    margin-bottom: inherit;
+    margin-top: inherit;
+  }
+  .about-page > div,
+  .about-page blockquote{
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  .about-page .entry-header > h1.entry-title{
+    font-size: 60px;
+    font-size: 6rem;
   }
   .widget .button{
     font-size: 20px;
