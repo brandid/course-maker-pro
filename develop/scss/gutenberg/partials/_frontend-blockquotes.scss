@@ -1,7 +1,7 @@
 /* Blockquotes and captions
 --------------------------------------------- */
 .entry-content .wp-block-quote {
-    border-left: .25em solid;
+    border-left: .25em solid $light-gray;
     padding-left: 1em;
     p {
         line-height: 1.6;
@@ -73,6 +73,7 @@
             margin-top: 10px;
         	font-size: 15px;
             font-style: normal;
+            letter-spacing: 0.08em;
             // text-transform: uppercase;
         	// text-align: center;
         }
@@ -89,9 +90,11 @@
     .wp-block-image {
         figcaption {
         	font-size: 16px;
-        	font-style: italic;
+        	font-style: normal;
         	margin-bottom: 30px;
         	margin-top: 10px;
+            text-align: center;
+            letter-spacing: 0.08em;
         }
     }
 }

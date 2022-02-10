@@ -1,13 +1,53 @@
 $single-about-font-size: 24px;
 
 .about-page {
-	& > div {
-		font-size: $single-about-font-size;
+	& > div,
+	blockquote {
+		
 		line-height: 1.8em;
+		font-size: 16px;
+		@include media($screen--m) {
+			font-size: $single-about-font-size;
+		}
 	}
 
 	article.type-page.entry {
 		padding-top: 20px;
+	}
+
+	.entry-header > h1.entry-title {
+		text-align: left;
+		letter-spacing: 0.2em;
+		font-size: 32px;
+		line-height: 1.15em;
+		margin-bottom: 16px;
+
+		@include media($screen--m) {
+			font-size: 60px;
+		}
+	}
+
+	h2, h3, h4, h5, h6 {
+		line-height: 1.4;
+		font-weight: 400;
+		letter-spacing: 0.2em;
+	}
+	h2 {
+		font-size: 48px;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	h4 {
+		font-size: 24px;
+	}
+	h5 {
+		font-size: $single-article-font-size;
+	}
+
+	/* Layout */
+	.site-inner {
+		max-width: 1100px;
 	}
 	
 }
