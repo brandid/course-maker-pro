@@ -3,8 +3,12 @@ $single-about-font-size: 24px;
 .about-page {
 	& > div,
 	blockquote {
-		font-size: $single-about-font-size;
+		
 		line-height: 1.8em;
+		font-size: 16px;
+		@include media($screen--m) {
+			font-size: $single-about-font-size;
+		}
 	}
 
 	article.type-page.entry {
@@ -14,9 +18,13 @@ $single-about-font-size: 24px;
 	.entry-header > h1.entry-title {
 		text-align: left;
 		letter-spacing: 0.2em;
-		font-size: 60px;
+		font-size: 32px;
 		line-height: 1.15em;
 		margin-bottom: 16px;
+
+		@include media($screen--m) {
+			font-size: 60px;
+		}
 	}
 
 	h2, h3, h4, h5, h6 {
