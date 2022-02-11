@@ -46,3 +46,38 @@
 		}
 	}
 }
+
+/* LifterLMS course single */
+.single-course {
+	h1 {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+
+	.entry-content article .entry-content h3 {
+		font-size: 40px;
+		letter-spacing: 0.2em;
+	}
+
+	.llms-meta-info {
+		padding-bottom: 65px;
+		font-size: 18px;
+
+		
+
+		.llms-meta {
+			padding-bottom: 20px;
+			margin-bottom: 0;
+			font-size: 18px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		.llms-meta-info {
+			margin-bottom: 0;
+			padding-bottom: 80px;
+		}
+	}
+}
