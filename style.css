@@ -3349,6 +3349,7 @@ img.circle {
   padding-bottom: 65px;
   font-size: 18px;
   font-size: 1.8rem;
+  margin: 0;
 }
 
 .single-course.single .llms-meta-info .llms-meta {
@@ -3409,6 +3410,13 @@ img.circle {
   width: 100%;
 }
 
+/* Adjust the LifterLMS Flexbox to fit */
+.llms-syllabus-wrapper > div > .lessons.grid-style > .llms-lesson-preview {
+  -ms-flex-positive: inherit;
+      flex-grow: inherit;
+  -ms-flex: 1 0 25%;
+      flex: 1 0 25%;
+}
 @media screen and (min-width: 320px){
   .site-inner,
   .wrap{
@@ -3443,7 +3451,6 @@ img.circle {
     margin-bottom: 0;
   }
 }
-
 @media screen and (min-width: 768px){
   .entry-content .featured-articles .featured-article{
     -ms-grid-columns: 33.3333% 1fr;
@@ -3539,7 +3546,6 @@ img.circle {
     display: table-footer-group;
   }
 }
-
 @media screen and (min-width: 861px){
   body > div{
     font-size: 19px;
@@ -3558,7 +3564,6 @@ img.circle {
     font-size: 1.9rem;
   }
 }
-
 @media screen and (min-width: 1023px){
   .admin-bar .site-container{
     min-height: calc(100vh - 32px);
@@ -3936,7 +3941,6 @@ img.circle {
     font-size: 2.3rem;
   }
 }
-
 @media screen and (min-width: 1200px){
   .site-inner,
   .wrap{
@@ -3973,13 +3977,11 @@ img.circle {
     padding: 32px 16px;
   }
 }
-
 @media screen and (min-width: 1600px){
   .title-area{
     padding-left: 0;
   }
 }
-
 @media screen and (max-width: 414px){
   .alignleft.center-mobile,
   .alignright.center-mobile{
@@ -3988,7 +3990,6 @@ img.circle {
     margin: 0 auto 24px;
   }
 }
-
 @media print{
   *,
   *::after,
