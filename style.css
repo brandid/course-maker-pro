@@ -3522,8 +3522,6 @@ img.circle {
 .llms-syllabus-wrapper > div > .lessons.grid-style > .llms-lesson-preview {
   -ms-flex-positive: inherit;
       flex-grow: inherit;
-  -ms-flex: 1 0 25%;
-      flex: 1 0 25%;
 }
 @media screen and (min-width: 320px){
   .site-inner,
