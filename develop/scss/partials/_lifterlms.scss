@@ -48,8 +48,9 @@
 }
 
 /* LifterLMS course single */
-.single-course.single {
-	.entry-content article h1.entry-title {
+.single-course.single .entry-content {
+
+	article h1.entry-title {
 		padding-top: 90px;
 		padding-bottom: 90px;
 		font-weight: 400;
@@ -57,11 +58,87 @@
 		font-size: 50px;
 	}
 
-	.entry-content article .entry-content h3 {
+	article .entry-content h3 {
 		font-size: 40px;
 		letter-spacing: 0.2em;
 		font-weight: 400;
 		color: $med-gray;
+
+		&.llms-section-title {
+			font-size: 50px;
+		}
+	}
+
+	.llms-lesson-thumbnail {
+		margin-bottom: 0;
+	}
+
+	.lessons.grid-style a.llms-lesson-link {
+		
+		section {
+			padding: 0 28px;
+		}
+	}
+
+	/* Lesson hover effects */
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: inherit;
+		margin: 0;
+		padding: 0;
+		margin-top: 15px;
+		padding: 15px 28px;
+		padding-bottom: 10px;
+
+		p {
+			display: block;
+		}
+	}
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview:hover a > .llms-extra {
+		background-color: $black-coral;
+		color: $white;
+
+		.fa.fa-check-circle {
+			color: $white;
+		}
+	}
+
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title {
+		font-size: 30px;
+		letter-spacing: 0.2em;
+		padding-top: 65px;
+		padding-bottom: 35px;
+	}
+
+	.llms-main .llms-lesson-excerpt,
+	.llms-main .llms-lesson-excerpt p {
+		font-size: 23px;
+		letter-spacing: 0.025em;
+		line-height: 35px;
+	}
+
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+		display: flex;
+		flex-wrap: wrap;
+
+		.learn-more {
+			display: block;
+			width: 100%;
+			font-size: 23px;
+			line-height: 40px;
+			letter-spacing: 0.025em;
+		}
+
+		.extras {
+			display: flex;
+			justify-content: flex-end;
+
+			span {
+				display: inline-block;
+				width: auto;
+			}
+		}
 	}
 
 	.featured-image {
@@ -127,6 +204,10 @@
 	span {
 		display: inline-block;
 		width: 100%;
+	}
+
+	.llms-button-action.button {
+		color: $white;
 	}
 }
 
