@@ -3325,29 +3325,43 @@ img.circle {
 
 /* LifterLMS course single */
 .single-course.single .entry-content {
+  /* Hide extra space on the bottom */
   /* Lesson hover effects */
 }
 
+.single-course.single .entry-content .llms-syllabus-wrapper {
+  margin-bottom: 0;
+}
+
+.single-course.single .entry-content article {
+  padding: 0;
+  margin: 0;
+}
+
 .single-course.single .entry-content article h1.entry-title {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   font-weight: 400;
   color: #5e6270;
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 38px;
+  font-size: 3.8rem;
 }
 
 .single-course.single .entry-content article .entry-content h3 {
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 32px;
+  font-size: 3.2rem;
   letter-spacing: 0.2em;
   font-weight: 400;
   color: #5e6270;
 }
 
 .single-course.single .entry-content article .entry-content h3.llms-section-title {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 38px;
+  font-size: 3.8rem;
+}
+
+.single-course.single .entry-content article .entry-content h3.llms-meta-title {
+  margin-bottom: 40px;
 }
 
 .single-course.single .entry-content .llms-lesson-thumbnail {
@@ -3389,7 +3403,9 @@ img.circle {
   font-size: 30px;
   font-size: 3rem;
   letter-spacing: 0.2em;
-  padding-top: 65px;
+  font-size: 24px;
+  font-size: 2.4rem;
+  padding-top: 32px;
   padding-bottom: 35px;
 }
 
@@ -3636,6 +3652,25 @@ img.circle {
   }
   .llms-sd-grades table tfoot{
     display: table-footer-group;
+  }
+  .single-course.single .entry-content article h1.entry-title{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  .single-course.single .entry-content article .entry-content h3{
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  .single-course.single .entry-content article .entry-content h3.llms-section-title{
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  .single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title{
+    font-size: 30px;
+    font-size: 3rem;
+    padding-top: 65px;
   }
 }
 @media screen and (min-width: 861px){

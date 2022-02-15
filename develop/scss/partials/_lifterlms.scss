@@ -50,22 +50,54 @@
 /* LifterLMS course single */
 .single-course.single .entry-content {
 
+	
+	/* Hide extra space on the bottom */
+	.llms-syllabus-wrapper {
+		margin-bottom: 0;
+	}
+
+
+	article {
+		padding: 0;
+		margin: 0;
+	}
+
 	article h1.entry-title {
-		padding-top: 90px;
-		padding-bottom: 90px;
+		
+		padding-top: 45px;
+		padding-bottom: 45px;
 		font-weight: 400;
 		color: $med-gray;
-		font-size: 50px;
+		font-size: 38px;
+		
+
+		@include media($screen--tablet) {
+			padding-top: 90px;
+			padding-bottom: 90px;
+			font-size: 50px;
+		}
 	}
 
 	article .entry-content h3 {
-		font-size: 40px;
+		font-size: 32px;
 		letter-spacing: 0.2em;
 		font-weight: 400;
 		color: $med-gray;
 
+		@include media($screen--tablet) {
+			font-size: 40px;
+		}
+
 		&.llms-section-title {
-			font-size: 50px;
+			font-size: 38px;
+
+			@include media($screen--tablet) {
+				font-size: 50px;
+			}
+		}
+
+		&.llms-meta-title {
+			margin-bottom: 40px;
 		}
 	}
 
@@ -107,8 +139,14 @@
 	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title {
 		font-size: 30px;
 		letter-spacing: 0.2em;
-		padding-top: 65px;
+		font-size: 24px;
+		padding-top: 32px;
 		padding-bottom: 35px;
+
+		@include media($screen--tablet) {
+			font-size: 30px;
+			padding-top: 65px;
+		}
 	}
 
 	.llms-main .llms-lesson-excerpt,
