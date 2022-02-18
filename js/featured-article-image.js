@@ -116,12 +116,12 @@
 		e.preventDefault();
 		var mediaUploader = wp.media( {
 			button: {
-				text: course_maker_meta_attachments.media_uploader_title,
+				text: course_maker_meta_attachments.media_modal_crop_text,
 				close: false,
 			},
 			states: [
 				new wp.media.controller.Library( {
-					title: course_maker_meta_attachments.media_uploader_button_text,
+					title: course_maker_meta_attachments.media_modal_title,
 					library: wp.media.query( { type: 'image' } ),
 					multiple: false,
 					date: false,

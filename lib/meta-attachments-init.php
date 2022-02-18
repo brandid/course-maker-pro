@@ -29,8 +29,8 @@ function course_maker_add_attachment_image_init() {
 			'img_atts'                => array(
 				'suggested_width'            => 1200,
 				'suggested_height'           => 630,
-				'media_uploader_title'       => esc_html__( 'Select Featured Article Image and Crop', 'course-maker' ),
-				'media_uploader_button_text' => esc_html__( 'Select and crop', 'course-maker' ),
+				'media_modal_title'       => esc_html__( 'Select Featured Article Image and Crop', 'course-maker' ),
+				'media_modal_crop_text' => esc_html__( 'Select and crop', 'course-maker' ),
 				'can_skip_crop'              => false,
 				'aspect_ratio'               => '40:21',
 			),
