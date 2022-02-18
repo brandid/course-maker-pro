@@ -91,3 +91,39 @@
 .llms_certificate-template-default .footer-widgets {
     display: none;
 }
+
+/* # General Widget styles.
+---------------------------------------------------------------------------------------------------- */
+
+.page-template-about {
+  aside.sidebar-primary {
+    @include media($screen--m) {
+      padding-top: 60px;
+    }
+  }
+}
+.widget-general {
+  font-size: 16px;
+  line-height: 1.4;
+
+  a {
+    color: #878C8A;
+  }
+
+  .widget-wrap .entry-header h4.entry-title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0.2em;
+  }
+  
+  &.widget_search {
+    h4 {
+      text-align: left;
+    }
+  }
+
+  &.widget_categories {
+    text-align: left;
+  }
+}

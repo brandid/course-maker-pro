@@ -815,6 +815,12 @@ body.content-sidebar .site-inner > #container {
 --------------------------------------------- */
 /* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
 
+/* ## About Page Layout
+--------------------------------------------- */
+.about-page .entry-content#genesis-content {
+  padding-top: 20px;
+}
+
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
 /* ## Avatar
@@ -1712,7 +1718,7 @@ img.alignright {
   width: 100%;
   height: 8px;
   margin: 0 auto;
-  background-color: #4a6054;
+  background-color: #5e6270;
 }
 
 .single-post .featured-image img {
@@ -1728,6 +1734,159 @@ img.alignright {
   max-width: 728px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.single .entry-content article {
+  padding-top: 0;
+}
+
+.single .entry-content article h1.entry-title {
+  color: #5e6270;
+  text-transform: capitalize;
+  margin: 0;
+  line-height: 1.25;
+  padding: 25px 0;
+  font-size: 28px;
+  font-size: 2.8rem;
+  letter-spacing: 0.2em;
+}
+
+.single .entry-content article .entry-content,
+.single .entry-content article .entry-content hr {
+  color: #333333;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.single .entry-content article .entry-content h2, .single .entry-content article .entry-content h3, .single .entry-content article .entry-content h4, .single .entry-content article .entry-content h5, .single .entry-content article .entry-content h6,
+.single .entry-content article .entry-content hr h2,
+.single .entry-content article .entry-content hr h3,
+.single .entry-content article .entry-content hr h4,
+.single .entry-content article .entry-content hr h5,
+.single .entry-content article .entry-content hr h6 {
+  line-height: 1.4;
+}
+
+.single .entry-content article .entry-content h2,
+.single .entry-content article .entry-content hr h2 {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
+.single .entry-content article .entry-content h3,
+.single .entry-content article .entry-content hr h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.single .entry-content article .entry-content h4,
+.single .entry-content article .entry-content hr h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.single .entry-content article .entry-content h5,
+.single .entry-content article .entry-content hr h5 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.single .entry-content article .entry-content a:hover,
+.single .entry-content article .entry-content hr a:hover {
+  color: #879589;
+}
+
+.single .entry-content article .entry-content blockquote,
+.single .entry-content article .entry-content hr blockquote {
+  padding-left: 40px;
+}
+
+.single .entry-content article .entry-content ul li, .single .entry-content article .entry-content ol li,
+.single .entry-content article .entry-content hr ul li,
+.single .entry-content article .entry-content hr ol li {
+  margin-bottom: 5px;
+}
+
+.single .entry-content article .entry-content ul li:last-child, .single .entry-content article .entry-content ol li:last-child,
+.single .entry-content article .entry-content hr ul li:last-child,
+.single .entry-content article .entry-content hr ol li:last-child {
+  margin-bottom: 0;
+}
+
+.single .entry-content article .entry-content ul li::marker,
+.single .entry-content article .entry-content hr ul li::marker {
+  display: inline-block;
+  font-size: 24px;
+  font-size: 2.4rem;
+  vertical-align: middle;
+}
+
+/* Responsive images with text */
+.wp-block-image > figure.alignright,
+.wp-block-image > figure.alignleft {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.entry-content > .wp-block-image > figure > figcaption {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.about-page {
+  /* Layout */
+}
+
+.about-page > div,
+.about-page blockquote {
+  line-height: 1.8em;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.about-page article.type-page.entry {
+  padding-top: 20px;
+}
+
+.about-page .entry-header > h1.entry-title {
+  text-align: left;
+  letter-spacing: 0.2em;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.15em;
+  margin-bottom: 16px;
+}
+
+.about-page h2, .about-page h3, .about-page h4, .about-page h5, .about-page h6 {
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.about-page h2 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+.about-page h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.about-page h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+.about-page h5 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.about-page .site-inner {
+  max-width: 1100px;
 }
 
 /* Widgets
@@ -1815,6 +1974,35 @@ img.alignright {
 
 .llms_certificate-template-default .footer-widgets {
   display: none;
+}
+
+/* # General Widget styles.
+---------------------------------------------------------------------------------------------------- */
+
+.widget-general {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.widget-general a {
+  color: #878C8A;
+}
+
+.widget-general .widget-wrap .entry-header h4.entry-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.2em;
+}
+
+.widget-general.widget_search h4 {
+  text-align: left;
+}
+
+.widget-general.widget_categories {
+  text-align: left;
 }
 
 /* # Plugins
@@ -3135,6 +3323,206 @@ img.circle {
   display: none;
 }
 
+/* LifterLMS course single */
+.single-course.single .entry-content {
+  /* Hide extra space on the bottom */
+  /* Lesson hover effects */
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper {
+  margin-bottom: 0;
+}
+
+.single-course.single .entry-content article {
+  padding: 0;
+  margin: 0;
+}
+
+.single-course.single .entry-content article h1.entry-title {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  font-weight: 400;
+  color: #5e6270;
+  font-size: 38px;
+  font-size: 3.8rem;
+}
+
+.single-course.single .entry-content article .entry-content h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  color: #5e6270;
+}
+
+.single-course.single .entry-content article .entry-content h3.llms-section-title {
+  font-size: 38px;
+  font-size: 3.8rem;
+}
+
+.single-course.single .entry-content article .entry-content h3.llms-meta-title {
+  margin-bottom: 40px;
+}
+
+.single-course.single .entry-content .llms-lesson-thumbnail {
+  margin-bottom: 0;
+}
+
+.single-course.single .entry-content .lessons.grid-style a.llms-lesson-link section {
+  padding: 0 28px;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: inherit;
+      align-items: inherit;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  padding: 15px 28px;
+  padding-bottom: 10px;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra p {
+  display: block;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview:hover a > .llms-extra {
+  background-color: #5E6270;
+  color: #fff;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview:hover a > .llms-extra .fa.fa-check-circle {
+  color: #fff;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title {
+  font-size: 30px;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+  font-size: 2.4rem;
+  padding-top: 32px;
+  padding-bottom: 35px;
+}
+
+.single-course.single .entry-content .llms-main .llms-lesson-excerpt,
+.single-course.single .entry-content .llms-main .llms-lesson-excerpt p {
+  font-size: 23px;
+  font-size: 2.3rem;
+  letter-spacing: 0.025em;
+  line-height: 35px;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra .learn-more {
+  display: block;
+  width: 100%;
+  font-size: 23px;
+  font-size: 2.3rem;
+  line-height: 40px;
+  letter-spacing: 0.025em;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra .extras {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra .extras span {
+  display: inline-block;
+  width: auto;
+}
+
+.single-course.single .entry-content .featured-image {
+  text-align: left;
+}
+
+.single-course.single .entry-content .llms-meta-info {
+  padding-bottom: 65px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.single-course.single .entry-content .llms-meta-info .llms-meta {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.single-course.single .entry-content .llms-meta-info .llms-meta:last-child {
+  padding-bottom: 0;
+}
+
+.single-course.single .entry-content .llms-meta-info .llms-meta-info {
+  margin-bottom: 0;
+  padding-bottom: 80px;
+}
+
+.single-course.single .entry-content .llms-author {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  background-color: #F6F6F6;
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.single-course.single .entry-content .llms-author .llms-author-info.name {
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
+.single-course.single .entry-content .llms-author .llms-author-info.label {
+  padding-bottom: 10px;
+}
+
+.single-course.single .entry-content .llms-author p.llms-author-info.bio {
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.2;
+  padding-bottom: 15px;
+}
+
+.single-course.single .entry-content img.avatar {
+  position: absolute;
+  left: 15px;
+}
+
+.single-course.single .entry-content span {
+  display: inline-block;
+  width: 100%;
+}
+
+.single-course.single .entry-content .llms-button-action.button {
+  color: #fff;
+}
+
+/* Adjust the LifterLMS Flexbox to fit */
+.llms-syllabus-wrapper > div > .lessons.grid-style > .llms-lesson-preview {
+  -ms-flex-positive: inherit;
+      flex-grow: inherit;
+}
 @media screen and (min-width: 320px){
   .site-inner,
   .wrap{
@@ -3169,7 +3557,6 @@ img.circle {
     margin-bottom: 0;
   }
 }
-
 @media screen and (min-width: 768px){
   .entry-content .featured-articles .featured-article{
     -ms-grid-columns: 33.3333% 1fr;
@@ -3229,6 +3616,19 @@ img.circle {
     -ms-flex-preferred-size: 46%;
     flex-basis: 46%;
   }
+  .single.full-width-content .content{
+    padding-top: 56px;
+    padding-bottom: 56px;
+    width: 100%;
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .single .entry-content article h1.entry-title{
+    padding: 56px 0;
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
   .pagination{
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -3251,8 +3651,26 @@ img.circle {
   .llms-sd-grades table tfoot{
     display: table-footer-group;
   }
+  .single-course.single .entry-content article h1.entry-title{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  .single-course.single .entry-content article .entry-content h3{
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  .single-course.single .entry-content article .entry-content h3.llms-section-title{
+    font-size: 50px;
+    font-size: 5rem;
+  }
+  .single-course.single .entry-content .llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title{
+    font-size: 30px;
+    font-size: 3rem;
+    padding-top: 65px;
+  }
 }
-
 @media screen and (min-width: 861px){
   body > div{
     font-size: 19px;
@@ -3271,7 +3689,6 @@ img.circle {
     font-size: 1.9rem;
   }
 }
-
 @media screen and (min-width: 1023px){
   .admin-bar .site-container{
     min-height: calc(100vh - 32px);
@@ -3479,9 +3896,30 @@ img.circle {
     -ms-flex-preferred-size: 29.333%;
     flex-basis: 29.333%;
   }
+  .wp-block-image > figure.alignright,
+  .wp-block-image > figure.alignleft{
+    margin: inherit;
+    text-align: inherit;
+  }
+  .entry-content > .wp-block-image > figure > figcaption{
+    margin-bottom: inherit;
+    margin-top: inherit;
+  }
+  .about-page > div,
+  .about-page blockquote{
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  .about-page .entry-header > h1.entry-title{
+    font-size: 60px;
+    font-size: 6rem;
+  }
   .widget .button{
     font-size: 20px;
     font-size: 2rem;
+  }
+  .page-template-about aside.sidebar-primary{
+    padding-top: 60px;
   }
   .js.home .site-header{
     position: relative;
@@ -3628,7 +4066,6 @@ img.circle {
     font-size: 2.3rem;
   }
 }
-
 @media screen and (min-width: 1200px){
   .site-inner,
   .wrap{
@@ -3665,13 +4102,11 @@ img.circle {
     padding: 32px 16px;
   }
 }
-
 @media screen and (min-width: 1600px){
   .title-area{
     padding-left: 0;
   }
 }
-
 @media screen and (max-width: 414px){
   .alignleft.center-mobile,
   .alignright.center-mobile{
@@ -3680,7 +4115,6 @@ img.circle {
     margin: 0 auto 24px;
   }
 }
-
 @media print{
   *,
   *::after,

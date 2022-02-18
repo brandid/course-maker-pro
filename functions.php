@@ -50,6 +50,9 @@ require_once CHILD_THEME_DIR . '/lib/icon-functions.php';
 // Add the custom meta boxes.
 require_once CHILD_THEME_DIR . '/lib/metaboxes.php';
 
+// Add custom sidebars.
+require_once CHILD_THEME_DIR . '/lib/sidebars.php';
+
 // Add the the attachment meta box class.
 require_once CHILD_THEME_DIR . '/lib/meta-attachments.php';
 require_once CHILD_THEME_DIR . '/lib/meta-attachments-init.php';

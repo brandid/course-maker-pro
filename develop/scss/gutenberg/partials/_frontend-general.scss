@@ -29,15 +29,24 @@ body.content-sidebar .content-sidebar-wrap > #genesis-content,
 body.sidebar-content .content-sidebar-wrap > #genesis-content {
     max-width: 100%;
     @include media($screen--m){
-        width: 65%;
+        width: 60.1%;
     }
 }
 
-.full-width-content .content {
-    @include media($screen--m){
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
+.full-width-content {
+    .content {
+        @include media($screen--tablet){
+            width: 100%;
+            max-width: 730px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.single {
+        .content {
+            padding-top: 56px;
+        }
     }
 }
 

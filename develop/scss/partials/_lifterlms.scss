@@ -46,3 +46,210 @@
 		}
 	}
 }
+
+/* LifterLMS course single */
+.single-course.single .entry-content {
+
+	
+	/* Hide extra space on the bottom */
+	.llms-syllabus-wrapper {
+		margin-bottom: 0;
+	}
+
+
+	article {
+		padding: 0;
+		margin: 0;
+	}
+
+	article h1.entry-title {
+		
+		padding-top: 45px;
+		padding-bottom: 45px;
+		font-weight: 400;
+		color: $med-gray;
+		font-size: 38px;
+		
+
+		@include media($screen--tablet) {
+			padding-top: 90px;
+			padding-bottom: 90px;
+			font-size: 50px;
+		}
+	}
+
+	article .entry-content h3 {
+		font-size: 32px;
+		letter-spacing: 0.2em;
+		font-weight: 400;
+		color: $med-gray;
+
+		@include media($screen--tablet) {
+			font-size: 40px;
+		}
+
+		&.llms-section-title {
+			font-size: 38px;
+
+			@include media($screen--tablet) {
+				font-size: 50px;
+			}
+		}
+
+		&.llms-meta-title {
+			margin-bottom: 40px;
+		}
+	}
+
+	.llms-lesson-thumbnail {
+		margin-bottom: 0;
+	}
+
+	.lessons.grid-style a.llms-lesson-link {
+		
+		section {
+			padding: 0 28px;
+		}
+	}
+
+	/* Lesson hover effects */
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: inherit;
+		margin: 0;
+		padding: 0;
+		margin-top: 15px;
+		padding: 15px 28px;
+		padding-bottom: 10px;
+
+		p {
+			display: block;
+		}
+	}
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview:hover a > .llms-extra {
+		background-color: $black-coral;
+		color: $white;
+
+		.fa.fa-check-circle {
+			color: $white;
+		}
+	}
+
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview h5.llms-lesson-title {
+		font-size: 30px;
+		letter-spacing: 0.2em;
+		font-size: 24px;
+		padding-top: 32px;
+		padding-bottom: 35px;
+
+		@include media($screen--tablet) {
+			font-size: 30px;
+			padding-top: 65px;
+		}
+	}
+
+	.llms-main .llms-lesson-excerpt,
+	.llms-main .llms-lesson-excerpt p {
+		font-size: 23px;
+		letter-spacing: 0.025em;
+		line-height: 35px;
+	}
+
+	.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview a > .llms-extra {
+		display: flex;
+		flex-wrap: wrap;
+
+		.learn-more {
+			display: block;
+			width: 100%;
+			font-size: 23px;
+			line-height: 40px;
+			letter-spacing: 0.025em;
+		}
+
+		.extras {
+			display: flex;
+			justify-content: flex-end;
+
+			span {
+				display: inline-block;
+				width: auto;
+			}
+		}
+	}
+
+	.featured-image {
+		text-align: left;
+	}
+
+	.llms-meta-info {
+		padding-bottom: 65px;
+		font-size: 18px;
+		margin: 0;
+
+		
+
+		.llms-meta {
+			padding-bottom: 20px;
+			margin-bottom: 0;
+			font-size: 18px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		.llms-meta-info {
+			margin-bottom: 0;
+			padding-bottom: 80px;
+		}
+	}
+
+	.llms-author {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: relative;
+		background-color: #F6F6F6;
+		font-size: 15px;
+		margin: 0;
+		padding: 0;
+
+		.llms-author-info.name {
+			padding-top: 5px;
+			padding-bottom: 8px;
+		}
+
+		.llms-author-info.label {
+			padding-bottom: 10px;
+		}
+
+		p.llms-author-info.bio {
+			max-width: 450px;
+			text-align: center;
+			margin: 0 auto;
+			line-height: 1.2;
+			padding-bottom: 15px;
+		}
+	}
+
+	img.avatar {
+		position: absolute;
+		left: 15px;
+	}
+
+	span {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.llms-button-action.button {
+		color: $white;
+	}
+}
+
+/* Adjust the LifterLMS Flexbox to fit */
+.llms-syllabus-wrapper > div > .lessons.grid-style > .llms-lesson-preview {
+	flex-grow: inherit;
+}
