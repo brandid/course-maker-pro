@@ -21,7 +21,7 @@
 
 		var ratio = xInit / yInit;
 
-		controller.set( 'canSkipCrop', false );
+		controller.set( 'canSkipCrop', course_maker_meta_attachments.can_skip_crop );
 
 		var xImg = xInit;
 		var yImg = yInit;
@@ -54,7 +54,7 @@
 			y1,
 			x2: xInit + x1,
 			y2: yInit + y1,
-			aspectRatio: '40:21',
+			aspectRatio: course_maker_meta_attachments.aspect_ratio,
 		};
 		return imgSelectOptions;
 	};
@@ -72,8 +72,8 @@
 		params: {
 			flex_width: true, // set to true if the width of the cropped image can be different to the width defined here
 			flex_height: true, // set to true if the height of the cropped image can be different to the height defined here
-			width: 1200, // set the desired width of the destination image here
-			height: 630, // set the desired height of the destination image here
+			width: course_maker_meta_attachments.suggested_width, // set the desired width of the destination image here
+			height: course_maker_meta_attachments.suggested_height, // set the desired height of the destination image here
 		},
 	};
 	cropControl.mustBeCropped = ( flexW, flexH, dstW, dstH, imgW, imgH ) => {
@@ -116,18 +116,18 @@
 		e.preventDefault();
 		var mediaUploader = wp.media( {
 			button: {
-				text: __( 'Select and Crop', 'coursemaker' ), // l10n.selectAndCrop,
+				text: course_maker_meta_attachments.media_uploader_title,
 				close: false,
 			},
 			states: [
 				new wp.media.controller.Library( {
-					title: __( 'Select Featured Article Image and Crop', 'coursemaker' ), // l10n.chooseImage,
+					title: course_maker_meta_attachments.media_uploader_button_text,
 					library: wp.media.query( { type: 'image' } ),
 					multiple: false,
 					date: false,
 					priority: 20,
-					suggestedWidth: 1200,
-					suggestedHeight: 630,
+					suggestedWidth: course_maker_meta_attachments.suggested_width,
+					suggestedHeight: course_maker_meta_attachments.suggested_height,
 				} ),
 				new wp.media.controller.CustomizeImageCropper( {
 					imgSelectOptions: cropOptions,
