@@ -72,30 +72,71 @@ class Meta_Attachments {
 	private string $attachment_button_label = '';
 
 	/**
+	 * The meta add attachment nonce action.
+	 *
+	 * @var string $nonce_action To create a nonce from.
+	 */
+	private string $nonce_action = '';
+
+	/**
+	 * Array of supported script hooks.
+	 *
+	 * @var array $hooks Array of hooks for enqueing (e.g., post.php)
+	 */
+	private array $hooks = array();
+
+	/**
+	 * Array of image attributes to be localized.
+	 *
+	 * @var array $img_atts Array of image attributes for script localization.
+	 */
+	private array $img_atts = array();
+
+	/**
 	 * Class constructor.
 	 *
 	 * @param array $args {
 	 *     An array of arguments.
 	 *
-	 *     @type string $meta_key Meta key to register (stored in post meta)
-	 *     @type array $post_types Array of post types to list this meta box on.
-	 *     @type string $meta_label Label for insert attachment button (see add_meta_box).
+	 *     @type string $meta_key      Meta key to register (stored in post meta)
+	 *     @type array  $post_types    Array of post types to list this meta box on.
+	 *     @type string $meta_label    Label for insert attachment button (see add_meta_box).
 	 *     @type string $meta_priority Priority of meta box (see add_meta_box).
 	 *     @type string $meta_location Location of meta box (see add_meta_box).
+	 *     @type string $nonce_action  Nonce action for retrieval, saving, etc.
+	 *     @type array  $args {
+	 *          @type int    $suggested_width            The desired width of the image (px).
+	 *          @type int    $suggested_height           The desired height of the image (px).
+	 *          @type string $media_uploader_title       The title of the media modal.
+	 *          @type string $media_uploader_button_text The button text of the media uploader insert button.
+	 *          @type bool   $can_skip_crop              true|false (Whether the user can skip cropping or not).
+	 *          @type string $aspect_ratio               Aspect ratio the cropping tool must have.
+	 *     }
 	 * }
 	 */
 	public function __construct( $args ) {
 		// Set defaults.
 		$defaults = array(
-			'id' => 'course_maker_featured_article_image',
-			'meta_key' => 'course_maker_featured_article_image',
-			'post_types' => array(
+			'id'                      => 'course_maker_featured_article_image',
+			'meta_key'                => 'course_maker_featured_article_image',
+			'post_types'              => array(
 				'post',
 			),
-			'meta_label' => __( 'Add Image', 'coursemaker' ),
-			'meta_priority' => 'high',
-			'meta_location' => 'side',
+			'meta_label'              => __( 'Add Image', 'coursemaker' ),
+			'meta_priority'           => 'high',
+			'meta_location'           => 'side',
 			'attachment_button_label' => __( 'Add Image', 'coursemaker' ),
+			'nonce_action'            => wp_generate_password( 12, false, false ), // random nonce.
+			'hooks'                   => array( 'post.php' ),
+			'img_atts'                => array(
+				'suggested_width'            => 1200,
+				'suggested_height'           => 630,
+				'media_uploader_title'       => esc_html__( 'Select Featured Article Image and Crop', 'course-maker' ),
+				'media_uploader_button_text' => esc_html__( 'Select and crop', 'course-maker' ),
+				'can_skip_crop'              => false,
+				'aspect_ratio'               => '40:21',
+
+			),
 		);
 
 		// Merge arguments.
@@ -116,7 +157,7 @@ class Meta_Attachments {
 		}
 
 		// Load the attachment script.
-		add_action( 'admin_enqueue_scripts', 'course_maker_display_featured_article_image_scripts' );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );
 	}
 
 	/**
@@ -162,25 +203,48 @@ class Meta_Attachments {
 		</div>
 		<?php
 	}
+
+	/**
+	 * Enqueue admin scripts including media.
+	 *
+	 * @param string $hook The hook for the admin area you are viewing (e.g., post.php).
+	 */
+	public function add_admin_scripts( $hook ) {
+		if ( ! in_array( $hook, $this->hooks, true ) ) {
+			return;
+		}
+		wp_enqueue_media();
+		$script_deps = array( 'media-editor', 'jquery', 'wp-i18n' );
+		wp_enqueue_script(
+			genesis_get_theme_handle() . 'featured-article-image',
+			get_stylesheet_directory_uri() . '/js/featured-article-image.js',
+			$script_deps,
+			'1.0.0',
+			true
+		);
+
+		/**
+		 * Filter: course_maker_attachment_meta_localized
+		 *
+		 * @param array Array of variabled to be localized.
+		 */
+		$localized_vars = apply_filters(
+			'course_maker_attachment_meta_localized',
+			array(
+				'nonce' => wp_create_nonce( $this->nonce_action ),
+			)
+		);
+		$localized_vars = array_merge( $localized_vars, $this->img_atts );
+
+		wp_localize_script(
+			genesis_get_theme_handle() . 'featured-article-image',
+			'course_maker_meta_attachments',
+			$localized_vars
+		);
+	}
 }
 
-/**
- * Load post admin scripts for the featured article image.
- */
-function course_maker_display_featured_article_image_scripts( $hook ) {
-	if ( 'post.php' !== $hook ) {
-		return;
-	}
-	wp_enqueue_media();
-	$script_deps = array( 'media-editor', 'jquery', 'wp-i18n' );
-	wp_enqueue_script(
-		genesis_get_theme_handle() . 'featured-article-image',
-		get_stylesheet_directory_uri() . '/js/featured-article-image.js',
-		$script_deps,
-		'1.0.0',
-		true
-	);
-}
+
 
 
 
