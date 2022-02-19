@@ -141,6 +141,25 @@
 				id: croppedImage.attachment_id,
 				url: croppedImage.url,
 			} );
+
+			$.ajax( {
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'course_maker_add_cropped_attachment_image',
+					nonce: course_maker_meta_attachments.nonce,
+					attachment_id: croppedImage.attachment_id,
+					url: croppedImage.url,
+					post_id: course_maker_meta_attachments.post_id,
+				},
+			} ).done( function( response ) {
+				console.log( response );
+				console.log( 'ajax done' );
+			}).fail( function( response ) {
+				console.log( 'failed' );
+			}).always( function( response ) {
+				console.log( 'finished' );
+			});
 		} );
 
 		mediaUploader.on( 'insert', function() {
