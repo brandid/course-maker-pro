@@ -193,9 +193,18 @@
 				mediaUploader.setState( 'cropper' );
 			}
 		} );
+
+		mediaUploader.on( 'open', function() {
+			// Set attached image upon media library opened.
+			var attachment = wp.media.attachment( 1052 );
+			var selection = mediaUploader.state('library').get('selection');
+			selection.add( attachment );
+
+		} );
+
 		mediaUploader.open();
 	};
 
-	jQuery( '#course-maker-featured-article-image' ).on( 'click', handleUpload );
+	jQuery( '#course-maker-featured-article-image, .course-maker-img-container a' ).on( 'click', handleUpload );
 
 })(jQuery);
