@@ -6,13 +6,6 @@
 	var __ = wp.i18n.__;
 	var cropOptions = ( attachment, controller ) => {
 		var control = controller.get( 'control' );
-
-		console.log( attachment );
-		console.log( control );
-
-		var flexWidth = !! parseInt( control.params.flex_width, 10 );
-		var flexHeight = !! parseInt( control.params.flex_height, 10 );
-
 		var realWidth = attachment.get( 'width' );
 		var realHeight = attachment.get( 'height' );
 
@@ -20,8 +13,22 @@
 		let yInit = parseInt( control.params.height, 10 );
 
 		var ratio = xInit / yInit;
+		var ratioReal = realWidth / realHeight;
 
-		controller.set( 'canSkipCrop', course_maker_meta_attachments.can_skip_crop );
+		// Determine if user can skip crop.
+		var canSkipCrop = false;
+
+		// If ratios match, can skip crop.
+		if ( ratio === ratioReal ) {
+			canSkipCrop = true;
+		}
+
+		// If image is smaller than cropped.
+		if ( realWidth < control.params.width && realHeight < control.params.height ) {
+			canSkipCrop = true;
+		}
+		
+		controller.set( 'canSkipCrop', canSkipCrop );
 
 		var xImg = xInit;
 		var yImg = yInit;
@@ -76,40 +83,27 @@
 			height: course_maker_meta_attachments.suggested_height, // set the desired height of the destination image here
 		},
 	};
-	cropControl.mustBeCropped = ( flexW, flexH, dstW, dstH, imgW, imgH ) => {
-		// If the width and height are both flexible
-		// then the user does not need to crop the image.
 
-		if ( true === flexW && true === flexH ) {
-			return false;
-		}
-
-		// If the width is flexible and the cropped image height matches the current image height,
-		// then the user does not need to crop the image.
-		if ( true === flexW && dstH === imgH ) {
-			return false;
-		}
-
-		// If the height is flexible and the cropped image width matches the current image width,
-		// then the user does not need to crop the image.
-		if ( true === flexH && dstW === imgW ) {
-			return false;
-		}
-
-		// If the cropped image width matches the current image width,
-		// and the cropped image height matches the current image height
-		// then the user does not need to crop the image.
-		if ( dstW === imgW && dstH === imgH ) {
-			return false;
-		}
-
-		// If the destination width is equal to or greater than the cropped image width
-		// then the user does not need to crop the image...
-		if ( imgW <= dstW ) {
-			return false;
-		}
-
-		return true;
+	// Ajax to save cropped image.
+	function saveCropped( attachment_id, attachment_url ) {
+		$.ajax( {
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'course_maker_add_cropped_attachment_image',
+				nonce: course_maker_meta_attachments.nonce,
+				attachment_id: attachment_id,
+				url: attachment_url,
+				post_id: course_maker_meta_attachments.post_id,
+			},
+		} ).done( function( response ) {
+			console.log( response );
+			console.log( 'ajax done' );
+		}).fail( function( response ) {
+			console.log( 'failed' );
+		}).always( function( response ) {
+			console.log( 'finished' );
+		});
 	};
 
 	function handleUpload( e ) {
@@ -136,62 +130,36 @@
 			],
 		} );
 
+		// When image is cropped.
 		mediaUploader.on( 'cropped', function( croppedImage ) {
 			setAttachmentImage( {
 				id: croppedImage.attachment_id,
 				url: croppedImage.url,
 			} );
 
-			$.ajax( {
-				type: 'POST',
-				url: ajaxurl,
-				data: {
-					action: 'course_maker_add_cropped_attachment_image',
-					nonce: course_maker_meta_attachments.nonce,
-					attachment_id: croppedImage.attachment_id,
-					url: croppedImage.url,
-					post_id: course_maker_meta_attachments.post_id,
-				},
-			} ).done( function( response ) {
-				console.log( response );
-				console.log( 'ajax done' );
-			}).fail( function( response ) {
-				console.log( 'failed' );
-			}).always( function( response ) {
-				console.log( 'finished' );
-			});
+			saveCropped( croppedImage.attachment_id, croppedImage.url );
 		} );
 
-		mediaUploader.on( 'insert', function() {
-			var json = mediaUploader.state().get( 'selection' ).first().toJSON();
-			var url = json.sizes.hasOwnProperty( 'thumbnail' )
-				? json.sizes.thumbnail.url
-				: json.sizes.full.url;
-				setAttachmentImage( {
-				id: json.id,
-				url,
-			} );
+		// When image cropping is skipped.
+		mediaUploader.on( 'skippedcrop', function( selection ) {
+			saveCropped( selection.id, selection.get( 'url' ) );
 		} );
+
 		mediaUploader.on( 'select', function() {
 			var attachment = mediaUploader.state().get( 'selection' ).first().toJSON();
 
+			var ratio = attachment.width / attachment.height;
+			var desiredRatio = cropControl.params.width / cropControl.params.height;
 			if (
-				cropControl.params.width === attachment.width &&
-				cropControl.params.height === attachment.height &&
-				! cropControl.params.flex_width &&
-				! cropControl.params.flex_height
+				ratio === desiredRatio
 			) {
-				var url = attachment.sizes.hasOwnProperty( 'thumbnail' )
-					? attachment.sizes.full.url
-					: attachment.sizes.full.url;
-					setAttachmentImage( {
-					id: json.id,
-					url,
-				} );
+				var selection = mediaUploader.state().get('selection').single();
+				saveCropped( selection.attributes.id, selection.attributes.url );
 				mediaUploader.close();
 			} else {
 				mediaUploader.setState( 'cropper' );
 			}
+			console.log( 'select' );
 		} );
 
 		mediaUploader.on( 'open', function() {
