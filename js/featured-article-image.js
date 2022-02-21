@@ -4,7 +4,7 @@
 
     'use strict';
 	var __ = wp.i18n.__;
-	var attachment_id = 0;
+	var saved_attachment_id = course_maker_meta_attachments.attachment_id;
 
 	var cropOptions = ( attachment, controller ) => {
 		var control = controller.get( 'control' );
@@ -106,6 +106,7 @@
 					id: response.data.attachment_id,
 					url: response.data.img_url,
 				} );
+				saved_attachment_id = response.data.attachment_id;
 			}
 		}).fail( function( response ) {
 			console.log( 'failed' );
@@ -166,7 +167,7 @@
 
 		mediaUploader.on( 'open', function() {
 			// Set attached image upon media library opened.
-			var attachment = wp.media.attachment( 1052 );
+			var attachment = wp.media.attachment( saved_attachment_id );
 			var selection = mediaUploader.state('library').get('selection');
 			selection.add( attachment );
 		} );

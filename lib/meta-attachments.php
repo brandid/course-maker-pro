@@ -357,6 +357,11 @@ class Meta_Attachments {
 			true
 		);
 
+		$maybe_attachment_id = get_post_meta( $post->ID, $this->attachment_id_meta_key, true );
+		if ( ! $maybe_attachment_id ) {
+			$maybe_attachment_id = 0;
+		}
+
 		/**
 		 * Filter: course_maker_attachment_meta_localized
 		 *
@@ -367,6 +372,7 @@ class Meta_Attachments {
 			array(
 				'nonce'   => wp_create_nonce( $this->nonce_action . '_' . $post->ID ),
 				'post_id' => intval( $post->ID ),
+				'attachment_id' => $maybe_attachment_id,
 			)
 		);
 		$localized_vars = array_merge( $localized_vars, $this->img_atts );
