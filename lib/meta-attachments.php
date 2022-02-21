@@ -331,6 +331,7 @@ class Meta_Attachments {
 			array(
 				'message' => esc_html__( 'The image has been saved', 'course-maker' ),
 				'img_url' => esc_url( $cropped_image_url ),
+				'attachment_id' => absint( $attachment_id ),
 			)
 		);
 	}

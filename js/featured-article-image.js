@@ -4,6 +4,8 @@
 
     'use strict';
 	var __ = wp.i18n.__;
+	var attachment_id = 0;
+
 	var cropOptions = ( attachment, controller ) => {
 		var control = controller.get( 'control' );
 		var realWidth = attachment.get( 'width' );
@@ -71,7 +73,9 @@
 	 * @param {object} image Image object after cropping.
 	 */
 	function setAttachmentImage( image ) {
-		console.log( image );
+		var html = '<img src="' + image.url + '" />';
+
+		$( '.course-maker-img-container a' ).html( html );
 	}
 
 	var cropControl = {
@@ -97,8 +101,12 @@
 				post_id: course_maker_meta_attachments.post_id,
 			},
 		} ).done( function( response ) {
-			console.log( response );
-			console.log( 'ajax done' );
+			if ( response.success ) {
+				setAttachmentImage( {
+					id: response.data.attachment_id,
+					url: response.data.img_url,
+				} );
+			}
 		}).fail( function( response ) {
 			console.log( 'failed' );
 		}).always( function( response ) {
@@ -132,11 +140,6 @@
 
 		// When image is cropped.
 		mediaUploader.on( 'cropped', function( croppedImage ) {
-			setAttachmentImage( {
-				id: croppedImage.attachment_id,
-				url: croppedImage.url,
-			} );
-
 			saveCropped( croppedImage.attachment_id, croppedImage.url );
 		} );
 
@@ -159,7 +162,6 @@
 			} else {
 				mediaUploader.setState( 'cropper' );
 			}
-			console.log( 'select' );
 		} );
 
 		mediaUploader.on( 'open', function() {
@@ -167,7 +169,6 @@
 			var attachment = wp.media.attachment( 1052 );
 			var selection = mediaUploader.state('library').get('selection');
 			selection.add( attachment );
-
 		} );
 
 		mediaUploader.open();
