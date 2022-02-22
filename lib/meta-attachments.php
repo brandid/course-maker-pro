@@ -229,8 +229,8 @@ class Meta_Attachments {
 		?>
 		<div class='inside'>
 				<?php
-				$img_attachment_url = get_post_meta( $post_id, $this->attachment_image_url_meta_key, true );
-				if ( $img_attachment_url ) {
+				$img_attachment_id = get_post_meta( $post_id, $this->attachment_id_meta_key, true );
+				if ( $img_attachment_id ) {
 					// Get width/height.
 					$width  = $this->img_atts['suggested_width'];
 					$height = $this->img_atts['suggested_height'];
@@ -255,19 +255,28 @@ class Meta_Attachments {
 						$width  = $max_width_in_px * $image_ratio;
 					}
 
+					$attachment_url = wp_get_attachment_url( $img_attachment_id );
+
 					?>
-					<div class="course-maker-img-container">
-						<a href="#" title="<?php esc_attr_e( 'Click to Edit Image' ); ?>">
-							<img src="<?php echo esc_url( $img_attachment_url ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" alt="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>" style="max-width: 100%; height: auto;" />
-						</a>
-					</div>
+					<div id="<?php echo esc_attr( $this->id ); ?>">
+						<div class="course-maker-img-container">
+							<a href="#" title="<?php esc_attr_e( 'Click to Edit Image' ); ?>">
+								<?php
+								if ( $attachment_url ) {
+									?>
+									<img src="<?php echo esc_url( $attachment_url ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" alt="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>" style="max-width: 100%; height: auto;" />
+									<?php
+								}
+								?>
+							</a>
+						</div>
+						<button id="<?php echo esc_html( $this->id ); ?>" type='button' class='button-secondary'>
+							<?php echo esc_html( $this->attachment_button_label ); ?>
+						</button>
 					<?php
 				}
 				?>
-				<div>
-				<button id="<?php echo esc_html( $this->id ); ?>" type='button' class='button-secondary'>
-					<?php echo esc_html( $this->attachment_button_label ); ?>
-				</button>
+				</div>
 			</div>
 
 		</div>

@@ -381,11 +381,11 @@
 		
 
 		return this.each( function() {
-			$( this ).on( 'click', handleUpload );
+			$( this ).find( 'a, button').on( 'click', handleUpload );
 		} );
 	}
 
-	jQuery( '#course-maker-featured-article-image, .course-maker-img-container a' ).courseMakerImageCrop( {
+	jQuery( '#course-maker-featured-article-image' ).courseMakerImageCrop( {
 		attachmentId: course_maker_meta_attachments.attachment_id,
 			aspectRatio: course_maker_meta_attachments.aspect_ratio,
 			suggestedWidth: course_maker_meta_attachments.suggested_width,
