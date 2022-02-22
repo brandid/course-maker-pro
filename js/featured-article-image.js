@@ -186,6 +186,7 @@
 			postId: 0,
 			title: __( 'Image', 'course-maker' ),
 			buttonLabel: __( 'Add Image', 'course-maker' ),
+			ajaxAction: 'course_maker_add_cropped_attachment_image',
 		}, options );
 
 		var cropOptions = function (attachment, controller) {
@@ -260,34 +261,131 @@
 			},
 		};
 
-		var mediaUploader = wp.media({
-			button: {
-				text: settings.buttonLabel,
-				close: true,
-			},
-			states: [
-				new wp.media.controller.Library({
-					title: settings.title,
-					library: wp.media.query({ type: 'image' }),
-					multiple: false,
-					date: false,
-					priority: 20,
-					suggestedWidth: settings.suggestedWidth,
-					suggestedHeight: settings.suggestedHeight,
-				}),
-				new wp.media.controller.CustomizeImageCropper({
-					imgSelectOptions: cropOptions,
-					control: cropControl,
-				}),
-			],
-		});
+		/**
+		 * Set the attachment image.
+		 * @param {object} image Image object after cropping.
+		 */
+		function setAttachmentImage(image) {
+			var html = '<img src="' + image.url + '" />';
+
+			$('.course-maker-img-container a').html(html);
+		}
+
+		// Ajax to save cropped image.
+		function saveCropped(attachment_id, attachment_url) {
+			$.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: settings.ajaxAction,
+					nonce: settings.nonce,
+					attachment_id: attachment_id,
+					url: attachment_url,
+					post_id: settings.postId,
+				},
+			}).done(function (response) {
+				if (response.success) {
+					setAttachmentImage({
+						id: response.data.attachment_id,
+						url: response.data.img_url,
+					});
+					settings.attachmentId = response.data.attachment_id;
+				}
+			}).fail(function (response) {
+			}).always(function (response) {
+			});
+		};
+
+		function handleUpload(e) {
+			e.preventDefault();
+			var mediaUploader = wp.media({
+				button: {
+					text: settings.buttonLabel,
+					close: false,
+				},
+				states: [
+					new wp.media.controller.Library({
+						title: settings.title,
+						library: wp.media.query({ type: 'image' }),
+						multiple: false,
+						date: false,
+						priority: 20,
+						suggestedWidth: settings.suggestedWidth,
+						suggestedHeight: settings.suggestedHeight,
+					}),
+					new wp.media.controller.CustomizeImageCropper({
+						imgSelectOptions: cropOptions,
+						control: cropControl,
+					}),
+				],
+			});
+	
+			var mediaUploader = wp.media({
+				button: {
+					text: settings.buttonLabel,
+					close: false,
+				},
+				states: [
+					new wp.media.controller.Library({
+						title: settings.title,
+						library: wp.media.query({ type: 'image' }),
+						multiple: false,
+						date: false,
+						priority: 20,
+						suggestedWidth: settings.suggestedWidth,
+						suggestedHeight: settings.suggestedHeight,
+					}),
+					new wp.media.controller.CustomizeImageCropper({
+						imgSelectOptions: cropOptions,
+						control: cropControl,
+					}),
+				],
+			});
+	
+			// When image is cropped.
+			mediaUploader.on('cropped', function (croppedImage) {
+				saveCropped(croppedImage.attachment_id, croppedImage.url);
+			});
+	
+			// When image cropping is skipped.
+			mediaUploader.on('skippedcrop', function (selection) {
+				saveCropped(selection.id, selection.get('url'));
+			});
+	
+			mediaUploader.on('select', function () {
+				var attachment = mediaUploader.state().get('selection').first().toJSON();
+	
+				var ratio = attachment.width / attachment.height;
+				var desiredRatio = cropControl.params.width / cropControl.params.height;
+				if (
+					ratio === desiredRatio
+				) {
+					var selection = mediaUploader.state().get('selection').single();
+					saveCropped(selection.attributes.id, selection.attributes.url);
+					mediaUploader.close();
+				} else {
+					mediaUploader.setState('cropper');
+				}
+			});
+	
+			mediaUploader.on('open', function () {
+				// Set attached image upon media library opened.
+				var attachment = wp.media.attachment(settings.attachmentId);
+				var selection = mediaUploader.state('library').get('selection');
+				selection.add(attachment);
+			});
+	
+			mediaUploader.open();
+		}
+
+		
 
 		return this.each( function() {
-			console.log( settings );
+			$( this ).on( 'click', handleUpload );
 		} );
 	}
 
-	jQuery( '#course-maker-featured-article-image' ).courseMakerImageCrop( {
+	jQuery( '#course-maker-featured-article-image, .course-maker-img-container a' ).courseMakerImageCrop( {
 		attachmentId: course_maker_meta_attachments.attachment_id,
 			aspectRatio: course_maker_meta_attachments.aspect_ratio,
 			suggestedWidth: course_maker_meta_attachments.suggested_width,
@@ -298,6 +396,6 @@
 			buttonLabel: course_maker_meta_attachments.media_modal_crop_text,
 	});
 
-	jQuery('#course-maker-featured-article-image, .course-maker-img-container a').on('click', handleUpload);
+	// jQuery('#course-maker-featured-article-image, .course-maker-img-container a').on('click', handleUpload);
 
 })(jQuery);
