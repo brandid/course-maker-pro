@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Class for adding an attachment meta box with custom cropping.
  *
@@ -8,9 +8,9 @@
  * @link    https://thebrandidthemes.com/
  */
 
- /**
-  * Class for handling meta attachments.
-  */
+/**
+ * Class for handling meta attachments.
+ */
 class Meta_Attachments {
 
 	/**
@@ -70,6 +70,13 @@ class Meta_Attachments {
 	 * @var string $attachment_button_label
 	 */
 	private string $attachment_button_label = '';
+
+	/**
+	 * The meta add attachment nonce.
+	 *
+	 * @var string $nonce Generated nonce.
+	 */
+	private string $nonce = '';
 
 	/**
 	 * The meta add attachment nonce action.
@@ -135,7 +142,7 @@ class Meta_Attachments {
 		// Set defaults.
 		$defaults = array(
 			'id'                      => 'course_maker_featured_article_image',
-			'meta_key'                => 'course_maker_featured_article_image',
+			'meta_key'                => 'course_maker_featured_article_image', // phpcs:ignore
 			'post_types'              => array(
 				'post',
 			),
@@ -191,6 +198,8 @@ class Meta_Attachments {
 
 		// Ajax action for when a cropped image is selected and the media box has closed.
 		add_action( 'wp_ajax_course_maker_add_cropped_attachment_image', array( $this, 'ajax_save_cropped_image' ) );
+
+		add_action( 'admin_print_footer_scripts', array( $this, 'output_script' ) );
 	}
 
 	/**
@@ -221,9 +230,6 @@ class Meta_Attachments {
 		wp_nonce_field( basename( __FILE__ ), sanitize_title( $slug ) . '_nonce' );
 
 		$attachment_image = get_post_meta( $post->ID, $this->id, true );
-
-		// Get the _featured_article current value.
-		// $current_featured_article_value = get_post_meta( $post->ID, '_featured_article', true );
 
 		// Show the fields.
 		?>
@@ -260,7 +266,7 @@ class Meta_Attachments {
 					?>
 					<div id="<?php echo esc_attr( $this->id ); ?>">
 						<div class="course-maker-img-container">
-							<a href="#" title="<?php esc_attr_e( 'Click to Edit Image' ); ?>">
+							<a href="#" title="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>">
 								<?php
 								if ( $attachment_url ) {
 									?>
@@ -270,7 +276,7 @@ class Meta_Attachments {
 								?>
 							</a>
 						</div>
-						<button id="<?php echo esc_html( $this->id ); ?>" type='button' class='button-secondary'>
+						<button type='button' class='button-secondary'>
 							<?php echo esc_html( $this->attachment_button_label ); ?>
 						</button>
 					<?php
@@ -338,11 +344,26 @@ class Meta_Attachments {
 		// Indicate success.
 		wp_send_json_success(
 			array(
-				'message' => esc_html__( 'The image has been saved', 'course-maker' ),
-				'img_url' => esc_url( $cropped_image_url ),
+				'message'       => esc_html__( 'The image has been saved', 'course-maker' ),
+				'img_url'       => esc_url( $cropped_image_url ),
 				'attachment_id' => absint( $attachment_id ),
 			)
 		);
+	}
+
+	/**
+	 * Retrieve an attachment ID.
+	 *
+	 * @param int $post_id Post ID for the attachment.
+	 *
+	 * @return int Attachment ID or 0 on failure.
+	 */
+	private function get_attachment_id( int $post_id ) {
+		$attachment_id = get_post_meta( $post_id, $this->attachment_id_meta_key, true );
+		if ( ! $attachment_id ) {
+			$attachment_id = 0;
+		}
+		return $attachment_id;
 	}
 
 	/**
@@ -366,11 +387,9 @@ class Meta_Attachments {
 			true
 		);
 
-		$maybe_attachment_id = get_post_meta( $post->ID, $this->attachment_id_meta_key, true );
-		if ( ! $maybe_attachment_id ) {
-			$maybe_attachment_id = 0;
-		}
+		$maybe_attachment_id = $this->get_attachment_id( $post->ID );
 
+		$this->nonce = wp_create_nonce( $this->nonce_action . '_' . $post->ID );
 		/**
 		 * Filter: course_maker_attachment_meta_localized
 		 *
@@ -379,8 +398,8 @@ class Meta_Attachments {
 		$localized_vars = apply_filters(
 			'course_maker_attachment_meta_localized',
 			array(
-				'nonce'   => wp_create_nonce( $this->nonce_action . '_' . $post->ID ),
-				'post_id' => intval( $post->ID ),
+				'nonce'         => $this->nonce,
+				'post_id'       => intval( $post->ID ),
 				'attachment_id' => $maybe_attachment_id,
 			)
 		);
@@ -391,6 +410,31 @@ class Meta_Attachments {
 			'course_maker_meta_attachments',
 			$localized_vars
 		);
+	}
+
+	/**
+	 * Output meta initialization script.
+	 */
+	public function output_script() {
+		global $post;
+		if ( ! wp_script_is( genesis_get_theme_handle() . 'featured-article-image', 'done' ) ) {
+			return;
+		}
+		$maybe_attachment_id = $this->get_attachment_id( $post->ID );
+		?>
+		<script>
+			jQuery( '#<?php echo esc_js( $this->id ); ?>' ).courseMakerImageCrop( {
+					attachmentId: <?php echo esc_js( $maybe_attachment_id ); ?>,
+					aspectRatio: '<?php echo esc_js( $this->img_atts['aspect_ratio'] ); ?>',
+					suggestedWidth: <?php echo esc_js( $this->img_atts['suggested_width'] ); ?>,
+					suggestedHeight: <?php echo esc_js( $this->img_atts['suggested_height'] ); ?>,
+					nonce: '<?php echo esc_js( $this->nonce ); ?>',
+					postId: <?php echo esc_js( $post->ID ); ?>,
+					title: '<?php echo esc_js( $this->img_atts['media_modal_title'] ); ?>',
+					buttonLabel: '<?php echo esc_js( $this->img_atts['media_modal_crop_text'] ); ?>',
+			});
+		</script>
+		<?php
 	}
 }
 
