@@ -7,6 +7,7 @@
 		var __ = wp.i18n.__;
 
 		var settings = $.extend({
+			id: '',
 			attachmentId: 0,
 			aspectRatio: '1:1',
 			suggestedWidth: '1000',
@@ -15,7 +16,7 @@
 			postId: 0,
 			title: __('Image', 'course-maker'),
 			buttonLabel: __('Add Image', 'course-maker'),
-			ajaxAction: 'course_maker_add_cropped_attachment_image',
+			main: this,
 		}, options);
 
 		var cropOptions = function (attachment, controller) {
@@ -97,16 +98,17 @@
 		function setAttachmentImage(image) {
 			var html = '<img src="' + image.url + '" />';
 
-			$('.course-maker-img-container a').html(html);
+			$( settings.main ).find('.course-maker-img-container a').html(html);
 		}
 
 		// Ajax to save cropped image.
 		function saveCropped(attachment_id, attachment_url) {
+
 			$.ajax({
 				type: 'POST',
 				url: ajaxurl,
 				data: {
-					action: settings.ajaxAction,
+					action: settings.id,
 					nonce: settings.nonce,
 					attachment_id: attachment_id,
 					url: attachment_url,
@@ -173,7 +175,7 @@
 
 			// When image is cropped.
 			mediaUploader.on('cropped', function (croppedImage) {
-				saveCropped(croppedImage.attachment_id, croppedImage.url);
+				saveCropped(croppedImage.id, croppedImage.url);
 			});
 
 			// When image cropping is skipped.

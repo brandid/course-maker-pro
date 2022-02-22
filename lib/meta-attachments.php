@@ -197,7 +197,7 @@ class Meta_Attachments {
 		add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );
 
 		// Ajax action for when a cropped image is selected and the media box has closed.
-		add_action( 'wp_ajax_course_maker_add_cropped_attachment_image', array( $this, 'ajax_save_cropped_image' ) );
+		add_action( 'wp_ajax_' . $this->id, array( $this, 'ajax_save_cropped_image' ) );
 
 		add_action( 'admin_print_footer_scripts', array( $this, 'output_script' ) );
 	}
@@ -209,7 +209,7 @@ class Meta_Attachments {
 	 */
 	public function add_meta_box_callback( $post ) {
 		add_meta_box(
-			sanitize_title( $this->meta_slug ),
+			sanitize_title( $this->id ),
 			$this->meta_label,
 			array( $this, 'display_meta_box' ),
 			get_post_type( $post ),
@@ -236,56 +236,51 @@ class Meta_Attachments {
 		<div class='inside'>
 				<?php
 				$img_attachment_id = get_post_meta( $post_id, $this->attachment_id_meta_key, true );
-				if ( $img_attachment_id ) {
-					// Get width/height.
-					$width  = $this->img_atts['suggested_width'];
-					$height = $this->img_atts['suggested_height'];
 
-					/**
-					 * Filter: course_maker_max_width
-					 *
-					 * @param int Maximum width of the image.
-					 */
-					$max_width_in_px = apply_filters(
-						'course_maker_max_width',
-						300
-					);
+				// Get width/height.
+				$width  = $this->img_atts['suggested_width'];
+				$height = $this->img_atts['suggested_height'];
 
-					// Calculate new image size.
-					$image_ratio = $width / $height;
-					if ( $image_ratio > 1 ) {
-						$width  = $max_width_in_px;
-						$height = $max_width_in_px / $image_ratio;
-					} else {
-						$height = $max_width_in_px;
-						$width  = $max_width_in_px * $image_ratio;
-					}
+				/**
+				 * Filter: course_maker_max_width
+				 *
+				 * @param int Maximum width of the image.
+				 */
+				$max_width_in_px = apply_filters(
+					'course_maker_max_width',
+					300
+				);
 
-					$attachment_url = wp_get_attachment_url( $img_attachment_id );
-
-					?>
-					<div id="<?php echo esc_attr( $this->id ); ?>">
-						<div class="course-maker-img-container">
-							<a href="#" title="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>">
-								<?php
-								if ( $attachment_url ) {
-									?>
-									<img src="<?php echo esc_url( $attachment_url ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" alt="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>" style="max-width: 100%; height: auto;" />
-									<?php
-								}
-								?>
-							</a>
-						</div>
-						<button type='button' class='button-secondary'>
-							<?php echo esc_html( $this->attachment_button_label ); ?>
-						</button>
-					<?php
+				// Calculate new image size.
+				$image_ratio = $width / $height;
+				if ( $image_ratio > 1 ) {
+					$width  = $max_width_in_px;
+					$height = $max_width_in_px / $image_ratio;
+				} else {
+					$height = $max_width_in_px;
+					$width  = $max_width_in_px * $image_ratio;
 				}
+
+				$attachment_url = wp_get_attachment_url( $img_attachment_id );
+
 				?>
+				<div id="<?php echo esc_attr( $this->id ); ?>">
+					<div class="course-maker-img-container">
+						<a href="#" title="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>">
+							<?php
+							if ( $attachment_url ) {
+								?>
+								<img src="<?php echo esc_url( $attachment_url ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" alt="<?php esc_attr_e( 'Click to Edit Image', 'course-maker' ); ?>" style="max-width: 100%; height: auto;" />
+								<?php
+							}
+							?>
+						</a>
+					</div>
+					<button type='button' class='button-secondary'>
+						<?php echo esc_html( $this->attachment_button_label ); ?>
+					</button>
 				</div>
 			</div>
-
-		</div>
 		<?php
 	}
 
@@ -424,6 +419,7 @@ class Meta_Attachments {
 		?>
 		<script>
 			jQuery( '#<?php echo esc_js( $this->id ); ?>' ).courseMakerImageCrop( {
+					id: '<?php echo esc_js( $this->id ); ?>',
 					attachmentId: <?php echo esc_js( $maybe_attachment_id ); ?>,
 					aspectRatio: '<?php echo esc_js( $this->img_atts['aspect_ratio'] ); ?>',
 					suggestedWidth: <?php echo esc_js( $this->img_atts['suggested_width'] ); ?>,
