@@ -37,7 +37,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-wp-pot": "^2.2.0",
     "gulp-zip": "^4.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "postcss-pxtorem": "^4.0.1",
     "postcss-svg": "^1.0.6"
   },
