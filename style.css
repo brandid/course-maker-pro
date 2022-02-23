@@ -815,9 +815,13 @@ body.content-sidebar .site-inner > #container {
 --------------------------------------------- */
 /* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
 
-/* ## About Page Layout
+/* ## General Page Layout
 --------------------------------------------- */
-.about-page .entry-content#genesis-content {
+.entry-content#genesis-content {
+  padding-top: 20px;
+}
+
+.entry-content#genesis-content article {
   padding-top: 20px;
 }
 
@@ -1042,6 +1046,7 @@ input:focus:-ms-input-placeholder {
 .archive-title,
 .entry-header .entry-title {
   font-size: calc(4.0vw + 1rem);
+  letter-spacing: 0.2em;
 }
 
 #content > .page-title,
@@ -2838,6 +2843,7 @@ p.entry-meta {
   font-size: 1.5em;
   margin-right: 10px;
   text-rendering: auto;
+  line-height: 22px;
 }
 
 .sub-menu-toggle {
