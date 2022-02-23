@@ -96,6 +96,10 @@ function course_maker_show_featured_articles() {
 
 			$post_id = get_the_ID();
 
+			// Get attachment meta.
+			$meta_key      = '_course-maker-featured-article-image_attachment_id';
+			$attachment_id = get_post_meta( $post_id, $meta_key, true );
+
 			// Create character limit for blog post titles.
 			$title_char_limit = 60;
 
@@ -108,7 +112,7 @@ function course_maker_show_featured_articles() {
 			}
 
 			// Open article container.
-			if ( has_post_thumbnail() ) {
+			if ( $attachment_id ) {
 				echo '<div class="featured-article">';
 			} else {
 				echo '<div class="featured-article no-thumbnail">';
@@ -165,11 +169,11 @@ function course_maker_show_featured_articles() {
 			echo '</div>';
 
 			// Show the Featured Image.
-			if ( has_post_thumbnail() ) {
+			if ( $attachment_id ) {
 
 				echo '<div class="featured-img">';
 				echo '<a href="' . esc_url( get_the_permalink() ) . '">';
-				echo get_the_post_thumbnail( $post_id, 'featured-article' );
+				echo wp_get_attachment_image( $attachment_id, array( 1200, 630 ) );
 				echo '</a>';
 				echo '</div>';
 
