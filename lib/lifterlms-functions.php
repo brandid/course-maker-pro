@@ -111,3 +111,18 @@ function course_maker_lifterlms_my_grades() {
 		</script>
 	<?php
 }
+
+/**
+ * Hook in after theme and functions is executed.
+ */
+add_action( 'wp', 'course_maker_lifterlms_remove_comments' );
+
+/**
+ * Remove comments from LifterLMS templates.
+ */
+function course_maker_lifterlms_remove_comments() {
+	if ( function_exists( 'is_lifterlms' ) && is_lifterlms() ) {
+		remove_action( 'genesis_after_entry', 'genesis_get_comments_template' );
+	}
+}
+
