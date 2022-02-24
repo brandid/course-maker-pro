@@ -1,4 +1,4 @@
-Developer Documentation Draft for Course Maker Pro Theme
+# Developer Documentation for Course Maker Pro Theme
 
 ## Prerequisites
 Node and npm are required for Gulp and SASS, and to compile the project.
@@ -41,7 +41,7 @@ npm -v
 
 ## Install Gulp
 
-The Gulp version required is 3.9.x. If you are running Gulp 4 or later, you can install Gulp 3.9.x in the theme direcgtory.
+The Gulp version required is 3.9.x. If you are running Gulp 4 or later, you can install Gulp 3.9.x in the theme directory.
 
 ## Clone the Course Maker Pro theme repo.
 [GitHub](https://github.com/brandid/course-maker-pro)
