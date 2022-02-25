@@ -577,3 +577,27 @@ function course_maker_add_single_post_content_class( $attributes ) {
 
 }
 add_filter( 'genesis_attr_content', 'course_maker_add_single_post_content_class' );
+
+/**
+ * Modify output of image for archive images.
+ *
+ * @param string $output Image output.
+ * @param array  $args   Array of args passed.
+ * @param int    $id     ID of image.
+ * @param string $html   HTML output.
+ * @param string $url    URL of image.
+ * @param string $src    SRC of image.
+ */
+function course_maker_get_blog_archive_images( string $output, array $args, int $id, string $html, $url, string $src ) {
+	// Make sure width/height of attachment is reasonable.
+	$attachment_src = wp_get_attachment_image_src( $id );
+	if ( $attachment_src && is_array( $attachment_src ) ) {
+		$width  = $attachment_src[1];
+		$height = $attachment_src[2];
+		if ( $width <= 1 || $height <= 1 ) {
+			return '';
+		}
+	}
+	return $output;
+}
+add_filter( 'genesis_get_image', 'course_maker_get_blog_archive_images', 10, 6 );
