@@ -19,6 +19,11 @@ return array(
 				'public_url' => 'https://displayposts.com',
 			),
 			array(
+				'name'       => __( 'GenerateBlocks', 'coursemaker' ),
+				'slug'       => 'generateblocks/plugin.php',
+				'public_url' => 'https://wordpress.org/plugins/generateblocks/',
+			),
+			array(
 				'name'       => __( 'Genesis Blocks', 'coursemaker' ),
 				'slug'       => 'genesis-blocks/genesis-blocks.php',
 				'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
