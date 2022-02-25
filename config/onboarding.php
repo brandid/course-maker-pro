@@ -62,6 +62,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
+			'meta_input'     => array( '_wp_page_template' => 'page-templates/about.php' ),
 		),
 		'blog'                 => array(
 			'post_title'     => 'Blog',

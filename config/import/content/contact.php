@@ -12,7 +12,8 @@
 
 return <<<CONTENT
 <!-- wp:paragraph {"align":"center"} -->
-<p style="text-align:center">Think of this page as a virtual business card and online networking event all rolled into one! Encourage visitors to get in touch and ask questions about your course. The more connections and conversations you have with potential users, the better your chances of making a love connection, professionally speaking!</p>
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Think of this page as a virtual business card and online networking event all rolled into one! Encourage visitors to get in touch and ask questions about your course. The more connections and conversations you have with potential users, the better your chances of making a love connection, professionally speaking!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center"} -->
