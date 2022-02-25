@@ -38,11 +38,6 @@
 				canSkipCrop = true;
 			}
 
-			// If image is smaller than cropped.
-			if (realWidth < control.params.width && realHeight < control.params.height) {
-				canSkipCrop = true;
-			}
-
 			controller.set('canSkipCrop', canSkipCrop);
 
 			var xImg = xInit;
@@ -65,6 +60,35 @@
 			var x1 = (realWidth - xInit) / 2;
 			var y1 = (realHeight - yInit) / 2;
 
+			if ( x1 === 0 ) {
+				if ( ratio > 0 ) {
+					x1 = y1 * ratio;
+				} else {
+					x1 = y1 / ratio;
+				}
+			}
+			if ( y1 === 0 ) {
+				if ( ratio > 0 ) {
+					y1 = x1 * ratio;
+				} else {
+					y1 = x1 / ratio;
+				}
+			}
+
+			var cropWidthX2 = 0;
+			var cropHeightY2 = 0;
+			if ( ( xInit + x1 ) > realWidth ) {
+				cropWidthX2 = xInit -1;
+			} else {
+				cropWidthX2 = xInit + x1;
+			}
+			if ( ( yInit + y1 ) > realHeight ) {
+				cropHeightY2 = yInit -1;
+			} else {
+				cropHeightY2 = yInit + y1;
+			}
+
+
 			var imgSelectOptions = {
 				handles: true,
 				keys: true,
@@ -74,8 +98,8 @@
 				imageHeight: realHeight,
 				x1: x1,
 				y1: y1,
-				x2: xInit + x1,
-				y2: yInit + y1,
+				x2: cropWidthX2,
+				y2: cropHeightY2,
 				aspectRatio: settings.aspectRatio,
 			};
 			return imgSelectOptions;
