@@ -817,11 +817,11 @@ body.content-sidebar .site-inner > #container {
 
 /* ## General Page Layout
 --------------------------------------------- */
-.entry-content#genesis-content {
+body::not(.home) .entry-content#genesis-content {
   padding-top: 20px;
 }
 
-.entry-content#genesis-content article {
+body::not(.home) .entry-content#genesis-content article {
   padding-top: 20px;
 }
 
