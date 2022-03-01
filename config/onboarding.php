@@ -241,5 +241,35 @@ return array(
 				),
 			),
 		),
+		'about-sidebar'  => array(
+			array(
+				'type' => 'search',
+				'args' => array(
+					'title'  => 'Search',
+				),
+			),
+		),
+		'about-sidebar' => array(
+			array(
+				'type' => 'text',
+				'args' => array(
+					'title'  => 'Start building Your Brand For Free',
+					'text'   => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu interdum libero, at fermentum sapien. Morbi facilisis mattis quam, ac fermentum elit aliquam eu.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
+		'about-sidebar' => array(
+			array(
+				'type' => 'featured-content ',
+				'args' => array(
+					'title'  => 'Start building Your Brand For Free',
+					'text'   => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu interdum libero, at fermentum sapien. Morbi facilisis mattis quam, ac fermentum elit aliquam eu.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
 	),
 );
