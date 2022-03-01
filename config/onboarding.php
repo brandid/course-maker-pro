@@ -208,7 +208,7 @@ return array(
 	),
 	/* WIDGET IMPORT - Ready for Genesis 3.1 */
 	'widgets'          => array(
-		'footer-1' => array(
+		'footer-1'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -219,7 +219,7 @@ return array(
 				),
 			),
 		),
-		'footer-2' => array(
+		'footer-2'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -230,7 +230,7 @@ return array(
 				),
 			),
 		),
-		'footer-3' => array(
+		'footer-3'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -241,15 +241,13 @@ return array(
 				),
 			),
 		),
-		'about-sidebar'  => array(
+		'about-sidebar' => array(
 			array(
 				'type' => 'search',
 				'args' => array(
-					'title'  => 'Search',
+					'title' => 'Search',
 				),
 			),
-		),
-		'about-sidebar' => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -259,8 +257,6 @@ return array(
 					'visual' => 1,
 				),
 			),
-		),
-		'about-sidebar' => array(
 			array(
 				'type' => 'featured-content ',
 				'args' => array(
