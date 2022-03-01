@@ -37,3 +37,55 @@ img.circle {
   width: 25px;
   color: inherit;
 }
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
+  flex-grow: 0;
+}
+/* Site Logo */
+.title-area img {
+height: 56px;
+width: auto;
+}
+/* Homepage Hero - Reduce Opacity */
+@media only screen and (max-width: 1022px) {
+.homepage-hero::before {
+  opacity: 0.5;
+}
+}
+
+/* Homepage Nav Menu Styles */
+.home .site-header .menu-item a,
+.home .site-header .menu-item a:hover {
+color: #717875 !important;
+text-transform: normal;
+letter-spacing: 0.2em;
+}
+.home .site-header nav ul {
+display: flex;
+justify-content: space-between;
+}
+@media screen and (min-width: 1200px) {
+.home .site-header .genesis-nav-menu .menu-item a {
+  padding: 32px 16px;
+  line-height: 1.3em;
+}
+.home.logged-in .site-header nav .menu-item a {
+  font-size: 16px;
+  padding: 32px 8px;
+}
+}
+.home .site-header .activated ~ nav ul {
+flex-wrap: wrap;
+}
+.home .site-header .activated ~ nav ul li {
+display: block;
+width: 100%;
+}
+
+/* Homepage Container Remove bottmo padding */
+
+.home .site-inner,
+.home .site-inner article {
+padding-bottom: 0;
+margin-bottom: 0;
+}
