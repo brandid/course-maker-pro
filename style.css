@@ -815,9 +815,13 @@ body.content-sidebar .site-inner > #container {
 --------------------------------------------- */
 /* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
 
-/* ## About Page Layout
+/* ## General Page Layout
 --------------------------------------------- */
-.about-page .entry-content#genesis-content {
+body::not(.home) .entry-content#genesis-content {
+  padding-top: 20px;
+}
+
+body::not(.home) .entry-content#genesis-content article {
   padding-top: 20px;
 }
 
@@ -1042,6 +1046,7 @@ input:focus:-ms-input-placeholder {
 .archive-title,
 .entry-header .entry-title {
   font-size: calc(4.0vw + 1rem);
+  letter-spacing: 0.2em;
 }
 
 #content > .page-title,
@@ -2203,6 +2208,20 @@ body:not(.home) main.content .entry .gform_confirmation_message {
   text-align: center;
 }
 
+.home .site-header nav ul {
+  display: block;
+  margin: 0 auto;
+}
+
+.home .site-header nav ul > li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.home .site-header nav ul > li:last-child {
+  margin-right: 0;
+}
+
 .header-image .title-area {
   margin: 0 auto 0 0;
   max-width: 300px;
@@ -2838,6 +2857,7 @@ p.entry-meta {
   font-size: 1.5em;
   margin-right: 10px;
   text-rendering: auto;
+  line-height: 22px;
 }
 
 .sub-menu-toggle {
@@ -3284,11 +3304,49 @@ img.circle {
 }
 
 .more-link:after {
-  content: "\00a0 >>";
+  content: '\00a0 >>';
   position: absolute;
   height: 20px;
   width: 25px;
   color: inherit;
+}
+
+.llms-syllabus-wrapper .lessons.grid-style > .llms-lesson-preview {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+}
+
+/* Site Logo */
+.title-area img {
+  height: 56px;
+  width: auto;
+}
+
+/* Homepage Hero - Reduce Opacity */
+
+/* Homepage Nav Menu Styles */
+.home .site-header .menu-item a,
+.home .site-header .menu-item a:hover {
+  color: #717875 !important;
+  text-transform: normal;
+  letter-spacing: 0.2em;
+}
+
+.home .site-header .activated ~ nav ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home .site-header .activated ~ nav ul li {
+  display: block;
+  width: 100%;
+}
+
+/* Homepage Container Remove bottmo padding */
+.home .site-inner,
+.home .site-inner article {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* # Print Media Queries
@@ -4080,6 +4138,12 @@ img.circle {
     margin-left: 0 !important;
     text-align: left;
   }
+  .home .site-header nav ul{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
   .site-description,
   .site-title{
     text-align: left;
@@ -4101,6 +4165,15 @@ img.circle {
   .genesis-responsive-menu .genesis-nav-menu .menu-item a{
     padding: 32px 16px;
   }
+  .home .site-header .genesis-nav-menu .menu-item a{
+    padding: 32px 16px;
+    line-height: 1.3em;
+  }
+  .home.logged-in .site-header nav .menu-item a{
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding: 32px 8px;
+  }
 }
 @media screen and (min-width: 1600px){
   .title-area{
@@ -4113,6 +4186,11 @@ img.circle {
     display: block;
     float: none;
     margin: 0 auto 24px;
+  }
+}
+@media only screen and (max-width: 1022px){
+  .homepage-hero::before{
+    opacity: 0.5;
   }
 }
 @media print{

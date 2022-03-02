@@ -234,6 +234,7 @@ input:focus:-ms-input-placeholder {
 .archive-title,
 .entry-header .entry-title {
     font-size: calc(4.0vw + 1rem);
+    letter-spacing: $letter-spacing;
     @include media($screen--m) {
         font-size: $h1-font-size;
     }

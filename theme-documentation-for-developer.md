@@ -1,4 +1,4 @@
-Developer Documentation Draft for Course Maker Pro Theme
+# Developer Documentation for Course Maker Pro Theme
 
 ## Prerequisites
 Node and npm are required for Gulp and SASS, and to compile the project.
@@ -8,22 +8,40 @@ Composer and phpcs are optional for ensuring your code conforms to the WordPress
 
 [How to Install Node.js and NPM on Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows)
 
-Check your version of node and npm by  typing them  in terminal
+The versions required of ```node```, ```npm```, and ```node-sass``` are marked below:
+
+```bash
+npm - 6.4.1
+node - 10.15.3
+node-sass - 4.14.1
+```
+
+Recommended is to install NVM and switch versions that way: https://github.com/nvm-sh/nvm
+
+Once NVM is installed, you can do the following:
+
+```bash
+nvm install 10.15.3
+```
+
+And then to switch to the version:
+
+```bash
+nvm use 10
+```
+
+Check your verions of ```node``` and ```npm``` respectively.
 
 ```
 node -v
 npm -v
 ```
 
-If you a returned a version number for each - you are ready to go to the next step.
-
 - - - -
 
 ## Install Gulp
 
-Next, you’ll need to install Gulp globally (if you do not have it installed already). To check, just type `gulp -v` in your terminal window. If you see a version number, then you have gulp installed. If not, follow this step:
-
-from terminal type: `npm install -g gulp`
+The Gulp version required is 3.9.x. If you are running Gulp 4 or later, you can install Gulp 3.9.x in the theme directory.
 
 ## Clone the Course Maker Pro theme repo.
 [GitHub](https://github.com/brandid/course-maker-pro)
@@ -35,6 +53,8 @@ Once the Child theme is installed, from the child theme folder in Terminal type:
 At the terminal type `gulp watch`
 
 This will fire up the Gulp watch task - it will sit back and watch for any changes you make to the source src/.css files, when you save a file the task will run, process your CSS files, and place them in the child theme folder.
+
+If you receive any errors, it is likely the node version is a mismatch.
 
 - - - -
 

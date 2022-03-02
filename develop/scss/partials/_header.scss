@@ -118,6 +118,25 @@
 
 }
 
+.home .site-header nav ul {
+	display: block;
+  margin: 0 auto;
+
+  @include media($screen--l) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & > li {
+    display: inline-block;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+	}
+}
+
 .header-image .title-area {
   margin: 0 auto 0 0;
   max-width: 300px;

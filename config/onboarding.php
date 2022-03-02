@@ -19,6 +19,11 @@ return array(
 				'public_url' => 'https://displayposts.com',
 			),
 			array(
+				'name'       => __( 'GenerateBlocks', 'coursemaker' ),
+				'slug'       => 'generateblocks/plugin.php',
+				'public_url' => 'https://wordpress.org/plugins/generateblocks/',
+			),
+			array(
 				'name'       => __( 'Genesis Blocks', 'coursemaker' ),
 				'slug'       => 'genesis-blocks/genesis-blocks.php',
 				'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
@@ -57,6 +62,7 @@ return array(
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
+			'meta_input'     => array( '_wp_page_template' => 'page-templates/about.php' ),
 		),
 		'blog'                 => array(
 			'post_title'     => 'Blog',
@@ -202,7 +208,7 @@ return array(
 	),
 	/* WIDGET IMPORT - Ready for Genesis 3.1 */
 	'widgets'          => array(
-		'footer-1' => array(
+		'footer-1'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -213,7 +219,7 @@ return array(
 				),
 			),
 		),
-		'footer-2' => array(
+		'footer-2'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
@@ -224,12 +230,38 @@ return array(
 				),
 			),
 		),
-		'footer-3' => array(
+		'footer-3'      => array(
 			array(
 				'type' => 'text',
 				'args' => array(
 					'title'  => 'Start building Your Brand For Free',
 					'text'   => '<p><strong><em>To display an Opt-in form, simply install your favorite Forms plugin. Then, replace this text with your Form widget or shortcode.</em></strong></p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
+		'about-sidebar' => array(
+			array(
+				'type' => 'search',
+				'args' => array(
+					'title' => 'Search',
+				),
+			),
+			array(
+				'type' => 'text',
+				'args' => array(
+					'title'  => 'Start building Your Brand For Free',
+					'text'   => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu interdum libero, at fermentum sapien. Morbi facilisis mattis quam, ac fermentum elit aliquam eu.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+			array(
+				'type' => 'featured-content ',
+				'args' => array(
+					'title'  => 'Start building Your Brand For Free',
+					'text'   => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu interdum libero, at fermentum sapien. Morbi facilisis mattis quam, ac fermentum elit aliquam eu.</p>',
 					'filter' => 1,
 					'visual' => 1,
 				),
